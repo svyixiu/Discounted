@@ -637,7 +637,7 @@ h3 {
   box-shadow: 0 0 14px
     color-mix(in srgb, var(--rarity, var(--accent)) 13%, transparent);
 }
-.budget-head output {
+.genre-filters {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 7px;\n}\n.genre-chip {\n  min-width: 0;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 7px;\n  padding: 8px 9px;\n  background: var(--bg-raised);\n  font-size: 11px;\n  text-align: left;\n}\n.genre-chip span {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.genre-chip b {\n  flex: 0 0 auto;\n  color: var(--muted);\n  font-size: 10px;\n  font-weight: 500;\n  font-variant-numeric: tabular-nums;\n}\n.genre-chip.active {\n  border-color: var(--accent);\n  color: var(--accent);\n  background: #66c0f415;\n  box-shadow: 0 0 14px #66c0f420;\n}\n.genre-chip.active b {\n  color: var(--accent);\n}\n\n.budget-head output {
   font-size: 13px;
   font-variant-numeric: tabular-nums;
 }
