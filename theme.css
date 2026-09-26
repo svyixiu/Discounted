@@ -199,3 +199,9 @@ dialog::backdrop { background: rgba(18,17,15,.82); backdrop-filter: none; }
   .card-top { justify-content: space-between; }
   .product-card .card-action { gap: 8px; }
 }
+@media (max-width: 760px) {
+  .filter-panel { max-height: 88vh; max-height: 88dvh; padding-bottom: calc(24px + env(safe-area-inset-bottom)); overscroll-behavior: contain; }
+  .mobile-filters { bottom: calc(16px + env(safe-area-inset-bottom)); min-height: 44px; }
+  .toast { bottom: calc(70px + env(safe-area-inset-bottom)); }
+  .product-page, .catalog-section { overflow-x: clip; }
+}

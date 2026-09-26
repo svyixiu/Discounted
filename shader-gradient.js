@@ -3,6 +3,8 @@
 (() => {
   const canvas = document.querySelector('#heroGradient');
   if (!canvas) return;
+  // Small touch screens use the CSS pigment field to avoid a fragile GPU context.
+  if (matchMedia('(max-width: 760px) and (pointer: coarse)').matches) return;
   const gl = canvas.getContext('webgl', { alpha: false, antialias: false, powerPreference: 'low-power' });
   if (!gl) return; // The CSS background remains visible.
 
@@ -98,7 +100,8 @@
     observer.observe(canvas);
   } else update();
   document.addEventListener('visibilitychange', update);
-  reduced.addEventListener('change', update);
+  if (reduced.addEventListener) reduced.addEventListener('change', update);
+  else reduced.addListener(update); // Older mobile Safari.
   canvas.addEventListener('webglcontextlost', (event) => {
     event.preventDefault();
     cancelAnimationFrame(frame);
