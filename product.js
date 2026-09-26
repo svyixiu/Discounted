@@ -211,12 +211,36 @@ function relationScore(current, candidate) {
 }
 
 function recommendationsFor(item) {
-  return catalog
+  const ranked = catalog
     .map(candidate => ({ candidate, score: relationScore(item, candidate) }))
     .filter(entry => entry.score > 8)
-    .sort((a,b) => b.score - a.score || b.candidate.discount_percent - a.candidate.discount_percent || a.candidate.title.localeCompare(b.candidate.title))
-    .slice(0, 8)
-    .map(entry => entry.candidate);
+    .sort((a,b) => b.score - a.score || b.candidate.discount_percent - a.candidate.discount_percent || a.candidate.title.localeCompare(b.candidate.title));
+
+  const selected = [];
+  const selectedTitles = new Set();
+
+  const take = (type, limit) => {
+    for (const entry of ranked) {
+      if (selected.length >= 8 || limit <= 0) break;
+      if (entry.candidate.type !== type || selectedTitles.has(entry.candidate.title)) continue;
+      selected.push(entry.candidate);
+      selectedTitles.add(entry.candidate.title);
+      limit -= 1;
+    }
+  };
+
+  take('game', 4);
+  take('dlc', 2);
+  take('bundle', 2);
+
+  for (const entry of ranked) {
+    if (selected.length >= 8) break;
+    if (selectedTitles.has(entry.candidate.title)) continue;
+    selected.push(entry.candidate);
+    selectedTitles.add(entry.candidate.title);
+  }
+
+  return selected;
 }
 
 async function renderRecommendationImage(card, item) {
