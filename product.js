@@ -524,7 +524,7 @@ async function boot() {
     }
 
     const canonicalPath = productUrl(product);
-    if (location.pathname !== canonicalPath && routeMatch)
+    if (location.pathname !== canonicalPath || location.search)
       history.replaceState(null, "", canonicalPath);
 
     await renderProduct();
