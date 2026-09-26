@@ -355,7 +355,7 @@ function renderRecommendations() {
   els.recommendGrid.innerHTML = items
     .map(
       (item) => `
-    <a class="recommend-card" href="${escapeHtml(productUrl(item.title))}">
+    <a class="recommend-card" href="${escapeHtml(productUrl(item))}">
       <div class="recommend-media">
         <span class="thumb-fallback"><svg class="i"><use href="#i-image"/></svg></span>
         <img alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />

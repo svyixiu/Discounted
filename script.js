@@ -367,7 +367,7 @@ function fullCard(product) {
 
   return `
     <article class="product-card" data-rarity="${Vault.rarity(product.discount_percent)}" style="--rarity:var(--${Vault.rarity(product.discount_percent)},#b5e8ef)" data-title="${escapeHtml(product.title)}">
-      <a class="card-media" href="${escapeHtml(internalProductUrl(product.title))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
+      <a class="card-media" href="${escapeHtml(internalProductUrl(product))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
         <span class="thumb-fallback" aria-hidden="true"><svg class="i"><use href="#i-image"/></svg></span>
         <img class="product-thumb" width="460" height="215" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
       </a>
@@ -384,13 +384,14 @@ function fullCard(product) {
           <strong class="price-now">${moneyUSD(product.sale_price)}</strong>
           <span class="price-was">${moneyUSD(product.original_price)}</span>
         </div>
-        <div class="saving-line">Save ${moneyUSD(saved)}</div>${product.ends_at ? `<span class="countdown" data-ends="${escapeHtml(product.ends_at)}"></span>` : ""}
+        <div class="saving-line">Save ${moneyUSD(saved)}</div>
+        <span class="countdown"${product.ends_at ? ` data-ends="${escapeHtml(product.ends_at)}"` : ' aria-hidden="true"'}></span>
       </div>
 
       <div class="card-action">
-        <a href="${escapeHtml(internalProductUrl(product.title))}"><svg class="i i-sm"><use href="#i-eye"/></svg>View deal</a>
+        <a href="${escapeHtml(internalProductUrl(product))}"><svg class="i i-sm"><use href="#i-eye"/></svg>View deal</a>
         <a href="${escapeHtml(steamSearchUrl(product.title))}" target="_blank" rel="noopener noreferrer"><svg class="i i-sm"><use href="#i-external"/></svg>Steam</a>
-        <button class="copy-link" data-copy="${escapeHtml(internalProductUrl(product.title))}" aria-label="Copy link to ${escapeHtml(product.title)}">Copy</button>
+        <button class="copy-link" data-copy="${escapeHtml(internalProductUrl(product))}" aria-label="Copy link to ${escapeHtml(product.title)}">Copy</button>
       </div>
     </article>
   `;
@@ -399,7 +400,7 @@ function fullCard(product) {
 function compactCard(product) {
   return `
     <article class="product-card compact-card" style="--rarity:var(--${Vault.rarity(product.discount_percent)},#b5e8ef)" data-title="${escapeHtml(product.title)}">
-      <a class="card-media" href="${escapeHtml(internalProductUrl(product.title))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
+      <a class="card-media" href="${escapeHtml(internalProductUrl(product))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
         <span class="thumb-fallback" aria-hidden="true"><svg class="i"><use href="#i-image"/></svg></span>
         <img class="product-thumb" width="460" height="215" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
       </a>
@@ -413,7 +414,7 @@ function compactCard(product) {
         <strong>${moneyUSD(product.sale_price)}</strong>
       </div>
       <div class="compact-actions">
-        <a href="${escapeHtml(internalProductUrl(product.title))}"><svg class="i i-sm"><use href="#i-eye"/></svg>VIEW</a>
+        <a href="${escapeHtml(internalProductUrl(product))}"><svg class="i i-sm"><use href="#i-eye"/></svg>VIEW</a>
         <a href="${escapeHtml(steamSearchUrl(product.title))}" target="_blank" rel="noopener noreferrer"><svg class="i i-sm"><use href="#i-external"/></svg>Steam</a>
       </div>
     </article>
@@ -755,7 +756,7 @@ async function setHeroSnapshot() {
   els.previewPrice.textContent = moneyUSD(featured.sale_price);
   els.previewWas.textContent = moneyUSD(featured.original_price);
 
-  const featuredUrl = internalProductUrl(featured.title);
+  const featuredUrl = internalProductUrl(featured);
   if (els.featuredLink) els.featuredLink.href = featuredUrl;
   if (els.previewMedia) els.previewMedia.href = featuredUrl;
 
@@ -1165,7 +1166,7 @@ async function buildDiscoveries() {
   const daily = document.querySelector("#dailyGem");
   daily.classList.remove("skeleton");
   Vault.paint(daily, gem.discount_percent);
-  daily.innerHTML = `<img width="460" height="215" alt="" hidden><div><p class="eyebrow">◇ GEM OF THE DAY</p><h2>${escapeHtml(gem.title)}</h2><p>${moneyUSD(gem.sale_price)} <s>${moneyUSD(gem.original_price)}</s></p>${gem.ends_at ? `<span class="countdown" data-ends="${escapeHtml(gem.ends_at)}"></span>` : ""}</div><strong class="daily-cut">−${gem.discount_percent}%</strong><a class="primary-action" href="${escapeHtml(internalProductUrl(gem.title))}">View gem ↗</a>`;
+  daily.innerHTML = `<img width="460" height="215" alt="" hidden><div><p class="eyebrow">◇ GEM OF THE DAY</p><h2>${escapeHtml(gem.title)}</h2><p>${moneyUSD(gem.sale_price)} <s>${moneyUSD(gem.original_price)}</s></p>${gem.ends_at ? `<span class="countdown" data-ends="${escapeHtml(gem.ends_at)}"></span>` : ""}</div><strong class="daily-cut">−${gem.discount_percent}%</strong><a class="primary-action" href="${escapeHtml(internalProductUrl(gem))}">View gem ↗</a>`;
   thumbnailData(gem).then((d) => {
     if (d) {
       const img = daily.querySelector("img");
@@ -1238,7 +1239,7 @@ async function buildDiscoveries() {
     els.previewPrice.textContent = moneyUSD(p.sale_price);
     els.previewWas.textContent = moneyUSD(p.original_price);
     els.previewDiscount.textContent = "−" + p.discount_percent + "%";
-    els.featuredLink.href = els.previewMedia.href = internalProductUrl(p.title);
+    els.featuredLink.href = els.previewMedia.href = internalProductUrl(p);
     const d = await thumbnailData(p);
     if (d)
       setImage(
