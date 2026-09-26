@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#171a21" />
+    <meta name="theme-color" content="#242320" />
     <meta name="color-scheme" content="dark" />
     <title>Discounted — Steam deals without the digging</title>
     <meta
@@ -12,6 +12,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/assets/discounted.svg" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/theme.css" />
     <script>
       if ("scrollRestoration" in history) history.scrollRestoration = "manual";
     </script>
@@ -22,7 +23,7 @@
     />
     <meta
       property="og:description"
-      content="A vault of discounted Steam games, DLC and bundles. Pick your rarity. Find your next obsession."
+      content="Browse researched Steam discounts on games, DLC and bundles."
     />
     <meta
       property="og:image"
@@ -165,15 +166,14 @@
         <div class="wrap">
           <div class="hero-layout">
             <div class="hero-copy reveal">
-              <p class="release" id="heroCount">THE GEM VAULT</p>
-              <h1>Dig less.<br /><span>Play more.</span></h1>
+              <p class="release" id="heroCount">DISCOUNTED</p>
+              <h1>Find a good deal.<br /><span>Get back to playing.</span></h1>
               <p class="lead">
-                Steam deals without the digging.<br />Good games. Deep
-                discounts. All unearthed.
+                Browse researched Steam discounts on games, DLC and bundles.
               </p>
 
               <div class="hero-actions">
-                <a class="primary-action" href="#browse">Open the vault</a>
+                <a class="primary-action" href="#browse">Browse deals</a>
                 <a
                   class="secondary-action"
                   href="/how-it-works.html"
@@ -247,7 +247,7 @@
                 </div>
               </article>
               <div class="total-gems">
-                <span>GEMS UNEARTHED</span
+                <span>DEALS TRACKED</span
                 ><strong id="totalGems">Digging…</strong>
               </div>
             </div>
@@ -264,19 +264,19 @@
         <section class="legendary-section">
           <div class="section-title">
             <div>
-              <p class="eyebrow">THE RAREST FINDS</p>
-              <h2>Legendary shelf<span>90% off. Or better.</span></h2>
+              <p class="eyebrow">FEATURED DISCOUNTS</p>
+              <h2>Deep discounts<span>90% off or more.</span></h2>
             </div>
             <div>
-              <button data-shelf-prev aria-label="Previous gems">←</button
-              ><button data-shelf-next aria-label="Next gems">→</button>
+              <button data-shelf-prev aria-label="Previous deals">←</button
+              ><button data-shelf-next aria-label="Next deals">→</button>
             </div>
           </div>
           <div
             id="legendaryShelf"
             class="shelf"
             tabindex="0"
-            aria-label="Legendary deals"
+            aria-label="Deep discounts"
           ></div>
         </section>
       </div>
@@ -284,9 +284,9 @@
         <div class="wrap">
           <header class="catalog-heading reveal">
             <div>
-              <p class="eyebrow">THE COLLECTION</p>
-              <h2>The vault is open.</h2>
-              <p>Pick your rarity. Find your next obsession.</p>
+              <p class="eyebrow">BROWSE</p>
+              <h2>All deals</h2>
+              <p>Search and filter the current catalog.</p>
             </div>
           </header>
 
@@ -358,13 +358,13 @@
                     Any
                   </button>
                   <button class="quick-chip" type="button" data-filter="50plus">
-                    Rare <small>50%+</small>
+                    50%+
                   </button>
                   <button class="quick-chip" type="button" data-filter="70plus">
-                    Epic <small>70%+</small>
+                    70%+
                   </button>
                   <button class="quick-chip" type="button" data-filter="90plus">
-                    Legendary <small>90%+</small>
+                    90%+
                   </button>
                 </div>
               </section>
@@ -461,7 +461,7 @@
               <div class="results-head reveal">
                 <div>
                   <span class="eyebrow">Results</span>
-                  <h3 id="resultCount">Digging up deals…</h3>
+                  <h3 id="resultCount">Loading deals…</h3>
                 </div>
 
                 <div class="results-actions">
@@ -515,8 +515,8 @@
                     d="m55 67 20-48m-8-3 16 7-7 13-14-6zM46 61l17 7-10 12-15-6z"
                   />
                 </svg>
-                <strong>Nothing buried here.</strong>
-                <p>Loosen a filter? Your next gem could be close.</p>
+                <strong>No matching deals.</strong>
+                <p>Try another search or reset your filters.</p>
                 <button id="emptyReset" class="secondary-button" type="button">
                   Reset filters
                 </button>
@@ -529,7 +529,7 @@
                   height="64"
                   alt=""
                 />
-                <strong>The vault jammed.</strong>
+                <strong>Deals are unavailable.</strong>
                 <p>Try again.</p>
                 <button onclick="location.reload()">Retry</button>
               </section>

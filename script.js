@@ -374,7 +374,7 @@ function fullCard(product) {
 
       <div class="card-top">
         <span class="type-badge"><svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>${escapeHtml(typeLabel(product.type))}</span>
-        <span class="discount-badge" title="${Vault.rarity(product.discount_percent)} · Was ${moneyUSD(product.original_price)}">-${product.discount_percent}%</span>
+        <span class="discount-badge" title="Was ${moneyUSD(product.original_price)}">-${product.discount_percent}%</span>
       </div>
 
       <div class="card-body">
@@ -668,8 +668,8 @@ function render(options = {}) {
   const rangeEnd = Math.min(start + pageSize, ordered.length);
 
   els.resultCount.textContent = ordered.length
-    ? `${ordered.length.toLocaleString()} gems found · ${rangeStart}–${rangeEnd}`
-    : `0 gems found`;
+    ? `${ordered.length.toLocaleString()} deals found · ${rangeStart}–${rangeEnd}`
+    : `0 deals found`;
 
   els.empty.hidden = ordered.length !== 0;
   renderPagination(ordered.length, pageSize);
@@ -1166,7 +1166,7 @@ async function buildDiscoveries() {
   const daily = document.querySelector("#dailyGem");
   daily.classList.remove("skeleton");
   Vault.paint(daily, gem.discount_percent);
-  daily.innerHTML = `<img width="460" height="215" alt="" hidden><div><p class="eyebrow">◇ GEM OF THE DAY</p><h2>${escapeHtml(gem.title)}</h2><p>${moneyUSD(gem.sale_price)} <s>${moneyUSD(gem.original_price)}</s></p>${gem.ends_at ? `<span class="countdown" data-ends="${escapeHtml(gem.ends_at)}"></span>` : ""}</div><strong class="daily-cut">−${gem.discount_percent}%</strong><a class="primary-action" href="${escapeHtml(internalProductUrl(gem))}">View gem ↗</a>`;
+  daily.innerHTML = `<img width="460" height="215" alt="" hidden><div><p class="eyebrow">TODAY’S PICK</p><h2>${escapeHtml(gem.title)}</h2><p>${moneyUSD(gem.sale_price)} <s>${moneyUSD(gem.original_price)}</s></p>${gem.ends_at ? `<span class="countdown" data-ends="${escapeHtml(gem.ends_at)}"></span>` : ""}</div><strong class="daily-cut">−${gem.discount_percent}%</strong><a class="primary-action" href="${escapeHtml(internalProductUrl(gem))}">View deal ↗</a>`;
   thumbnailData(gem).then((d) => {
     if (d) {
       const img = daily.querySelector("img");
@@ -1234,7 +1234,7 @@ async function buildDiscoveries() {
     Vault.paint(document.querySelector(".featured-card"), p.discount_percent);
     els.previewTitle.textContent = p.title;
     els.previewType.textContent =
-      typeLabel(p.type) + " · " + Vault.rarity(p.discount_percent);
+      typeLabel(p.type);
     els.previewGroup.textContent = p.sale_group || "Steam promotion";
     els.previewPrice.textContent = moneyUSD(p.sale_price);
     els.previewWas.textContent = moneyUSD(p.original_price);

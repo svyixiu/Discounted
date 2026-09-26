@@ -1,4 +1,4 @@
-/* Shared Gem Vault interaction layer. No dependencies or build step. */
+/* Shared storefront behavior. No dependencies or build step. */
 window.Vault = (() => {
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const rarity = (n) =>
@@ -11,17 +11,10 @@ window.Vault = (() => {
           : n >= 50
             ? "rare"
             : "common";
-  const colors = {
-    common: "#9fb3c8",
-    rare: "#66c0f4",
-    epic: "#b48cff",
-    legendary: "#ffcf6b",
-    mythic: "#b5e8ef",
-  };
   function paint(el, n) {
     const r = rarity(n);
     el.dataset.rarity = r;
-    el.style.setProperty("--rarity", colors[r]);
+    el.style.setProperty("--rarity", "var(--accent)");
   }
   let toastTimer;
   function toast(message) {
@@ -106,54 +99,6 @@ window.Vault = (() => {
         else visible.add(el);
       });
   }
-  let pointerFrame = 0,
-    previous = null;
-
-  function releaseInteractiveCard(card) {
-    if (!card) return;
-    card.style.transition =
-      "transform 520ms cubic-bezier(0.22, 1, 0.36, 1)";
-    card.style.transform = "";
-    window.setTimeout(() => {
-      if (!card.matches(":hover")) card.style.removeProperty("transition");
-    }, 540);
-  }
-
-  document.addEventListener("pointermove", (event) => {
-    if (reduced.matches || event.pointerType === "touch" || pointerFrame)
-      return;
-    pointerFrame = requestAnimationFrame(() => {
-      pointerFrame = 0;
-      document.documentElement.style.setProperty(
-        "--mx",
-        (event.clientX / innerWidth) * 100 + "%",
-      );
-      document.documentElement.style.setProperty(
-        "--my",
-        (event.clientY / innerHeight) * 100 + "%",
-      );
-      document.documentElement.style.setProperty(
-        "--floor",
-        (event.clientX / innerWidth - 0.5) * 6 + "deg",
-      );
-      const card = event.target.closest(
-        ".product-card:not(.compact-card),.featured-card,.product-hero-media",
-      );
-      if (previous && previous !== card) releaseInteractiveCard(previous);
-      if (card && visible.has(card)) {
-        const r = card.getBoundingClientRect();
-        card.style.transition = "transform 86ms ease-out";
-        card.style.transform = `perspective(900px) rotateX(${(-(event.clientY - r.top - r.height / 2) / r.height) * 12}deg) rotateY(${((event.clientX - r.left - r.width / 2) / r.width) * 12}deg) translateY(-4px)`;
-        previous = card;
-      }
-    });
-  });
-  document.addEventListener("pointerout", (event) => {
-    if (previous && !previous.contains(event.relatedTarget)) {
-      releaseInteractiveCard(previous);
-      previous = null;
-    }
-  });
   function shelf(el) {
     if (!el || el.dataset.ready) return;
     el.dataset.ready = "1";
@@ -208,19 +153,6 @@ window.Vault = (() => {
       true,
     );
   }
-  let treasure = false;
-  try {
-    treasure = sessionStorage.getItem("vault:treasure") === "1";
-  } catch {}
-  document.body.classList.toggle("treasure", treasure);
-  function unlock() {
-    treasure = true;
-    document.body.classList.add("treasure");
-    try {
-      sessionStorage.setItem("vault:treasure", "1");
-    } catch {}
-    toast("You found the hidden gem.");
-  }
   async function random() {
     try {
       const response = await fetch("/games.json");
@@ -234,26 +166,13 @@ window.Vault = (() => {
           valid[Math.floor(Math.random() * valid.length)].title,
         );
     } catch {
-      toast("The vault jammed. Try again.");
+      toast("Deals are unavailable. Try again.");
     }
   }
-  const konami = [
-    "ArrowUp",
-    "ArrowUp",
-    "ArrowDown",
-    "ArrowDown",
-    "ArrowLeft",
-    "ArrowRight",
-    "ArrowLeft",
-    "ArrowRight",
-    "b",
-    "a",
-  ];
-  let ki = 0,
-    lastG = 0;
+  let lastG = 0;
   const panel = document.createElement("dialog");
   panel.innerHTML =
-    "<h2>A few shortcuts.</h2><p><kbd>/</kbd> Search the vault</p><p><kbd>G → H</kbd> Back home</p><p><kbd>R</kbd> Dig a random gem</p><p><kbd>← →</kbd> Browse a focused shelf</p><p><kbd>Esc</kbd> Close filters or this panel</p><button>Got it</button>";
+    "<h2>A few shortcuts.</h2><p><kbd>/</kbd> Search deals</p><p><kbd>G → H</kbd> Back home</p><p><kbd>R</kbd> Open a random deal</p><p><kbd>← →</kbd> Browse a focused shelf</p><p><kbd>Esc</kbd> Close filters or this panel</p><button>Got it</button>";
   document.body.append(panel);
   panel.querySelector("button").onclick = () => panel.close();
   document.addEventListener("keydown", (e) => {
@@ -262,11 +181,6 @@ window.Vault = (() => {
       e.target.isContentEditable
     )
       return;
-    ki = e.key === konami[ki] ? ki + 1 : 0;
-    if (ki === konami.length) {
-      unlock();
-      ki = 0;
-    }
     if (e.key === "?") {
       panel.showModal();
     }
@@ -275,21 +189,6 @@ window.Vault = (() => {
       location.href = "./";
     if (e.key.toLowerCase() === "g") lastG = Date.now();
   });
-  let glints = 0;
-  document.querySelectorAll(".brand-logo").forEach((el) =>
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      const bounds = el.getBoundingClientRect();
-      if (e.clientX < bounds.left + bounds.width * 0.65) {
-        location.href = el.closest("a").href;
-        return;
-      }
-      if (++glints === 5) {
-        unlock();
-        glints = 0;
-      }
-    }),
-  );
   const filter = document.querySelector("#filterPanel"),
     trigger = document.querySelector(".mobile-filters");
   let oldFocus;
@@ -388,52 +287,7 @@ window.Vault = (() => {
       sessionStorage.setItem("vault:entered", "1");
     }
   } catch {}
-  const canvas = document.createElement("canvas");
-  canvas.className = "dust";
-  canvas.setAttribute("aria-hidden", "true");
-  document.body.prepend(canvas);
-  const ctx = canvas.getContext("2d");
-  let frame = 0;
-  const points = Array.from({ length: 30 }, () => ({
-    x: Math.random(),
-    y: Math.random(),
-    r: Math.random() * 1.2 + 0.3,
-  }));
-  function size() {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
-  }
-  size();
-  addEventListener("resize", size);
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = treasure ? "#ffcf6b66" : "#a4c7e040";
-    for (const p of points) {
-      p.y -= 0.00012;
-      if (p.y < 0) p.y = 1;
-      ctx.beginPath();
-      ctx.arc(p.x * canvas.width, p.y * canvas.height, p.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    frame = requestAnimationFrame(draw);
-  }
-  function ambient() {
-    cancelAnimationFrame(frame);
-    document.body.classList.toggle("paused", document.hidden);
-    if (!document.hidden && !reduced.matches) draw();
-  }
-  document.addEventListener("visibilitychange", ambient);
-  reduced.addEventListener("change", ambient);
-  ambient();
   observe();
-  const world = document.createElement("div");
-  world.className = "world-grid";
-  world.setAttribute("aria-hidden", "true");
-  document.body.prepend(world);
-  const grain = document.createElement("div");
-  grain.className = "grain";
-  grain.setAttribute("aria-hidden", "true");
-  document.body.append(grain);
   function countUp(el, n) {
     if (!el) return;
     if (reduced.matches) {

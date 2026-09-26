@@ -392,10 +392,7 @@ async function renderProduct() {
   Vault.paint(els.view, product.discount_percent);
   Vault.paint(els.media, product.discount_percent);
   els.discount.textContent =
-    Vault.rarity(product.discount_percent) +
-    " · −" +
-    product.discount_percent +
-    "%";
+    "−" + product.discount_percent + "%";
   document.querySelector("#productTrust").textContent = product.verified_by
     ? "✓ Verified by " + product.verified_by
     : "Verification source not supplied";

@@ -1,0 +1,144 @@
+/* Discounted: flat charcoal and cream storefront. */
+:root {
+  --void: #242320;
+  --bg: #292824;
+  --bg-raised: #33312c;
+  --surface: #37352f;
+  --surface-2: #413e37;
+  --text: #f1eadf;
+  --text-soft: #d2c9bb;
+  --muted: #b3aa9c;
+  --accent: #d18a6b;
+  --common: #d18a6b;
+  --rare: #d18a6b;
+  --epic: #d18a6b;
+  --legendary: #d18a6b;
+  --mythic: #d18a6b;
+  --line: #514d45;
+  --line-strong: #625c51;
+  --edge: #625c51;
+  --e1: none;
+  --e2: none;
+  --e3: none;
+  --e4: none;
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; }
+body, .catalog-section { background: var(--bg); color: var(--text); }
+body::before, .hero::before, .world-grid, .grain, .dust,
+.featured-card::before, .featured-card::after, .product-card::after,
+.store-button::after { display: none !important; }
+* { text-shadow: none !important; }
+button, a, input, select { transition-duration: 160ms; }
+button:hover, a.primary-action:hover { filter: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; box-shadow: none; }
+h1, h2, h3, .brand { letter-spacing: -.035em; }
+.brand-logo, .brand:hover .brand-logo { filter: none !important; }
+.masthead, .page-brandline {
+  background: var(--void);
+  border-color: var(--line);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.masthead.scrolled { background: var(--void); }
+.masthead::after { display: none; }
+.masthead select, select, input, .input-shell { background: var(--surface); color: var(--text); border-color: var(--line-strong); }
+.input-shell:focus-within { box-shadow: none; border-color: var(--accent); }
+.hero { background: var(--void); border-bottom: 1px solid var(--line); }
+.hero h1 span, .release, .eyebrow, .panel-kicker { color: var(--accent); }
+.hero h1 { font-size: clamp(42px, 5vw, 72px); }
+.release::before { display: none; }
+.primary-action, .store-button, .mobile-filters {
+  background: var(--accent); border-color: var(--accent); color: #24201c;
+  box-shadow: none;
+}
+.primary-action:hover, .store-button:hover, .mobile-filters:hover { background: #dda084; }
+.secondary-action, .secondary-button, button, .quick-chip, .genre-chip {
+  background: var(--surface); border-color: var(--line-strong); color: var(--text);
+  box-shadow: none;
+}
+.showcase, .showcase .featured-card { perspective: none; transform: none !important; }
+.featured-card, .daily-gem, .product-card, .recommend-card,
+.filter-panel, .product-buybox, .price-notice-card, .price-notice-dialog > div {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transform-style: flat;
+}
+.featured-card:hover, .product-card:hover, .recommend-card:hover { border-color: var(--line-strong); box-shadow: none; }
+.featured-media, .card-media, .recommend-media, .product-hero-media { background: var(--surface); }
+.featured-card .featured-body, .featured-card .preview-meta b,
+.product-card .card-body, .product-card .discount-badge { transform: none !important; }
+.featured-body, .card-body { background: transparent; }
+.preview-meta b, .daily-cut, .price-now, .detail-prices strong { color: var(--text); }
+.daily-gem { background: var(--surface); }
+.daily-gem::before, .daily-gem::after { display: none; }
+.daily-gem .daily-cut { color: var(--accent); }
+.legendary-section .section-title h2 span { color: var(--muted); }
+.shelf { border-bottom-color: var(--line); }
+.shelf-track > .product-card { transform: none !important; }
+.product-card, .featured-card { border-top-color: var(--line) !important; }
+.product-card[data-rarity], .featured-card[data-rarity], .daily-gem[data-rarity],
+.product-hero[data-rarity], .product-hero-media[data-rarity] {
+  --rarity: var(--accent) !important;
+  animation: none !important;
+}
+.discount-badge, .compact-discount, .detail-discount {
+  color: var(--accent);
+  background: #43372f;
+  border: 1px solid #785444;
+  box-shadow: none;
+  transform: none !important;
+}
+.discount-badge:hover { transform: none !important; }
+.type-badge, .product-kicker, .countdown { color: var(--muted); }
+.saving-line { color: var(--text-soft); }
+.card-action, .featured-bottom { border-color: var(--line); }
+.card-action a:first-child, .featured-link { color: var(--accent); }
+.genre-chip.active, .genre-chip[aria-pressed="true"],
+.quick-chip.active, .quick-chip[aria-pressed="true"], .type-tab.active {
+  background: #493a31;
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: none;
+  font-weight: 700;
+}
+.genre-chip.active b, .genre-chip[aria-pressed="true"] b { color: var(--text); }
+.type-tabs::before { display: none; }
+.range-fill, #histogram i { background: var(--accent); box-shadow: none; }
+#histogram i { opacity: .45; }
+.filter-panel, .price-notice-card, .product-buybox { border-radius: 12px; }
+.filter-panel.open { background: var(--bg-raised); }
+.results-head, .catalog-heading { color: var(--text); }
+.active-filters button, .pagination button { box-shadow: none; }
+.pagination .active { background: var(--accent); color: var(--void); }
+.price-notice-backdrop { background: rgba(18,17,15,.82); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.price-notice-card p:not(.eyebrow), .empty-state p { color: var(--text-soft); }
+.site-footer { background: var(--void); border-color: var(--line); color: var(--muted); }
+.toast { background: var(--surface); border-color: var(--line); box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+.product-backdrop { display: none; }
+.product-hero-media, .product-buybox, .recommend-card { box-shadow: none !important; }
+.price-breakdown { background: var(--surface-2); }
+.price-breakdown i { background: var(--accent); }
+.not-found .error-number { color: var(--accent); }
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .shelf-track { animation: none; }
+}
+/* Quiet typography and feedback across all routes. */
+.hero h1, .catalog-heading h2, .section-title h2, .story > h1,
+.not-found h1, .product-hero-info h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 600; letter-spacing: -.045em; }
+.product-title, .featured-body h2, .daily-gem h2 { font-family: Inter, system-ui, sans-serif; letter-spacing: -.025em; }
+.hero h1 span { color: var(--text); }
+.hero h1 { line-height: 1.05; }
+.skeleton { background: var(--surface); animation: none; }
+.skeleton::after { content: 'Loading deals…'; }
+mark { background: #664738; color: var(--text); }
+dialog::backdrop { background: rgba(18,17,15,.82); backdrop-filter: none; }
+.range-wrap input::-webkit-slider-thumb, .range-wrap input::-moz-range-thumb { background: var(--accent); border-color: var(--void); }
+.card-media img, .featured-media img, .product-hero-media img { filter: none; }
+.product-hero-media { border-color: var(--line) !important; }
+.trust, .product-sub { color: var(--text-soft); }
