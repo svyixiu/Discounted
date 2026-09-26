@@ -111,39 +111,46 @@ export default async function handler(req, res) {
   }
 
   const start = Math.max(0, Number(req.query.start) || 0);
-  const count = Math.min(100, Math.max(1, Number(req.query.count) || 50));
+  const count = 50;
+  const pages = Math.min(20, Math.max(1, Number(req.query.pages) || 1));
 
   try {
-    const url = new URL("https://store.steampowered.com/search/results/");
-    url.searchParams.set("query", "");
-    url.searchParams.set("start", String(start));
-    url.searchParams.set("count", String(count));
-    url.searchParams.set("dynamic_data", "");
-    url.searchParams.set("sort_by", "_ASC");
-    url.searchParams.set("specials", "1");
-    url.searchParams.set("category1", "998");
-    url.searchParams.set("infinite", "1");
-    url.searchParams.set("cc", "US");
-    url.searchParams.set("l", "english");
+    const fetchPage = async (pageStart) => {
+      const url = new URL("https://store.steampowered.com/search/results/");
+      url.searchParams.set("query", "");
+      url.searchParams.set("start", String(pageStart));
+      url.searchParams.set("count", String(count));
+      url.searchParams.set("dynamic_data", "");
+      url.searchParams.set("sort_by", "_ASC");
+      url.searchParams.set("specials", "1");
+      url.searchParams.set("category1", "998");
+      url.searchParams.set("infinite", "1");
+      url.searchParams.set("cc", "US");
+      url.searchParams.set("l", "english");
 
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (compatible; Discounted/1.0; +https://github.com/svyixiu/Discounted)",
-        "Accept-Language": "en-US,en;q=0.9",
-        Accept: "application/json,text/plain,*/*",
-      },
-    });
-
-    if (!response.ok) {
-      return res.status(502).json({
-        error: "Steam specials search failed",
-        status: response.status,
+      const response = await fetch(url, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; Discounted/1.0; +https://github.com/svyixiu/Discounted)",
+          "Accept-Language": "en-US,en;q=0.9",
+          Accept: "application/json,text/plain,*/*",
+        },
       });
-    }
 
-    const payload = await response.json();
-    const items = parseRows(payload.results_html || "");
+      if (!response.ok) {
+        throw new Error(`Steam specials search failed: ${response.status}`);
+      }
+
+      return response.json();
+    };
+
+    const payloads = await Promise.all(
+      Array.from({ length: pages }, (_, i) => fetchPage(start + i * count)),
+    );
+    const items = payloads.flatMap((payload) =>
+      parseRows(payload.results_html || ""),
+    );
+    const totalCount = Number(payloads[0]?.total_count) || null;
 
     res.setHeader(
       "Cache-Control",
@@ -153,7 +160,8 @@ export default async function handler(req, res) {
     return res.status(200).json({
       start,
       count,
-      total_count: Number(payload.total_count) || null,
+      pages,
+      total_count: totalCount,
       returned: items.length,
       items,
     });
