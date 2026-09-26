@@ -2156,7 +2156,7 @@ body > * {
 .legendary-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
+  overflow: visible;
 }
 .legendary-section .section-title {
   width: min(1400px, calc(100% - 80px));
@@ -2168,7 +2168,7 @@ body > * {
 }
 .shelf {
   display: block;
-  overflow: hidden;
+  overflow: visible;
   scroll-snap-type: none;
   padding: 0;
   border-bottom-color: rgba(102, 192, 244, .24);
@@ -2183,7 +2183,7 @@ body > * {
   display: flex;
   width: max-content;
   gap: var(--shelf-gap);
-  padding: 24px max(24px, calc((100vw - 1400px) / 2)) 42px;
+  padding: 24px 0 42px;
   will-change: transform;
   animation: discounted-legendary-train 48s linear infinite;
 }
