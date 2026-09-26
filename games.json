@@ -5,12 +5,12 @@
     "scope": "Current discounted Steam games plus curated discounted DLC, passes, bundles and packages. Live game rows are discovered from Steam's US specials index; curated rows preserve known promotion end dates and provenance.",
     "method": "Live Steam specials discovery for the Games category, merged title-first with the existing curated catalog. Steam app IDs and broad Steam genres are retained when available.",
     "important": "Live Steam prices and discounts can change at any time. Rows without ends_at were discovered as currently discounted but do not have a verified promotion end date.",
-    "count": 6447,
+    "count": 6569,
     "link_policy": "Steam app links use steam_appid when available; title search remains the fallback.",
     "discovery_total": 6300,
     "discovery_source_total": 6346,
     "research_merge_date": "2026-09-26",
-    "research_merge_added": 108
+    "research_merge_added": 230
   },
   "games": [
     {
@@ -87519,6 +87519,1741 @@
       "sale_group": "Mundo Gamer Showcase 2026-3",
       "store_url": "https://store.steampowered.com/app/3190820/Effulgence_RPG/",
       "steam_appid": 3190820
+    },
+    {
+      "title": "BEYBLADE X XONE Digital Beybooster Vol.1",
+      "type": "dlc",
+      "steam_appid": 3287540,
+      "original_price": 3.99,
+      "sale_price": 2.79,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3287540/"
+    },
+    {
+      "title": "\"BEYBLADE X XONE\" DRAN DIGITAL COLOR CHOICE BOOSTER",
+      "type": "dlc",
+      "steam_appid": 3534860,
+      "original_price": 3.99,
+      "sale_price": 2.79,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3534860/"
+    },
+    {
+      "title": "\"BEYBLADE X XONE\" X-OVER BOOSTER",
+      "type": "dlc",
+      "steam_appid": 3287570,
+      "original_price": 7.99,
+      "sale_price": 5.59,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3287570/"
+    },
+    {
+      "title": "BEYBLADE X XONE Digital Beybooster Vol.3",
+      "type": "dlc",
+      "steam_appid": 3287560,
+      "original_price": 3.99,
+      "sale_price": 2.79,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3287560/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE BEY COATING PATTERN & COLOR ADD-ON KIT",
+      "type": "dlc",
+      "steam_appid": 4128510,
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128510/"
+    },
+    {
+      "title": "BEYBLADE X XONE Digital Beybooster Vol.2",
+      "type": "dlc",
+      "steam_appid": 3287550,
+      "original_price": 3.99,
+      "sale_price": 2.79,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3287550/"
+    },
+    {
+      "title": "バトルスピリッツ クロスオーバー　『 DIVA ALL STARS 』レアカードセット",
+      "type": "dlc",
+      "steam_appid": 3131050,
+      "original_price": 8.99,
+      "sale_price": 7.19,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/3131050/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE PART DROP +1 EXPANSION KIT",
+      "type": "dlc",
+      "steam_appid": 4128520,
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128520/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE BEY COATING PACK",
+      "type": "dlc",
+      "steam_appid": 4128530,
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128530/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE EXP & PRIZE MONEY BOOST KIT",
+      "type": "dlc",
+      "steam_appid": 4128540,
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128540/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE BEY COATING SHOP ADD-ON KIT",
+      "type": "dlc",
+      "steam_appid": 4128550,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128550/"
+    },
+    {
+      "title": "EXSTETRA - Runes Set",
+      "type": "dlc",
+      "steam_appid": 4358110,
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4358110/"
+    },
+    {
+      "title": "EXSTETRA - Item Set",
+      "type": "dlc",
+      "steam_appid": 4559740,
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4559740/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE SUPER BLADER PACK",
+      "type": "dlc",
+      "steam_appid": 4793640,
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4793640/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE BEY COATING PATTERN ADD-ON KIT",
+      "type": "dlc",
+      "steam_appid": 4382740,
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4382740/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE X-OVER BOOSTER",
+      "type": "dlc",
+      "steam_appid": 4544040,
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4544040/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER VOL.6",
+      "type": "dlc",
+      "steam_appid": 4793620,
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4793620/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER VOL.7",
+      "type": "dlc",
+      "steam_appid": 4793630,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4793630/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER VOL.2",
+      "type": "dlc",
+      "steam_appid": 4138090,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4138090/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER VOL.3",
+      "type": "dlc",
+      "steam_appid": 4138100,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4138100/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER VOL.1",
+      "type": "dlc",
+      "steam_appid": 4128560,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4128560/"
+    },
+    {
+      "title": "LogiKing LEVEL2",
+      "type": "dlc",
+      "steam_appid": 2262260,
+      "original_price": 9.99,
+      "sale_price": 6.99,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/2262260/"
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE DIGITAL BEYBOOSTER METAL COAT",
+      "type": "dlc",
+      "steam_appid": 4138120,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "source_url": "https://store.steampowered.com/app/4138120/"
+    },
+    {
+      "title": "Anno 1800™ - Season 4 Pass",
+      "type": "dlc",
+      "steam_appid": 1933240,
+      "original_price": 24.99,
+      "sale_price": 12.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1933240/"
+    },
+    {
+      "title": "Anno 1800™ - Season 3 Pass",
+      "type": "dlc",
+      "steam_appid": 1530880,
+      "original_price": 19.99,
+      "sale_price": 9.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1530880/"
+    },
+    {
+      "title": "Anno 1800™ - Season 2 Pass",
+      "type": "dlc",
+      "steam_appid": 1247710,
+      "original_price": 24.99,
+      "sale_price": 12.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1247710/"
+    },
+    {
+      "title": "Anno 1800™ - Season 1 Pass",
+      "type": "dlc",
+      "steam_appid": 1066850,
+      "original_price": 24.99,
+      "sale_price": 12.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1066850/"
+    },
+    {
+      "title": "Anno 1800 - End of an Era Pack",
+      "type": "dlc",
+      "steam_appid": 3256930,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/3256930/"
+    },
+    {
+      "title": "Anno 1800 - Pirate Cove Pack",
+      "type": "dlc",
+      "steam_appid": 3113620,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/3113620/"
+    },
+    {
+      "title": "Anno 1800 - Steampunk Pack",
+      "type": "dlc",
+      "steam_appid": 2830580,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2830580/"
+    },
+    {
+      "title": "Anno 1800 - Eldritch Pack",
+      "type": "dlc",
+      "steam_appid": 2622040,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2622040/"
+    },
+    {
+      "title": "Anno 1800™ National Park Pack",
+      "type": "dlc",
+      "steam_appid": 2504950,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2504950/"
+    },
+    {
+      "title": "Anno 1800™ Fiesta Pack",
+      "type": "dlc",
+      "steam_appid": 2400950,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2400950/"
+    },
+    {
+      "title": "Anno 1800 Cosmetic Pack Bundle #1",
+      "type": "dlc",
+      "steam_appid": 1933242,
+      "original_price": 24.99,
+      "sale_price": 19.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1933242/"
+    },
+    {
+      "title": "Anno 1800 Cosmetic Pack Bundle #2",
+      "type": "dlc",
+      "steam_appid": 2622020,
+      "original_price": 39.99,
+      "sale_price": 31.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2622020/"
+    },
+    {
+      "title": "Anno 1800™ Dragon Garden Pack",
+      "type": "dlc",
+      "steam_appid": 2277980,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2277980/"
+    },
+    {
+      "title": "Anno 1800 - Old Town Pack",
+      "type": "dlc",
+      "steam_appid": 2222650,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2222650/"
+    },
+    {
+      "title": "Anno 1800 - Industrial Zone Pack",
+      "type": "dlc",
+      "steam_appid": 2055760,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2055760/"
+    },
+    {
+      "title": "Anno 1800 - Vibrant Cities Pack",
+      "type": "dlc",
+      "steam_appid": 1803742,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1803742/"
+    },
+    {
+      "title": "Anno 1800 - Pedestrian Zone Pack",
+      "type": "dlc",
+      "steam_appid": 1704690,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1704690/"
+    },
+    {
+      "title": "Anno 1800 - Vehicle Liveries",
+      "type": "dlc",
+      "steam_appid": 1626972,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1626972/"
+    },
+    {
+      "title": "Anno 1800 - City Lights Pack",
+      "type": "dlc",
+      "steam_appid": 1465650,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1465650/"
+    },
+    {
+      "title": "Anno 1800 - Amusements Pack",
+      "type": "dlc",
+      "steam_appid": 1383240,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1383240/"
+    },
+    {
+      "title": "Anno 1800 – Holiday pack",
+      "type": "dlc",
+      "steam_appid": 1210040,
+      "original_price": 3.99,
+      "sale_price": 1.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1210040/"
+    },
+    {
+      "title": "Anno 1800 - Seasonal Decorations Pack",
+      "type": "dlc",
+      "steam_appid": 1881100,
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1881100/"
+    },
+    {
+      "title": "Anno 1800 - Sunken Treasure",
+      "type": "dlc",
+      "steam_appid": 1125790,
+      "original_price": 11.99,
+      "sale_price": 5.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1125790/"
+    },
+    {
+      "title": "Anno 1800 - Botanica",
+      "type": "dlc",
+      "steam_appid": 1125792,
+      "original_price": 7.99,
+      "sale_price": 3.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1125792/"
+    },
+    {
+      "title": "Anno 1800 - The Passage",
+      "type": "dlc",
+      "steam_appid": 1125794,
+      "original_price": 14.99,
+      "sale_price": 7.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1125794/"
+    },
+    {
+      "title": "Anno 1800 - Seat of Power",
+      "type": "dlc",
+      "steam_appid": 1247680,
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1247680/"
+    },
+    {
+      "title": "Anno 1800 - Bright Harvest",
+      "type": "dlc",
+      "steam_appid": 1314950,
+      "original_price": 6.99,
+      "sale_price": 3.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1314950/"
+    },
+    {
+      "title": "Anno 1800 - Land of Lions",
+      "type": "dlc",
+      "steam_appid": 1442810,
+      "original_price": 17.99,
+      "sale_price": 8.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1442810/"
+    },
+    {
+      "title": "Anno 1800 - Docklands",
+      "type": "dlc",
+      "steam_appid": 1530882,
+      "original_price": 6.99,
+      "sale_price": 3.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1530882/"
+    },
+    {
+      "title": "Anno 1800 - Tourist Season",
+      "type": "dlc",
+      "steam_appid": 1626970,
+      "original_price": 8.99,
+      "sale_price": 4.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1626970/"
+    },
+    {
+      "title": "Anno 1800 - The High Life",
+      "type": "dlc",
+      "steam_appid": 1704680,
+      "original_price": 8.99,
+      "sale_price": 4.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1704680/"
+    },
+    {
+      "title": "Anno 1800 - Seeds of Change",
+      "type": "dlc",
+      "steam_appid": 1933244,
+      "original_price": 7.99,
+      "sale_price": 3.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1933244/"
+    },
+    {
+      "title": "Anno 1800 - Empire of the Skies",
+      "type": "dlc",
+      "steam_appid": 2074410,
+      "original_price": 11.99,
+      "sale_price": 5.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2074410/"
+    },
+    {
+      "title": "Anno 1800 – New World Rising",
+      "type": "dlc",
+      "steam_appid": 2222640,
+      "original_price": 14.99,
+      "sale_price": 7.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2222640/"
+    },
+    {
+      "title": "Watch Dogs: Legion - Bloodline",
+      "type": "dlc",
+      "steam_appid": 2239577,
+      "original_price": 14.99,
+      "sale_price": 4.49,
+      "discount_percent": 70,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2239577/"
+    },
+    {
+      "title": "Watch_Dogs - Bad Blood",
+      "type": "dlc",
+      "steam_appid": 293061,
+      "original_price": 14.99,
+      "sale_price": 2.99,
+      "discount_percent": 80,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/293061/"
+    },
+    {
+      "title": "UNO - Rayman Theme Cards",
+      "type": "dlc",
+      "steam_appid": 560940,
+      "original_price": 2.99,
+      "sale_price": 1.79,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Casual"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/560940/"
+    },
+    {
+      "title": "UNO - 50th Anniversary Theme",
+      "type": "dlc",
+      "steam_appid": 1599770,
+      "original_price": 2.99,
+      "sale_price": 1.79,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Casual"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/1599770/"
+    },
+    {
+      "title": "Steep - Extreme Pack",
+      "type": "dlc",
+      "steam_appid": 556392,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Sports"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/556392/"
+    },
+    {
+      "title": "Watch_Dogs - Season Pass",
+      "type": "dlc",
+      "steam_appid": 293054,
+      "original_price": 19.99,
+      "sale_price": 3.99,
+      "discount_percent": 80,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/293054/"
+    },
+    {
+      "title": "Watch_Dogs 2 - T-Bone Pack",
+      "type": "dlc",
+      "steam_appid": 525000,
+      "original_price": 6.99,
+      "sale_price": 1.04,
+      "discount_percent": 85,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/525000/"
+    },
+    {
+      "title": "Watch_Dogs 2 - Human Conditions",
+      "type": "dlc",
+      "steam_appid": 525030,
+      "original_price": 14.99,
+      "sale_price": 2.24,
+      "discount_percent": 85,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/525030/"
+    },
+    {
+      "title": "Watch_Dogs 2 - No Compromise",
+      "type": "dlc",
+      "steam_appid": 525031,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/525031/"
+    },
+    {
+      "title": "Watch_Dogs 2 - Season Pass",
+      "type": "dlc",
+      "steam_appid": 555240,
+      "original_price": 29.99,
+      "sale_price": 5.99,
+      "discount_percent": 80,
+      "ends_at": "2026-10-01",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/555240/"
+    },
+    {
+      "title": "Dying Light - Retrowave Bundle",
+      "type": "dlc",
+      "steam_appid": 1177880,
+      "original_price": 2.99,
+      "sale_price": 0.74,
+      "discount_percent": 75,
+      "ends_at": "2026-09-26",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Dying Light Franchise Sale",
+      "source_url": "https://store.steampowered.com/app/1177880/"
+    },
+    {
+      "title": "Dying Light - Volatile Hunter Bundle",
+      "type": "dlc",
+      "steam_appid": 436082,
+      "original_price": 2.99,
+      "sale_price": 0.74,
+      "discount_percent": 75,
+      "ends_at": "2026-09-26",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Dying Light Franchise Sale",
+      "source_url": "https://store.steampowered.com/app/436082/"
+    },
+    {
+      "title": "Dying Light - Shu Warrior Bundle",
+      "type": "dlc",
+      "steam_appid": 1184350,
+      "original_price": 2.99,
+      "sale_price": 0.74,
+      "discount_percent": 75,
+      "ends_at": "2026-09-26",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Dying Light Franchise Sale",
+      "source_url": "https://store.steampowered.com/app/1184350/"
+    },
+    {
+      "title": "Dying Light - Harran Inmate Bundle",
+      "type": "dlc",
+      "steam_appid": 1174580,
+      "original_price": 2.99,
+      "sale_price": 0.74,
+      "discount_percent": 75,
+      "ends_at": "2026-09-26",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Dying Light Franchise Sale",
+      "source_url": "https://store.steampowered.com/app/1174580/"
+    },
+    {
+      "title": "Dying Light - Harran Ranger Bundle",
+      "type": "dlc",
+      "steam_appid": 436080,
+      "original_price": 2.99,
+      "sale_price": 0.74,
+      "discount_percent": 75,
+      "ends_at": "2026-09-26",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "verified_by": "Steam Store",
+      "sale_group": "Dying Light Franchise Sale",
+      "source_url": "https://store.steampowered.com/app/436080/"
+    },
+    {
+      "title": "Parasite Black - Grim Days Manga Series",
+      "type": "dlc",
+      "steam_appid": 4636510,
+      "original_price": 7.49,
+      "sale_price": 5.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Introductory Offer",
+      "source_url": "https://store.steampowered.com/app/4636510/"
+    },
+    {
+      "title": "Who Wants to Be a Millionaire? - Deluxe Upgrade",
+      "type": "dlc",
+      "steam_appid": 1815670,
+      "original_price": 9.99,
+      "sale_price": 1.99,
+      "discount_percent": 80,
+      "ends_at": "2026-09-28",
+      "genres": [
+        "Casual"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Week Long Deal",
+      "source_url": "https://store.steampowered.com/app/1815670/"
+    },
+    {
+      "title": "Batman - The Telltale Series Shadows Mode",
+      "type": "dlc",
+      "steam_appid": 1182000,
+      "original_price": 4.99,
+      "sale_price": 1.99,
+      "discount_percent": 60,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Week Long Deal",
+      "source_url": "https://store.steampowered.com/app/1182000/"
+    },
+    {
+      "title": "WARRIORS: Abyss - DYNASTY WARRIORS: ORIGINS Main Content Set",
+      "type": "dlc",
+      "steam_appid": 4239840,
+      "original_price": 16.99,
+      "sale_price": 11.89,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/app/4239840/"
+    },
+    {
+      "title": "WARRIORS: Abyss - DYNASTY WARRIORS: ORIGINS Playable Character Set",
+      "type": "dlc",
+      "steam_appid": 4239850,
+      "original_price": 12.99,
+      "sale_price": 9.09,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/app/4239850/"
+    },
+    {
+      "title": "WARRIORS: Abyss - DYNASTY WARRIORS: ORIGINS Main Content Set + Playable Character Set",
+      "type": "dlc",
+      "steam_appid": 4337620,
+      "original_price": 24.99,
+      "sale_price": 17.49,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/app/4337620/"
+    },
+    {
+      "title": "Inertial Drift - Twilight Rivals DLC",
+      "type": "dlc",
+      "steam_appid": 2075290,
+      "original_price": 9.99,
+      "sale_price": 0.99,
+      "discount_percent": 90,
+      "ends_at": "2026-09-30",
+      "genres": [
+        "Racing"
+      ],
+      "verified_by": "SteamDB",
+      "sale_group": "Daily Deal",
+      "source_url": "https://store.steampowered.com/app/2075290/"
+    },
+    {
+      "title": "Star Wars Outlaws - Deluxe Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 89.99,
+      "sale_price": 22.49,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Weekend Deal",
+      "source_url": "https://store.steampowered.com/sub/1200863/"
+    },
+    {
+      "title": "Star Wars Outlaws - Gold Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 109.99,
+      "sale_price": 27.49,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Weekend Deal",
+      "source_url": "https://store.steampowered.com/sub/1155688/"
+    },
+    {
+      "title": "Star Wars Outlaws - Ultimate Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 129.99,
+      "sale_price": 32.49,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Weekend Deal",
+      "source_url": "https://store.steampowered.com/sub/1155705/"
+    },
+    {
+      "title": "DYNASTY WARRIORS: ORIGINS Digital Deluxe Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 89.99,
+      "sale_price": 62.99,
+      "discount_percent": 30,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/sub/1175493/"
+    },
+    {
+      "title": "Tales of Berseria Remastered Deluxe Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 59.99,
+      "sale_price": 44.99,
+      "discount_percent": 25,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/sub/1452686/"
+    },
+    {
+      "title": "Bullet Girls Phantasia Deluxe Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 59.99,
+      "sale_price": 20.99,
+      "discount_percent": 65,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Week Long Deal",
+      "source_url": "https://store.steampowered.com/sub/425705/"
+    },
+    {
+      "title": "Kingdom Come: Deliverance - Royal DLC Package",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 19.99,
+      "sale_price": 5.99,
+      "discount_percent": 70,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/sub/368777/"
+    },
+    {
+      "title": "Remnant II - DLC Bundle",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 24.99,
+      "sale_price": 8.74,
+      "discount_percent": 65,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Midweek Deal",
+      "source_url": "https://store.steampowered.com/sub/857632/"
+    },
+    {
+      "title": "Tom Clancy's The Division 2 Battle for Brooklyn Deluxe DLC",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 24.99,
+      "sale_price": 14.99,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Weekend Deal",
+      "source_url": "https://store.steampowered.com/sub/1260367/"
+    },
+    {
+      "title": "experiment",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 2.78,
+      "sale_price": 2.68,
+      "discount_percent": 4,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Introductory Offer",
+      "source_url": "https://store.steampowered.com/bundle/85045/"
+    },
+    {
+      "title": "Winmon x Neko Station",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 10.78,
+      "sale_price": 9.07,
+      "discount_percent": 16,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/80627/"
+    },
+    {
+      "title": "Elite Bundle 2026",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 19.5,
+      "sale_price": 18.48,
+      "discount_percent": 5,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Introductory Offer",
+      "source_url": "https://store.steampowered.com/bundle/88353/"
+    },
+    {
+      "title": "Monochromatic Time Loops",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 34.18,
+      "sale_price": 26.08,
+      "discount_percent": 24,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/38099/"
+    },
+    {
+      "title": "IGTAP: an Incremental Game That's Also a Platformer & Border Pioneer",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 22.48,
+      "sale_price": 14.83,
+      "discount_percent": 34,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/89127/"
+    },
+    {
+      "title": "Ant-Mon",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 7.18,
+      "sale_price": 6.19,
+      "discount_percent": 14,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/80572/"
+    },
+    {
+      "title": "Moody after Dark",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 8.08,
+      "sale_price": 7.54,
+      "discount_percent": 7,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/80240/"
+    },
+    {
+      "title": "Necesse + Delverium",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 24.73,
+      "sale_price": 17.76,
+      "discount_percent": 28,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/85912/"
+    },
+    {
+      "title": "IGTAP: an Incremental Game That's Also a Platformer & Stray Path",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 22.48,
+      "sale_price": 13.48,
+      "discount_percent": 40,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/89123/"
+    },
+    {
+      "title": "Nadeo Bundle",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 125.94,
+      "sale_price": 59.34,
+      "discount_percent": 53,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Weekend Deal",
+      "source_url": "https://store.steampowered.com/bundle/24162/"
+    },
+    {
+      "title": "Explorers of Palan × Starwulf",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 20.68,
+      "sale_price": 18.66,
+      "discount_percent": 10,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/89697/"
+    },
+    {
+      "title": "Deified + The Gate Must Stand",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 22.48,
+      "sale_price": 18.43,
+      "discount_percent": 18,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/88673/"
+    },
+    {
+      "title": "DD 2026 Desktop Pet Bundle",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 8.97,
+      "sale_price": 8.43,
+      "discount_percent": 6,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Introductory Offer",
+      "source_url": "https://store.steampowered.com/bundle/88752/"
+    },
+    {
+      "title": "IGTAP X Kin and Conquest",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 15.98,
+      "sale_price": 13.58,
+      "discount_percent": 15,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/82448/"
+    },
+    {
+      "title": "Enigma of Fear & Stray Path",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 40.48,
+      "sale_price": 24.28,
+      "discount_percent": 40,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/88642/"
+    },
+    {
+      "title": "Enigma of Fear & Border Pioneer",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 40.48,
+      "sale_price": 25.63,
+      "discount_percent": 37,
+      "ends_at": "2026-09-26",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/88643/"
+    },
+    {
+      "title": "Minishoot' Adventures + Last Command",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 26.98,
+      "sale_price": 22.26,
+      "discount_percent": 17,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Special Promotion",
+      "source_url": "https://store.steampowered.com/bundle/40346/"
+    },
+    {
+      "title": "Knights & Pirates",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 58.48,
+      "sale_price": 8.53,
+      "discount_percent": 85,
+      "ends_at": "2026-09-28",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/48359/"
+    },
+    {
+      "title": "Future Pixel",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 34.18,
+      "sale_price": 26.08,
+      "discount_percent": 24,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/50939/"
+    },
+    {
+      "title": "Plan B: Terraform + Worlds of Fire and Water DLC",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 18.88,
+      "sale_price": 13.89,
+      "discount_percent": 26,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/89636/"
+    },
+    {
+      "title": "Eastward + LISA: The Painful",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 40.48,
+      "sale_price": 32.38,
+      "discount_percent": 20,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/82800/"
+    },
+    {
+      "title": "Plan B: Terraform + Worlds of Fire and Water DLC + Dig or Die",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 29.67,
+      "sale_price": 24.68,
+      "discount_percent": 17,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/89464/"
+    },
+    {
+      "title": "Hot as Hell",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 76.48,
+      "sale_price": 26.98,
+      "discount_percent": 65,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/59911/"
+    },
+    {
+      "title": "Tripwire Watery Death",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 62.98,
+      "sale_price": 42.73,
+      "discount_percent": 32,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/47665/"
+    },
+    {
+      "title": "Gema indica 2024",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 51.14,
+      "sale_price": 36.26,
+      "discount_percent": 29,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/43747/"
+    },
+    {
+      "title": "The Alters + Tacoma",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 49.48,
+      "sale_price": 34.18,
+      "discount_percent": 31,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/81845/"
+    },
+    {
+      "title": "Death's Gambit: Afterlife - Deluxe Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 27.98,
+      "sale_price": 13.98,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/24560/"
+    },
+    {
+      "title": "Shovel Knight: Treasure Trove + Death's Gambit: Afterlife",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 53.98,
+      "sale_price": 44.98,
+      "discount_percent": 17,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/76344/"
+    },
+    {
+      "title": "My Little Life & Parisian Bistro Simulator",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 23.38,
+      "sale_price": 16.18,
+      "discount_percent": 31,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/88172/"
+    },
+    {
+      "title": "Artifacts and Anomalies 2.0",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 58.48,
+      "sale_price": 49.48,
+      "discount_percent": 15,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/87102/"
+    },
+    {
+      "title": "Paratopic: Overdub + Centum",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 20.23,
+      "sale_price": 14.16,
+      "discount_percent": 30,
+      "ends_at": "2026-09-30",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/89549/"
+    },
+    {
+      "title": "Emergency Call 112 Bundle",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 35.98,
+      "sale_price": 24.1,
+      "discount_percent": 33,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/bundle/48478/"
+    },
+    {
+      "title": "Watch_Dogs2 Gold Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 79.99,
+      "sale_price": 3.99,
+      "discount_percent": 95,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "SteamDB",
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/sub/141099/"
+    },
+    {
+      "title": "Blasphemous 2 - Complete Sacrament Edition",
+      "type": "bundle",
+      "steam_appid": null,
+      "original_price": 44.99,
+      "sale_price": 11.24,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01",
+      "genres": [],
+      "verified_by": "Steam Store",
+      "sale_group": "Steam promotion",
+      "source_url": "https://store.steampowered.com/sub/1150199/"
     }
   ]
 }
