@@ -3,6 +3,8 @@ const els = {
   search: document.querySelector('#searchInput'),
   sort: document.querySelector('#sortSelect'),
   pageSize: document.querySelector('#pageSizeSelect'),
+  currency: document.querySelector('#currencySelect'),
+  layout: document.querySelector('#layoutSelect'),
   resultCount: document.querySelector('#resultCount'),
   updatedAt: document.querySelector('#updatedAt'),
   empty: document.querySelector('#emptyState'),
@@ -15,14 +17,17 @@ const els = {
   maxPrice: document.querySelector('#maxPrice'),
   budgetOutput: document.querySelector('#budgetOutput'),
   rangeFill: document.querySelector('#rangeFill'),
+  rangeMinLabel: document.querySelector('#rangeMinLabel'),
   rangeMaxLabel: document.querySelector('#rangeMaxLabel'),
   heroCount: document.querySelector('#heroCount'),
-  stageBudget: document.querySelector('#stageBudget'),
-  stageTitle: document.querySelector('#stageTitle'),
-  stageGroup: document.querySelector('#stageGroup'),
-  stageDiscount: document.querySelector('#stageDiscount'),
-  stagePrice: document.querySelector('#stagePrice'),
-  stageWas: document.querySelector('#stageWas'),
+  previewMedia: document.querySelector('#previewMedia'),
+  previewImage: document.querySelector('#previewImage'),
+  previewType: document.querySelector('#previewType'),
+  previewTitle: document.querySelector('#previewTitle'),
+  previewGroup: document.querySelector('#previewGroup'),
+  previewDiscount: document.querySelector('#previewDiscount'),
+  previewPrice: document.querySelector('#previewPrice'),
+  previewWas: document.querySelector('#previewWas'),
   stageCheapest: document.querySelector('#stageCheapest'),
   stageBestCut: document.querySelector('#stageBestCut'),
   pagination: document.querySelector('#pagination'),
@@ -40,20 +45,22 @@ const els = {
 
 let catalog = [];
 let meta = {};
+let rates = { USD: 1 };
 let activeType = 'game';
 let activeDiscount = 'all';
-let absoluteMax = 100;
 let currentPage = 1;
+let currentCurrency = 'USD';
+let currencyRate = 1;
+let absoluteMaxUSD = 100;
 let thumbnailObserver = null;
 
 const THUMB_CACHE_PREFIX = 'discounted:thumb:';
-const money = value => `$${Number(value).toFixed(2)}`;
+const CURRENCY_KEY = 'discounted:currency';
+const LAYOUT_KEY = 'discounted:layout';
+const formatterCache = new Map();
+
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, ch => ({
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  "'": '&#39;',
-  '"': '&quot;'
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
 }[ch]));
 
 function normalizeType(value) {
@@ -89,8 +96,47 @@ function formatDate(iso) {
   }).format(d)}`;
 }
 
+function getFormatter(code) {
+  if (formatterCache.has(code)) return formatterCache.get(code);
+
+  let formatter;
+
+  try {
+    formatter = new Intl.NumberFormat(undefined, {
+      style: 'currency',
+      currency: code,
+      maximumFractionDigits: 2
+    });
+  } catch {
+    formatter = {
+      format(value) {
+        return `${code} ${Number(value).toFixed(2)}`;
+      }
+    };
+  }
+
+  formatterCache.set(code, formatter);
+  return formatter;
+}
+
+function converted(usd) {
+  return Number(usd) * currencyRate;
+}
+
+function moneyUSD(usd) {
+  return getFormatter(currentCurrency).format(converted(usd));
+}
+
+function moneyValue(value) {
+  return getFormatter(currentCurrency).format(Number(value));
+}
+
 function steamSearchUrl(title) {
   return `https://store.steampowered.com/search/?term=${encodeURIComponent(title)}`;
+}
+
+function internalProductUrl(title) {
+  return `./product.html?title=${encodeURIComponent(title)}`;
 }
 
 function steamHeaderUrl(appid) {
@@ -113,23 +159,48 @@ function sortProducts(items) {
   const byName = (a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' });
 
   switch (els.sort.value) {
-    case 'za':
-      return copy.sort((a, b) => byName(b, a));
-    case 'cheap':
-      return copy.sort((a, b) => a.sale_price - b.sale_price || byName(a, b));
-    case 'expensive':
-      return copy.sort((a, b) => b.sale_price - a.sale_price || byName(a, b));
-    case 'discount':
-      return copy.sort((a, b) => b.discount_percent - a.discount_percent || a.sale_price - b.sale_price || byName(a, b));
-    case 'discount-low':
-      return copy.sort((a, b) => a.discount_percent - b.discount_percent || byName(a, b));
+    case 'za': return copy.sort((a, b) => byName(b, a));
+    case 'cheap': return copy.sort((a, b) => a.sale_price - b.sale_price || byName(a, b));
+    case 'expensive': return copy.sort((a, b) => b.sale_price - a.sale_price || byName(a, b));
+    case 'discount': return copy.sort((a, b) => b.discount_percent - a.discount_percent || a.sale_price - b.sale_price || byName(a, b));
+    case 'discount-low': return copy.sort((a, b) => a.discount_percent - b.discount_percent || byName(a, b));
     case 'savings':
       return copy.sort((a, b) =>
         (b.original_price - b.sale_price) - (a.original_price - a.sale_price) || byName(a, b)
       );
-    default:
-      return copy.sort(byName);
+    default: return copy.sort(byName);
   }
+}
+
+function budgetStep(max) {
+  if (max >= 100000) return 1000;
+  if (max >= 10000) return 100;
+  if (max >= 1000) return 10;
+  if (max >= 250) return 1;
+  return .5;
+}
+
+function setupBudget(preserve = null) {
+  absoluteMaxUSD = Math.max(5, Math.ceil(Math.max(0, ...catalog.map(item => item.sale_price)) / 5) * 5);
+
+  const selectedMax = Math.ceil(absoluteMaxUSD * currencyRate);
+  const step = budgetStep(selectedMax);
+
+  [els.minPrice, els.maxPrice].forEach(input => {
+    input.min = '0';
+    input.max = String(selectedMax);
+    input.step = String(step);
+  });
+
+  if (preserve) {
+    els.minPrice.value = String(Math.max(0, Math.min(selectedMax, preserve.minUSD * currencyRate)));
+    els.maxPrice.value = String(Math.max(0, Math.min(selectedMax, preserve.maxUSD * currencyRate)));
+  } else {
+    els.minPrice.value = '0';
+    els.maxPrice.value = String(selectedMax);
+  }
+
+  updateBudgetUI();
 }
 
 function updateBudgetUI() {
@@ -140,20 +211,19 @@ function updateBudgetUI() {
     if (document.activeElement === els.minPrice) max = min;
     else min = max;
 
-    els.minPrice.value = min;
-    els.maxPrice.value = max;
+    els.minPrice.value = String(min);
+    els.maxPrice.value = String(max);
   }
 
-  const minPct = absoluteMax ? (min / absoluteMax) * 100 : 0;
-  const maxPct = absoluteMax ? (max / absoluteMax) * 100 : 100;
+  const selectedMax = Number(els.maxPrice.max) || 1;
+  const minPct = min / selectedMax * 100;
+  const maxPct = max / selectedMax * 100;
 
   els.rangeFill.style.left = `${minPct}%`;
   els.rangeFill.style.width = `${Math.max(0, maxPct - minPct)}%`;
-  els.budgetOutput.textContent = `${money(min)} — ${money(max)}`;
-
-  if (els.stageBudget) {
-    els.stageBudget.textContent = `${money(min).replace('.00', '')} — ${money(max).replace('.00', '')}`;
-  }
+  els.budgetOutput.textContent = `${moneyValue(min)} — ${moneyValue(max)}`;
+  els.rangeMinLabel.textContent = moneyValue(0);
+  els.rangeMaxLabel.textContent = moneyValue(selectedMax);
 }
 
 function filteredCatalog() {
@@ -163,66 +233,68 @@ function filteredCatalog() {
 
   return catalog.filter(product => {
     const haystack = `${product.title} ${product.sale_group || ''} ${product.type}`.toLocaleLowerCase();
+    const selectedPrice = converted(product.sale_price);
 
     return typeMatches(product)
       && discountMatches(product)
-      && product.sale_price >= min
-      && product.sale_price <= max
+      && selectedPrice >= min
+      && selectedPrice <= max
       && haystack.includes(query);
   });
 }
 
-function renderCard(product) {
+function fullCard(product) {
   const saved = Math.max(0, product.original_price - product.sale_price);
-  const steamUrl = steamSearchUrl(product.title);
-  const sourceIcon = product.verified_by === 'Steam offer page' ? 'i-check' : 'i-info';
 
   return `
-    <article class="product-card">
-      <a class="card-media"
-         href="${escapeHtml(steamUrl)}"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Search ${escapeHtml(product.title)} on Steam">
-        <span class="thumb-fallback" aria-hidden="true">
-          <svg class="i"><use href="#i-image"/></svg>
-        </span>
+    <article class="product-card" data-title="${escapeHtml(product.title)}">
+      <a class="card-media" href="${escapeHtml(internalProductUrl(product.title))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
+        <span class="thumb-fallback" aria-hidden="true"><svg class="i"><use href="#i-image"/></svg></span>
         <img class="product-thumb" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
       </a>
 
       <div class="card-top">
-        <span class="type-badge">
-          <svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>
-          ${escapeHtml(typeLabel(product.type))}
-        </span>
+        <span class="type-badge"><svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>${escapeHtml(typeLabel(product.type))}</span>
         <span class="discount-badge">-${product.discount_percent}%</span>
       </div>
 
       <div class="card-body">
         <h3 class="product-title">${escapeHtml(product.title)}</h3>
         <p class="sale-group">${escapeHtml(product.sale_group || 'Steam promotion')}</p>
-
         <div class="price-line">
-          <strong class="price-now">${money(product.sale_price)}</strong>
-          <span class="price-was">${money(product.original_price)}</span>
+          <strong class="price-now">${moneyUSD(product.sale_price)}</strong>
+          <span class="price-was">${moneyUSD(product.original_price)}</span>
         </div>
-
-        <div class="saving-line">Save ${money(saved)}</div>
+        <div class="saving-line">Save ${moneyUSD(saved)}</div>
       </div>
 
       <div class="card-action">
-        <a class="steam-link"
-           href="${escapeHtml(steamUrl)}"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Search ${escapeHtml(product.title)} on Steam">
-          <span>FIND ON STEAM</span>
-          <svg class="i i-sm"><use href="#i-external"/></svg>
-        </a>
+        <a href="${escapeHtml(internalProductUrl(product.title))}"><svg class="i i-sm"><use href="#i-eye"/></svg>VIEW HERE</a>
+        <a href="${escapeHtml(steamSearchUrl(product.title))}" target="_blank" rel="noopener noreferrer"><svg class="i i-sm"><use href="#i-external"/></svg>STEAM</a>
+      </div>
+    </article>
+  `;
+}
 
-        <span class="card-source" title="${escapeHtml(product.verified_by || 'Indexed source')}">
-          <svg class="i i-sm"><use href="#${sourceIcon}"/></svg>
-        </span>
+function compactCard(product) {
+  return `
+    <article class="product-card compact-card" data-title="${escapeHtml(product.title)}">
+      <a class="card-media" href="${escapeHtml(internalProductUrl(product.title))}" aria-label="View ${escapeHtml(product.title)} on Discounted">
+        <span class="thumb-fallback" aria-hidden="true"><svg class="i"><use href="#i-image"/></svg></span>
+        <img class="product-thumb" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+      </a>
+      <div class="compact-main">
+        <h3 class="product-title">${escapeHtml(product.title)}</h3>
+        <p class="sale-group">${escapeHtml(typeLabel(product.type))} · ${escapeHtml(product.sale_group || 'Steam promotion')}</p>
+      </div>
+      <div class="compact-discount">-${product.discount_percent}%</div>
+      <div class="compact-price">
+        <s>${moneyUSD(product.original_price)}</s>
+        <strong>${moneyUSD(product.sale_price)}</strong>
+      </div>
+      <div class="compact-actions">
+        <a href="${escapeHtml(internalProductUrl(product.title))}"><svg class="i i-sm"><use href="#i-eye"/></svg>VIEW</a>
+        <a href="${escapeHtml(steamSearchUrl(product.title))}" target="_blank" rel="noopener noreferrer"><svg class="i i-sm"><use href="#i-external"/></svg>STEAM</a>
       </div>
     </article>
   `;
@@ -232,11 +304,8 @@ function readThumbCache(title) {
   try {
     const raw = localStorage.getItem(THUMB_CACHE_PREFIX + title);
     if (!raw) return null;
-
     const data = JSON.parse(raw);
-    if (!data || !data.thumbnail_url) return null;
-
-    return data;
+    return data?.thumbnail_url ? data : null;
   } catch {
     return null;
   }
@@ -249,23 +318,15 @@ function writeThumbCache(title, data) {
       fallback_url: data.fallback_url || null,
       cached_at: Date.now()
     }));
-  } catch {
-    // Storage can be unavailable in private/restricted browser modes.
-  }
+  } catch {}
 }
 
-function setCardImage(card, primaryUrl, fallbackUrl = null) {
-  const media = card.querySelector('.card-media');
-  const image = card.querySelector('.product-thumb');
-
-  if (!media || !image || !primaryUrl) return;
+function setImage(container, image, primaryUrl, fallbackUrl = null) {
+  if (!container || !image || !primaryUrl) return;
 
   let triedFallback = false;
 
-  image.onload = () => {
-    media.classList.add('loaded');
-  };
-
+  image.onload = () => container.classList.add('loaded');
   image.onerror = () => {
     if (!triedFallback && fallbackUrl && fallbackUrl !== primaryUrl) {
       triedFallback = true;
@@ -273,51 +334,47 @@ function setCardImage(card, primaryUrl, fallbackUrl = null) {
       return;
     }
 
-    media.classList.remove('loaded');
+    container.classList.remove('loaded');
     image.removeAttribute('src');
   };
 
   image.src = primaryUrl;
 }
 
-async function resolveThumbnail(card, product) {
-  if (card.dataset.thumbResolved === '1') return;
-  card.dataset.thumbResolved = '1';
-
-  if (product.thumbnail_url) {
-    setCardImage(card, product.thumbnail_url);
-    return;
-  }
+async function thumbnailData(product) {
+  if (product.thumbnail_url) return { thumbnail_url: product.thumbnail_url };
 
   const appid = product.steam_appid || product.thumbnail_appid;
-
-  if (appid) {
-    setCardImage(card, steamHeaderUrl(appid));
-    return;
-  }
+  if (appid) return { thumbnail_url: steamHeaderUrl(appid) };
 
   const cached = readThumbCache(product.title);
-
-  if (cached) {
-    setCardImage(card, cached.thumbnail_url, cached.fallback_url);
-    return;
-  }
+  if (cached) return cached;
 
   try {
     const response = await fetch(`/api/steam-thumb?title=${encodeURIComponent(product.title)}`, {
       headers: { Accept: 'application/json' }
     });
 
-    if (!response.ok) return;
+    if (!response.ok) return null;
 
     const data = await response.json();
-    if (!data.thumbnail_url) return;
+    if (!data.thumbnail_url) return null;
 
     writeThumbCache(product.title, data);
-    setCardImage(card, data.thumbnail_url, data.fallback_url);
+    return data;
   } catch {
-    // The SVG fallback remains visible.
+    return null;
   }
+}
+
+async function resolveThumbnail(card, product) {
+  if (card.dataset.thumbResolved === '1') return;
+  card.dataset.thumbResolved = '1';
+
+  const data = await thumbnailData(product);
+  if (!data) return;
+
+  setImage(card.querySelector('.card-media'), card.querySelector('.product-thumb'), data.thumbnail_url, data.fallback_url);
 }
 
 function attachThumbnails(pageItems) {
@@ -336,17 +393,11 @@ function attachThumbnails(pageItems) {
   thumbnailObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-
       const index = cards.indexOf(entry.target);
-      const product = pageItems[index];
-
-      if (product) resolveThumbnail(entry.target, product);
+      if (pageItems[index]) resolveThumbnail(entry.target, pageItems[index]);
       thumbnailObserver.unobserve(entry.target);
     });
-  }, {
-    rootMargin: '240px 0px',
-    threshold: 0.01
-  });
+  }, { rootMargin: '220px 0px', threshold: 0.01 });
 
   cards.forEach(card => thumbnailObserver.observe(card));
 }
@@ -365,34 +416,17 @@ function renderPagination(totalItems, pageSize) {
   }
 
   const pages = new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1]);
-  const visiblePages = [...pages]
-    .filter(page => page >= 1 && page <= totalPages)
-    .sort((a, b) => a - b);
-
+  const visible = [...pages].filter(p => p >= 1 && p <= totalPages).sort((a,b) => a-b);
   const parts = [];
   let previous = 0;
 
-  visiblePages.forEach(page => {
-    if (previous && page - previous > 1) {
-      parts.push('<span class="page-gap">…</span>');
-    }
-
-    parts.push(`
-      <button
-        class="page-number ${page === currentPage ? 'active' : ''}"
-        type="button"
-        data-page="${page}"
-        aria-label="Page ${page}"
-        aria-current="${page === currentPage ? 'page' : 'false'}">
-        ${page}
-      </button>
-    `);
-
+  for (const page of visible) {
+    if (previous && page - previous > 1) parts.push('<span class="page-gap">…</span>');
+    parts.push(`<button class="page-number ${page === currentPage ? 'active' : ''}" type="button" data-page="${page}" aria-current="${page === currentPage ? 'page' : 'false'}">${page}</button>`);
     previous = page;
-  });
+  }
 
   els.pageNumbers.innerHTML = parts.join('');
-
   els.pageNumbers.querySelectorAll('[data-page]').forEach(button => {
     button.addEventListener('click', () => {
       currentPage = Number(button.dataset.page);
@@ -408,27 +442,22 @@ function render(options = {}) {
   const pageSize = Number(els.pageSize.value) || 25;
   const totalPages = Math.max(1, Math.ceil(ordered.length / pageSize));
 
-  if (currentPage > totalPages) currentPage = totalPages;
-  if (currentPage < 1) currentPage = 1;
+  currentPage = Math.max(1, Math.min(currentPage, totalPages));
 
   const start = (currentPage - 1) * pageSize;
   const pageItems = ordered.slice(start, start + pageSize);
+  const compact = els.layout.value === 'compact';
 
-  els.products.innerHTML = pageItems.map(renderCard).join('');
+  els.products.classList.toggle('compact', compact);
+  els.products.innerHTML = pageItems.map(compact ? compactCard : fullCard).join('');
   attachThumbnails(pageItems);
 
-  const label =
-    activeType === 'all' ? 'products'
-    : activeType === 'dlc' ? 'DLC'
-    : activeType === 'bundle' ? 'bundles'
-    : activeType === 'other' ? 'products'
-    : 'games';
-
+  const label = activeType === 'all' ? 'products' : activeType === 'dlc' ? 'DLC' : activeType === 'bundle' ? 'bundles' : 'games';
   const rangeStart = ordered.length ? start + 1 : 0;
   const rangeEnd = Math.min(start + pageSize, ordered.length);
 
   els.resultCount.textContent = ordered.length
-    ? `${ordered.length.toLocaleString('en-US')} ${label} · showing ${rangeStart}–${rangeEnd}`
+    ? `${ordered.length.toLocaleString()} ${label} · showing ${rangeStart}–${rangeEnd}`
     : `0 ${label}`;
 
   els.empty.hidden = ordered.length !== 0;
@@ -451,33 +480,12 @@ function resetAll() {
   activeType = 'game';
   activeDiscount = 'all';
   currentPage = 1;
-  els.minPrice.value = 0;
-  els.maxPrice.value = absoluteMax;
 
-  els.typeTabs.forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.type === 'game');
-  });
+  els.typeTabs.forEach(tab => tab.classList.toggle('active', tab.dataset.type === 'game'));
+  els.quickChips.forEach(chip => chip.classList.toggle('active', chip.dataset.filter === 'all'));
 
-  els.quickChips.forEach(chip => {
-    chip.classList.toggle('active', chip.dataset.filter === 'all');
-  });
-
+  setupBudget();
   render();
-}
-
-function setupBudget() {
-  const maxPrice = Math.max(0, ...catalog.map(item => item.sale_price));
-  absoluteMax = Math.max(5, Math.ceil(maxPrice / 5) * 5);
-
-  [els.minPrice, els.maxPrice].forEach(input => {
-    input.max = String(absoluteMax);
-  });
-
-  els.minPrice.value = '0';
-  els.maxPrice.value = String(absoluteMax);
-  els.rangeMaxLabel.textContent = money(absoluteMax).replace('.00', '');
-
-  updateBudgetUI();
 }
 
 function setCounts() {
@@ -487,41 +495,73 @@ function setCounts() {
     if (counts[item.type] !== undefined) counts[item.type] += 1;
   });
 
-  els.counts.game.textContent = counts.game.toLocaleString('en-US');
-  els.counts.dlc.textContent = counts.dlc.toLocaleString('en-US');
-  els.counts.bundle.textContent = counts.bundle.toLocaleString('en-US');
-  els.counts.all.textContent = counts.all.toLocaleString('en-US');
+  els.counts.game.textContent = counts.game.toLocaleString();
+  els.counts.dlc.textContent = counts.dlc.toLocaleString();
+  els.counts.bundle.textContent = counts.bundle.toLocaleString();
+  els.counts.all.textContent = counts.all.toLocaleString();
 }
 
-function setHeroSnapshot() {
+async function setHeroSnapshot() {
   if (!catalog.length) return;
 
-  const cheapest = catalog.reduce((a, b) => a.sale_price <= b.sale_price ? a : b);
-  const biggestCut = catalog.reduce((a, b) => a.discount_percent >= b.discount_percent ? a : b);
-
+  const cheapest = catalog.reduce((a,b) => a.sale_price <= b.sale_price ? a : b);
+  const biggestCut = catalog.reduce((a,b) => a.discount_percent >= b.discount_percent ? a : b);
   const featured = [...catalog]
     .filter(item => item.type === 'game')
-    .sort((a, b) =>
-      b.discount_percent - a.discount_percent
-      || a.sale_price - b.sale_price
-      || a.title.localeCompare(b.title)
-    )[0] || catalog[0];
+    .sort((a,b) => b.discount_percent - a.discount_percent || a.sale_price - b.sale_price)[0] || catalog[0];
 
-  if (els.heroCount) {
-    const updated = meta.updated_at
-      ? new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(new Date(`${meta.updated_at}T00:00:00`))
-      : 'current snapshot';
+  const updated = meta.updated_at
+    ? new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(new Date(`${meta.updated_at}T00:00:00`))
+    : 'current snapshot';
 
-    els.heroCount.textContent = `${catalog.length.toLocaleString('en-US')} tracked discounts · ${updated}`;
+  els.heroCount.textContent = `${catalog.length.toLocaleString()} tracked discounts · ${updated}`;
+  els.stageCheapest.textContent = moneyUSD(cheapest.sale_price);
+  els.stageBestCut.textContent = `-${biggestCut.discount_percent}%`;
+  els.previewType.textContent = typeLabel(featured.type);
+  els.previewTitle.textContent = featured.title;
+  els.previewGroup.textContent = featured.sale_group || 'Steam promotion';
+  els.previewDiscount.textContent = `-${featured.discount_percent}%`;
+  els.previewPrice.textContent = moneyUSD(featured.sale_price);
+  els.previewWas.textContent = moneyUSD(featured.original_price);
+
+  const data = await thumbnailData(featured);
+  if (data) setImage(els.previewMedia, els.previewImage, data.thumbnail_url, data.fallback_url);
+}
+
+function populateCurrencies() {
+  const codes = Object.keys(rates).sort((a,b) => a.localeCompare(b));
+  const common = ['USD','EUR','GBP','SAR','AED','JPY','CAD','AUD'];
+  const ordered = [...new Set([...common.filter(c => rates[c]), ...codes])];
+
+  els.currency.innerHTML = ordered.map(code => `<option value="${code}">${code}</option>`).join('');
+
+  let saved = 'USD';
+  try { saved = localStorage.getItem(CURRENCY_KEY) || 'USD'; } catch {}
+  if (!rates[saved]) saved = 'USD';
+
+  currentCurrency = saved;
+  currencyRate = rates[saved] || 1;
+  els.currency.value = currentCurrency;
+}
+
+async function loadRates() {
+  try {
+    const response = await fetch('/api/fx', { headers: { Accept: 'application/json' } });
+    if (!response.ok) throw new Error('FX unavailable');
+    const data = await response.json();
+    if (data.rates) rates = data.rates;
+  } catch {
+    rates = { USD:1, EUR:.86, GBP:.74, SAR:3.75, AED:3.6725, JPY:158, CAD:1.4, AUD:1.42 };
   }
 
-  els.stageCheapest.textContent = money(cheapest.sale_price);
-  els.stageBestCut.textContent = `-${biggestCut.discount_percent}%`;
-  els.stageTitle.textContent = featured.title;
-  els.stageGroup.textContent = featured.sale_group || 'Steam promotion';
-  els.stageDiscount.textContent = `-${featured.discount_percent}%`;
-  els.stagePrice.textContent = money(featured.sale_price);
-  els.stageWas.textContent = money(featured.original_price);
+  populateCurrencies();
+}
+
+function setupLayout() {
+  let saved = 'full';
+  try { saved = localStorage.getItem(LAYOUT_KEY) || 'full'; } catch {}
+  if (!['full','compact'].includes(saved)) saved = 'full';
+  els.layout.value = saved;
 }
 
 function setupScrollReveal() {
@@ -539,71 +579,36 @@ function setupScrollReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -30px'
-  });
+  }, { threshold: .12, rootMargin: '0px 0px -30px' });
 
   items.forEach(item => observer.observe(item));
 }
 
 function setupBackToTop() {
-  if (!els.backToTop) return;
-
-  const update = () => {
-    els.backToTop.hidden = window.scrollY < 700;
-  };
-
+  const update = () => { els.backToTop.hidden = window.scrollY < 700; };
   window.addEventListener('scroll', update, { passive: true });
-  els.backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
+  els.backToTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
   update();
-}
-
-function setupStageMotion() {
-  const stage = document.querySelector('.stage');
-  const app = stage?.querySelector('.app');
-
-  if (!stage || !app || !window.matchMedia('(pointer:fine)').matches) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  stage.addEventListener('pointermove', event => {
-    const rect = stage.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 8;
-
-    app.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-  });
-
-  stage.addEventListener('pointerleave', () => {
-    app.style.transform = '';
-  });
 }
 
 async function boot() {
   setupScrollReveal();
   setupBackToTop();
-  setupStageMotion();
+  setupLayout();
 
   try {
-    const response = await fetch('./games.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const [catalogResponse] = await Promise.all([
+      fetch('./games.json', { cache:'no-store' }),
+      loadRates()
+    ]);
 
-    const data = await response.json();
+    if (!catalogResponse.ok) throw new Error(`HTTP ${catalogResponse.status}`);
+    const data = await catalogResponse.json();
     if (!Array.isArray(data.games)) throw new Error('games.json has no games array');
 
     meta = data.meta || {};
-
     catalog = data.games
-      .filter(item =>
-        item
-        && item.title
-        && Number.isFinite(Number(item.original_price))
-        && Number.isFinite(Number(item.sale_price))
-        && Number.isFinite(Number(item.discount_percent))
-      )
+      .filter(item => item && item.title && Number.isFinite(Number(item.original_price)) && Number.isFinite(Number(item.sale_price)) && Number.isFinite(Number(item.discount_percent)))
       .map(item => ({
         ...item,
         type: normalizeType(item.type || item.product_type),
@@ -612,24 +617,21 @@ async function boot() {
         discount_percent: Number(item.discount_percent)
       }));
 
-    setupBudget();
     setCounts();
-    setHeroSnapshot();
-
+    setupBudget();
     els.updatedAt.textContent = formatDate(meta.updated_at);
+    await setHeroSnapshot();
     render();
   } catch (error) {
-    console.error('Failed to load games.json', error);
+    console.error('Failed to load catalog', error);
     els.resultCount.textContent = 'Catalog unavailable';
     els.error.hidden = false;
-    if (els.heroCount) els.heroCount.textContent = 'Catalog unavailable';
+    els.heroCount.textContent = 'Catalog unavailable';
   }
 }
 
 window.addEventListener('pageshow', () => {
-  if (!location.hash) {
-    requestAnimationFrame(() => window.scrollTo(0, 0));
-  }
+  if (!location.hash) requestAnimationFrame(() => window.scrollTo(0,0));
 });
 
 els.search.addEventListener('input', resetPageAndRender);
@@ -640,16 +642,40 @@ els.maxPrice.addEventListener('input', resetPageAndRender);
 els.reset.addEventListener('click', resetAll);
 els.emptyReset.addEventListener('click', resetAll);
 
+els.currency.addEventListener('change', async () => {
+  const oldRate = currencyRate || 1;
+  const preserve = {
+    minUSD: Number(els.minPrice.value) / oldRate,
+    maxUSD: Number(els.maxPrice.value) / oldRate
+  };
+
+  currentCurrency = els.currency.value;
+  currencyRate = rates[currentCurrency] || 1;
+
+  try { localStorage.setItem(CURRENCY_KEY, currentCurrency); } catch {}
+
+  setupBudget(preserve);
+  await setHeroSnapshot();
+  currentPage = 1;
+  render();
+});
+
+els.layout.addEventListener('change', () => {
+  try { localStorage.setItem(LAYOUT_KEY, els.layout.value); } catch {}
+  currentPage = 1;
+  render();
+});
+
 els.prevPage.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage -= 1;
-    render({ scrollToResults: true });
+    render({ scrollToResults:true });
   }
 });
 
 els.nextPage.addEventListener('click', () => {
   currentPage += 1;
-  render({ scrollToResults: true });
+  render({ scrollToResults:true });
 });
 
 els.typeTabs.forEach(tab => {
@@ -671,13 +697,9 @@ els.quickChips.forEach(chip => {
 });
 
 document.addEventListener('keydown', event => {
-  const activeTag = document.activeElement?.tagName;
+  const tag = document.activeElement?.tagName;
 
-  if (
-    event.key === '/'
-    && document.activeElement !== els.search
-    && !['INPUT', 'SELECT', 'TEXTAREA'].includes(activeTag)
-  ) {
+  if (event.key === '/' && document.activeElement !== els.search && !['INPUT','SELECT','TEXTAREA'].includes(tag)) {
     event.preventDefault();
     els.search.focus();
   }
