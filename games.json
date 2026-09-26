@@ -3,12 +3,12 @@
     "updated_at": "2026-09-26",
     "currency": "USD",
     "target_end_date": "2026-10-01",
-    "scope": "Discounted Steam game products whose individual offer is verified or event-grounded to end October 1, 2026. DLC, soundtracks, demos, ordinary bundles, free base games, and full-price event participants are excluded.",
-    "method": "Title-first discovery across Steam specials, direct Steam offer pages, and October 1 sale-event inventories. Direct offer expiry overrides event membership.",
+    "scope": "Discounted Steam games, DLC, passes, bundles and discounted packages verified or event-grounded to end October 1, 2026.",
+    "method": "Title-first discovery across Steam direct offer pages, content listings and October 1 sale-event inventories. Product type is explicit when known; thumbnails may use a Steam app ID or lazy title resolution.",
     "important": "Snapshot for Oct 1, 2026. Event participation alone is not treated as a discount. The catalog favors coverage while preserving ends_at and verification provenance for each row.",
-    "count": 426,
+    "count": 505,
     "sale_end": "2026-10-01",
-    "link_policy": "Steam search links are generated client-side from each game title; app IDs are intentionally not required."
+    "link_policy": "Steam result links are generated client-side from product titles. App IDs are optional and primarily used for thumbnails."
   },
   "games": [
     {
@@ -255,6 +255,18 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Franchise Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 3035570,
+      "original_price": 571.35,
+      "sale_price": 204.36,
+      "discount_percent": 64,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/3035570/Assassins_Creed_Mirage/"
+    },
+    {
       "title": "Assassin's Creed II",
       "original_price": 19.99,
       "sale_price": 4.99,
@@ -309,6 +321,42 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Odyssey - Season Pass",
+      "type": "dlc",
+      "steam_appid": 937890,
+      "original_price": 39.99,
+      "sale_price": 7.99,
+      "discount_percent": 80,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/937890/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Odyssey - The Fate of Atlantis",
+      "type": "dlc",
+      "thumbnail_appid": 812140,
+      "original_price": 24.99,
+      "sale_price": 4.99,
+      "discount_percent": 80,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Odyssey – Legacy of the First Blade",
+      "type": "dlc",
+      "thumbnail_appid": 812140,
+      "original_price": 24.99,
+      "sale_price": 4.99,
+      "discount_percent": 80,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
+    },
+    {
       "title": "Assassin's Creed Origins",
       "original_price": 59.99,
       "sale_price": 8.99,
@@ -316,6 +364,54 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Ubisoft 40th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Origins - Deluxe Pack",
+      "type": "dlc",
+      "thumbnail_appid": 582160,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/582160/Assassins_Creed_Origins/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Origins - Season Pass",
+      "type": "dlc",
+      "thumbnail_appid": 582160,
+      "original_price": 39.99,
+      "sale_price": 5.99,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/582160/Assassins_Creed_Origins/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Origins - The Curse Of The Pharaohs",
+      "type": "dlc",
+      "steam_appid": 662351,
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/662351/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Origins - The Hidden Ones",
+      "type": "dlc",
+      "steam_appid": 662350,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/662350/"
     },
     {
       "title": "Assassin's Creed Revelations",
@@ -352,6 +448,90 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Ubisoft 40th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - Jack The Ripper",
+      "type": "dlc",
+      "thumbnail_appid": 368500,
+      "original_price": 14.99,
+      "sale_price": 3.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/368500/Assassins_Creed_Syndicate/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - Steampunk Pack",
+      "type": "dlc",
+      "thumbnail_appid": 368500,
+      "original_price": 4.99,
+      "sale_price": 1.24,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/368500/Assassins_Creed_Syndicate/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - Streets of London Pack",
+      "type": "dlc",
+      "thumbnail_appid": 368500,
+      "original_price": 6.99,
+      "sale_price": 1.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/368500/Assassins_Creed_Syndicate/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - The Dreadful Crimes",
+      "type": "dlc",
+      "steam_appid": 452960,
+      "original_price": 4.99,
+      "sale_price": 1.24,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/452960/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - The Last Maharaja",
+      "type": "dlc",
+      "steam_appid": 407475,
+      "original_price": 6.99,
+      "sale_price": 1.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/407475/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate - Victorian Legends Pack",
+      "type": "dlc",
+      "thumbnail_appid": 368500,
+      "original_price": 4.99,
+      "sale_price": 1.24,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/368500/Assassins_Creed_Syndicate/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Assassin's Creed Syndicate Season Pass",
+      "type": "dlc",
+      "thumbnail_appid": 368500,
+      "original_price": 29.99,
+      "sale_price": 7.49,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/368500/Assassins_Creed_Syndicate/"
     },
     {
       "title": "Assassin's Creed Unity",
@@ -813,6 +993,18 @@
       "sale_group": "Standalone Oct 1 promotion"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Diluvian Winds - Supporter Pack",
+      "type": "dlc",
+      "thumbnail_appid": 1561040,
+      "original_price": 5.99,
+      "sale_price": 2.99,
+      "discount_percent": 50,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1561040/Diluvian_Winds/"
+    },
+    {
       "title": "Disney Dreamlight Valley",
       "original_price": 39.99,
       "sale_price": 23.99,
@@ -865,6 +1057,42 @@
       "ends_at": "2026-10-01",
       "verified_by": "Steam offer page",
       "sale_group": "Other Oct 1 promotions"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "DRAGON QUEST VII Reimagined: Luminary's Livery",
+      "type": "dlc",
+      "steam_appid": 3378680,
+      "original_price": 4.99,
+      "sale_price": 3.24,
+      "discount_percent": 35,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/3378680/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "DRAGON QUEST VII Reimagined: The Road of Regal Wretches",
+      "type": "dlc",
+      "steam_appid": 3257600,
+      "original_price": 5.99,
+      "sale_price": 3.89,
+      "discount_percent": 35,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/3257600/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "DREDGE - Complete Edition",
+      "type": "bundle",
+      "thumbnail_appid": 1562430,
+      "original_price": 39.99,
+      "sale_price": 19.99,
+      "discount_percent": 50,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1562430/DREDGE/"
     },
     {
       "title": "Driver: Parallel Lines",
@@ -997,7 +1225,8 @@
       "original_price": 19.99,
       "sale_price": 4.99,
       "discount_percent": 75,
-      "ends_at": "2026-10-01",      "verified_by": "Steam offer page",
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
       "sale_group": "Other Oct 1 promotions"
     },
     {
@@ -1064,6 +1293,18 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 4 Season Pass",
+      "type": "dlc",
+      "steam_appid": 324340,
+      "original_price": 29.99,
+      "sale_price": 5.99,
+      "discount_percent": 80,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/324340/"
+    },
+    {
       "title": "Far Cry 5",
       "original_price": 59.99,
       "sale_price": 8.99,
@@ -1073,6 +1314,90 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 - Dead Living Zombies",
+      "type": "dlc",
+      "steam_appid": 874610,
+      "original_price": 7.99,
+      "sale_price": 1.19,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/874610/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 - Deluxe Pack",
+      "type": "dlc",
+      "steam_appid": 823990,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/823990/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 - Hours of Darkness",
+      "type": "dlc",
+      "steam_appid": 761821,
+      "original_price": 11.99,
+      "sale_price": 1.79,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/761821/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 - Lost on Mars",
+      "type": "dlc",
+      "steam_appid": 761820,
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/761820/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 - Season Pass",
+      "type": "dlc",
+      "thumbnail_appid": 552520,
+      "original_price": 29.99,
+      "sale_price": 4.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/552520/Far_Cry_5/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 + Far Cry New Dawn Deluxe Edition Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 552520,
+      "original_price": 99.99,
+      "sale_price": 14.99,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/552520/Far_Cry_5/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 5 Gold Edition + Far Cry New Dawn Deluxe Edition Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 552520,
+      "original_price": 129.99,
+      "sale_price": 19.49,
+      "discount_percent": 85,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/552520/Far_Cry_5/"
+    },
+    {
       "title": "Far Cry 6",
       "original_price": 59.99,
       "sale_price": 5.99,
@@ -1080,6 +1405,90 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Ubisoft 40th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6 DLC 1 Vaas: Insanity",
+      "type": "dlc",
+      "thumbnail_appid": 2369390,
+      "original_price": 14.99,
+      "sale_price": 3.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369390/Far_Cry_6/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6 DLC 2 Pagan: Control",
+      "type": "dlc",
+      "steam_appid": 2369456,
+      "original_price": 14.99,
+      "sale_price": 3.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369456/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6 DLC 3 Joseph: Collapse",
+      "type": "dlc",
+      "steam_appid": 2369454,
+      "original_price": 14.99,
+      "sale_price": 3.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369454/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6 Game of the Year Upgrade Pass",
+      "type": "dlc",
+      "steam_appid": 2369452,
+      "original_price": 59.99,
+      "sale_price": 14.99,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369452/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6 Season Pass",
+      "type": "dlc",
+      "thumbnail_appid": 2369390,
+      "original_price": 39.99,
+      "sale_price": 9.99,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369390/Far_Cry_6/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry 6: Lost Between Worlds",
+      "type": "dlc",
+      "steam_appid": 2369450,
+      "original_price": 19.99,
+      "sale_price": 4.99,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369450/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry Franchise Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 2369390,
+      "original_price": 247.42,
+      "sale_price": 46.04,
+      "discount_percent": 81,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369390/Far_Cry_6/"
     },
     {
       "title": "Far Cry New Dawn",
@@ -1100,6 +1509,30 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry Primal - Wenja Pack",
+      "type": "dlc",
+      "steam_appid": 453360,
+      "original_price": 6.99,
+      "sale_price": 1.74,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/453360/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Far Cry Villains Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 2369390,
+      "original_price": 188.96,
+      "sale_price": 30.55,
+      "discount_percent": 84,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2369390/Far_Cry_6/"
+    },
+    {
       "title": "Fata Deum - The God Sim",
       "original_price": 29.99,
       "sale_price": 20.99,
@@ -1118,6 +1551,114 @@
       "sale_group": "Aerosoft Publisher Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY",
+      "type": "game",
+      "steam_appid": 1173770,
+      "original_price": 11.99,
+      "sale_price": 7.19,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173770/FINAL_FANTASY/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY I-VI Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 1173770,
+      "original_price": 74.83,
+      "sale_price": 44.9,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173800/FINAL_FANTASY_IV/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY II",
+      "type": "game",
+      "steam_appid": 1173780,
+      "original_price": 11.99,
+      "sale_price": 7.19,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173780/FINAL_FANTASY_II/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY III",
+      "type": "game",
+      "steam_appid": 1173790,
+      "original_price": 17.99,
+      "sale_price": 10.79,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173790/FINAL_FANTASY_III/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY IV",
+      "type": "game",
+      "steam_appid": 1173800,
+      "original_price": 17.99,
+      "sale_price": 10.79,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173800/FINAL_FANTASY_IV/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY IX",
+      "type": "game",
+      "steam_appid": 377840,
+      "original_price": 20.99,
+      "sale_price": 6.29,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/377840/FINAL_FANTASY_IX/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY V",
+      "type": "game",
+      "steam_appid": 1173810,
+      "original_price": 17.99,
+      "sale_price": 10.79,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173810/FINAL_FANTASY_V/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY VI",
+      "type": "game",
+      "steam_appid": 1173820,
+      "original_price": 17.99,
+      "sale_price": 10.79,
+      "discount_percent": 40,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1173820/FINAL_FANTASY_VI/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY VII",
+      "type": "game",
+      "steam_appid": 3837340,
+      "original_price": 11.99,
+      "sale_price": 4.79,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/3837340/FINAL_FANTASY_VII/"
+    },
+    {
       "title": "FINAL FANTASY VII REBIRTH",
       "original_price": 49.99,
       "sale_price": 14.99,
@@ -1125,6 +1666,30 @@
       "ends_at": "2026-10-01",
       "verified_by": "Steam offer page",
       "sale_group": "Standalone Oct 1 promotion"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+      "type": "bundle",
+      "thumbnail_appid": 2909400,
+      "original_price": 69.99,
+      "sale_price": 20.99,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/2909400/FINAL_FANTASY_VII_REBIRTH/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition Upgrade",
+      "type": "dlc",
+      "thumbnail_appid": 2909400,
+      "original_price": 20,
+      "sale_price": 6,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/2909400/FINAL_FANTASY_VII_REBIRTH/"
     },
     {
       "title": "FINAL FANTASY VII REMAKE INTERGRADE",
@@ -1136,6 +1701,102 @@
       "sale_group": "Standalone Oct 1 promotion"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY VIII",
+      "type": "game",
+      "steam_appid": 39150,
+      "original_price": 11.99,
+      "sale_price": 4.79,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/39150/FINAL_FANTASY_VIII/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "type": "game",
+      "steam_appid": 359870,
+      "original_price": 29.99,
+      "sale_price": 11.99,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/359870/FINAL_FANTASY_XX2_HD_Remaster/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XII THE ZODIAC AGE",
+      "type": "game",
+      "steam_appid": 595520,
+      "original_price": 49.99,
+      "sale_price": 14.99,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/595520/FINAL_FANTASY_XII_THE_ZODIAC_AGE/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XIII",
+      "type": "game",
+      "steam_appid": 292120,
+      "original_price": 15.99,
+      "sale_price": 6.39,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/292120/FINAL_FANTASY_XIII/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XIII-2",
+      "type": "game",
+      "steam_appid": 292140,
+      "original_price": 19.99,
+      "sale_price": 7.99,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/292140/FINAL_FANTASY_XIII2/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XV EPISODE ARDYN",
+      "type": "dlc",
+      "steam_appid": 977610,
+      "original_price": 4.99,
+      "sale_price": 1.49,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/977610/FINAL_FANTASY_XV_EPISODE_ARDYN/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XV EPISODE ARDYN COMPLETE EDITION",
+      "type": "bundle",
+      "thumbnail_appid": 637650,
+      "original_price": 39.98,
+      "sale_price": 11.98,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/637650/FINAL_FANTASY_XV_WINDOWS_EDITION/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XV WINDOWS EDITION",
+      "type": "game",
+      "steam_appid": 637650,
+      "original_price": 34.99,
+      "sale_price": 10.49,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/637650/FINAL_FANTASY_XV_WINDOWS_EDITION/"
+    },
+    {
       "title": "FINAL FANTASY XVI",
       "original_price": 49.99,
       "sale_price": 19.99,
@@ -1143,6 +1804,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "Steam offer page",
       "sale_group": "Standalone Oct 1 promotion"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "FINAL FANTASY XVI Expansion Pass",
+      "type": "dlc",
+      "steam_appid": 2886900,
+      "original_price": 24.99,
+      "sale_price": 9.99,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/2886900/FINAL_FANTASY_XVI_Expansion_Pass/"
     },
     {
       "title": "Fischer's Fishing Journey",
@@ -1242,6 +1915,30 @@
       "ends_at": "2026-10-01",
       "verified_by": "Steam offer page",
       "sale_group": "Standalone Oct 1 promotion"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Ghost Recon Breakpoint Year 1 Pass",
+      "type": "dlc",
+      "thumbnail_appid": 2231380,
+      "original_price": 39.99,
+      "sale_price": 9.99,
+      "discount_percent": 75,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2231380/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Ghost Recon Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 2231380,
+      "original_price": 134.95,
+      "sale_price": 29.2,
+      "discount_percent": 78,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2231380/"
     },
     {
       "title": "Global Farmer",
@@ -1550,6 +2247,18 @@
       "sale_group": "Mango Party 5th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Isonzo: First Wave Edition",
+      "type": "bundle",
+      "thumbnail_appid": 1556790,
+      "original_price": 44.99,
+      "sale_price": 9.89,
+      "discount_percent": 78,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1556790/Isonzo/"
+    },
+    {
       "title": "Jane's Advanced Strike Fighters",
       "original_price": 9.99,
       "sale_price": 1.49,
@@ -1640,6 +2349,18 @@
       "sale_group": "Standalone Oct 1 promotion"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
+      "type": "bundle",
+      "thumbnail_appid": 2552430,
+      "original_price": 99.99,
+      "sale_price": 29.99,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/2552450/KINGDOM_HEARTS_III__Re_Mind_DLC/"
+    },
+    {
       "title": "Kon's Lesson!",
       "original_price": 9.99,
       "sale_price": 5.99,
@@ -1710,6 +2431,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Mango Party 5th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "LIGHTNING RETURNS: FINAL FANTASY XIII",
+      "type": "game",
+      "steam_appid": 345350,
+      "original_price": 19.99,
+      "sale_price": 7.99,
+      "discount_percent": 60,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/345350/LIGHTNING_RETURNS_FINAL_FANTASY_XIII/"
     },
     {
       "title": "Lilith Waifu",
@@ -1996,7 +2729,8 @@
       "sale_price": 17.99,
       "discount_percent": 70,
       "ends_at": "2026-10-01",
-      "verified_by": "Steam offer page",      "sale_group": "Standalone Oct 1 promotion"
+      "verified_by": "Steam offer page",
+      "sale_group": "Standalone Oct 1 promotion"
     },
     {
       "title": "NieR Replicant ver.1.22474487139...",
@@ -2087,6 +2821,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Mango Party 5th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "NukGames Pack",
+      "type": "bundle",
+      "thumbnail_appid": 438480,
+      "original_price": 4.99,
+      "sale_price": 0.49,
+      "discount_percent": 90,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/438480/"
     },
     {
       "title": "OCTOPATH TRAVELER",
@@ -2213,6 +2959,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Mango Party 5th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Painkiller Complete Pack",
+      "type": "bundle",
+      "thumbnail_appid": 214870,
+      "original_price": 69.99,
+      "sale_price": 6.99,
+      "discount_percent": 90,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/214870/"
     },
     {
       "title": "Painkiller Hell & Damnation",
@@ -2366,6 +3124,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "ATLUS Developer Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Planet Coaster - Spooky Pack",
+      "type": "dlc",
+      "steam_appid": 710490,
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/710490/"
     },
     {
       "title": "Police Helicopter Simulator",
@@ -2710,6 +3480,18 @@
       "sale_group": "Other Oct 1 promotions"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Snufkin: Melody of Moominvalley - Digital Deluxe Edition",
+      "type": "bundle",
+      "thumbnail_appid": 1808680,
+      "original_price": 32.99,
+      "sale_price": 16.49,
+      "discount_percent": 50,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1808680/"
+    },
+    {
       "title": "Soggy Beans",
       "original_price": 10.99,
       "sale_price": 9.89,
@@ -2782,6 +3564,42 @@
       "sale_group": "Standalone Oct 1 promotion"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "STAR OCEAN THE DIVINE FORCE",
+      "type": "game",
+      "steam_appid": 1776380,
+      "original_price": 59.99,
+      "sale_price": 17.99,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1776380/STAR_OCEAN_THE_DIVINE_FORCE/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "STAR OCEAN THE DIVINE FORCE DIGITAL DELUXE EDITION",
+      "type": "bundle",
+      "thumbnail_appid": 1776380,
+      "original_price": 74.99,
+      "sale_price": 22.49,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1776380/STAR_OCEAN_THE_DIVINE_FORCE/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "STAR OCEAN THE DIVINE FORCE DIGITAL DELUXE UPGRADE",
+      "type": "dlc",
+      "thumbnail_appid": 1776380,
+      "original_price": 19.99,
+      "sale_price": 5.99,
+      "discount_percent": 70,
+      "sale_group": "Square Enix Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/1776380/STAR_OCEAN_THE_DIVINE_FORCE/"
+    },
+    {
       "title": "STAR OCEAN THE SECOND STORY R",
       "original_price": 49.99,
       "sale_price": 24.99,
@@ -2798,6 +3616,54 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Ubisoft 40th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Star Wars Outlaws - Season Pass",
+      "type": "dlc",
+      "steam_appid": 3271140,
+      "original_price": 39.99,
+      "sale_price": 13.99,
+      "discount_percent": 65,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/3271140/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Star Wars Outlaws - Ultimate Pack",
+      "type": "dlc",
+      "thumbnail_appid": 2842040,
+      "original_price": 19.99,
+      "sale_price": 9.99,
+      "discount_percent": 50,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2842040/Star_Wars_Outlaws/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Star Wars Outlaws: A Pirate's Fortune DLC",
+      "type": "dlc",
+      "thumbnail_appid": 2842040,
+      "original_price": 14.99,
+      "sale_price": 5.99,
+      "discount_percent": 60,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2842040/Star_Wars_Outlaws/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Star Wars Outlaws: Wild Card DLC",
+      "type": "dlc",
+      "thumbnail_appid": 2842040,
+      "original_price": 14.99,
+      "sale_price": 5.99,
+      "discount_percent": 60,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2842040/Star_Wars_Outlaws/"
     },
     {
       "title": "Starbreed",
@@ -2995,7 +3861,8 @@
       "discount_percent": 10,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"    },
+      "sale_group": "Mango Party 5th Anniversary Sale"
+    },
     {
       "title": "The Adventures of MICOCO",
       "original_price": 6.99,
@@ -3042,6 +3909,18 @@
       "sale_group": "Ubisoft 40th Anniversary Sale"
     },
     {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Franchise Bundle",
+      "type": "bundle",
+      "thumbnail_appid": 2698940,
+      "original_price": 89.98,
+      "sale_price": 20.68,
+      "discount_percent": 77,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2698940/The_Crew_Motorfest/"
+    },
+    {
       "title": "The Crew Motorfest",
       "original_price": 69.99,
       "sale_price": 13.99,
@@ -3049,6 +3928,66 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Ubisoft 40th Anniversary Sale"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Motorfest | Chase Squad Pack",
+      "type": "dlc",
+      "thumbnail_appid": 2698940,
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2698940/The_Crew_Motorfest/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Motorfest | RC Frenzy Pack",
+      "type": "dlc",
+      "thumbnail_appid": 2698940,
+      "original_price": 9.99,
+      "sale_price": 6.99,
+      "discount_percent": 30,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2698940/The_Crew_Motorfest/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Motorfest | Year 1 Pass",
+      "type": "dlc",
+      "steam_appid": 2805000,
+      "original_price": 29.99,
+      "sale_price": 9.89,
+      "discount_percent": 67,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2805000/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Motorfest | Year 2 Pass",
+      "type": "dlc",
+      "thumbnail_appid": 2698940,
+      "original_price": 29.99,
+      "sale_price": 9.89,
+      "discount_percent": 67,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2698940/The_Crew_Motorfest/"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "The Crew Motorfest | Year 3 Pass",
+      "type": "dlc",
+      "thumbnail_appid": 2698940,
+      "original_price": 29.99,
+      "sale_price": 14.99,
+      "discount_percent": 50,
+      "sale_group": "Ubisoft 40th Anniversary Sale",
+      "source_url": "https://store.steampowered.com/app/2698940/The_Crew_Motorfest/"
     },
     {
       "title": "The Heroines' Last Anthem",
@@ -3526,6 +4465,18 @@
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
       "sale_group": "Companion Falls for You"
+    },
+    {
+      "ends_at": "2026-10-01",
+      "verified_by": "Steam offer page",
+      "title": "Ultros Deluxe Edition",
+      "type": "bundle",
+      "thumbnail_appid": 2386310,
+      "original_price": 34.99,
+      "sale_price": 8.74,
+      "discount_percent": 75,
+      "sale_group": "Oct 1 promotion",
+      "source_url": "https://store.steampowered.com/app/2386310/"
     },
     {
       "title": "UNO",
