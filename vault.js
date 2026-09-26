@@ -223,7 +223,7 @@ window.Vault = (() => {
   }
   async function random() {
     try {
-      const response = await fetch("./games.json");
+      const response = await fetch("/games.json");
       if (!response.ok) throw Error();
       const { games } = await response.json();
       const valid = games.filter((x) => x && x.title);

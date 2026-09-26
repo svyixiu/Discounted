@@ -113,7 +113,7 @@ function productRouteId(item) {
 
 function productUrl(item) {
   if (!item || typeof item === "string")
-    return `./product.html?title=${encodeURIComponent(String(item || ""))}`;
+    return `/product.html?title=${encodeURIComponent(String(item || ""))}`;
   return `/${normalizeType(item.type)}/${productRouteId(item)}`;
 }
 
@@ -480,8 +480,8 @@ async function boot() {
     back = back || sessionStorage.getItem("vault:filters");
   } catch {}
   if (back && back.startsWith("?"))
-    document.querySelectorAll('a[href="./"]').forEach((a) => {
-      if (!a.classList.contains("brand")) a.href = "./" + back + "#browse";
+    document.querySelectorAll('a[href="/"]').forEach((a) => {
+      if (!a.classList.contains("brand")) a.href = "/" + back + "#browse";
     });
 
   if (!title && !routeMatch) {
@@ -491,14 +491,16 @@ async function boot() {
 
   try {
     const [catalogResponse] = await Promise.all([
-      fetch("./games.json", { cache: "default" }),
+      fetch("/games.json", { cache: "default" }),
       loadRates(),
     ]);
 
     if (!catalogResponse.ok) throw new Error("Catalog unavailable");
     const data = await catalogResponse.json();
 
-    catalog = (data.games || []).map((item) => ({
+    if (!Array.isArray(data.games)) throw new Error("Invalid catalog");
+    catalog = data.games.filter((item) => item && typeof item.title === "string" && item.title.trim() &&
+      [item.original_price, item.sale_price, item.discount_percent].every((value) => Number.isFinite(Number(value)))).map((item) => ({
       ...item,
       type: normalizeType(item.type || item.product_type),
       original_price: Number(item.original_price),

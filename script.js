@@ -168,7 +168,7 @@ function productRouteId(product) {
 
 function internalProductUrl(product) {
   if (!product || typeof product === "string")
-    return `./product.html?title=${encodeURIComponent(String(product || ""))}`;
+    return `/product.html?title=${encodeURIComponent(String(product || ""))}`;
   return `/${normalizeType(product.type)}/${productRouteId(product)}`;
 }
 
@@ -867,7 +867,7 @@ async function boot() {
 
   try {
     const [catalogResponse] = await Promise.all([
-      fetch("./games.json", { cache: "default" }),
+      fetch("/games.json", { cache: "default" }),
       loadRates(),
     ]);
 
@@ -1279,6 +1279,7 @@ const PRICE_NOTICE_KEY = "discounted:hide-price-notice";
 const priceNoticeDialog = document.querySelector("#priceNoticeDialog");
 const priceNoticeClose = document.querySelector("#priceNoticeClose");
 const priceNoticeDismissForever = document.querySelector("#priceNoticeDismissForever");
+let priceNoticePreviousFocus = null;
 
 function openPriceNotice() {
   if (!priceNoticeDialog) return;
@@ -1290,6 +1291,7 @@ function openPriceNotice() {
 
   if (hiddenForever) return;
 
+  priceNoticePreviousFocus = document.activeElement;
   priceNoticeDialog.hidden = false;
   document.documentElement.classList.add("price-notice-open");
   requestAnimationFrame(() => priceNoticeClose?.focus());
@@ -1299,6 +1301,7 @@ function closePriceNotice() {
   if (!priceNoticeDialog) return;
   priceNoticeDialog.hidden = true;
   document.documentElement.classList.remove("price-notice-open");
+  if (priceNoticePreviousFocus?.isConnected) priceNoticePreviousFocus.focus();
 }
 
 priceNoticeClose?.addEventListener("click", closePriceNotice);
@@ -1312,6 +1315,16 @@ priceNoticeDismissForever?.addEventListener("click", () => {
 
 priceNoticeDialog?.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closePriceNotice();
+  if (event.key !== "Tab") return;
+  const controls = [priceNoticeClose, priceNoticeDismissForever];
+  const first = controls[0], last = controls[controls.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 });
 
 window.addEventListener("DOMContentLoaded", openPriceNotice);
