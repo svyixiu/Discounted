@@ -143,6 +143,10 @@
       </a>
 
       <nav class="masthead-links" aria-label="Project links">
+        <label class="toolbar-field language-field">
+          <span>Language</span>
+          <select class="language-select" aria-label="Language"><option value="en">English</option><option value="ar">العربية</option></select>
+        </label>
         <label class="toolbar-field">
           <span>Currency</span>
           <select id="currencySelect" aria-label="Currency">
@@ -458,6 +462,7 @@
                 </div>
               </div>
 
+              <p class="popularity-note">Popularity uses Steam review totals. “Top seller” means listed on Steam’s revenue chart; sales counts are not public.</p>
               <div id="activeFilters" class="active-filters"></div>
               <div class="results-head reveal">
                 <div>
@@ -614,6 +619,7 @@
     </div>
 
     <script src="/shader-gradient.js" defer></script>
+    <script src="/i18n.js" defer></script>
     <script src="/vault.js" defer></script>
     <script src="/script.js" defer></script>
   </body>

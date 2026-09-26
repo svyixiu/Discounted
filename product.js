@@ -408,6 +408,18 @@ async function renderProduct() {
   document.querySelector("[data-copy]").dataset.copy = location.href;
   Vault.timers();
   els.view.hidden = false;
+  const popularity = document.querySelector("#productPopularity");
+  if (popularity && Number.isSafeInteger(product.steam_appid)) {
+    popularity.hidden = false;
+    fetch(`/api/popularity?ids=${product.steam_appid}`)
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then(({ items }) => {
+        const value = items?.[product.steam_appid];
+        const count = value?.reviews;
+        popularity.textContent = count == null ? I18n.t("Steam reviews unavailable")
+          : `${I18n.t("Steam reviews")}: ${new Intl.NumberFormat(I18n.language()).format(count)}${value.topSeller ? ` · ${I18n.t("Top seller")}` : count >= 100000 ? ` · ${I18n.t("Widely reviewed")}` : count < 1000 ? ` · ${I18n.t("Fewer reviews")}` : ""}`;
+      }).catch(() => { popularity.textContent = I18n.t("Steam reviews unavailable"); });
+  }
   Vault.observe();
   const data = await thumbnailData(product);
   if (data) {
@@ -418,6 +430,8 @@ async function renderProduct() {
 
   els.view.hidden = false;
   renderRecommendations();
+  I18n.translate(els.view);
+  I18n.translate(els.recommendations);
   Vault.shelf(els.recommendGrid);
 }
 
@@ -442,11 +456,8 @@ async function loadRates() {
     };
   }
 
-  const common = ["USD", "EUR", "GBP", "SAR", "AED", "JPY", "CAD", "AUD"];
-  const codes = Object.keys(rates).sort((a, b) => a.localeCompare(b));
-  const ordered = [
-    ...new Set([...common.filter((code) => rates[code]), ...codes]),
-  ];
+  const common = ["USD", "SAR", "EUR", "GBP", "AED", "CAD", "AUD", "JPY"];
+  const ordered = common.filter((code) => rates[code]);
 
   els.currency.innerHTML = ordered
     .map((code) => `<option value="${code}">${code}</option>`)
@@ -456,7 +467,7 @@ async function loadRates() {
   try {
     saved = localStorage.getItem(CURRENCY_KEY) || "USD";
   } catch {}
-  if (!rates[saved]) saved = "USD";
+  if (!ordered.includes(saved)) saved = "USD";
 
   currentCurrency = saved;
   currencyRate = rates[saved] || 1;

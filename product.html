@@ -103,6 +103,10 @@
             /><span>Discounted</span></a
           >
           <nav>
+            <label class="tag-control product-language">
+              <span>Language</span>
+              <select class="language-select" aria-label="Language"><option value="en">English</option><option value="ar">العربية</option></select>
+            </label>
             <label class="tag-control product-currency">
               <span>Currency</span>
               <select id="currencySelect" aria-label="Currency">
@@ -140,6 +144,7 @@
                 <s id="productWas"></s>
               </div>
               <p id="productSaving" class="product-sub"></p>
+              <p id="productPopularity" class="popularity detail-popularity" hidden>Checking Steam reviews…</p>
 
               <div
                 id="priceBreakdown"
@@ -207,6 +212,7 @@
       </div>
     </footer>
 
+    <script src="/i18n.js" defer></script>
     <script src="/vault.js" defer></script>
     <script src="/product.js" defer></script>
   </body>

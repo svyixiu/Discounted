@@ -61,6 +61,42 @@ const THUMB_CACHE_PREFIX = "discounted:thumb:";
 const CURRENCY_KEY = "discounted:currency";
 const LAYOUT_KEY = "discounted:layout";
 const formatterCache = new Map();
+const popularityCache = new Map();
+
+function popularityMarkup(product) {
+  const id = Number(product.steam_appid);
+  if (!Number.isSafeInteger(id) || id <= 0) return "";
+  return `<p class="popularity" data-popularity="${id}" aria-live="polite"><span>${I18n.t("Steam reviews")}</span><strong>${I18n.t("Checking…")}</strong></p>`;
+}
+
+function populatePopularity(root = document) {
+  root.querySelectorAll("[data-popularity]").forEach((el) => {
+    const result = popularityCache.get(Number(el.dataset.popularity));
+    if (!result) return;
+    const label = result.reviews == null
+      ? I18n.t("Unavailable")
+      : new Intl.NumberFormat(I18n.language()).format(result.reviews);
+    const tier = result.topSeller ? "Top seller" : result.reviews >= 100000
+      ? "Widely reviewed" : result.reviews < 1000 && result.reviews != null
+        ? "Fewer reviews" : "";
+    el.innerHTML = `<span>${I18n.t("Steam reviews")}</span><strong>${label}</strong>${tier ? `<small>${I18n.t(tier)}</small>` : ""}`;
+  });
+}
+
+async function loadPopularity(items) {
+  const ids = [...new Set(items.map((item) => Number(item.steam_appid)))]
+    .filter((id) => Number.isSafeInteger(id) && id > 0 && !popularityCache.has(id));
+  populatePopularity(els.products);
+  for (let offset = 0; offset < ids.length; offset += 30) {
+    try {
+      const response = await fetch(`/api/popularity?ids=${ids.slice(offset, offset + 30).join(",")}`);
+      if (!response.ok) continue;
+      const { items: results } = await response.json();
+      for (const [id, value] of Object.entries(results || {})) popularityCache.set(Number(id), value);
+      populatePopularity(els.products);
+    } catch { /* The storefront remains usable without Steam's review service. */ }
+  }
+}
 
 const escapeHtml = (value) =>
   String(value).replace(
@@ -380,6 +416,7 @@ function fullCard(product) {
       <div class="card-body">
         <h3 class="product-title">${highlightTitle(product.title)}</h3>
         <p class="sale-group">${escapeHtml(product.sale_group || "Steam promotion")}</p>
+        ${popularityMarkup(product)}
         <div class="price-line">
           <strong class="price-now">${moneyUSD(product.sale_price)}</strong>
           <span class="price-was">${moneyUSD(product.original_price)}</span>
@@ -407,6 +444,7 @@ function compactCard(product) {
       <div class="compact-main">
         <h3 class="product-title">${highlightTitle(product.title)}</h3>
         <p class="sale-group">${escapeHtml(typeLabel(product.type))} · ${escapeHtml(product.sale_group || "Steam promotion")}</p>
+        ${popularityMarkup(product)}
       </div>
       <div class="compact-discount">-${product.discount_percent}%</div>
       <div class="compact-price">
@@ -655,6 +693,8 @@ function render(options = {}) {
   Vault.timers();
   syncFilters();
   attachThumbnails(pageItems);
+  loadPopularity(pageItems);
+  I18n.translate(els.products);
 
   const label =
     activeType === "all"
@@ -668,8 +708,8 @@ function render(options = {}) {
   const rangeEnd = Math.min(start + pageSize, ordered.length);
 
   els.resultCount.textContent = ordered.length
-    ? `${ordered.length.toLocaleString()} deals found · ${rangeStart}–${rangeEnd}`
-    : `0 deals found`;
+    ? `${new Intl.NumberFormat(I18n.language()).format(ordered.length)} ${I18n.t("deals found")} · ${rangeStart}–${rangeEnd}`
+    : `0 ${I18n.t("deals found")}`;
 
   els.empty.hidden = ordered.length !== 0;
   renderPagination(ordered.length, pageSize);
@@ -771,9 +811,8 @@ async function setHeroSnapshot() {
 }
 
 function populateCurrencies() {
-  const codes = Object.keys(rates).sort((a, b) => a.localeCompare(b));
-  const common = ["USD", "EUR", "GBP", "SAR", "AED", "JPY", "CAD", "AUD"];
-  const ordered = [...new Set([...common.filter((c) => rates[c]), ...codes])];
+  const common = ["USD", "SAR", "EUR", "GBP", "AED", "CAD", "AUD", "JPY"];
+  const ordered = common.filter((code) => rates[code]);
 
   els.currency.innerHTML = ordered
     .map((code) => `<option value="${code}">${code}</option>`)
@@ -783,7 +822,7 @@ function populateCurrencies() {
   try {
     saved = localStorage.getItem(CURRENCY_KEY) || "USD";
   } catch {}
-  if (!rates[saved]) saved = "USD";
+  if (!ordered.includes(saved)) saved = "USD";
 
   currentCurrency = saved;
   currencyRate = rates[saved] || 1;
