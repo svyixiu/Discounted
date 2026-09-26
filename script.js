@@ -1247,3 +1247,45 @@ async function buildDiscoveries() {
   }, 6000);
   Vault.timers();
 }
+
+
+const PRICE_NOTICE_KEY = "discounted:hide-price-notice";
+const priceNoticeDialog = document.querySelector("#priceNoticeDialog");
+const priceNoticeClose = document.querySelector("#priceNoticeClose");
+const priceNoticeDismissForever = document.querySelector("#priceNoticeDismissForever");
+
+function openPriceNotice() {
+  if (!priceNoticeDialog) return;
+
+  let hiddenForever = false;
+  try {
+    hiddenForever = localStorage.getItem(PRICE_NOTICE_KEY) === "1";
+  } catch {}
+
+  if (hiddenForever) return;
+
+  priceNoticeDialog.hidden = false;
+  document.documentElement.classList.add("price-notice-open");
+  requestAnimationFrame(() => priceNoticeClose?.focus());
+}
+
+function closePriceNotice() {
+  if (!priceNoticeDialog) return;
+  priceNoticeDialog.hidden = true;
+  document.documentElement.classList.remove("price-notice-open");
+}
+
+priceNoticeClose?.addEventListener("click", closePriceNotice);
+
+priceNoticeDismissForever?.addEventListener("click", () => {
+  try {
+    localStorage.setItem(PRICE_NOTICE_KEY, "1");
+  } catch {}
+  closePriceNotice();
+});
+
+priceNoticeDialog?.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closePriceNotice();
+});
+
+window.addEventListener("DOMContentLoaded", openPriceNotice);
