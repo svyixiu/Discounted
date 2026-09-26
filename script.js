@@ -28,6 +28,7 @@ const els = {
   previewDiscount: document.querySelector('#previewDiscount'),
   previewPrice: document.querySelector('#previewPrice'),
   previewWas: document.querySelector('#previewWas'),
+  featuredLink: document.querySelector('#featuredLink'),
   stageCheapest: document.querySelector('#stageCheapest'),
   stageBestCut: document.querySelector('#stageBestCut'),
   pagination: document.querySelector('#pagination'),
@@ -523,6 +524,10 @@ async function setHeroSnapshot() {
   els.previewDiscount.textContent = `-${featured.discount_percent}%`;
   els.previewPrice.textContent = moneyUSD(featured.sale_price);
   els.previewWas.textContent = moneyUSD(featured.original_price);
+
+  const featuredUrl = internalProductUrl(featured.title);
+  if (els.featuredLink) els.featuredLink.href = featuredUrl;
+  if (els.previewMedia) els.previewMedia.href = featuredUrl;
 
   const data = await thumbnailData(featured);
   if (data) setImage(els.previewMedia, els.previewImage, data.thumbnail_url, data.fallback_url);
