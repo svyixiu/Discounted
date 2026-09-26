@@ -29,6 +29,7 @@ const els = {
   prevPage: document.querySelector('#prevPage'),
   nextPage: document.querySelector('#nextPage'),
   pageNumbers: document.querySelector('#pageNumbers'),
+  backToTop: document.querySelector('#backToTop'),
   counts: {
     game: document.querySelector('#gameCount'),
     dlc: document.querySelector('#dlcCount'),
@@ -43,7 +44,9 @@ let activeType = 'game';
 let activeDiscount = 'all';
 let absoluteMax = 100;
 let currentPage = 1;
+let thumbnailObserver = null;
 
+const THUMB_CACHE_PREFIX = 'discounted:thumb:';
 const money = value => `$${Number(value).toFixed(2)}`;
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, ch => ({
   '&': '&amp;',
@@ -84,6 +87,14 @@ function formatDate(iso) {
     day: 'numeric',
     year: 'numeric'
   }).format(d)}`;
+}
+
+function steamSearchUrl(title) {
+  return `https://store.steampowered.com/search/?term=${encodeURIComponent(title)}`;
+}
+
+function steamHeaderUrl(appid) {
+  return `https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/header.jpg`;
 }
 
 function discountMatches(product) {
@@ -163,11 +174,22 @@ function filteredCatalog() {
 
 function renderCard(product) {
   const saved = Math.max(0, product.original_price - product.sale_price);
-  const steamUrl = `https://store.steampowered.com/search/?term=${encodeURIComponent(product.title)}`;
+  const steamUrl = steamSearchUrl(product.title);
   const sourceIcon = product.verified_by === 'Steam offer page' ? 'i-check' : 'i-info';
 
   return `
     <article class="product-card">
+      <a class="card-media"
+         href="${escapeHtml(steamUrl)}"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Search ${escapeHtml(product.title)} on Steam">
+        <span class="thumb-fallback" aria-hidden="true">
+          <svg class="i"><use href="#i-image"/></svg>
+        </span>
+        <img class="product-thumb" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+      </a>
+
       <div class="card-top">
         <span class="type-badge">
           <svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>
@@ -204,6 +226,129 @@ function renderCard(product) {
       </div>
     </article>
   `;
+}
+
+function readThumbCache(title) {
+  try {
+    const raw = localStorage.getItem(THUMB_CACHE_PREFIX + title);
+    if (!raw) return null;
+
+    const data = JSON.parse(raw);
+    if (!data || !data.thumbnail_url) return null;
+
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function writeThumbCache(title, data) {
+  try {
+    localStorage.setItem(THUMB_CACHE_PREFIX + title, JSON.stringify({
+      thumbnail_url: data.thumbnail_url,
+      fallback_url: data.fallback_url || null,
+      cached_at: Date.now()
+    }));
+  } catch {
+    // Storage can be unavailable in private/restricted browser modes.
+  }
+}
+
+function setCardImage(card, primaryUrl, fallbackUrl = null) {
+  const media = card.querySelector('.card-media');
+  const image = card.querySelector('.product-thumb');
+
+  if (!media || !image || !primaryUrl) return;
+
+  let triedFallback = false;
+
+  image.onload = () => {
+    media.classList.add('loaded');
+  };
+
+  image.onerror = () => {
+    if (!triedFallback && fallbackUrl && fallbackUrl !== primaryUrl) {
+      triedFallback = true;
+      image.src = fallbackUrl;
+      return;
+    }
+
+    media.classList.remove('loaded');
+    image.removeAttribute('src');
+  };
+
+  image.src = primaryUrl;
+}
+
+async function resolveThumbnail(card, product) {
+  if (card.dataset.thumbResolved === '1') return;
+  card.dataset.thumbResolved = '1';
+
+  if (product.thumbnail_url) {
+    setCardImage(card, product.thumbnail_url);
+    return;
+  }
+
+  const appid = product.steam_appid || product.thumbnail_appid;
+
+  if (appid) {
+    setCardImage(card, steamHeaderUrl(appid));
+    return;
+  }
+
+  const cached = readThumbCache(product.title);
+
+  if (cached) {
+    setCardImage(card, cached.thumbnail_url, cached.fallback_url);
+    return;
+  }
+
+  try {
+    const response = await fetch(`/api/steam-thumb?title=${encodeURIComponent(product.title)}`, {
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) return;
+
+    const data = await response.json();
+    if (!data.thumbnail_url) return;
+
+    writeThumbCache(product.title, data);
+    setCardImage(card, data.thumbnail_url, data.fallback_url);
+  } catch {
+    // The SVG fallback remains visible.
+  }
+}
+
+function attachThumbnails(pageItems) {
+  if (thumbnailObserver) {
+    thumbnailObserver.disconnect();
+    thumbnailObserver = null;
+  }
+
+  const cards = [...els.products.querySelectorAll('.product-card')];
+
+  if (!('IntersectionObserver' in window)) {
+    cards.forEach((card, index) => resolveThumbnail(card, pageItems[index]));
+    return;
+  }
+
+  thumbnailObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const index = cards.indexOf(entry.target);
+      const product = pageItems[index];
+
+      if (product) resolveThumbnail(entry.target, product);
+      thumbnailObserver.unobserve(entry.target);
+    });
+  }, {
+    rootMargin: '240px 0px',
+    threshold: 0.01
+  });
+
+  cards.forEach(card => thumbnailObserver.observe(card));
 }
 
 function renderPagination(totalItems, pageSize) {
@@ -270,6 +415,7 @@ function render(options = {}) {
   const pageItems = ordered.slice(start, start + pageSize);
 
   els.products.innerHTML = pageItems.map(renderCard).join('');
+  attachThumbnails(pageItems);
 
   const label =
     activeType === 'all' ? 'products'
@@ -353,11 +499,13 @@ function setHeroSnapshot() {
   const cheapest = catalog.reduce((a, b) => a.sale_price <= b.sale_price ? a : b);
   const biggestCut = catalog.reduce((a, b) => a.discount_percent >= b.discount_percent ? a : b);
 
-  const featured = [...catalog].sort((a, b) =>
-    b.discount_percent - a.discount_percent
-    || a.sale_price - b.sale_price
-    || a.title.localeCompare(b.title)
-  )[0];
+  const featured = [...catalog]
+    .filter(item => item.type === 'game')
+    .sort((a, b) =>
+      b.discount_percent - a.discount_percent
+      || a.sale_price - b.sale_price
+      || a.title.localeCompare(b.title)
+    )[0] || catalog[0];
 
   if (els.heroCount) {
     const updated = meta.updated_at
@@ -392,15 +540,52 @@ function setupScrollReveal() {
       }
     });
   }, {
-    threshold: 0.14,
-    rootMargin: '0px 0px -40px'
+    threshold: 0.12,
+    rootMargin: '0px 0px -30px'
   });
 
   items.forEach(item => observer.observe(item));
 }
 
+function setupBackToTop() {
+  if (!els.backToTop) return;
+
+  const update = () => {
+    els.backToTop.hidden = window.scrollY < 700;
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  els.backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  update();
+}
+
+function setupStageMotion() {
+  const stage = document.querySelector('.stage');
+  const app = stage?.querySelector('.app');
+
+  if (!stage || !app || !window.matchMedia('(pointer:fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  stage.addEventListener('pointermove', event => {
+    const rect = stage.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 8;
+
+    app.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  });
+
+  stage.addEventListener('pointerleave', () => {
+    app.style.transform = '';
+  });
+}
+
 async function boot() {
   setupScrollReveal();
+  setupBackToTop();
+  setupStageMotion();
 
   try {
     const response = await fetch('./games.json', { cache: 'no-store' });
@@ -440,6 +625,12 @@ async function boot() {
     if (els.heroCount) els.heroCount.textContent = 'Catalog unavailable';
   }
 }
+
+window.addEventListener('pageshow', () => {
+  if (!location.hash) {
+    requestAnimationFrame(() => window.scrollTo(0, 0));
+  }
+});
 
 els.search.addEventListener('input', resetPageAndRender);
 els.sort.addEventListener('change', resetPageAndRender);
@@ -489,6 +680,11 @@ document.addEventListener('keydown', event => {
   ) {
     event.preventDefault();
     els.search.focus();
+  }
+
+  if (event.key === 'Escape' && document.activeElement === els.search && els.search.value) {
+    els.search.value = '';
+    resetPageAndRender();
   }
 });
 
