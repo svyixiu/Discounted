@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0c10" />
+  <meta name="color-scheme" content="dark" />
+  <title>Discounted — Steam deals ending October 1</title>
+  <meta name="description" content="A calm, searchable list of Steam games discounted through October 1, 2026." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="brand-row">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span class="brand">Discounted</span>
+          <span class="status"><i></i> Oct 1 sale watch</span>
+        </div>
+        <p class="eyebrow">STEAM DEALS · USD</p>
+        <h1>No digging. <span>I’ve got you, stranger.</span></h1>
+        <p class="lede">One calm list of the base games we found discounted through October 1. Search it, sort it, narrow it down, then go enjoy something good.</p>
+      </div>
+
+      <aside class="snapshot" aria-label="Deal snapshot">
+        <div class="snapshot-top">
+          <span>Right now</span>
+          <span id="updatedAt">Checking…</span>
+        </div>
+        <strong id="totalCount">—</strong>
+        <span class="snapshot-label">tracked base-game deals</span>
+        <div class="snapshot-split">
+          <div><b id="cheapestValue">—</b><span>cheapest</span></div>
+          <div><b id="bestDiscountValue">—</b><span>biggest cut</span></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="controls" aria-label="Search and sort deals">
+      <label class="search-box" for="searchInput">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 20-4.2-4.2m1.7-5.3a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Search a game…" />
+        <kbd>/</kbd>
+      </label>
+
+      <label class="select-wrap">
+        <span>Sort</span>
+        <select id="sortSelect" aria-label="Sort games">
+          <option value="az">A → Z</option>
+          <option value="za">Z → A</option>
+          <option value="cheap">Cheapest first</option>
+          <option value="expensive">Most expensive first</option>
+          <option value="discount">Biggest discount</option>
+          <option value="discount-low">Smallest discount</option>
+          <option value="savings">Most dollars saved</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="quick-filters" aria-label="Quick filters">
+      <button class="chip active" data-filter="all">Everything</button>
+      <button class="chip" data-filter="under5">Under $5</button>
+      <button class="chip" data-filter="under10">Under $10</button>
+      <button class="chip" data-filter="under20">Under $20</button>
+      <button class="chip" data-filter="70plus">70%+ off</button>
+      <button class="chip" data-filter="90plus">90%+ off</button>
+    </section>
+
+    <section class="result-line" aria-live="polite">
+      <span id="resultCount">Loading the good stuff…</span>
+      <button id="resetButton" class="quiet-button" type="button" hidden>Reset filters</button>
+    </section>
+
+    <section class="deal-list" aria-label="Discounted games">
+      <div class="table-head" aria-hidden="true">
+        <span>Game</span>
+        <span>Was</span>
+        <span>Now</span>
+        <span>You save</span>
+        <span>Discount</span>
+        <span></span>
+      </div>
+      <div id="games"></div>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <div class="empty-orb">?</div>
+        <strong>Nothing hiding here, stranger.</strong>
+        <p>Try a wider price range or clear the search. I’ll keep the list right here.</p>
+        <button id="emptyReset" type="button">Show everything</button>
+      </div>
+
+      <div id="errorState" class="empty-state error-state" hidden>
+        <div class="empty-orb">!</div>
+        <strong>I dropped the deal bag.</strong>
+        <p><code>games.json</code> didn’t load. Refresh once; if it persists, the JSON file is probably missing from the deployment.</p>
+      </div>
+    </section>
+
+    <section class="trust-note">
+      <div class="trust-icon">✓</div>
+      <div>
+        <strong>Built to be easy to correct.</strong>
+        <p>The interface contains no hard-coded games. Titles, prices, discounts, expiry dates and verification notes all come from <code>games.json</code>. Steam search links are generated automatically from each title, so replacing the JSON is enough to refresh the catalog.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Discounted</strong> · researched snapshot for October 1, 2026.</p>
+      <p>Steam can change live promotions. When it does, we change one JSON file—not the website.</p>
+    </footer>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
