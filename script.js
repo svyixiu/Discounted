@@ -28,6 +28,7 @@ const els = {
   previewDiscount: document.querySelector('#previewDiscount'),
   previewPrice: document.querySelector('#previewPrice'),
   previewWas: document.querySelector('#previewWas'),
+  featuredLink: document.querySelector('#featuredLink'),
   stageCheapest: document.querySelector('#stageCheapest'),
   stageBestCut: document.querySelector('#stageBestCut'),
   pagination: document.querySelector('#pagination'),
@@ -515,14 +516,16 @@ async function setHeroSnapshot() {
     : 'current snapshot';
 
   els.heroCount.textContent = `${catalog.length.toLocaleString()} tracked discounts · ${updated}`;
-  els.stageCheapest.textContent = moneyUSD(cheapest.sale_price);
-  els.stageBestCut.textContent = `-${biggestCut.discount_percent}%`;
   els.previewType.textContent = typeLabel(featured.type);
   els.previewTitle.textContent = featured.title;
   els.previewGroup.textContent = featured.sale_group || 'Steam promotion';
   els.previewDiscount.textContent = `-${featured.discount_percent}%`;
   els.previewPrice.textContent = moneyUSD(featured.sale_price);
   els.previewWas.textContent = moneyUSD(featured.original_price);
+
+  const featuredUrl = internalProductUrl(featured.title);
+  if (els.featuredLink) els.featuredLink.href = featuredUrl;
+  if (els.previewMedia) els.previewMedia.href = featuredUrl;
 
   const data = await thumbnailData(featured);
   if (data) setImage(els.previewMedia, els.previewImage, data.thumbnail_url, data.fallback_url);
@@ -564,6 +567,29 @@ function setupLayout() {
   els.layout.value = saved;
 }
 
+function setupEntranceMotion() {
+  const card = document.querySelector('.demo-card');
+  const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+  const finish = () => {
+    document.documentElement.classList.remove('motion-pending');
+
+    if (window.__discountedMotionFallback) {
+      clearTimeout(window.__discountedMotionFallback);
+      window.__discountedMotionFallback = null;
+    }
+  };
+
+  if (reduced || !card) {
+    finish();
+    return;
+  }
+
+  card.addEventListener('animationend', event => {
+    if (event.animationName === 'vantage-card') finish();
+  }, { once: true });
+}
+
 function setupScrollReveal() {
   const items = document.querySelectorAll('.reveal');
 
@@ -592,6 +618,7 @@ function setupBackToTop() {
 }
 
 async function boot() {
+  setupEntranceMotion();
   setupScrollReveal();
   setupBackToTop();
   setupLayout();
