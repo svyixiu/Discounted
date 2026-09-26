@@ -3,47 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f6f0e5" />
-  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta name="color-scheme" content="dark" />
   <title>Discounted — Steam sale index</title>
   <meta name="description" content="Search, filter and sort the Steam discounts indexed by Discounted." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="page-noise" aria-hidden="true"></div>
-
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Discounted home">
-      <span class="brand-box">D</span>
-      <span>DISCOUNTED</span>
+      <span class="brand-mark">D</span>
+      <span>Discounted</span>
     </a>
     <div class="topbar-meta">
-      <span>STEAM SALE INDEX</span>
-      <span class="live-dot"><i></i> SNAPSHOT</span>
+      <span>Steam sale index</span>
+      <span class="live-dot"><i></i> Snapshot</span>
     </div>
   </header>
 
   <main id="top" class="shell">
     <section class="hero">
       <div class="hero-copy">
-        <p class="kicker">DEALS WITHOUT THE DIGGING</p>
-        <h1>Find the discount.<br><span>Set the budget.</span></h1>
-        <p class="hero-text">A searchable index of the Steam discounts currently tracked by this snapshot. Filter by product type, choose a price range, sort the catalog, and open the result on Steam.</p>
+        <p class="kicker">STEAM DEALS · USD</p>
+        <h1>Steam deals,<br><span>filtered.</span></h1>
+        <p class="hero-text">Browse the discounts currently tracked by this snapshot. Choose a product type, set a budget, sort the catalog, and open the result on Steam.</p>
       </div>
 
       <div class="hero-stats" aria-label="Catalog statistics">
-        <article class="stat-card stat-yellow">
-          <span>INDEXED</span>
+        <article class="stat-card">
+          <span>Indexed</span>
           <strong id="totalCount">—</strong>
           <small>products</small>
         </article>
-        <article class="stat-card stat-blue">
-          <span>CHEAPEST</span>
+        <article class="stat-card">
+          <span>Cheapest</span>
           <strong id="cheapestValue">—</strong>
           <small>sale price</small>
         </article>
-        <article class="stat-card stat-pink">
-          <span>BIGGEST CUT</span>
+        <article class="stat-card">
+          <span>Biggest cut</span>
           <strong id="bestDiscountValue">—</strong>
           <small>discount</small>
         </article>
@@ -51,17 +49,17 @@
     </section>
 
     <section class="catalog-panel" aria-label="Deal browser">
-      <div class="section-label">01 / PRODUCT TYPE</div>
+      <div class="section-label">Product type</div>
       <nav id="typeTabs" class="type-tabs" aria-label="Product type">
-        <button class="type-tab active" type="button" data-type="game">GAMES <b id="gameCount">0</b></button>
+        <button class="type-tab active" type="button" data-type="game">Games <b id="gameCount">0</b></button>
         <button class="type-tab" type="button" data-type="dlc">DLC <b id="dlcCount">0</b></button>
-        <button class="type-tab" type="button" data-type="bundle">BUNDLES <b id="bundleCount">0</b></button>
-        <button class="type-tab" type="button" data-type="all">ALL <b id="allCount">0</b></button>
+        <button class="type-tab" type="button" data-type="bundle">Bundles <b id="bundleCount">0</b></button>
+        <button class="type-tab" type="button" data-type="all">All <b id="allCount">0</b></button>
       </nav>
 
       <div class="filter-grid">
         <div class="filter-block search-block">
-          <label for="searchInput">SEARCH</label>
+          <label for="searchInput">Search</label>
           <div class="search-input-wrap">
             <input id="searchInput" type="search" autocomplete="off" placeholder="Search title or sale…" />
             <kbd>/</kbd>
@@ -69,7 +67,7 @@
         </div>
 
         <div class="filter-block sort-block">
-          <label for="sortSelect">ORDER</label>
+          <label for="sortSelect">Order</label>
           <select id="sortSelect">
             <option value="az">Alphabetical A → Z</option>
             <option value="za">Alphabetical Z → A</option>
@@ -83,7 +81,7 @@
 
         <div class="filter-block budget-block">
           <div class="budget-head">
-            <label>BUDGET</label>
+            <label>Budget</label>
             <output id="budgetOutput">$0.00 — $0.00</output>
           </div>
           <div class="range-wrap" id="rangeWrap">
@@ -98,18 +96,18 @@
 
       <div class="quick-row">
         <div class="quick-filters" aria-label="Discount filters">
-          <button class="quick-chip active" type="button" data-filter="all">ANY DISCOUNT</button>
+          <button class="quick-chip active" type="button" data-filter="all">Any discount</button>
           <button class="quick-chip" type="button" data-filter="50plus">50%+</button>
           <button class="quick-chip" type="button" data-filter="70plus">70%+</button>
           <button class="quick-chip" type="button" data-filter="90plus">90%+</button>
         </div>
-        <button id="resetButton" class="reset-button" type="button">RESET FILTERS</button>
+        <button id="resetButton" class="reset-button" type="button">Reset filters</button>
       </div>
     </section>
 
     <section class="results-head" aria-live="polite">
       <div>
-        <span class="section-label">02 / RESULTS</span>
+        <span class="section-label">Results</span>
         <h2 id="resultCount">Loading catalog…</h2>
       </div>
       <p id="updatedAt">Updated —</p>
@@ -118,27 +116,27 @@
     <section id="products" class="product-grid" aria-label="Discounted products"></section>
 
     <section id="emptyState" class="empty-state" hidden>
-      <strong>NO MATCHES.</strong>
+      <strong>No matches.</strong>
       <p>Try widening the budget range, changing tabs, or clearing the search.</p>
-      <button id="emptyReset" type="button">SHOW EVERYTHING</button>
+      <button id="emptyReset" type="button">Show everything</button>
     </section>
 
     <section id="errorState" class="empty-state error-state" hidden>
-      <strong>CATALOG FAILED TO LOAD.</strong>
+      <strong>Catalog failed to load.</strong>
       <p><code>games.json</code> could not be read from this deployment.</p>
     </section>
 
     <section class="data-note">
       <div class="data-note-number">JSON</div>
       <div>
-        <h3>Data-first by design.</h3>
-        <p>The interface has no hard-coded products. Add or replace entries in <code>games.json</code>; the tabs, counts, budget controls, sorting, search and Steam links update automatically. Existing records default to <code>game</code>, while future entries can use <code>dlc</code>, <code>bundle</code> or <code>other</code>.</p>
+        <h3>Data-first catalog.</h3>
+        <p>The interface has no hard-coded products. Add or replace entries in <code>games.json</code>; tabs, counts, budget controls, sorting, search and Steam links update automatically.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>DISCOUNTED</strong>
+    <strong>Discounted</strong>
     <span>Steam promotions can change. Prices shown are snapshot data.</span>
   </footer>
 
