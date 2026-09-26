@@ -835,6 +835,9 @@ h3 {
   --rarity: var(--common);
   position: relative;
   min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: var(--bg-raised);
   border: 1px solid var(--line-strong);
   border-top-color: var(--rarity);
@@ -866,9 +869,11 @@ h3 {
   border-radius: 11px 11px 0 0;
 }
 .card-top {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 44px;
   padding: 15px 17px 0;
 }
 .type-badge {
@@ -892,13 +897,21 @@ h3 {
   font-size: 13px;
 }
 .card-body {
-  padding: 13px 17px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 13px 17px 16px;
 }
 .product-title {
   font-size: 17px;
   letter-spacing: -0.025em;
   line-height: 1.35;
-  min-height: 46px;
+  min-height: calc(1.35em * 3);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .sale-group {
   white-space: nowrap;
@@ -906,12 +919,13 @@ h3 {
   text-overflow: ellipsis;
   font-size: 12px;
   color: var(--muted);
-  margin: 6px 0 13px;
+  margin: 7px 0 16px;
 }
 .price-line {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
+  margin-top: auto;
 }
 .price-now {
   font-size: 23px;
@@ -923,10 +937,13 @@ h3 {
   font-size: 12px;
 }
 .saving-line {
+  min-height: 18px;
   font-size: 12px;
   color: var(--rarity);
 }
 .card-action {
+  flex: 0 0 auto;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -950,6 +967,7 @@ h3 {
 }
 .countdown {
   display: block;
+  min-height: 17px;
   font-size: 11px;
   color: var(--muted);
   margin-top: 8px;
@@ -976,6 +994,8 @@ h3 {
   gap: 8px;
 }
 .compact-card {
+  height: auto;
+  flex-direction: row;
   display: flex;
   align-items: center;
   border-top-color: var(--line-strong);
@@ -997,6 +1017,10 @@ h3 {
 }
 .compact-main .product-title {
   min-height: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 15px;
 }
 .compact-main .sale-group {
@@ -1557,7 +1581,6 @@ mark {
   }
   .product-title {
     font-size: 15px;
-    min-height: 41px;
   }
   .price-now {
     font-size: 20px;
@@ -2181,6 +2204,7 @@ body > * {
 .shelf-track {
   --shelf-gap: 18px;
   display: flex;
+  align-items: stretch;
   width: max-content;
   gap: var(--shelf-gap);
   padding: 24px 0 42px;
@@ -2193,6 +2217,7 @@ body > * {
 }
 .shelf-track > .product-card {
   flex: 0 0 270px;
+  min-height: 435px;
   scroll-snap-align: none;
   transform: none;
 }
