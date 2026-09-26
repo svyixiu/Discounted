@@ -158,13 +158,13 @@ export default async function handler(req, res) {
           break;
         } catch (error) {
           lastError = error;
-          await sleep(180 * (attempt + 1));
+          await sleep(2000 * (attempt + 1));
         }
       }
 
       if (!payload) throw lastError || new Error("Steam page fetch failed");
       payloads.push(payload);
-      if (i + 1 < pages) await sleep(90);
+      if (i + 1 < pages) await sleep(850);
     }
 
     const items = payloads.flatMap((payload) =>
