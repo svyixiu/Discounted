@@ -2109,23 +2109,6 @@ body > * {
   backdrop-filter: blur(18px) saturate(150%);
 }
 
-:is(
-  .featured-link,
-  .reset-button,
-  .type-tab.active,
-  .genre-chip.active,
-  .genre-chip.active b,
-  .page-number.active,
-  .active-filters button,
-  .brand:hover,
-  .product-kicker,
-  a:focus-visible
-) {
-  text-shadow:
-    0 0 5px rgba(150, 178, 255, .98),
-    0 0 13px rgba(0, 0, 255, .95),
-    0 0 28px rgba(0, 0, 255, .62);
-}
 .brand:hover .brand-logo {
   filter:
     drop-shadow(0 0 6px rgba(132, 167, 255, .95))
