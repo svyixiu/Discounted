@@ -14,19 +14,19 @@
   "rewrites": [
     {
       "source": "/game/:id",
-      "destination": "/product.html"
+      "destination": "/product"
     },
     {
       "source": "/dlc/:id",
-      "destination": "/product.html"
+      "destination": "/product"
     },
     {
       "source": "/bundle/:id",
-      "destination": "/product.html"
+      "destination": "/product"
     },
     {
       "source": "/other/:id",
-      "destination": "/product.html"
+      "destination": "/product"
     }
   ]
 }
