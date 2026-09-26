@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0f14" />
+  <meta name="theme-color" content="#0e141b" />
   <meta name="color-scheme" content="dark" />
-  <title>Discounted — Steam sale index</title>
-  <meta name="description" content="Search, filter and sort the Steam discounts indexed by Discounted." />
+  <title>Discounted — Steam deals without the digging</title>
+  <meta name="description" content="Browse, filter and compare discounted Steam games, DLC and bundles." />
+  <link rel="icon" type="image/svg+xml" href="./assets/discounted.svg" />
   <link rel="stylesheet" href="./styles.css" />
   <script>if ("scrollRestoration" in history) history.scrollRestoration = "manual";</script>
 </head>
@@ -18,127 +19,104 @@
     <symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M4 4h6v3a2 2 0 1 0 4 0V4h6v6h-3a2 2 0 1 0 0 4h3v6h-6v-3a2 2 0 1 0-4 0v3H4v-6h3a2 2 0 1 0 0-4H4Z"/></symbol>
     <symbol id="i-box" viewBox="0 0 24 24"><path d="m4 7 8-4 8 4-8 4Z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
-    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M4 4h7l9 9-7 7-9-9Z"/><circle cx="8.2" cy="8.2" r="1.2"/></symbol>
-    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6.5A2.5 2.5 0 0 1 4 17.5Z"/><path d="M4 8h16"/><path d="M15 12h5v4h-5a2 2 0 1 1 0-4Z"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="m20 4-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 10.5V16"/><circle cx="12" cy="7.5" r=".8" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m10 7-5 5 5 5"/></symbol>
-    <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></symbol>
     <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m5.5 17 4.2-4.2 3 3 2.2-2.2 3.6 3.4"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m7 10 5-5 5 5"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m10 7-5 5 5 5"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></symbol>
   </svg>
 
   <main id="top">
     <section class="hero">
       <div class="wrap">
         <div class="hero-brandline reveal">
-          <a class="brand" href="#top" aria-label="Discounted home">
-            <span class="brand-mark">D</span>
+          <a class="brand" href="./" aria-label="Discounted home">
+            <img class="brand-logo" src="./assets/discounted.svg" width="36" height="36" alt="" />
             <span>Discounted</span>
           </a>
-          <a class="source-link" href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">
-            Source
-            <svg class="i i-sm"><use href="#i-external"/></svg>
-          </a>
+          <div class="hero-links">
+            <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
+            <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
         </div>
+
         <div class="hero-grid">
-        <div class="hero-copy reveal">
-          <p class="release" id="heroCount">Loading sale snapshot</p>
-          <h1>
-            <span>No digging.</span>
-            <span class="hero-accent">I’ve got you, stranger.</span>
-          </h1>
-          <p class="lead">A focused index of Steam discounts. Pick a product type, set your exact budget, choose an order, and jump straight to Steam.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#browse">
-              Browse deals
-              <svg class="i"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="btn btn-ghost" href="#how">How it works</a>
+          <div class="hero-copy reveal">
+            <p class="release" id="heroCount">Loading sale snapshot</p>
+            <h1>No digging.<br><span>I’ve got you, stranger.</span></h1>
+            <p class="lead">Discounted Steam games, DLC and bundles in one place. Set your budget, switch currency, choose the layout, and find something worth opening.</p>
+            <a class="hero-jump" href="#browse">Browse deals</a>
           </div>
-          <p class="fine">USD pricing <span>·</span> JSON-driven catalog <span>·</span> Steam title search</p>
-        </div>
 
-        <div class="stage-wrap reveal delay-1" aria-label="Discounted interface preview">
-          <div class="stage">
-            <div class="app">
-              <div class="app-bar">
-                <span class="app-brand">DISCOUNTED</span>
+          <div class="hero-preview reveal delay-1">
+            <div class="preview-window">
+              <div class="preview-media" id="previewMedia">
+                <span class="thumb-fallback"><svg class="i"><use href="#i-image"/></svg></span>
+                <img id="previewImage" alt="" loading="eager" decoding="async" />
               </div>
-
-              <div class="app-search">
-                <svg class="i"><use href="#i-search"/></svg>
-                <span>Search discounted games</span>
-              </div>
-
-              <div class="app-budget">
-                <div class="app-budget-head">
-                  <span>Budget</span>
-                  <b id="stageBudget">$0 — $100</b>
+              <div class="preview-body">
+                <div class="preview-meta">
+                  <span id="previewType">Game</span>
+                  <b id="previewDiscount">—</b>
                 </div>
-                <div class="mini-track"><i></i><b></b><span></span></div>
-              </div>
-
-              <div class="featured-deal">
-                <div class="featured-top">
-                  <span class="deal-type"><svg class="i i-sm"><use href="#i-gamepad"/></svg>Game</span>
-                  <span id="stageDiscount" class="deal-cut">—</span>
-                </div>
-                <strong id="stageTitle">Finding a deal…</strong>
-                <small id="stageGroup">Steam promotion</small>
-                <div class="featured-price">
-                  <b id="stagePrice">—</b>
-                  <s id="stageWas">—</s>
+                <h2 id="previewTitle">Finding a deal…</h2>
+                <p id="previewGroup">Steam promotion</p>
+                <div class="preview-pricing">
+                  <strong id="previewPrice">—</strong>
+                  <s id="previewWas">—</s>
                 </div>
               </div>
-
-              <div class="app-foot">
-                <span><svg class="i i-sm"><use href="#i-sliders"/></svg>FILTER</span>
-                <span><svg class="i i-sm"><use href="#i-tag"/></svg>SORT</span>
-                <span><svg class="i i-sm"><use href="#i-external"/></svg>STEAM</span>
-              </div>
             </div>
-
-            <div class="stage-chip c1">
-              <span class="chip-icon"><svg class="i"><use href="#i-wallet"/></svg></span>
-              <span><small>CHEAPEST</small><b id="stageCheapest">—</b></span>
-            </div>
-            <div class="stage-chip c2">
-              <span class="chip-icon"><svg class="i"><use href="#i-tag"/></svg></span>
-              <span><small>BIGGEST CUT</small><b id="stageBestCut">—</b></span>
-            </div>
+            <div class="preview-stat stat-a"><span>Cheapest</span><b id="stageCheapest">—</b></div>
+            <div class="preview-stat stat-b"><span>Biggest cut</span><b id="stageBestCut">—</b></div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
-    <section id="browse" class="section">
+    <section id="browse" class="catalog-section">
       <div class="wrap">
-        <header class="section-head reveal">
-          <p class="eyebrow">Browse</p>
-          <h2>Find your price.</h2>
-          <p class="lead">Search the catalog, filter the discount, or use both budget handles to stay inside a range.</p>
+        <header class="catalog-heading reveal">
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>Find your next deal.</h2>
+          </div>
+
+          <div class="catalog-tags">
+            <label class="tag-control">
+              <span>Currency</span>
+              <select id="currencySelect" aria-label="Currency">
+                <option value="USD">USD</option>
+              </select>
+            </label>
+            <label class="tag-control">
+              <span>Layout</span>
+              <select id="layoutSelect" aria-label="Catalog layout">
+                <option value="full">Full</option>
+                <option value="compact">Compact</option>
+              </select>
+            </label>
+          </div>
         </header>
 
-        <div class="browser-shell reveal delay-1">
-          <div class="browser-top">
-            <nav id="typeTabs" class="type-tabs" aria-label="Product type">
-              <button class="type-tab active" type="button" data-type="game"><svg class="i i-sm"><use href="#i-gamepad"/></svg>Games <b id="gameCount">0</b></button>
-              <button class="type-tab" type="button" data-type="dlc"><svg class="i i-sm"><use href="#i-puzzle"/></svg>DLC <b id="dlcCount">0</b></button>
-              <button class="type-tab" type="button" data-type="bundle"><svg class="i i-sm"><use href="#i-box"/></svg>Bundles <b id="bundleCount">0</b></button>
-              <button class="type-tab" type="button" data-type="all"><svg class="i i-sm"><use href="#i-grid"/></svg>All <b id="allCount">0</b></button>
-            </nav>
-          </div>
+        <div class="browser-shell reveal">
+          <nav id="typeTabs" class="type-tabs" aria-label="Product type">
+            <button class="type-tab active" type="button" data-type="game"><svg class="i i-sm"><use href="#i-gamepad"/></svg>Games <b id="gameCount">0</b></button>
+            <button class="type-tab" type="button" data-type="dlc"><svg class="i i-sm"><use href="#i-puzzle"/></svg>DLC <b id="dlcCount">0</b></button>
+            <button class="type-tab" type="button" data-type="bundle"><svg class="i i-sm"><use href="#i-box"/></svg>Bundles <b id="bundleCount">0</b></button>
+            <button class="type-tab" type="button" data-type="all"><svg class="i i-sm"><use href="#i-grid"/></svg>All <b id="allCount">0</b></button>
+          </nav>
 
           <div class="filter-grid">
             <label class="control search-control">
               <span>Search</span>
               <div class="input-shell">
                 <svg class="i"><use href="#i-search"/></svg>
-                <input id="searchInput" type="search" autocomplete="off" placeholder="Search title or sale…" />
+                <input id="searchInput" type="search" autocomplete="off" placeholder="Search a title or promotion…" />
                 <kbd>/</kbd>
               </div>
             </label>
@@ -161,13 +139,13 @@
                 <span>Budget</span>
                 <output id="budgetOutput">$0.00 — $0.00</output>
               </div>
-              <div class="range-wrap" id="rangeWrap">
+              <div class="range-wrap">
                 <div class="range-track"></div>
                 <div class="range-fill" id="rangeFill"></div>
                 <input id="minPrice" type="range" min="0" max="100" step="0.5" value="0" aria-label="Minimum sale price" />
                 <input id="maxPrice" type="range" min="0" max="100" step="0.5" value="100" aria-label="Maximum sale price" />
               </div>
-              <div class="range-scale"><span>$0</span><span id="rangeMaxLabel">$100</span></div>
+              <div class="range-scale"><span id="rangeMinLabel">$0</span><span id="rangeMaxLabel">$100</span></div>
             </div>
           </div>
 
@@ -178,10 +156,7 @@
               <button class="quick-chip" type="button" data-filter="70plus">70%+</button>
               <button class="quick-chip" type="button" data-filter="90plus">90%+</button>
             </div>
-            <button id="resetButton" class="reset-button" type="button">
-              <svg class="i i-sm"><use href="#i-sliders"/></svg>
-              Reset
-            </button>
+            <button id="resetButton" class="reset-button" type="button"><svg class="i i-sm"><use href="#i-sliders"/></svg>Reset</button>
           </div>
         </div>
 
@@ -190,6 +165,7 @@
             <span class="eyebrow">Results</span>
             <h3 id="resultCount">Loading catalog…</h3>
           </div>
+
           <div class="results-actions">
             <label class="page-size">
               <span>Show</span>
@@ -207,85 +183,35 @@
         <section id="products" class="product-grid" aria-label="Discounted products"></section>
 
         <nav id="pagination" class="pagination" aria-label="Result pages" hidden>
-          <button id="prevPage" class="page-nav" type="button" aria-label="Previous page">
-            <svg class="i i-sm"><use href="#i-left"/></svg>
-            Previous
-          </button>
+          <button id="prevPage" class="page-nav" type="button"><svg class="i i-sm"><use href="#i-left"/></svg>Previous</button>
           <div id="pageNumbers" class="page-numbers"></div>
-          <button id="nextPage" class="page-nav" type="button" aria-label="Next page">
-            Next
-            <svg class="i i-sm"><use href="#i-right"/></svg>
-          </button>
+          <button id="nextPage" class="page-nav" type="button">Next<svg class="i i-sm"><use href="#i-right"/></svg></button>
         </nav>
 
         <section id="emptyState" class="empty-state" hidden>
           <svg class="empty-icon"><use href="#i-search"/></svg>
           <strong>No matches.</strong>
-          <p>Try widening the budget range, changing tabs, or clearing the search.</p>
-          <button id="emptyReset" class="btn btn-ghost" type="button">Show everything</button>
+          <p>Try widening the budget, switching categories, or clearing the search.</p>
+          <button id="emptyReset" class="secondary-button" type="button">Show everything</button>
         </section>
 
         <section id="errorState" class="empty-state error-state" hidden>
           <svg class="empty-icon"><use href="#i-info"/></svg>
-          <strong>Catalog failed to load.</strong>
-          <p><code>games.json</code> could not be read from this deployment.</p>
+          <strong>Catalog unavailable.</strong>
+          <p>The deal list could not be loaded.</p>
         </section>
-      </div>
-    </section>
-
-    <section id="how" class="section section-alt">
-      <div class="wrap">
-        <header class="section-head compact reveal">
-          <p class="eyebrow">How it works</p>
-          <h2>Three steps.</h2>
-        </header>
-
-        <ol class="route">
-          <li class="route-node reveal">
-            <span class="node-icon"><svg class="i"><use href="#i-grid"/></svg></span>
-            <span class="node-num">01</span>
-            <h3>Choose the catalog</h3>
-            <p>Games, DLC, bundles, or everything together.</p>
-          </li>
-          <li class="route-node reveal delay-1">
-            <span class="node-icon"><svg class="i"><use href="#i-wallet"/></svg></span>
-            <span class="node-num">02</span>
-            <h3>Set the budget</h3>
-            <p>Use both slider handles to define the sale-price range.</p>
-          </li>
-          <li class="route-node reveal delay-2">
-            <span class="node-icon"><svg class="i"><use href="#i-external"/></svg></span>
-            <span class="node-num">03</span>
-            <h3>Open Steam</h3>
-            <p>Every result generates a Steam search from the title.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="data" class="section">
-      <div class="wrap data-grid">
-        <div class="reveal">
-          <p class="eyebrow">Data</p>
-          <h2>One file drives it.</h2>
-          <p class="lead">The interface contains no hard-coded products. Add or replace entries in <code>games.json</code> and the counts, tabs, budget ceiling, sorting, search, cards and Steam links update automatically.</p>
-        </div>
-
-        <aside class="data-card reveal delay-1">
-          <div class="data-row"><span>Catalog</span><b>games.json</b></div>
-          <div class="data-row"><span>Links</span><b>Title-based Steam search</b></div>
-          <div class="data-row"><span>Types</span><b>game · dlc · bundle · other</b></div>
-          <div class="data-row"><span>Pricing</span><b>USD snapshot</b></div>
-        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <a class="brand" href="#top"><span class="brand-mark">D</span><span>Discounted</span></a>
-      <p>Steam promotions can change. Prices shown are snapshot data.</p>
-      <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
+      <a class="brand" href="./"><img class="brand-logo" src="./assets/discounted.svg" width="30" height="30" alt="" /><span>Discounted</span></a>
+      <span>Steam promotions can change.</span>
+      <div class="footer-links">
+        <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
+        <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
+      </div>
     </div>
   </footer>
 
