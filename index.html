@@ -33,47 +33,73 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <div class="hero-brandline reveal">
+        <div class="masthead reveal">
           <a class="brand" href="./" aria-label="Discounted home">
-            <img class="brand-logo" src="./assets/discounted.svg" width="36" height="36" alt="" />
+            <img class="brand-logo" src="./assets/discounted.svg" width="34" height="34" alt="" />
             <span>Discounted</span>
           </a>
-          <div class="hero-links">
+
+          <nav class="masthead-links" aria-label="Project links">
             <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
-            <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
-          </div>
+            <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">
+              Source
+              <svg class="i i-sm"><use href="#i-external"/></svg>
+            </a>
+          </nav>
         </div>
 
-        <div class="hero-grid">
+        <div class="hero-layout">
           <div class="hero-copy reveal">
             <p class="release" id="heroCount">Loading sale snapshot</p>
-            <h1>No digging.<br><span>I’ve got you, stranger.</span></h1>
-            <p class="lead">Discounted Steam games, DLC and bundles in one place. Set your budget, switch currency, choose the layout, and find something worth opening.</p>
-            <a class="hero-jump" href="#browse">Browse deals</a>
+            <h1>Find the right deal faster.</h1>
+            <p class="lead">Browse discounted Steam games, DLC and bundles from one catalog. Search by title, filter by budget and discount, switch currency, and open the deal when it fits.</p>
+
+            <div class="hero-actions">
+              <a class="primary-action" href="#browse">Browse deals</a>
+              <a class="secondary-action" href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
+            </div>
+
+            <div class="snapshot-row" aria-label="Sale snapshot">
+              <div class="snapshot-item">
+                <span>Cheapest deal</span>
+                <strong id="stageCheapest">—</strong>
+              </div>
+              <div class="snapshot-item">
+                <span>Largest discount</span>
+                <strong id="stageBestCut">—</strong>
+              </div>
+            </div>
           </div>
 
-          <div class="hero-preview reveal delay-1">
-            <div class="preview-window">
-              <div class="preview-media" id="previewMedia">
-                <span class="thumb-fallback"><svg class="i"><use href="#i-image"/></svg></span>
-                <img id="previewImage" alt="" loading="eager" decoding="async" />
+          <article class="featured-card reveal delay-1">
+            <a class="featured-media preview-media" id="previewMedia" href="#browse" aria-label="Open featured deal">
+              <span class="thumb-fallback" aria-hidden="true">
+                <svg class="i"><use href="#i-image"/></svg>
+              </span>
+              <img id="previewImage" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" />
+            </a>
+
+            <div class="featured-body">
+              <div class="preview-meta">
+                <span id="previewType">Game</span>
+                <b id="previewDiscount">—</b>
               </div>
-              <div class="preview-body">
-                <div class="preview-meta">
-                  <span id="previewType">Game</span>
-                  <b id="previewDiscount">—</b>
-                </div>
-                <h2 id="previewTitle">Finding a deal…</h2>
-                <p id="previewGroup">Steam promotion</p>
+
+              <h2 id="previewTitle">Finding a deal…</h2>
+              <p id="previewGroup">Steam promotion</p>
+
+              <div class="featured-bottom">
                 <div class="preview-pricing">
                   <strong id="previewPrice">—</strong>
                   <s id="previewWas">—</s>
                 </div>
+                <a class="featured-link" id="featuredLink" href="#browse" aria-label="View featured deal">
+                  View deal
+                  <svg class="i i-sm"><use href="#i-right"/></svg>
+                </a>
               </div>
             </div>
-            <div class="preview-stat stat-a"><span>Cheapest</span><b id="stageCheapest">—</b></div>
-            <div class="preview-stat stat-b"><span>Biggest cut</span><b id="stageBestCut">—</b></div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -82,131 +108,176 @@
       <div class="wrap">
         <header class="catalog-heading reveal">
           <div>
-            <p class="eyebrow">Browse</p>
-            <h2>Find your next deal.</h2>
-          </div>
-
-          <div class="catalog-tags">
-            <label class="tag-control">
-              <span>Currency</span>
-              <select id="currencySelect" aria-label="Currency">
-                <option value="USD">USD</option>
-              </select>
-            </label>
-            <label class="tag-control">
-              <span>Layout</span>
-              <select id="layoutSelect" aria-label="Catalog layout">
-                <option value="full">Full</option>
-                <option value="compact">Compact</option>
-              </select>
-            </label>
+            <p class="eyebrow">Catalog</p>
+            <h2>Browse all discounts.</h2>
+            <p>Use the filters to narrow the catalog before opening a product or continuing to Steam.</p>
           </div>
         </header>
 
-        <div class="browser-shell reveal">
-          <nav id="typeTabs" class="type-tabs" aria-label="Product type">
-            <button class="type-tab active" type="button" data-type="game"><svg class="i i-sm"><use href="#i-gamepad"/></svg>Games <b id="gameCount">0</b></button>
-            <button class="type-tab" type="button" data-type="dlc"><svg class="i i-sm"><use href="#i-puzzle"/></svg>DLC <b id="dlcCount">0</b></button>
-            <button class="type-tab" type="button" data-type="bundle"><svg class="i i-sm"><use href="#i-box"/></svg>Bundles <b id="bundleCount">0</b></button>
-            <button class="type-tab" type="button" data-type="all"><svg class="i i-sm"><use href="#i-grid"/></svg>All <b id="allCount">0</b></button>
-          </nav>
-
-          <div class="filter-grid">
-            <label class="control search-control">
-              <span>Search</span>
-              <div class="input-shell">
-                <svg class="i"><use href="#i-search"/></svg>
-                <input id="searchInput" type="search" autocomplete="off" placeholder="Search a title or promotion…" />
-                <kbd>/</kbd>
+        <div class="catalog-workspace">
+          <aside class="filter-panel reveal" aria-label="Catalog filters">
+            <div class="filter-panel-head">
+              <div>
+                <span class="panel-kicker">Filters</span>
+                <strong>Refine results</strong>
               </div>
-            </label>
+              <button id="resetButton" class="reset-button" type="button">
+                Reset
+              </button>
+            </div>
 
-            <label class="control">
-              <span>Order</span>
-              <select id="sortSelect">
-                <option value="az">Alphabetical A to Z</option>
-                <option value="za">Alphabetical Z to A</option>
-                <option value="cheap">Cheapest first</option>
-                <option value="expensive">Most expensive first</option>
-                <option value="discount">Biggest discount</option>
-                <option value="discount-low">Smallest discount</option>
-                <option value="savings">Most money saved</option>
-              </select>
-            </label>
+            <section class="filter-group">
+              <span class="filter-label">Product type</span>
+              <nav id="typeTabs" class="type-tabs" aria-label="Product type">
+                <button class="type-tab active" type="button" data-type="game">
+                  <span><svg class="i i-sm"><use href="#i-gamepad"/></svg>Games</span>
+                  <b id="gameCount">0</b>
+                </button>
+                <button class="type-tab" type="button" data-type="dlc">
+                  <span><svg class="i i-sm"><use href="#i-puzzle"/></svg>DLC</span>
+                  <b id="dlcCount">0</b>
+                </button>
+                <button class="type-tab" type="button" data-type="bundle">
+                  <span><svg class="i i-sm"><use href="#i-box"/></svg>Bundles</span>
+                  <b id="bundleCount">0</b>
+                </button>
+                <button class="type-tab" type="button" data-type="all">
+                  <span><svg class="i i-sm"><use href="#i-grid"/></svg>All products</span>
+                  <b id="allCount">0</b>
+                </button>
+              </nav>
+            </section>
 
-            <div class="control budget-control">
+            <section class="filter-group">
+              <span class="filter-label">Discount</span>
+              <div class="quick-filters" aria-label="Discount filters">
+                <button class="quick-chip active" type="button" data-filter="all">Any</button>
+                <button class="quick-chip" type="button" data-filter="50plus">50%+</button>
+                <button class="quick-chip" type="button" data-filter="70plus">70%+</button>
+                <button class="quick-chip" type="button" data-filter="90plus">90%+</button>
+              </div>
+            </section>
+
+            <section class="filter-group budget-control">
               <div class="budget-head">
-                <span>Budget</span>
+                <span class="filter-label">Budget</span>
                 <output id="budgetOutput">$0.00 — $0.00</output>
               </div>
+
               <div class="range-wrap">
                 <div class="range-track"></div>
                 <div class="range-fill" id="rangeFill"></div>
                 <input id="minPrice" type="range" min="0" max="100" step="0.5" value="0" aria-label="Minimum sale price" />
                 <input id="maxPrice" type="range" min="0" max="100" step="0.5" value="100" aria-label="Maximum sale price" />
               </div>
-              <div class="range-scale"><span id="rangeMinLabel">$0</span><span id="rangeMaxLabel">$100</span></div>
-            </div>
-          </div>
 
-          <div class="quick-row">
-            <div class="quick-filters" aria-label="Discount filters">
-              <button class="quick-chip active" type="button" data-filter="all">Any discount</button>
-              <button class="quick-chip" type="button" data-filter="50plus">50%+</button>
-              <button class="quick-chip" type="button" data-filter="70plus">70%+</button>
-              <button class="quick-chip" type="button" data-filter="90plus">90%+</button>
+              <div class="range-scale">
+                <span id="rangeMinLabel">$0</span>
+                <span id="rangeMaxLabel">$100</span>
+              </div>
+            </section>
+          </aside>
+
+          <div class="catalog-main">
+            <div class="catalog-toolbar reveal">
+              <label class="search-control">
+                <span class="sr-only">Search</span>
+                <div class="input-shell">
+                  <svg class="i"><use href="#i-search"/></svg>
+                  <input id="searchInput" type="search" autocomplete="off" placeholder="Search games, DLC, bundles or promotions" />
+                  <kbd>/</kbd>
+                </div>
+              </label>
+
+              <div class="toolbar-selects">
+                <label class="toolbar-field sort-field">
+                  <span>Sort</span>
+                  <select id="sortSelect">
+                    <option value="az">A to Z</option>
+                    <option value="za">Z to A</option>
+                    <option value="cheap">Cheapest first</option>
+                    <option value="expensive">Most expensive first</option>
+                    <option value="discount">Biggest discount</option>
+                    <option value="discount-low">Smallest discount</option>
+                    <option value="savings">Most money saved</option>
+                  </select>
+                </label>
+
+                <label class="toolbar-field">
+                  <span>Currency</span>
+                  <select id="currencySelect" aria-label="Currency">
+                    <option value="USD">USD</option>
+                  </select>
+                </label>
+
+                <label class="toolbar-field">
+                  <span>View</span>
+                  <select id="layoutSelect" aria-label="Catalog layout">
+                    <option value="full">Cards</option>
+                    <option value="compact">Compact</option>
+                  </select>
+                </label>
+              </div>
             </div>
-            <button id="resetButton" class="reset-button" type="button"><svg class="i i-sm"><use href="#i-sliders"/></svg>Reset</button>
+
+            <div class="results-head reveal">
+              <div>
+                <span class="eyebrow">Results</span>
+                <h3 id="resultCount">Loading catalog…</h3>
+              </div>
+
+              <div class="results-actions">
+                <label class="page-size">
+                  <span>Show</span>
+                  <select id="pageSizeSelect" aria-label="Number of results per page">
+                    <option value="10">10</option>
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </label>
+                <p id="updatedAt">Updated —</p>
+              </div>
+            </div>
+
+            <section id="products" class="product-grid" aria-label="Discounted products"></section>
+
+            <nav id="pagination" class="pagination" aria-label="Result pages" hidden>
+              <button id="prevPage" class="page-nav" type="button">
+                <svg class="i i-sm"><use href="#i-left"/></svg>
+                Previous
+              </button>
+              <div id="pageNumbers" class="page-numbers"></div>
+              <button id="nextPage" class="page-nav" type="button">
+                Next
+                <svg class="i i-sm"><use href="#i-right"/></svg>
+              </button>
+            </nav>
+
+            <section id="emptyState" class="empty-state" hidden>
+              <svg class="empty-icon"><use href="#i-search"/></svg>
+              <strong>No matches.</strong>
+              <p>Try widening the budget, switching categories, or clearing the search.</p>
+              <button id="emptyReset" class="secondary-button" type="button">Show everything</button>
+            </section>
+
+            <section id="errorState" class="empty-state error-state" hidden>
+              <svg class="empty-icon"><use href="#i-info"/></svg>
+              <strong>Catalog unavailable.</strong>
+              <p>The deal list could not be loaded.</p>
+            </section>
           </div>
         </div>
-
-        <div class="results-head reveal">
-          <div>
-            <span class="eyebrow">Results</span>
-            <h3 id="resultCount">Loading catalog…</h3>
-          </div>
-
-          <div class="results-actions">
-            <label class="page-size">
-              <span>Show</span>
-              <select id="pageSizeSelect" aria-label="Number of results per page">
-                <option value="10">10</option>
-                <option value="25" selected>25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </label>
-            <p id="updatedAt">Updated —</p>
-          </div>
-        </div>
-
-        <section id="products" class="product-grid" aria-label="Discounted products"></section>
-
-        <nav id="pagination" class="pagination" aria-label="Result pages" hidden>
-          <button id="prevPage" class="page-nav" type="button"><svg class="i i-sm"><use href="#i-left"/></svg>Previous</button>
-          <div id="pageNumbers" class="page-numbers"></div>
-          <button id="nextPage" class="page-nav" type="button">Next<svg class="i i-sm"><use href="#i-right"/></svg></button>
-        </nav>
-
-        <section id="emptyState" class="empty-state" hidden>
-          <svg class="empty-icon"><use href="#i-search"/></svg>
-          <strong>No matches.</strong>
-          <p>Try widening the budget, switching categories, or clearing the search.</p>
-          <button id="emptyReset" class="secondary-button" type="button">Show everything</button>
-        </section>
-
-        <section id="errorState" class="empty-state error-state" hidden>
-          <svg class="empty-icon"><use href="#i-info"/></svg>
-          <strong>Catalog unavailable.</strong>
-          <p>The deal list could not be loaded.</p>
-        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <a class="brand" href="./"><img class="brand-logo" src="./assets/discounted.svg" width="30" height="30" alt="" /><span>Discounted</span></a>
+      <a class="brand" href="./">
+        <img class="brand-logo" src="./assets/discounted.svg" width="30" height="30" alt="" />
+        <span>Discounted</span>
+      </a>
       <span>Steam promotions can change.</span>
       <div class="footer-links">
         <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
