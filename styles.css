@@ -1979,7 +1979,7 @@ body::before {
   background: #141b25;
   box-shadow:
     7px 7px 0 #040609,
-    10px 10px 0 color-mix(in srgb, var(--card-accent) 16%, transparent);
+    10px 10px 0 rgba(0,200,255,.08);
 }
 
 .card-media {
@@ -2046,12 +2046,12 @@ body::before {
 
 /* Compact mode inherits the same signal language */
 
-body[data-layout="compact"] .product-card {
+.product-grid.compact .product-card {
   border-left-width: 3px;
   box-shadow: 3px 3px 0 #05070a;
 }
 
-body[data-layout="compact"] .product-card:hover {
+.product-grid.compact .product-card:hover {
   transform: translate(-2px, -2px);
   box-shadow: 5px 5px 0 #040609;
 }
