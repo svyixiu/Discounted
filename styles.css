@@ -54,6 +54,30 @@ a { color: inherit; }
   margin: 0 auto;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 720;
+  letter-spacing: -.02em;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 850;
+}
+
 .source-link,
 .site-footer a:not(.brand) {
   color: var(--muted);
