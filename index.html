@@ -583,6 +583,35 @@
     >
       Filters
     </button>
+    <div
+      id="priceNoticeDialog"
+      class="price-notice"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="priceNoticeTitle"
+      aria-describedby="priceNoticeText"
+      hidden
+    >
+      <div class="price-notice-backdrop" aria-hidden="true"></div>
+      <div class="price-notice-card">
+        <p class="eyebrow">PRICE NOTICE</p>
+        <h2 id="priceNoticeTitle">Steam prices may differ.</h2>
+        <p id="priceNoticeText">
+          Discounted mirrors the prices we recorded during our research. Steam prices,
+          discounts, availability, and regional pricing may change at any time, so the
+          actual price shown on Steam may be different.
+        </p>
+        <div class="price-notice-actions">
+          <button id="priceNoticeClose" class="secondary-button" type="button">
+            Close
+          </button>
+          <button id="priceNoticeDismissForever" class="primary-action" type="button">
+            Don’t show again
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="./vault.js" defer></script>
     <script src="./script.js" defer></script>
   </body>
