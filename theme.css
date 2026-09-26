@@ -142,3 +142,9 @@ dialog::backdrop { background: rgba(18,17,15,.82); backdrop-filter: none; }
 .card-media img, .featured-media img, .product-hero-media img { filter: none; }
 .product-hero-media { border-color: var(--line) !important; }
 .trust, .product-sub { color: var(--text-soft); }
+
+/* A quiet moving pigment field behind the hero only. */
+.hero { isolation: isolate; background: #242320; }
+#heroGradient { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: .84; background: linear-gradient(115deg, #242320 30%, #302823 74%, #34302a); }
+.hero > .wrap { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { #heroGradient { opacity: .68; } }
