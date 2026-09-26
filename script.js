@@ -2,6 +2,7 @@ const els = {
   products: document.querySelector('#products'),
   search: document.querySelector('#searchInput'),
   sort: document.querySelector('#sortSelect'),
+  pageSize: document.querySelector('#pageSizeSelect'),
   resultCount: document.querySelector('#resultCount'),
   updatedAt: document.querySelector('#updatedAt'),
   empty: document.querySelector('#emptyState'),
@@ -24,6 +25,10 @@ const els = {
   stageWas: document.querySelector('#stageWas'),
   stageCheapest: document.querySelector('#stageCheapest'),
   stageBestCut: document.querySelector('#stageBestCut'),
+  pagination: document.querySelector('#pagination'),
+  prevPage: document.querySelector('#prevPage'),
+  nextPage: document.querySelector('#nextPage'),
+  pageNumbers: document.querySelector('#pageNumbers'),
   counts: {
     game: document.querySelector('#gameCount'),
     dlc: document.querySelector('#dlcCount'),
@@ -37,6 +42,7 @@ let meta = {};
 let activeType = 'game';
 let activeDiscount = 'all';
 let absoluteMax = 100;
+let currentPage = 1;
 
 const money = value => `$${Number(value).toFixed(2)}`;
 const escapeHtml = value => String(value).replace(/[&<>'"]/g, ch => ({
@@ -72,6 +78,7 @@ function typeIcon(type) {
 function formatDate(iso) {
   const d = new Date(`${iso || ''}T00:00:00`);
   if (Number.isNaN(d.getTime())) return 'Updated recently';
+
   return `Updated ${new Intl.DateTimeFormat('en-US', {
     month: 'short',
     day: 'numeric',
@@ -162,7 +169,7 @@ function renderCard(product) {
   return `
     <article class="product-card">
       <div class="card-top">
-        <span class="type-badge type-${escapeHtml(product.type)}">
+        <span class="type-badge">
           <svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>
           ${escapeHtml(typeLabel(product.type))}
         </span>
@@ -199,11 +206,70 @@ function renderCard(product) {
   `;
 }
 
-function render() {
+function renderPagination(totalItems, pageSize) {
+  const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+  currentPage = Math.min(currentPage, totalPages);
+
+  els.pagination.hidden = totalItems <= pageSize || totalItems === 0;
+  els.prevPage.disabled = currentPage <= 1;
+  els.nextPage.disabled = currentPage >= totalPages;
+
+  if (els.pagination.hidden) {
+    els.pageNumbers.innerHTML = '';
+    return;
+  }
+
+  const pages = new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1]);
+  const visiblePages = [...pages]
+    .filter(page => page >= 1 && page <= totalPages)
+    .sort((a, b) => a - b);
+
+  const parts = [];
+  let previous = 0;
+
+  visiblePages.forEach(page => {
+    if (previous && page - previous > 1) {
+      parts.push('<span class="page-gap">…</span>');
+    }
+
+    parts.push(`
+      <button
+        class="page-number ${page === currentPage ? 'active' : ''}"
+        type="button"
+        data-page="${page}"
+        aria-label="Page ${page}"
+        aria-current="${page === currentPage ? 'page' : 'false'}">
+        ${page}
+      </button>
+    `);
+
+    previous = page;
+  });
+
+  els.pageNumbers.innerHTML = parts.join('');
+
+  els.pageNumbers.querySelectorAll('[data-page]').forEach(button => {
+    button.addEventListener('click', () => {
+      currentPage = Number(button.dataset.page);
+      render({ scrollToResults: true });
+    });
+  });
+}
+
+function render(options = {}) {
   updateBudgetUI();
 
   const ordered = sortProducts(filteredCatalog());
-  els.products.innerHTML = ordered.map(renderCard).join('');
+  const pageSize = Number(els.pageSize.value) || 25;
+  const totalPages = Math.max(1, Math.ceil(ordered.length / pageSize));
+
+  if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+
+  const start = (currentPage - 1) * pageSize;
+  const pageItems = ordered.slice(start, start + pageSize);
+
+  els.products.innerHTML = pageItems.map(renderCard).join('');
 
   const label =
     activeType === 'all' ? 'products'
@@ -212,15 +278,33 @@ function render() {
     : activeType === 'other' ? 'products'
     : 'games';
 
-  els.resultCount.textContent = `${ordered.length.toLocaleString('en-US')} ${label}`;
+  const rangeStart = ordered.length ? start + 1 : 0;
+  const rangeEnd = Math.min(start + pageSize, ordered.length);
+
+  els.resultCount.textContent = ordered.length
+    ? `${ordered.length.toLocaleString('en-US')} ${label} · showing ${rangeStart}–${rangeEnd}`
+    : `0 ${label}`;
+
   els.empty.hidden = ordered.length !== 0;
+  renderPagination(ordered.length, pageSize);
+
+  if (options.scrollToResults) {
+    document.querySelector('.results-head')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function resetPageAndRender() {
+  currentPage = 1;
+  render();
 }
 
 function resetAll() {
   els.search.value = '';
   els.sort.value = 'az';
+  els.pageSize.value = '25';
   activeType = 'game';
   activeDiscount = 'all';
+  currentPage = 1;
   els.minPrice.value = 0;
   els.maxPrice.value = absoluteMax;
 
@@ -292,7 +376,32 @@ function setHeroSnapshot() {
   els.stageWas.textContent = money(featured.original_price);
 }
 
+function setupScrollReveal() {
+  const items = document.querySelectorAll('.reveal');
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(item => item.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: '0px 0px -40px'
+  });
+
+  items.forEach(item => observer.observe(item));
+}
+
 async function boot() {
+  setupScrollReveal();
+
   try {
     const response = await fetch('./games.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -332,16 +441,30 @@ async function boot() {
   }
 }
 
-els.search.addEventListener('input', render);
-els.sort.addEventListener('change', render);
-els.minPrice.addEventListener('input', render);
-els.maxPrice.addEventListener('input', render);
+els.search.addEventListener('input', resetPageAndRender);
+els.sort.addEventListener('change', resetPageAndRender);
+els.pageSize.addEventListener('change', resetPageAndRender);
+els.minPrice.addEventListener('input', resetPageAndRender);
+els.maxPrice.addEventListener('input', resetPageAndRender);
 els.reset.addEventListener('click', resetAll);
 els.emptyReset.addEventListener('click', resetAll);
+
+els.prevPage.addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage -= 1;
+    render({ scrollToResults: true });
+  }
+});
+
+els.nextPage.addEventListener('click', () => {
+  currentPage += 1;
+  render({ scrollToResults: true });
+});
 
 els.typeTabs.forEach(tab => {
   tab.addEventListener('click', () => {
     activeType = tab.dataset.type;
+    currentPage = 1;
     els.typeTabs.forEach(item => item.classList.toggle('active', item === tab));
     render();
   });
@@ -350,6 +473,7 @@ els.typeTabs.forEach(tab => {
 els.quickChips.forEach(chip => {
   chip.addEventListener('click', () => {
     activeDiscount = chip.dataset.filter;
+    currentPage = 1;
     els.quickChips.forEach(item => item.classList.toggle('active', item === chip));
     render();
   });
