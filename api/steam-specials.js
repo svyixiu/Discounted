@@ -144,9 +144,29 @@ export default async function handler(req, res) {
       return response.json();
     };
 
-    const payloads = await Promise.all(
-      Array.from({ length: pages }, (_, i) => fetchPage(start + i * count)),
-    );
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    const payloads = [];
+
+    for (let i = 0; i < pages; i += 1) {
+      const pageStart = start + i * count;
+      let payload = null;
+      let lastError = null;
+
+      for (let attempt = 0; attempt < 4; attempt += 1) {
+        try {
+          payload = await fetchPage(pageStart);
+          break;
+        } catch (error) {
+          lastError = error;
+          await sleep(180 * (attempt + 1));
+        }
+      }
+
+      if (!payload) throw lastError || new Error("Steam page fetch failed");
+      payloads.push(payload);
+      if (i + 1 < pages) await sleep(90);
+    }
+
     const items = payloads.flatMap((payload) =>
       parseRows(payload.results_html || ""),
     );
