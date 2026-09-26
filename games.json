@@ -2,13 +2,11 @@
   "meta": {
     "updated_at": "2026-09-26",
     "currency": "USD",
-    "target_end_date": "2026-10-01",
-    "scope": "Discounted Steam games, DLC, passes, bundles and discounted packages verified or event-grounded to end October 1, 2026.",
-    "method": "Title-first discovery across Steam direct offer pages, content listings and October 1 sale-event inventories. Product type is explicit when known; thumbnails may use a Steam app ID or lazy title resolution.",
-    "important": "Snapshot for Oct 1, 2026. Event participation alone is not treated as a discount. The catalog favors coverage while preserving ends_at and verification provenance for each row.",
+    "scope": "Current discounted Steam games plus curated discounted DLC, passes, bundles and packages. Live game rows are discovered from Steam's US specials index; curated rows preserve known promotion end dates and provenance.",
+    "method": "Live Steam specials discovery for the Games category, merged title-first with the existing curated catalog. Steam app IDs and broad Steam genres are retained when available.",
+    "important": "Live Steam prices and discounts can change at any time. Rows without ends_at were discovered as currently discounted but do not have a verified promotion end date.",
     "count": 505,
-    "sale_end": "2026-10-01",
-    "link_policy": "Steam result links are generated client-side from product titles. App IDs are optional and primarily used for thumbnails."
+    "link_policy": "Steam app links use steam_appid when available; title search remains the fallback."
   },
   "games": [
     {
