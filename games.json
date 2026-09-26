@@ -5,10 +5,12 @@
     "scope": "Current discounted Steam games plus curated discounted DLC, passes, bundles and packages. Live game rows are discovered from Steam's US specials index; curated rows preserve known promotion end dates and provenance.",
     "method": "Live Steam specials discovery for the Games category, merged title-first with the existing curated catalog. Steam app IDs and broad Steam genres are retained when available.",
     "important": "Live Steam prices and discounts can change at any time. Rows without ends_at were discovered as currently discounted but do not have a verified promotion end date.",
-    "count": 6339,
+    "count": 6447,
     "link_policy": "Steam app links use steam_appid when available; title search remains the fallback.",
     "discovery_total": 6300,
-    "discovery_source_total": 6346
+    "discovery_source_total": 6346,
+    "research_merge_date": "2026-09-26",
+    "research_merge_added": 108
   },
   "games": [
     {
@@ -8894,8 +8896,10 @@
       "original_price": 4.99,
       "sale_price": 3.49,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2898710/Blood_Vial/"
     },
     {
       "title": "Blood, Fuel, Ammo & Speed",
@@ -11202,12 +11206,14 @@
       "original_price": 5.99,
       "sale_price": 5.09,
       "discount_percent": 15,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-09-30T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3190830/Cards_Everywhere/"
     },
     {
       "title": "Cards We're Dealt",
@@ -11665,12 +11671,14 @@
       "original_price": 8.99,
       "sale_price": 7.19,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Action",
         "RPG"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3127810/Cat_Gladiator/"
     },
     {
       "title": "Cat Hits the Deck",
@@ -11799,11 +11807,13 @@
       "original_price": 9.99,
       "sale_price": 5.99,
       "discount_percent": 40,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3042160/CatboyZOOM/"
     },
     {
       "title": "Catch a Falling Star",
@@ -12273,11 +12283,13 @@
       "original_price": 6.99,
       "sale_price": 5.94,
       "discount_percent": 15,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3097120/Cheaters_Table/"
     },
     {
       "title": "Check Inn",
@@ -15900,8 +15912,10 @@
       "original_price": 17.99,
       "sale_price": 12.59,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
+      "ends_at": "2026-09-30T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2841920/Cyberwar_Neon_City/"
     },
     {
       "title": "Cyborg Runner",
@@ -15971,11 +15985,13 @@
       "original_price": 19.78,
       "sale_price": 10.87,
       "discount_percent": 45,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Strategy"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3095110/DOT_Defence/"
     },
     {
       "title": "Daily Brew Idle: Milk Tea Tycoon",
@@ -20314,12 +20330,14 @@
       "original_price": 9.99,
       "sale_price": 8.99,
       "discount_percent": 10,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
       "genres": [
         "Indie",
         "Racing"
-      ]
+      ],
+      "ends_at": "2026-09-30T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3182920/Driving_Rogue/"
     },
     {
       "title": "Driving Test Simulator",
@@ -21387,11 +21405,13 @@
       "original_price": 24.99,
       "sale_price": 12.49,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1830220/Echo_Point_Nova/"
     },
     {
       "title": "Echobreaker",
@@ -21615,7 +21635,8 @@
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/2841680/Eggo/"
     },
     {
       "title": "Eggys Games Flash Collection",
@@ -22222,8 +22243,10 @@
       "original_price": 19.99,
       "sale_price": 15.99,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1396870/ENCHAIN/"
     },
     {
       "title": "Enchanted Stories: Mystic Woods Collector's Edition",
@@ -26830,11 +26853,13 @@
       "original_price": 2.99,
       "sale_price": 1.19,
       "discount_percent": 60,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1599810/Force_Reboot/"
     },
     {
       "title": "Foregone",
@@ -29474,12 +29499,14 @@
       "original_price": 19.99,
       "sale_price": 12.99,
       "discount_percent": 35,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2746400/Goblin_Cleanup/"
     },
     {
       "title": "Goblin Defenders: Steel‘n’ Wood",
@@ -29852,13 +29879,15 @@
       "original_price": 49.99,
       "sale_price": 4.99,
       "discount_percent": 90,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual",
         "Indie",
         "Sports"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/431240/Golf_With_Your_Friends/"
     },
     {
       "title": "Golfie",
@@ -30384,8 +30413,10 @@
       "original_price": 12.99,
       "sale_price": 5.19,
       "discount_percent": 60,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2218400/Greedland/"
     },
     {
       "title": "GREGS: Linked Together",
@@ -31966,10 +31997,11 @@
       "sale_price": 12.49,
       "discount_percent": 75,
       "ends_at": "2026-10-01",
-      "verified_by": "Steam offer page",
+      "verified_by": "SteamDB / Steam Store",
       "sale_group": "Standalone Oct 1 promotion",
       "steam_appid": 686810,
-      "type": "game"
+      "type": "game",
+      "store_url": "https://store.steampowered.com/app/686810/Hell_Let_Loose/"
     },
     {
       "title": "Hell Madness",
@@ -37090,12 +37122,14 @@
       "original_price": 9.99,
       "sale_price": 5.99,
       "discount_percent": 40,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Action",
         "Casual"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3150240/Jelly_Bubble/"
     },
     {
       "title": "Jelly Troops",
@@ -37598,7 +37632,9 @@
       "discount_percent": 35,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/1732110/Kaiju_Princess/",
+      "steam_appid": 1732110
     },
     {
       "title": "Kaiju Princess 2",
@@ -37607,7 +37643,9 @@
       "discount_percent": 15,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/2621050/Kaiju_Princess_2/",
+      "steam_appid": 2621050
     },
     {
       "title": "KAKU: Ancient Seal",
@@ -37795,11 +37833,13 @@
       "original_price": 17.98,
       "sale_price": 8.98,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2824340/Katanaut/"
     },
     {
       "title": "Kaya's Prophecy",
@@ -40255,14 +40295,16 @@
       "original_price": 4.99,
       "sale_price": 1.49,
       "discount_percent": 70,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual",
         "Indie",
         "Puzzle",
         "Strategy"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2865740/Lets_Minesweeper/"
     },
     {
       "title": "Let's Sing 2019",
@@ -41655,8 +41697,10 @@
       "original_price": 17.99,
       "sale_price": 12.59,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2445690/Lost_Castle_2/"
     },
     {
       "title": "Lost Horizon",
@@ -43940,11 +43984,13 @@
       "original_price": 14.99,
       "sale_price": 8.99,
       "discount_percent": 40,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Strategy"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/983870/Mechabellum/"
     },
     {
       "title": "Mechaconda",
@@ -44368,7 +44414,8 @@
       "genres": [
         "Adventure",
         "RPG"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/2622470/Metaphor_ReFantazio/"
     },
     {
       "title": "Metro Exodus",
@@ -46364,14 +46411,16 @@
       "original_price": 24.99,
       "sale_price": 2.49,
       "discount_percent": 90,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Action",
         "Casual",
         "Indie",
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/996770/Moving_Out/"
     },
     {
       "title": "MR. ELEVATOR",
@@ -46467,11 +46516,13 @@
       "original_price": 19.99,
       "sale_price": 12.99,
       "discount_percent": 35,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2111190/MULLET_MADJACK/"
     },
     {
       "title": "Multiplayer Drone Simulator",
@@ -46966,12 +47017,14 @@
       "original_price": 19.99,
       "sale_price": 3.99,
       "discount_percent": 80,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action",
         "Indie"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/557340/My_Friend_Pedro/"
     },
     {
       "title": "My Girlfriends",
@@ -47125,7 +47178,9 @@
       "discount_percent": 50,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/2984200/My_Neighbors_Lonely_Wife_2/",
+      "steam_appid": 2984200
     },
     {
       "title": "My Peephole: Hotel Harborview",
@@ -47544,7 +47599,8 @@
       "verified_by": "SteamDB event",
       "sale_group": "Companion Falls for You",
       "steam_appid": 3590780,
-      "type": "game"
+      "type": "game",
+      "store_url": "https://store.steampowered.com/app/3045610/Nano_Neighbors/"
     },
     {
       "title": "NanoApostle",
@@ -48676,12 +48732,14 @@
       "original_price": 3.99,
       "sale_price": 1.99,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
       "genres": [
         "Adventure",
         "Casual"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2134650/SteamWorld_Build/"
     },
     {
       "title": "New Yankee: Pirate Trap",
@@ -50551,12 +50609,14 @@
       "original_price": 4.99,
       "sale_price": 4.24,
       "discount_percent": 15,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3179240/Old_Market_Restored/"
     },
     {
       "title": "Old Market Simulator",
@@ -50565,11 +50625,13 @@
       "original_price": 9.99,
       "sale_price": 5.99,
       "discount_percent": 40,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2728870/Old_Market_Simulator/"
     },
     {
       "title": "Omega Labyrinth Life",
@@ -52410,14 +52472,15 @@
       "sale_price": 11.59,
       "discount_percent": 50,
       "ends_at": "2026-10-01",
-      "verified_by": "Steam offer page",
+      "verified_by": "SteamDB",
       "sale_group": "Other Oct 1 promotions",
       "steam_appid": 3058360,
       "type": "game",
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/3165210/Parisian_Bistro_Simulator/"
     },
     {
       "title": "Park Ranger Simulator",
@@ -52538,11 +52601,13 @@
       "original_price": 19.99,
       "sale_price": 9.99,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1260320/Party_Animals/"
     },
     {
       "title": "Party Madness",
@@ -52577,11 +52642,13 @@
       "original_price": 18.99,
       "sale_price": 15.19,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Strategy"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3120890/Pass_the_Fear/"
     },
     {
       "title": "Patch Quest",
@@ -52711,12 +52778,14 @@
       "original_price": 4.99,
       "sale_price": 4.49,
       "discount_percent": 10,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual",
         "Simulation"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3178220/Paver_Tidy_Up_Together/"
     },
     {
       "title": "Paw Patrol: On A Roll!",
@@ -53179,7 +53248,8 @@
       "type": "game",
       "genres": [
         "Action"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/1602010/Persona_4_Arena_Ultimax/"
     },
     {
       "title": "Persona 4 Golden",
@@ -57168,7 +57238,8 @@
       "genres": [
         "Action",
         "Adventure"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/2984120/RAIDOU_Remastered_The_Mystery_of_the_Soulless_Army/"
     },
     {
       "title": "RaidTitans",
@@ -59425,11 +59496,13 @@
       "original_price": 19.99,
       "sale_price": 17.99,
       "discount_percent": 10,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3159780/RIG_Riot/"
     },
     {
       "title": "Riot Operator",
@@ -60335,12 +60408,14 @@
       "original_price": 24.99,
       "sale_price": 12.49,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Simulation",
         "Sports"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2191070/Rooftops__Alleys_The_Parkour_Game/"
     },
     {
       "title": "ROOM– 24/7 Total Surveillance",
@@ -62299,8 +62374,10 @@
       "original_price": 14.99,
       "sale_price": 7.49,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1925170/Seafrog/"
     },
     {
       "title": "Seal of Evil",
@@ -63052,11 +63129,13 @@
       "original_price": 24.99,
       "sale_price": 2.49,
       "discount_percent": 90,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1227690/Severed_Steel/"
     },
     {
       "title": "Sewer",
@@ -63256,11 +63335,13 @@
       "original_price": 24.99,
       "sale_price": 17.49,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2444750/Shape_of_Dreams/"
     },
     {
       "title": "Shape Shifter",
@@ -63580,7 +63661,8 @@
       "genres": [
         "Adventure",
         "RPG"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/1875830/Shin_Megami_Tensei_V_Vengeance/"
     },
     {
       "title": "Shinehill",
@@ -63686,8 +63768,10 @@
       "original_price": 39.99,
       "sale_price": 9.99,
       "discount_percent": 75,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1286580/Ship_of_Fools/"
     },
     {
       "title": "Ships At Sea",
@@ -63875,11 +63959,13 @@
       "original_price": 9.99,
       "sale_price": 4.99,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2841020/Shotgun_Cop_Man/"
     },
     {
       "title": "Shrapnel Sentinel",
@@ -64469,15 +64555,17 @@
       "original_price": 19.99,
       "sale_price": 13.99,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action",
         "Adventure",
         "Indie",
         "RPG",
         "Sports"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1263240/Skate_Story/"
     },
     {
       "title": "Skatehouse",
@@ -65146,11 +65234,13 @@
       "original_price": 12.99,
       "sale_price": 10.39,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
       "genres": [
         "Puzzle"
-      ]
+      ],
+      "ends_at": "2026-09-30T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3182910/Sniper_Dan/"
     },
     {
       "title": "Sniper Reaction",
@@ -66562,12 +66652,14 @@
       "original_price": 14.99,
       "sale_price": 2.99,
       "discount_percent": 80,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Indie",
         "Racing"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/207140/SpeedRunners/"
     },
     {
       "title": "SPEEDSHOT",
@@ -68054,8 +68146,10 @@
       "original_price": 9.99,
       "sale_price": 6.99,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2912440/Steel_Judgment/"
     },
     {
       "title": "Steel Racer",
@@ -68198,13 +68292,14 @@
       "sale_price": 5.99,
       "discount_percent": 50,
       "ends_at": "2026-10-01",
-      "verified_by": "Steam offer page",
+      "verified_by": "SteamDB",
       "sale_group": "Standalone Oct 1 promotion",
       "steam_appid": 2085540,
       "type": "game",
       "genres": [
         "Action"
-      ]
+      ],
+      "store_url": "https://store.steampowered.com/app/1695270/Stick_It_to_the_Stickman/"
     },
     {
       "title": "Stick to the end",
@@ -68760,8 +68855,10 @@
       "original_price": 19.99,
       "sale_price": 13.99,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2452330/STREET_UNi_X/"
     },
     {
       "title": "Stroke Fill",
@@ -68797,11 +68894,13 @@
       "original_price": 11.99,
       "sale_price": 5.99,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Adventure"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3021950/Stuck_Together/"
     },
     {
       "title": "Study Abroad Sim",
@@ -68824,12 +68923,14 @@
       "original_price": 7,
       "sale_price": 5.95,
       "discount_percent": 15,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Racing",
         "Sports"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3192080/STUNTBOOST/"
     },
     {
       "title": "Stunted Gravity",
@@ -69237,7 +69338,9 @@
       "discount_percent": 10,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/2841930/Summer_Clover/",
+      "steam_appid": 2841930
     },
     {
       "title": "Summer Days in the Joyful Countryside",
@@ -69517,14 +69620,16 @@
       "original_price": 9.99,
       "sale_price": 3.39,
       "discount_percent": 66,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action",
         "Adventure",
         "Casual",
         "Indie"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/668210/Super_Fancy_Pants_Adventure/"
     },
     {
       "title": "Super Flying Vroom Vroom",
@@ -70306,7 +70411,9 @@
       "discount_percent": 10,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/2984190/Sweet_Succubus_Home/",
+      "steam_appid": 2984190
     },
     {
       "title": "Sweetie Candy Maze: Coral Peach",
@@ -70428,12 +70535,14 @@
       "original_price": 30.99,
       "sale_price": 10.53,
       "discount_percent": 66,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Action",
         "Indie"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1752320/SWORN/"
     },
     {
       "title": "Syberia - Remastered",
@@ -70725,7 +70834,9 @@
       "discount_percent": 30,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/1794200/Take_Me_To_The_Dungeon/",
+      "steam_appid": 1794200
     },
     {
       "title": "Takorita Meets Fries",
@@ -72004,7 +72115,9 @@
       "discount_percent": 20,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/2621040/The_Arrogant_Kaiju_Princess_and_The_Detective_Servant/",
+      "steam_appid": 2621040
     },
     {
       "title": "The Assembly",
@@ -73063,11 +73176,13 @@
       "original_price": 19.99,
       "sale_price": 4.99,
       "discount_percent": 75,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Strategy"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/641990/The_Escapists_2/"
     },
     {
       "title": "The Escapists: The Walking Dead",
@@ -77548,11 +77663,13 @@
       "original_price": 4.99,
       "sale_price": 1.99,
       "discount_percent": 60,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Action"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2769080/Toree_Saturn/"
     },
     {
       "title": "Tormented Souls",
@@ -77998,8 +78115,10 @@
       "original_price": 13.99,
       "sale_price": 9.79,
       "discount_percent": 30,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3046780/Toy_Smash_Kaboom/"
     },
     {
       "title": "Trackmania Turbo",
@@ -78246,7 +78365,9 @@
       "discount_percent": 10,
       "ends_at": "2026-10-01",
       "verified_by": "SteamDB event",
-      "sale_group": "Mango Party 5th Anniversary Sale"
+      "sale_group": "Mango Party 5th Anniversary Sale",
+      "store_url": "https://store.steampowered.com/app/3094820/Train45/",
+      "steam_appid": 3094820
     },
     {
       "title": "Trainz Railroad Simulator 2019",
@@ -80379,12 +80500,14 @@
       "original_price": 19.99,
       "sale_price": 14.99,
       "discount_percent": 25,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
       "genres": [
         "Adventure",
         "Indie"
-      ]
+      ],
+      "ends_at": "2026-09-30T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3109240/Utopia_Birth_of_The_Heroes/"
     },
     {
       "title": "Vacanauta",
@@ -82396,11 +82519,13 @@
       "original_price": 9.99,
       "sale_price": 7.99,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
       "genres": [
         "Casual"
-      ]
+      ],
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3158090/We_Junk_Artists/"
     },
     {
       "title": "Weakless",
@@ -83388,8 +83513,10 @@
       "original_price": 8.98,
       "sale_price": 7.18,
       "discount_percent": 20,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials"
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "ends_at": "2026-10-02T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/3084790/Witchs_Apocalyptic_Journey/"
     },
     {
       "title": "Witchcrafty",
@@ -83437,12 +83564,14 @@
       "original_price": 39.99,
       "sale_price": 19.99,
       "discount_percent": 50,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
       "genres": [
         "Action",
         "RPG"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/1448440/Firegirl_Hack_n_Splash_Rescue_DX/"
     },
     {
       "title": "Wobble Rumble",
@@ -84250,11 +84379,13 @@
       "original_price": 16.99,
       "sale_price": 6.79,
       "discount_percent": 60,
-      "verified_by": "Steam specials search",
-      "sale_group": "Steam Specials",
+      "verified_by": "SteamDB",
+      "sale_group": "SCHMOOVEMENT FESTIVAL 2026",
       "genres": [
         "Indie"
-      ]
+      ],
+      "ends_at": "2026-09-29T17:00:00Z",
+      "store_url": "https://store.steampowered.com/app/2011780/Yellow_Taxi_Goes_Vroom/"
     },
     {
       "title": "Yellow Trouble",
@@ -86092,6 +86223,1302 @@
         "Casual",
         "Strategy"
       ]
+    },
+    {
+      "title": "SOMA",
+      "type": "game",
+      "original_price": 29.68,
+      "sale_price": 19.59,
+      "discount_percent": 34,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/282140/SOMA/",
+      "steam_appid": 282140
+    },
+    {
+      "title": "ROUTINE",
+      "type": "game",
+      "original_price": 24.99,
+      "sale_price": 17.49,
+      "discount_percent": 30,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/306160/ROUTINE/",
+      "steam_appid": 306160
+    },
+    {
+      "title": "UNSIGHTED",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 7.99,
+      "discount_percent": 60,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1062110/UNSIGHTED/",
+      "steam_appid": 1062110
+    },
+    {
+      "title": "Momodora: Moonlit Farewell",
+      "type": "game",
+      "original_price": 16.99,
+      "sale_price": 10.19,
+      "discount_percent": 40,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1747760/Momodora_Moonlit_Farewell/",
+      "steam_appid": 1747760
+    },
+    {
+      "title": "The Alters",
+      "type": "game",
+      "original_price": 49.54,
+      "sale_price": 34.18,
+      "discount_percent": 31,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1601570/The_Alters/",
+      "steam_appid": 1601570
+    },
+    {
+      "title": "Hauntii",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 9.99,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1260810/Hauntii/",
+      "steam_appid": 1260810
+    },
+    {
+      "title": "LISA: The Joyful",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 5.49,
+      "discount_percent": 45,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/379310/LISA_The_Joyful/",
+      "steam_appid": 379310
+    },
+    {
+      "title": "Death's Gambit: Afterlife Soundtrack",
+      "type": "dlc",
+      "original_price": 12.99,
+      "sale_price": 6.49,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1795380/Deaths_Gambit_Afterlife_Soundtrack/",
+      "steam_appid": 1795380
+    },
+    {
+      "title": "Death's Gambit: Afterlife - Ashes of Vados",
+      "type": "dlc",
+      "original_price": 7.99,
+      "sale_price": 3.99,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1836750/Deaths_Gambit_Afterlife__Ashes_of_Vados/",
+      "steam_appid": 1836750
+    },
+    {
+      "title": "Paratopic",
+      "type": "game",
+      "original_price": 4.62,
+      "sale_price": 4.34,
+      "discount_percent": 6,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/897030/Paratopic/",
+      "steam_appid": 897030
+    },
+    {
+      "title": "SCHiM",
+      "type": "game",
+      "original_price": 16.44,
+      "sale_price": 8.22,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1519710/SCHiM/",
+      "steam_appid": 1519710
+    },
+    {
+      "title": "LISA: Complete Edition",
+      "type": "bundle",
+      "original_price": 19.99,
+      "sale_price": 10.99,
+      "discount_percent": 45,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Serenity Forge Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/sub/77828/",
+      "steam_subid": 77828
+    },
+    {
+      "title": "SteamWorld Dig",
+      "type": "game",
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/252270/SteamWorld_Dig/",
+      "steam_appid": 252270
+    },
+    {
+      "title": "SteamWorld Dig 2",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/571310/SteamWorld_Dig_2/",
+      "steam_appid": 571310
+    },
+    {
+      "title": "SteamWorld Heist",
+      "type": "game",
+      "original_price": 14.99,
+      "sale_price": 2.24,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/322190/SteamWorld_Heist/",
+      "steam_appid": 322190
+    },
+    {
+      "title": "SteamWorld Heist II",
+      "type": "game",
+      "original_price": 49.99,
+      "sale_price": 7.11,
+      "discount_percent": 86,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2396240/SteamWorld_Heist_II/",
+      "steam_appid": 2396240
+    },
+    {
+      "title": "SteamWorld Quest: Hand of Gilgamech",
+      "type": "game",
+      "original_price": 24.99,
+      "sale_price": 3.74,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/804010/SteamWorld_Quest_Hand_of_Gilgamech/",
+      "steam_appid": 804010
+    },
+    {
+      "title": "SteamWorld Heist: The Outsider",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 1.24,
+      "discount_percent": 75,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/486710/SteamWorld_Heist__The_Outsider/",
+      "steam_appid": 486710
+    },
+    {
+      "title": "Hatbox: Hatful Eight + 2 (SteamWorld Heist)",
+      "type": "dlc",
+      "original_price": 2.99,
+      "sale_price": 0.71,
+      "discount_percent": 76,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/486720/Hatbox_Hatful_Eight__2_SteamWorld_Heist/",
+      "steam_appid": 486720
+    },
+    {
+      "title": "SteamWorld Dig 2 OST Feat. El Huervo",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 1.49,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/686700/SteamWorld_Dig_2_OST_Feat_El_Huervo/",
+      "steam_appid": 686700
+    },
+    {
+      "title": "SteamWorld Heist II Official Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 5.49,
+      "discount_percent": 45,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2999080/SteamWorld_Heist_II_Official_Soundtrack/",
+      "steam_appid": 2999080
+    },
+    {
+      "title": "SteamWorld Build Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 2.99,
+      "discount_percent": 70,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2727180/SteamWorld_Build_Soundtrack/",
+      "steam_appid": 2727180
+    },
+    {
+      "title": "SteamWorld Build: Mechanized",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 5.49,
+      "discount_percent": 45,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2727190/SteamWorld_Build_Mechanized/",
+      "steam_appid": 2727190
+    },
+    {
+      "title": "SteamWorld Dig - Soundtrack",
+      "type": "dlc",
+      "original_price": 1.99,
+      "sale_price": 0.69,
+      "discount_percent": 65,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/290170/SteamWorld_Dig__Soundtrack/",
+      "steam_appid": 290170
+    },
+    {
+      "title": "SteamWorld Quest: Hand of Gilgamech - Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 2.49,
+      "discount_percent": 75,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1074870/SteamWorld_Quest_Hand_of_Gilgamech__Soundtrack/",
+      "steam_appid": 1074870
+    },
+    {
+      "title": "Planet of Lana",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 3.99,
+      "discount_percent": 80,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1608230/Planet_of_Lana/",
+      "steam_appid": 1608230
+    },
+    {
+      "title": "Planet of Lana II",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 13.99,
+      "discount_percent": 30,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/3087260/Planet_of_Lana_II/",
+      "steam_appid": 3087260
+    },
+    {
+      "title": "Laika: Aged Through Blood",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 4.99,
+      "discount_percent": 75,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1796220/Laika_Aged_Through_Blood/",
+      "steam_appid": 1796220
+    },
+    {
+      "title": "Wavetale",
+      "type": "game",
+      "original_price": 29.99,
+      "sale_price": 4.49,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1823930/Wavetale/",
+      "steam_appid": 1823930
+    },
+    {
+      "title": "The Gunk",
+      "type": "game",
+      "original_price": 18.4,
+      "sale_price": 2.76,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1089020/The_Gunk/",
+      "steam_appid": 1089020
+    },
+    {
+      "title": "LEGO® Bricktales",
+      "type": "game",
+      "original_price": 29.99,
+      "sale_price": 4.49,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1898290/LEGO_Bricktales/",
+      "steam_appid": 1898290
+    },
+    {
+      "title": "Swordship",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1804270/Swordship/",
+      "steam_appid": 1804270
+    },
+    {
+      "title": "White Shadows",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1158890/White_Shadows/",
+      "steam_appid": 1158890
+    },
+    {
+      "title": "ASKA",
+      "type": "game",
+      "original_price": 24.99,
+      "sale_price": 19.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1898300/ASKA/",
+      "steam_appid": 1898300
+    },
+    {
+      "title": "PHOGS!",
+      "type": "game",
+      "original_price": 38.35,
+      "sale_price": 23.78,
+      "discount_percent": 38,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/850320/PHOGS/",
+      "steam_appid": 850320
+    },
+    {
+      "title": "Somerville",
+      "type": "game",
+      "original_price": 29.96,
+      "sale_price": 17.98,
+      "discount_percent": 40,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1671410/Somerville/",
+      "steam_appid": 1671410
+    },
+    {
+      "title": "Source of Madness",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1315610/Source_of_Madness/",
+      "steam_appid": 1315610
+    },
+    {
+      "title": "Paper Cut Mansion",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1005870/Paper_Cut_Mansion/",
+      "steam_appid": 1005870
+    },
+    {
+      "title": "Togges",
+      "type": "game",
+      "original_price": 18.4,
+      "sale_price": 2.76,
+      "discount_percent": 85,
+      "ends_at": "2026-09-29T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "Thunderful Publisher Sale 2026",
+      "store_url": "https://store.steampowered.com/app/1550270/Togges/",
+      "steam_appid": 1550270
+    },
+    {
+      "title": "PlateUp!",
+      "type": "game",
+      "original_price": 17.03,
+      "sale_price": 12.43,
+      "discount_percent": 27,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/1599600/PlateUp/",
+      "steam_appid": 1599600
+    },
+    {
+      "title": "Cozy Island",
+      "type": "game",
+      "original_price": 13.47,
+      "sale_price": 8.89,
+      "discount_percent": 34,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/3087320/Cozy_Island/",
+      "steam_appid": 3087320
+    },
+    {
+      "title": "Mall Together",
+      "type": "game",
+      "original_price": 16.25,
+      "sale_price": 11.54,
+      "discount_percent": 29,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/3108920/Mall_Together/",
+      "steam_appid": 3108920
+    },
+    {
+      "title": "Phantom Squad",
+      "type": "game",
+      "original_price": 16.71,
+      "sale_price": 13.37,
+      "discount_percent": 20,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/2995890/Phantom_Squad/",
+      "steam_appid": 2995890
+    },
+    {
+      "title": "Tiny Auto Knights",
+      "type": "game",
+      "original_price": 18.09,
+      "sale_price": 14.83,
+      "discount_percent": 18,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/3087280/Tiny_Auto_Knights/",
+      "steam_appid": 3087280
+    },
+    {
+      "title": "Project Planet - Earth vs Humanity",
+      "type": "game",
+      "original_price": 24.07,
+      "sale_price": 21.18,
+      "discount_percent": 12,
+      "ends_at": "2026-10-02T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "2026 Multiplayer Games Fest",
+      "store_url": "https://store.steampowered.com/app/2224610/Project_Planet__Earth_vs_Humanity/",
+      "steam_appid": 2224610
+    },
+    {
+      "title": "Chill with You : Lo-Fi Story",
+      "type": "game",
+      "original_price": 11.99,
+      "sale_price": 8.99,
+      "discount_percent": 25,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169820/Chill_with_You__LoFi_Story/",
+      "steam_appid": 3169820
+    },
+    {
+      "title": "Aeruta",
+      "type": "game",
+      "original_price": 24.34,
+      "sale_price": 18.74,
+      "discount_percent": 23,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/2286780/Aeruta/",
+      "steam_appid": 2286780
+    },
+    {
+      "title": "Melodius Moments: Kemono Teatime Original Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169830/Melodius_Moments_Kemono_Teatime_Original_Soundtrack/",
+      "steam_appid": 3169830
+    },
+    {
+      "title": "Kemono Teatime Design Works – Café Days",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169840/Kemono_Teatime_Design_Works__Caf_Days/",
+      "steam_appid": 3169840
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE SEASON PASS VOL.2",
+      "type": "dlc",
+      "original_price": 24.99,
+      "sale_price": 19.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169850/BEYBLADE_X_EVOBATTLE_SEASON_PASS_VOL2/",
+      "steam_appid": 3169850
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE SEASON PASS",
+      "type": "dlc",
+      "original_price": 14.99,
+      "sale_price": 11.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169860/BEYBLADE_X_EVOBATTLE_SEASON_PASS/",
+      "steam_appid": 3169860
+    },
+    {
+      "title": "BEYBLADE X EVOBATTLE SOUNDTRACK",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-28T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "FURYU TOKYO GAME SHOW SALE",
+      "store_url": "https://store.steampowered.com/app/3169870/BEYBLADE_X_EVOBATTLE_SOUNDTRACK/",
+      "steam_appid": 3169870
+    },
+    {
+      "title": "NieR:Automata™ - 3C3C1D119440927",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 3.99,
+      "discount_percent": 60,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "SteamDB / Steam Store",
+      "sale_group": "NieR Franchise Sale 2026",
+      "store_url": "https://store.steampowered.com/app/580600/NieRAutomata__3C3C1D119440927/",
+      "steam_appid": 580600
+    },
+    {
+      "title": "Metaphor: ReFantazio - Yasogami High School Uniform (7), Battle BGM & Battle Jingle Set",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 2.99,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "ATLUS Developer Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2622480/Metaphor_ReFantazio__Yasogami_High_School_Uniform_Set/",
+      "steam_appid": 2622480
+    },
+    {
+      "title": "Metaphor: ReFantazio - Shujin Academy School Uniform (7), Battle BGM & Battle Jingle Set",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 2.99,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "ATLUS Developer Sale 2026",
+      "store_url": "https://store.steampowered.com/app/2622490/Metaphor_ReFantazio__Shujin_Academy_School_Uniform_Set/",
+      "steam_appid": 2622490
+    },
+    {
+      "title": "Ozymandias - Season Pass",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/2226120/Ozymandias__Season_Pass/",
+      "steam_appid": 2226120
+    },
+    {
+      "title": "AEW: Fight Forever - Season Pass 3",
+      "type": "dlc",
+      "original_price": 16.99,
+      "sale_price": 4.24,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/2611460/AEW_Fight_Forever__Season_Pass_3/",
+      "steam_appid": 2611460
+    },
+    {
+      "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN - Season Pass",
+      "type": "dlc",
+      "original_price": 29.99,
+      "sale_price": 8.99,
+      "discount_percent": 70,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/2252280/STRANGER_OF_PARADISE_FINAL_FANTASY_ORIGIN__Season_Pass/",
+      "steam_appid": 2252280
+    },
+    {
+      "title": "DARK SOULS™ II - Season Pass",
+      "type": "dlc",
+      "original_price": 24.99,
+      "sale_price": 12.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/284450/DARK_SOULS_II__Season_Pass/",
+      "steam_appid": 284450
+    },
+    {
+      "title": "Deus Ex: Mankind Divided™ DLC - Season Pass",
+      "type": "dlc",
+      "original_price": 14.99,
+      "sale_price": 1.49,
+      "discount_percent": 90,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/470070/Deus_Ex_Mankind_Divided__Season_Pass/",
+      "steam_appid": 470070
+    },
+    {
+      "title": "Wingspan: Asia Expansion",
+      "type": "dlc",
+      "original_price": 19.99,
+      "sale_price": 15.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/3362880/Wingspan_Asia_Expansion/",
+      "steam_appid": 3362880
+    },
+    {
+      "title": "Ghostrunner 2 Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/app/2593890/Ghostrunner_2_Soundtrack/",
+      "steam_appid": 2593890
+    },
+    {
+      "title": "Stray Blade Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 5.99,
+      "discount_percent": 40,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/app/2347690/Stray_Blade_Soundtrack/",
+      "steam_appid": 2347690
+    },
+    {
+      "title": "Squad - Original Soundtrack Vol. 1 & 2",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/453400/Squad__Original_Soundtrack_Vol_1__2/",
+      "steam_appid": 453400
+    },
+    {
+      "title": "Bloodstained: Ritual of the Night - Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/app/1101300/Bloodstained_Ritual_of_the_Night__Soundtrack/",
+      "steam_appid": 1101300
+    },
+    {
+      "title": "Indivisible - Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/app/1172420/Indivisible__Soundtrack/",
+      "steam_appid": 1172420
+    },
+    {
+      "title": "Dying Light: The Beast - Official Soundtrack",
+      "type": "dlc",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/3707620/Dying_Light_The_Beast__Official_Soundtrack/",
+      "steam_appid": 3707620
+    },
+    {
+      "title": "Planet Coaster - Adventure Pack",
+      "type": "dlc",
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/768830/Planet_Coaster__Adventure_Pack/",
+      "steam_appid": 768830
+    },
+    {
+      "title": "Planet Coaster - Classic Rides Collection",
+      "type": "dlc",
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/1061350/Planet_Coaster__Classic_Rides_Collection/",
+      "steam_appid": 1061350
+    },
+    {
+      "title": "Planet Coaster - Magnificent Rides Collection",
+      "type": "dlc",
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/995780/Planet_Coaster__Magnificent_Rides_Collection/",
+      "steam_appid": 995780
+    },
+    {
+      "title": "Planet Coaster - World's Fair Pack",
+      "type": "dlc",
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/953660/Planet_Coaster__Worlds_Fair_Pack/",
+      "steam_appid": 953660
+    },
+    {
+      "title": "Planet Coaster - Vintage Pack",
+      "type": "dlc",
+      "original_price": 10.99,
+      "sale_price": 5.49,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/891230/Planet_Coaster__Vintage_Pack/",
+      "steam_appid": 891230
+    },
+    {
+      "title": "Pillars of Eternity - Definitive Edition",
+      "type": "bundle",
+      "original_price": 39.99,
+      "sale_price": 15.99,
+      "discount_percent": 60,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/220633/",
+      "steam_subid": 220633
+    },
+    {
+      "title": "Stellaris: Anniversary Edition",
+      "type": "bundle",
+      "original_price": 79.99,
+      "sale_price": 23.99,
+      "discount_percent": 70,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1583399/",
+      "steam_subid": 1583399
+    },
+    {
+      "title": "Squad Fireteam Edition",
+      "type": "bundle",
+      "original_price": 49.99,
+      "sale_price": 19.99,
+      "discount_percent": 60,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1603731/",
+      "steam_subid": 1603731
+    },
+    {
+      "title": "Ship of Fools - Completely Foolish Edition",
+      "type": "bundle",
+      "original_price": 39.99,
+      "sale_price": 9.99,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1288961/",
+      "steam_subid": 1288961
+    },
+    {
+      "title": "King of Seas - Deluxe Edition",
+      "type": "bundle",
+      "original_price": 29.99,
+      "sale_price": 2.99,
+      "discount_percent": 90,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1535871/",
+      "steam_subid": 1535871
+    },
+    {
+      "title": "Super Magbot - Deluxe Edition",
+      "type": "bundle",
+      "original_price": 19.99,
+      "sale_price": 3.99,
+      "discount_percent": 80,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1541522/",
+      "steam_subid": 1541522
+    },
+    {
+      "title": "Golf With Your Friends - Ultimate Edition",
+      "type": "bundle",
+      "original_price": 49.99,
+      "sale_price": 4.99,
+      "discount_percent": 90,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/962813/",
+      "steam_subid": 962813
+    },
+    {
+      "title": "Trepang2 - Deluxe Edition",
+      "type": "bundle",
+      "original_price": 39.99,
+      "sale_price": 9.99,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/939456/",
+      "steam_subid": 939456
+    },
+    {
+      "title": "Hell Let Loose - Deluxe Edition Upgrade",
+      "type": "bundle",
+      "original_price": 19.99,
+      "sale_price": 4.99,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1180326/",
+      "steam_subid": 1180326
+    },
+    {
+      "title": "Woodo - Endless Summer Edition",
+      "type": "bundle",
+      "original_price": 16.99,
+      "sale_price": 11.89,
+      "discount_percent": 30,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1800774/",
+      "steam_subid": 1800774
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl — Standard to Ultimate Upgrade",
+      "type": "bundle",
+      "original_price": 49.99,
+      "sale_price": 34.99,
+      "discount_percent": 30,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1176944/",
+      "steam_subid": 1176944
+    },
+    {
+      "title": "AnnaRedux Soundtrack",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1581547/",
+      "steam_subid": 1581547
+    },
+    {
+      "title": "RPG Maker MZ - Dusk of the Elves Orchestral Dark fantasy Music Pack",
+      "type": "dlc",
+      "original_price": 14.99,
+      "sale_price": 13.49,
+      "discount_percent": 10,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Launch Discount",
+      "store_url": "https://store.steampowered.com/sub/1794370/",
+      "steam_subid": 1794370
+    },
+    {
+      "title": "Cities: Skylines II - Starter Editon",
+      "type": "bundle",
+      "original_price": 59.99,
+      "sale_price": 47.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1614365/",
+      "steam_subid": 1614365
+    },
+    {
+      "title": "Blood Brides - Support pack (NSFW Artbook)",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/sub/1798101/",
+      "steam_subid": 1798101
+    },
+    {
+      "title": "Atelier Yumia - Recipe and Blueprint Expansion Pack \"The Art of Aladiss\"",
+      "type": "dlc",
+      "original_price": 4.99,
+      "sale_price": 2.49,
+      "discount_percent": 50,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/3123420/Atelier_Yumia__The_Art_of_Aladiss/",
+      "steam_appid": 3123420
+    },
+    {
+      "title": "Hold The Mine x Stonewards BUNDLE",
+      "type": "bundle",
+      "original_price": 22.48,
+      "sale_price": 17.76,
+      "discount_percent": 21,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/45120/Hold_The_Mine_x_Stonewards/",
+      "steam_bundleid": 45120
+    },
+    {
+      "title": "Hold The Dwarves BUNDLE",
+      "type": "bundle",
+      "original_price": 26.98,
+      "sale_price": 17.54,
+      "discount_percent": 35,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/45121/Hold_The_Dwarves/",
+      "steam_bundleid": 45121
+    },
+    {
+      "title": "Hold the Mine x There Are No Orcs BUNDLE",
+      "type": "bundle",
+      "original_price": 21.58,
+      "sale_price": 16.86,
+      "discount_percent": 22,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/45122/Hold_the_Mine_x_There_Are_No_Orcs/",
+      "steam_bundleid": 45122
+    },
+    {
+      "title": "The Bug Bros BUNDLE",
+      "type": "bundle",
+      "original_price": 16.18,
+      "sale_price": 14.56,
+      "discount_percent": 10,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/44890/The_Bug_Bros/",
+      "steam_bundleid": 44890
+    },
+    {
+      "title": "Discounty Supporter BUNDLE",
+      "type": "bundle",
+      "original_price": 22.48,
+      "sale_price": 16.18,
+      "discount_percent": 28,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/42110/Discounty_Supporter/",
+      "steam_bundleid": 42110
+    },
+    {
+      "title": "ReStory x Discounty BUNDLE",
+      "type": "bundle",
+      "original_price": 35.98,
+      "sale_price": 29.68,
+      "discount_percent": 18,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/42111/ReStory_x_Discounty/",
+      "steam_bundleid": 42111
+    },
+    {
+      "title": "Shopkeeper & Chemist Collection BUNDLE",
+      "type": "bundle",
+      "original_price": 35.98,
+      "sale_price": 29.68,
+      "discount_percent": 18,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/42112/Shopkeeper__Chemist_Collection/",
+      "steam_bundleid": 42112
+    },
+    {
+      "title": "THQ Nordic Steam Deck Verified Games Bundle",
+      "type": "bundle",
+      "original_price": 189.99,
+      "sale_price": 148.19,
+      "discount_percent": 22,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/bundle/38910/THQ_Nordic_Steam_Deck_Verified_Games/",
+      "steam_bundleid": 38910
+    },
+    {
+      "title": "Wingspan + European + Oceania + Asia + Bird Packs BUNDLE",
+      "type": "bundle",
+      "original_price": 62.64,
+      "sale_price": 40.22,
+      "discount_percent": 36,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam promotion",
+      "store_url": "https://store.steampowered.com/bundle/39201/Wingspan_All_Expansions/",
+      "steam_bundleid": 39201
+    },
+    {
+      "title": "Wingspan Special Edition BUNDLE",
+      "type": "bundle",
+      "original_price": 77.27,
+      "sale_price": 47.21,
+      "discount_percent": 39,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam promotion",
+      "store_url": "https://store.steampowered.com/bundle/39202/Wingspan_Special_Edition/",
+      "steam_bundleid": 39202
+    },
+    {
+      "title": "Birds, Cats & Dragons Special Edition BUNDLE",
+      "type": "bundle",
+      "original_price": 118.05,
+      "sale_price": 72.01,
+      "discount_percent": 39,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam promotion",
+      "store_url": "https://store.steampowered.com/bundle/39203/Birds_Cats__Dragons_Special_Edition/",
+      "steam_bundleid": 39203
+    },
+    {
+      "title": "Critical Hit Bundle",
+      "type": "bundle",
+      "original_price": 69.99,
+      "sale_price": 55.99,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam promotion",
+      "store_url": "https://store.steampowered.com/bundle/38110/Critical_Hit_Bundle/",
+      "steam_bundleid": 38110
+    },
+    {
+      "title": "The Crew Motorfest Deluxe Edition",
+      "type": "bundle",
+      "original_price": 79.99,
+      "sale_price": 15.99,
+      "discount_percent": 80,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/sub/945120/",
+      "steam_subid": 945120
+    },
+    {
+      "title": "The Crew Motorfest Ultimate Year 3 Edition",
+      "type": "bundle",
+      "original_price": 119.99,
+      "sale_price": 41.99,
+      "discount_percent": 65,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Weekend Deal",
+      "store_url": "https://store.steampowered.com/sub/945121/",
+      "steam_subid": 945121
+    },
+    {
+      "title": "Fight Angel Special Edition",
+      "type": "game",
+      "original_price": 19.99,
+      "sale_price": 2.99,
+      "discount_percent": 85,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/1041840/Fight_Angel_Special_Edition/",
+      "steam_appid": 1041840
+    },
+    {
+      "title": "Battle Fantasia -Revised Edition-",
+      "type": "game",
+      "original_price": 14.99,
+      "sale_price": 3.44,
+      "discount_percent": 77,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/356910/Battle_Fantasia_Revised_Edition/",
+      "steam_appid": 356910
+    },
+    {
+      "title": "Devil May Cry 5 - Vergil EX Provocation",
+      "type": "dlc",
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/1432643/Devil_May_Cry_5__Vergil_EX_Provocation/",
+      "steam_appid": 1432643
+    },
+    {
+      "title": "Resident Evil 2 (1998)",
+      "type": "game",
+      "original_price": 9.99,
+      "sale_price": 4.99,
+      "discount_percent": 50,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/4249110/BIOHAZARD_2_1998/",
+      "steam_appid": 4249110
+    },
+    {
+      "title": "Resident Evil Village",
+      "type": "game",
+      "original_price": 39.99,
+      "sale_price": 9.99,
+      "discount_percent": 75,
+      "ends_at": "2026-10-01T17:00:00Z",
+      "verified_by": "Steam Store",
+      "sale_group": "Steam Special Promotion",
+      "store_url": "https://store.steampowered.com/app/1196590/Resident_Evil_Village/",
+      "steam_appid": 1196590
+    },
+    {
+      "title": "Effulgence RPG",
+      "type": "game",
+      "original_price": 18.74,
+      "sale_price": 14.99,
+      "discount_percent": 20,
+      "ends_at": "2026-09-30T17:00:00Z",
+      "verified_by": "SteamDB",
+      "sale_group": "Mundo Gamer Showcase 2026-3",
+      "store_url": "https://store.steampowered.com/app/3190820/Effulgence_RPG/",
+      "steam_appid": 3190820
     }
   ]
 }
