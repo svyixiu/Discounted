@@ -2086,6 +2086,15 @@ body::before { display: none; }
 .hero h1 { font-size: clamp(44px, 5vw, 76px); margin: 12px 0; }
 .hero-actions { margin: 20px 0; }
 .hero .snapshot-row { margin-top: 24px; }
+.showcase { width: min(440px, 100%); justify-self: end; margin: 0; }
+.showcase #fanCards, .showcase .total-gems { display: none; }
+.showcase .featured-card { width: 100%; margin: 0; transform: none; }
+.showcase .featured-card::before, .showcase .featured-card::after { display: none; }
+.featured-media { aspect-ratio: 460 / 165; }
+.featured-body { padding: 16px 20px; }
+.featured-body h2 { font-size: 21px; margin: 6px 0; }
+.featured-bottom { margin-top: 10px; padding-top: 10px; }
+.preview-pricing strong { font-size: 22px; }
 .catalog-heading, .results-head { margin-bottom: 20px; }
 .masthead, .page-brandline, .filter-panel, .product-buybox, .price-notice-card {
   border-color: var(--line-strong);
@@ -2146,6 +2155,7 @@ body::before { display: none; }
 button, a, input, select { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 760px) {
   .hero-layout { padding-block: 32px 44px; }
+  .showcase { justify-self: stretch; width: 100%; }
   .legendary-section .section-title { width: calc(100% - 32px); }
   .genre-filters { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .price-notice-card { padding: 22px; }
