@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0e141b" />
+  <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <title>Discounted — Steam deals without the digging</title>
+  <title>Discounted — No digging.</title>
   <meta name="description" content="Browse, filter and compare discounted Steam games, DLC and bundles." />
   <link rel="icon" type="image/svg+xml" href="./assets/discounted.svg" />
   <link rel="stylesheet" href="./styles.css" />
-  <script>if ("scrollRestoration" in history) history.scrollRestoration = "manual";</script>
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    (() => {
+      const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduced) {
+        document.documentElement.classList.add("motion-pending");
+        window.__discountedMotionFallback = window.setTimeout(() => {
+          document.documentElement.classList.remove("motion-pending");
+        }, 3500);
+      }
+    })();
+  </script>
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" focusable="false">
@@ -32,50 +43,78 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap">
-        <div class="hero-brandline reveal">
-          <a class="brand" href="./" aria-label="Discounted home">
-            <img class="brand-logo" src="./assets/discounted.svg" width="36" height="36" alt="" />
-            <span>Discounted</span>
-          </a>
-          <div class="hero-links">
-            <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
-            <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
-          </div>
-        </div>
+      <video class="hero-background" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_064556_051587f1-74a1-4336-8c05-4dde3594ed05.mp4" type="video/mp4">
+      </video>
 
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <p class="release" id="heroCount">Loading sale snapshot</p>
-            <h1>No digging.<br><span>I’ve got you, stranger.</span></h1>
-            <p class="lead">Discounted Steam games, DLC and bundles in one place. Set your budget, switch currency, choose the layout, and find something worth opening.</p>
-            <a class="hero-jump" href="#browse">Browse deals</a>
-          </div>
+      <div class="hero-vignette" aria-hidden="true"></div>
 
-          <div class="hero-preview reveal delay-1">
-            <div class="preview-window">
-              <div class="preview-media" id="previewMedia">
-                <span class="thumb-fallback"><svg class="i"><use href="#i-image"/></svg></span>
-                <img id="previewImage" alt="" loading="eager" decoding="async" />
-              </div>
-              <div class="preview-body">
-                <div class="preview-meta">
-                  <span id="previewType">Game</span>
-                  <b id="previewDiscount">—</b>
-                </div>
-                <h2 id="previewTitle">Finding a deal…</h2>
-                <p id="previewGroup">Steam promotion</p>
-                <div class="preview-pricing">
-                  <strong id="previewPrice">—</strong>
-                  <s id="previewWas">—</s>
-                </div>
-              </div>
-            </div>
-            <div class="preview-stat stat-a"><span>Cheapest</span><b id="stageCheapest">—</b></div>
-            <div class="preview-stat stat-b"><span>Biggest cut</span><b id="stageBestCut">—</b></div>
-          </div>
+      <div class="hero-brandline">
+        <a class="brand" href="./" aria-label="Discounted home">
+          <img class="brand-logo" src="./assets/discounted.svg" width="32" height="32" alt="" />
+          <span>Discounted</span>
+        </a>
+
+        <div class="hero-links">
+          <a href="./how-it-works.html" target="_blank" rel="noopener">How it works</a>
+          <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer">Source</a>
         </div>
       </div>
+
+      <div class="hero-content">
+        <p class="release" id="heroCount">Loading sale snapshot</p>
+
+        <h1 class="hero-title">
+          <span class="line line-one"><span class="line-reveal">No digging.</span></span>
+          <span class="line line-two"><span class="line-reveal">I’ve got you, stranger.</span></span>
+        </h1>
+
+        <p class="hero-copy">
+          Discounted Steam games, DLC and bundles in one place.<br>
+          Set your budget, choose a currency, and sort the catalog<br>
+          until something worth opening finds you.
+        </p>
+
+        <a class="primary-cta" href="#browse">
+          <span class="label">Browse deals</span>
+          <span class="arrow-box" aria-hidden="true">
+            <svg viewBox="0 0 14 14">
+              <path d="M2.5 7h8.2"/>
+              <path d="m7.4 3.7 3.3 3.3-3.3 3.3"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <article class="demo-card">
+        <a class="demo-visual preview-media" id="previewMedia" href="#browse" aria-label="Open featured deal">
+          <span class="thumb-fallback" aria-hidden="true">
+            <svg class="i"><use href="#i-image"/></svg>
+          </span>
+          <img id="previewImage" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" />
+          <span class="glass-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8.5 6.6 18 12l-9.5 5.4Z"/></svg>
+          </span>
+        </a>
+
+        <div class="demo-meta">
+          <div class="preview-meta">
+            <span id="previewType">Game</span>
+            <b id="previewDiscount">—</b>
+          </div>
+          <strong id="previewTitle">Finding a deal…</strong>
+          <span id="previewGroup">Steam promotion</span>
+          <div class="preview-pricing">
+            <b id="previewPrice">—</b>
+            <s id="previewWas">—</s>
+          </div>
+        </div>
+
+        <a class="watch-button" id="featuredLink" href="#browse">
+          <span>View deal</span>
+          <svg class="i i-sm"><use href="#i-external"/></svg>
+        </a>
+      </article>
     </section>
 
     <section id="browse" class="catalog-section">
