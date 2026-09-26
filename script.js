@@ -13,6 +13,7 @@ const els = {
   emptyReset: document.querySelector("#emptyReset"),
   typeTabs: [...document.querySelectorAll(".type-tab")],
   quickChips: [...document.querySelectorAll(".quick-chip")],
+  genreFilters: document.querySelector("#genreFilters"),
   minPrice: document.querySelector("#minPrice"),
   maxPrice: document.querySelector("#maxPrice"),
   budgetOutput: document.querySelector("#budgetOutput"),
@@ -49,6 +50,7 @@ let meta = {};
 let rates = { USD: 1 };
 let activeType = "game";
 let activeDiscount = "all";
+let activeGenres = new Set();
 let currentPage = 1;
 let currentCurrency = "USD";
 let currencyRate = 1;
@@ -167,6 +169,59 @@ function typeMatches(product) {
   return activeType === "all" || product.type === activeType;
 }
 
+function genreMatches(product) {
+  if (!activeGenres.size) return true;
+  const genres = Array.isArray(product.genres) ? product.genres : [];
+  return genres.some((genre) => activeGenres.has(String(genre)));
+}
+
+function populateGenreFilters() {
+  const counts = new Map();
+  catalog.forEach((product) => {
+    (Array.isArray(product.genres) ? product.genres : []).forEach((genre) => {
+      const name = String(genre || "").trim();
+      if (name) counts.set(name, (counts.get(name) || 0) + 1);
+    });
+  });
+
+  const preferred = [
+    "Action",
+    "Adventure",
+    "RPG",
+    "Strategy",
+    "Simulation",
+    "Casual",
+    "Indie",
+    "Racing",
+    "Sports",
+    "Massively Multiplayer",
+    "Puzzle",
+    "Horror",
+    "Survival",
+    "Open World",
+  ];
+
+  const genres = [...counts.keys()].sort((a, b) => {
+    const ai = preferred.indexOf(a);
+    const bi = preferred.indexOf(b);
+    if (ai !== -1 || bi !== -1) {
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    }
+    return a.localeCompare(b);
+  });
+
+  const valid = new Set(genres);
+  activeGenres = new Set([...activeGenres].filter((genre) => valid.has(genre)));
+
+  els.genreFilters.innerHTML = genres
+    .map(
+      (genre) => `<button class="genre-chip" type="button" data-genre="${escapeHtml(genre)}" aria-pressed="false"><span>${escapeHtml(genre)}</span><b>${counts.get(genre).toLocaleString()}</b></button>`,
+    )
+    .join("");
+}
+
 function sortProducts(items) {
   const copy = [...items];
   const byName = (a, b) =>
@@ -275,12 +330,13 @@ function filteredCatalog() {
 
   return catalog.filter((product) => {
     const haystack =
-      `${product.title} ${product.sale_group || ""} ${product.type}`.toLocaleLowerCase();
+      `${product.title} ${product.sale_group || ""} ${product.type} ${(Array.isArray(product.genres) ? product.genres : []).join(" ")}`.toLocaleLowerCase();
     const selectedPrice = converted(product.sale_price);
 
     return (
       typeMatches(product) &&
       discountMatches(product) &&
+      genreMatches(product) &&
       selectedPrice >= min &&
       selectedPrice <= max &&
       haystack.includes(query)
@@ -620,6 +676,7 @@ function resetAll() {
   els.pageSize.value = "25";
   activeType = "game";
   activeDiscount = "all";
+  activeGenres.clear();
   currentPage = 1;
 
   els.typeTabs.forEach((tab) =>
@@ -819,6 +876,7 @@ async function boot() {
       }));
 
     setCounts();
+    populateGenreFilters();
     setupBudget();
     els.updatedAt.textContent = formatDate(meta.updated_at);
     restoreFilters();
@@ -917,6 +975,16 @@ els.quickChips.forEach((chip) => {
   });
 });
 
+els.genreFilters.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-genre]");
+  if (!button) return;
+  const genre = button.dataset.genre;
+  if (activeGenres.has(genre)) activeGenres.delete(genre);
+  else activeGenres.add(genre);
+  currentPage = 1;
+  render();
+});
+
 document.addEventListener("keydown", (event) => {
   const tag = document.activeElement?.tagName;
 
@@ -960,6 +1028,8 @@ function syncFilters() {
   const params = new URLSearchParams();
   params.set("type", activeType);
   if (activeDiscount !== "all") params.set("tier", activeDiscount);
+  if (activeGenres.size)
+    params.set("genres", [...activeGenres].sort((a, b) => a.localeCompare(b)).join(","));
   if (els.search.value) params.set("q", els.search.value);
   params.set("sort", els.sort.value);
   params.set("view", els.layout.value);
@@ -979,6 +1049,9 @@ function syncFilters() {
   if (activeType !== "all") pills.push(["type", typeLabel(activeType)]);
   if (activeDiscount !== "all")
     pills.push(["tier", activeDiscount.replace("plus", "%+")]);
+  [...activeGenres]
+    .sort((a, b) => a.localeCompare(b))
+    .forEach((genre) => pills.push([`genre:${genre}`, genre]));
   if (els.search.value) pills.push(["q", els.search.value]);
   if (
     Number(els.minPrice.value) > 0 ||
@@ -1007,6 +1080,11 @@ function syncFilters() {
     el.classList.toggle("active", el.dataset.filter === activeDiscount);
     el.setAttribute("aria-pressed", el.dataset.filter === activeDiscount);
   });
+  els.genreFilters.querySelectorAll("[data-genre]").forEach((el) => {
+    const selected = activeGenres.has(el.dataset.genre);
+    el.classList.toggle("active", selected);
+    el.setAttribute("aria-pressed", selected);
+  });
 }
 function restoreFilters() {
   const p = new URLSearchParams(location.search);
@@ -1014,6 +1092,12 @@ function restoreFilters() {
     activeType = p.get("type");
   if (["all", "50plus", "70plus", "90plus"].includes(p.get("tier")))
     activeDiscount = p.get("tier");
+  activeGenres = new Set(
+    (p.get("genres") || "")
+      .split(",")
+      .map((genre) => genre.trim())
+      .filter(Boolean),
+  );
   els.search.value = p.get("q") || "";
   for (const [k, el] of [
     ["sort", els.sort],
@@ -1035,6 +1119,7 @@ document.querySelector("#activeFilters").addEventListener("click", (e) => {
   if (!key) return;
   if (key === "type") activeType = "all";
   if (key === "tier") activeDiscount = "all";
+  if (key.startsWith("genre:")) activeGenres.delete(key.slice(6));
   if (key === "q") els.search.value = "";
   if (key === "budget") setupBudget();
   resetPageAndRender();
