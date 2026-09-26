@@ -1,37 +1,45 @@
 # Discounted
 
-Static Steam deal catalog. No build step and no dependencies.
+A static, JSON-driven Steam sale browser.
 
-## Updating the catalog
+## Structure
 
-Edit only `games.json`. The frontend reads every title, price, discount, sale group and expiry date from that file. **Steam App IDs are not required.** The website automatically generates a Steam search URL from each game title.
+- `index.html` — application shell
+- `styles.css` — neobrutalist visual system
+- `script.js` — search, tabs, sorting, dual budget slider and rendering
+- `games.json` — the catalog
+- `vercel.json` — Vercel static configuration
 
-### Required fields per game
+## Catalog schema
+
+Each product is a JSON object:
 
 ```json
 {
-  "title": "Game name",
-  "original_price": 59.99,
-  "sale_price": 14.99,
+  "title": "Example Game",
+  "type": "game",
+  "original_price": 29.99,
+  "sale_price": 7.49,
   "discount_percent": 75,
   "ends_at": "2026-10-01",
   "verified_by": "Steam offer page",
-  "sale_group": "Weekend Deal"
+  "sale_group": "Example promotion"
 }
 ```
 
-Only the first five fields are needed for display/filtering. `verified_by` and `sale_group` are provenance metadata for audits.
+`type` supports:
 
-## Steam links
+- `game`
+- `dlc`
+- `bundle`
+- `other`
 
-Every **Find on Steam** button is generated as:
+If `type` is omitted, the frontend treats the entry as `game` for backwards compatibility.
 
-```text
-https://store.steampowered.com/search/?term=<URL-encoded game title>
-```
+Steam links are generated from the product title and open a Steam search page, so App IDs are not required.
 
-This deliberately prioritizes catalog coverage over maintaining a separate App ID mapping.
+## Updating the sale
 
-## Deploying
+Update or replace `games.json`. No frontend edits are required when adding more products, changing categories, prices or discounts.
 
-Upload this directory to Vercel as a static project. `vercel.json` disables caching for `games.json` so a data-file swap becomes visible immediately.
+The UI automatically recalculates tab counts, the maximum budget slider value, cheapest price and biggest discount.
