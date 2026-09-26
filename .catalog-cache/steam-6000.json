@@ -1,0 +1,5057 @@
+{
+  "start": 6000,
+  "total_count": 6346,
+  "items": [
+    {
+      "steam_appid": 4986290,
+      "title": "Shanhai Exorcist: Yin-Yang Chronicles",
+      "type": "game",
+      "genres": [],
+      "original_price": 7.99,
+      "sale_price": 5.59,
+      "discount_percent": 30,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4986290/869ea403d31a53df3ef9f450a74cba3d7abbe5ea/capsule_231x87.jpg?t=1786674065",
+      "source_url": "https://store.steampowered.com/app/4986290/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4318250,
+      "title": "Genesis: Voces de la Niebla (Voices of the Mist)",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Action"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.09,
+      "discount_percent": 30,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4318250/5c875865e70aae7809e6c0fc7754dd0cac2f04a3/capsule_231x87.jpg?t=1788959512",
+      "source_url": "https://store.steampowered.com/app/4318250/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4542880,
+      "title": "Ironblood",
+      "type": "game",
+      "genres": [
+        "Sports",
+        "Strategy"
+      ],
+      "original_price": 16.99,
+      "sale_price": 11.89,
+      "discount_percent": 30,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4542880/bac7d60395110e7d565d14fd7e3759318b928128/capsule_231x87.jpg?t=1790191666",
+      "source_url": "https://store.steampowered.com/app/4542880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4640620,
+      "title": "Flux Ascendant",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 5.87,
+      "sale_price": 4.1,
+      "discount_percent": 30,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4640620/4100f12c396b12c09de378fdaff53a5ff4e1c6c3/capsule_231x87.jpg?t=1789057434",
+      "source_url": "https://store.steampowered.com/app/4640620/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4083670,
+      "title": "Wobble Rumble",
+      "type": "game",
+      "genres": [],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4083670/296296bbef666facc45e5546247c4ad9fa0144ca/capsule_231x87.jpg?t=1790171795",
+      "source_url": "https://store.steampowered.com/app/4083670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4549090,
+      "title": "Escape From Z",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4549090/4c10cc2826f77ceef277f73e9b9da8f9a61a1d1f/capsule_231x87.jpg?t=1790373326",
+      "source_url": "https://store.steampowered.com/app/4549090/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4617430,
+      "title": "John",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4617430/5e7b6c463aa34ccdbab6c9544877df9855823557/capsule_231x87.jpg?t=1790172508",
+      "source_url": "https://store.steampowered.com/app/4617430/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4462700,
+      "title": "白蛇之子 | The Son of White Snake: Roguelike Deckbuilder",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "RPG"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4462700/8537e14b83f9635171d5fc094f7213e7cddbef73/capsule_231x87.jpg?t=1789610427",
+      "source_url": "https://store.steampowered.com/app/4462700/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2525870,
+      "title": "What's Outside",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action",
+        "Strategy"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2525870/capsule_231x87.jpg?t=1784077736",
+      "source_url": "https://store.steampowered.com/app/2525870/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3943420,
+      "title": "Robots Arena Fight",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Action"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3943420/8503af19b8bd90c6bd1f2f6b9b620a65e4300f95/capsule_231x87.jpg?t=1789405380",
+      "source_url": "https://store.steampowered.com/app/3943420/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3813060,
+      "title": "Warm",
+      "type": "game",
+      "genres": [
+        "Survival",
+        "Open World",
+        "Horror"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3813060/7baf951462539f6d6d0bf615447e4f1d55fbb0d9/capsule_231x87.jpg?t=1790259019",
+      "source_url": "https://store.steampowered.com/app/3813060/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4311340,
+      "title": "Battalion of Tanks",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Simulation",
+        "Action"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4311340/523dfd5d6f605615e95893c1a3af34727f0d5ae5/capsule_231x87.jpg?t=1789405902",
+      "source_url": "https://store.steampowered.com/app/4311340/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4311370,
+      "title": "Supermarket Life Simulator",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4311370/a5e7fad571a48a964c37920b5c127de7a09bc747/capsule_231x87.jpg?t=1789405767",
+      "source_url": "https://store.steampowered.com/app/4311370/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4311780,
+      "title": "Phantom Town",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Survival"
+      ],
+      "original_price": 6.99,
+      "sale_price": 4.96,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4311780/98cfd09a80bfbab8ca67bc8564ccabaeecbc4b47/capsule_231x87.jpg?t=1789406032",
+      "source_url": "https://store.steampowered.com/app/4311780/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5125210,
+      "title": "THUD: Dicey Reload",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Simulation"
+      ],
+      "original_price": 3.49,
+      "sale_price": 2.47,
+      "discount_percent": 29,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5125210/86cbfa787ff31b96bbae485341ea60cb2076a548/capsule_231x87.jpg?t=1790096599",
+      "source_url": "https://store.steampowered.com/app/5125210/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4994950,
+      "title": "YOU ARE NEWTON",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4994950/0048955b5411df4743fff838630ea230718d6629/capsule_231x87.jpg?t=1790330451",
+      "source_url": "https://store.steampowered.com/app/4994950/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5115950,
+      "title": "DeskPets - Desktop Idle Companion",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 5,
+      "sale_price": 4.5,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5115950/b3f1ce3fcb4bfe97bb77b78cf0c071f265abd03c/capsule_231x87.jpg?t=1790270134",
+      "source_url": "https://store.steampowered.com/app/5115950/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4249380,
+      "title": "MusicHell",
+      "type": "game",
+      "genres": [],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4249380/7a7c3a815b3b403ee7e59a872b4c0f562c51fe18/capsule_231x87.jpg?t=1790000975",
+      "source_url": "https://store.steampowered.com/app/4249380/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4996800,
+      "title": "I Transmigrated to Another World to Become the Overlord ——Stop Fighting Over Me",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4996800/2cb2915e8569c414f3f9e0c1d56cdd9b4aa10b46/capsule_231x87.jpg?t=1790065180",
+      "source_url": "https://store.steampowered.com/app/4996800/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4808810,
+      "title": "Pousse-Pousse",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4808810/40f9e555f782f71d624f330a0c064ef4a8f019c0/capsule_231x87.jpg?t=1790024784",
+      "source_url": "https://store.steampowered.com/app/4808810/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5002330,
+      "title": "Bloodthrone: Eternal Reign",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation",
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5002330/cf5ae6c0f26af140ab18b5147856e601df98ea04/capsule_231x87.jpg?t=1790189745",
+      "source_url": "https://store.steampowered.com/app/5002330/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3240010,
+      "title": "GREGS: Linked Together",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Puzzle"
+      ],
+      "original_price": 8.99,
+      "sale_price": 6.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3240010/e694a8bec93f3fd68b3cca85f383560a368686cf/capsule_231x87.jpg?t=1790068933",
+      "source_url": "https://store.steampowered.com/app/3240010/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5229710,
+      "title": "Core Idle TD",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.69,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5229710/e89a356fc8712681447a112c9ce00578040909ba/capsule_231x87.jpg?t=1790344568",
+      "source_url": "https://store.steampowered.com/app/5229710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5029260,
+      "title": "Nexus Ascendant",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5029260/96f5b76741348d8a77479d05ea2d6cc79f9f0dda/capsule_231x87.jpg?t=1789790181",
+      "source_url": "https://store.steampowered.com/app/5029260/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5035760,
+      "title": "Elixonomy",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Simulation"
+      ],
+      "original_price": 10,
+      "sale_price": 7.5,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5035760/8d6c8aa9c311a73905d6c80757b1af7059ad7413/capsule_231x87.jpg?t=1790010199",
+      "source_url": "https://store.steampowered.com/app/5035760/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4904370,
+      "title": "Your Liar",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 4.49,
+      "sale_price": 4.04,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4904370/6280b6a8cc3630218c0ef0089770b95b11178443/capsule_231x87.jpg?t=1790250036",
+      "source_url": "https://store.steampowered.com/app/4904370/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4669380,
+      "title": "Cats of Light",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669380/25224df360ff7a3639d14925cbf3bb57f5348ada/capsule_231x87.jpg?t=1789530506",
+      "source_url": "https://store.steampowered.com/app/4669380/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5121110,
+      "title": "MEMEOLOGY CLUB",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 5,
+      "sale_price": 4.25,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5121110/6510dad341516973ec2eeab15ca66fd911f30775/capsule_231x87.jpg?t=1790095917",
+      "source_url": "https://store.steampowered.com/app/5121110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5193930,
+      "title": "My Desktop Cultivator",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5193930/b43c2cce5f174f7b8faec3b3ffc7951e80467b64/capsule_231x87.jpg?t=1790244086",
+      "source_url": "https://store.steampowered.com/app/5193930/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3634020,
+      "title": "Dante's RUMBA",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3634020/afb3031ebe5602ce4f0220d1d34e9d61e6a74dc3/capsule_231x87.jpg?t=1785342562",
+      "source_url": "https://store.steampowered.com/app/3634020/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4731830,
+      "title": "Nahualli",
+      "type": "game",
+      "genres": [],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4731830/d787a02ab1b59ba5842cbc9bdcda0bb55e3debe1/capsule_231x87.jpg?t=1789614035",
+      "source_url": "https://store.steampowered.com/app/4731830/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4593860,
+      "title": "Defenders of Ten Roads Crossing Tower",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4593860/22f40f35a9cb8ba1962ad20292b9e897356cd371/capsule_231x87.jpg?t=1790185955",
+      "source_url": "https://store.steampowered.com/app/4593860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5038120,
+      "title": "Infected",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5038120/9e9a9d4a91eb82627ea413ca9f4b1aa14eaed6c4/capsule_231x87.jpg?t=1790362049",
+      "source_url": "https://store.steampowered.com/app/5038120/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4003710,
+      "title": "Vaporwave Hardest Game",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4003710/470eb576c59386a553ab92c6b848419a15220dda/capsule_231x87.jpg?t=1787138695",
+      "source_url": "https://store.steampowered.com/app/4003710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4182620,
+      "title": "UBAI Again",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4182620/cfc1bffd43c782bd86887844aaa96cde7e2808ab/capsule_231x87.jpg?t=1778306644",
+      "source_url": "https://store.steampowered.com/app/4182620/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3698440,
+      "title": "Half Dead: A Zombie Story Game",
+      "type": "game",
+      "genres": [],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3698440/af53ba48b0f0923fac8008848642bd6cf2b13073/capsule_231x87.jpg?t=1782386303",
+      "source_url": "https://store.steampowered.com/app/3698440/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5041160,
+      "title": "HELL IS FUEL",
+      "type": "game",
+      "genres": [],
+      "original_price": 1.99,
+      "sale_price": 1.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5041160/8d1fdb705e4000559bb543a0679faa7e6b512cc3/capsule_231x87.jpg?t=1790077901",
+      "source_url": "https://store.steampowered.com/app/5041160/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5229670,
+      "title": "Life of a Penguin",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.39,
+      "discount_percent": 24,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5229670/fd6756c0e397f34cb1619292bf40f1be1d59ee63/capsule_231x87.jpg?t=1790350874",
+      "source_url": "https://store.steampowered.com/app/5229670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3201940,
+      "title": "Paper Puzzle",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3201940/109e248cb6ee15aebc6314983eebe04da7a3f425/capsule_231x87.jpg?t=1736484008",
+      "source_url": "https://store.steampowered.com/app/3201940/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4913770,
+      "title": "Corsair Fleet: Tides of Plunder",
+      "type": "game",
+      "genres": [],
+      "original_price": 1.99,
+      "sale_price": 1.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4913770/8dfc21a28c9d683c40a4b62153bc2eb2e56e7d62/capsule_231x87.jpg?t=1789405642",
+      "source_url": "https://store.steampowered.com/app/4913770/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3282200,
+      "title": "Nature Atelier",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation",
+        "Indie"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3282200/17435244008fe7253b70fce63b30f0d038c263b1/capsule_231x87.jpg?t=1789531042",
+      "source_url": "https://store.steampowered.com/app/3282200/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5084240,
+      "title": "Four Crossings of the ChiShui River Simulator",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5084240/08b9e00017775cb317172afb09ca9efa636f3ef9/capsule_231x87.jpg?t=1790412367",
+      "source_url": "https://store.steampowered.com/app/5084240/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5136120,
+      "title": "Off the Clock: 13/F",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5136120/3dad78df8cf5f1bc0be80362aac32f0da421ff9c/capsule_231x87.jpg?t=1790215315",
+      "source_url": "https://store.steampowered.com/app/5136120/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3778060,
+      "title": "Angle Of Attack",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Simulation"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3778060/58147de52de0aa2c854120bc2930150c33f5bda5/capsule_231x87.jpg?t=1790352399",
+      "source_url": "https://store.steampowered.com/app/3778060/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5166200,
+      "title": "Serandor The Last Knight",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 1.89,
+      "sale_price": 1.7,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5166200/774bd40761889f39d2ba48bb9d43302642c4dacf/capsule_231x87.jpg?t=1790096302",
+      "source_url": "https://store.steampowered.com/app/5166200/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3631720,
+      "title": "Log Defense",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3631720/f933fd1a30e0b27bd6de5c1f1e0be714ef9a1afd/capsule_231x87.jpg?t=1790260385",
+      "source_url": "https://store.steampowered.com/app/3631720/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4913850,
+      "title": "Ultradimensional",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Strategy",
+        "Puzzle"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4913850/69d20ebe377a5cdf24847c12b449711ede7f4bae/capsule_231x87.jpg?t=1790033652",
+      "source_url": "https://store.steampowered.com/app/4913850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2272720,
+      "title": "EXODIUM Part 1",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.52,
+      "discount_percent": 21,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2272720/4186dfbedeec02446354dcdf306b6ed79c565e36/capsule_231x87.jpg?t=1790001751",
+      "source_url": "https://store.steampowered.com/app/2272720/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5145860,
+      "title": "Hibiki & Kanon's Go 19x19 Complete Beginner’s Course",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Puzzle"
+      ],
+      "original_price": 29.99,
+      "sale_price": 25.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5145860/13c49fffb4ba786443adc044d6d5963bfbe1681f/capsule_231x87.jpg?t=1789963271",
+      "source_url": "https://store.steampowered.com/app/5145860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2693230,
+      "title": "Line Up!",
+      "type": "game",
+      "genres": [],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2693230/511b464289e4c9050b16a4a640837b0bdd8b28aa/capsule_231x87.jpg?t=1772771401",
+      "source_url": "https://store.steampowered.com/app/2693230/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 680850,
+      "title": "Sixteen",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/680850/capsule_231x87.jpg?t=1637627971",
+      "source_url": "https://store.steampowered.com/app/680850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1221300,
+      "title": "Tire Friend",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1221300/21c69ad9e14cb5ac79c885d1a825994cc4991c0e/capsule_231x87.jpg?t=1789276408",
+      "source_url": "https://store.steampowered.com/app/1221300/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1513500,
+      "title": "Plumber",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Adventure",
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1513500/capsule_231x87.jpg?t=1786972799",
+      "source_url": "https://store.steampowered.com/app/1513500/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2126650,
+      "title": "The Myriad",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Casual",
+        "RPG",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2126650/capsule_231x87.jpg?t=1714252275",
+      "source_url": "https://store.steampowered.com/app/2126650/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2220750,
+      "title": "Color Invader VR",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Strategy",
+        "Puzzle"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2220750/capsule_231x87.jpg?t=1786972758",
+      "source_url": "https://store.steampowered.com/app/2220750/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3474710,
+      "title": "The Mystical Traveler",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Indie"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3474710/49b5a21deff0c276effcd0f88c15fa13a698159f/capsule_231x87.jpg?t=1778960974",
+      "source_url": "https://store.steampowered.com/app/3474710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2930900,
+      "title": "帝国末日前的学院狂想",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2930900/capsule_231x87.jpg?t=1714853622",
+      "source_url": "https://store.steampowered.com/app/2930900/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3400080,
+      "title": "Fantasy Soul Revenge",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3400080/20551b5e68f051c5cbd22f7be79e60e49652c4d5/capsule_231x87.jpg?t=1789997831",
+      "source_url": "https://store.steampowered.com/app/3400080/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3429680,
+      "title": "1899: Secrets of the Maze",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Horror"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3429680/bc8edb7b15652ae2d58fe1532914520f59c9b06a/capsule_231x87.jpg?t=1756525292",
+      "source_url": "https://store.steampowered.com/app/3429680/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3211540,
+      "title": "World Diplomat",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "RPG"
+      ],
+      "original_price": 29.99,
+      "sale_price": 22.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3211540/c3a87f8843d0b6eb93cb1e97c8f543cffd1c2620/capsule_231x87.jpg?t=1760284521",
+      "source_url": "https://store.steampowered.com/app/3211540/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3578040,
+      "title": "The victims of lost sunny days: Eclipse",
+      "type": "game",
+      "genres": [],
+      "original_price": 5.99,
+      "sale_price": 4.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3578040/02cacf95c7f71126f7b7bbf0ac611d142279e2bd/capsule_231x87.jpg?t=1765368811",
+      "source_url": "https://store.steampowered.com/app/3578040/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3729610,
+      "title": "Can you clear up to 100 stages?",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3729610/22eec94c48c8312ecf6272263c31c1c4cd4cb669/capsule_231x87.jpg?t=1763707224",
+      "source_url": "https://store.steampowered.com/app/3729610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3985860,
+      "title": "Rain of Awakening",
+      "type": "game",
+      "genres": [],
+      "original_price": 5.99,
+      "sale_price": 4.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3985860/759977a8256e6aee1441405166bcb9b5c6fabf59/capsule_231x87.jpg?t=1784299989",
+      "source_url": "https://store.steampowered.com/app/3985860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3163580,
+      "title": "Fungiculture",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3163580/16a8e9e12101e9a8e8a2e4beed099ce7ff7bf92e/capsule_231x87.jpg?t=1729907221",
+      "source_url": "https://store.steampowered.com/app/3163580/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2763810,
+      "title": "J and the Sewer World",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2763810/84b28fc646da71218a348ec39c7d15275ae33993/capsule_231x87.jpg?t=1777954487",
+      "source_url": "https://store.steampowered.com/app/2763810/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3080790,
+      "title": "Muggo Clicker",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3080790/68724a0a4cc3444795c0b8c772bb336d9ed86d52/capsule_231x87.jpg?t=1782410935",
+      "source_url": "https://store.steampowered.com/app/3080790/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4536120,
+      "title": "Beat Boxy",
+      "type": "game",
+      "genres": [
+        "Indie"
+      ],
+      "original_price": 6.24,
+      "sale_price": 4.68,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4536120/4116d1f6ac8164023b6fc78790c1f2401a2e5f5a/capsule_231x87.jpg?t=1790208065",
+      "source_url": "https://store.steampowered.com/app/4536120/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4218310,
+      "title": "Cité Alexandrie",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 19.9,
+      "sale_price": 14.92,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4218310/15c0b9c62444a88c5a4ed40db5621883c5c57e98/capsule_231x87.jpg?t=1790093025",
+      "source_url": "https://store.steampowered.com/app/4218310/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4564820,
+      "title": "Dead Wrong Detective",
+      "type": "game",
+      "genres": [],
+      "original_price": 12.34,
+      "sale_price": 9.25,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4564820/88667750d9eb28745c75ec22edc114f8dc3c7e1d/capsule_231x87.jpg?t=1785931161",
+      "source_url": "https://store.steampowered.com/app/4564820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4458500,
+      "title": "Aeonfall",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "RPG",
+        "Indie"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4458500/c1e2a84a0470f2195e461c56bdf8d066d01cd2b0/capsule_231x87.jpg?t=1790082447",
+      "source_url": "https://store.steampowered.com/app/4458500/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4319530,
+      "title": "Doppler",
+      "type": "game",
+      "genres": [
+        "Racing"
+      ],
+      "original_price": 8.99,
+      "sale_price": 6.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4319530/87c3a206fa208710acad2ce09c3ef70c2080b981/capsule_231x87.jpg?t=1787341591",
+      "source_url": "https://store.steampowered.com/app/4319530/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4142180,
+      "title": "DEAD BEFORE WORK: THE COMMUTE",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4142180/bdc7efbc1abe1f0c617e5d55872cc39d5816e257/capsule_231x87_alt_assets_0.jpg?t=1790297479",
+      "source_url": "https://store.steampowered.com/app/4142180/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4382860,
+      "title": "Loot Goblin",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4382860/d404140e27500e81a24d3f63b468f7765bc84fba/capsule_231x87.jpg?t=1785860710",
+      "source_url": "https://store.steampowered.com/app/4382860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4946370,
+      "title": "Apparently an Apprentice Alchemist",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4946370/56f60353625a9a1263c92dc0e55d0494ba0a8910/capsule_231x87.jpg?t=1790310715",
+      "source_url": "https://store.steampowered.com/app/4946370/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3902470,
+      "title": "Etude",
+      "type": "game",
+      "genres": [],
+      "original_price": 29.99,
+      "sale_price": 22.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3902470/d54691eefde03ba3cdfa3b024a1e292e91d8a1d6/capsule_231x87.jpg?t=1789640430",
+      "source_url": "https://store.steampowered.com/app/3902470/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4997050,
+      "title": "How to Write a Book without Getting Killed",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4997050/a6d98b7deac29b905290d305d8ce6903936d67ee/capsule_231x87.jpg?t=1787833052",
+      "source_url": "https://store.steampowered.com/app/4997050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5103070,
+      "title": "Gassed Up!",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5103070/b728652b36f9fb26158674d062a456e90b18e96b/capsule_231x87.jpg?t=1790354652",
+      "source_url": "https://store.steampowered.com/app/5103070/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5164610,
+      "title": "MEANINGLESS",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 7.99,
+      "sale_price": 5.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5164610/ed10c2d155db41a344c472532d992b2f3dbfd629/capsule_231x87.jpg?t=1790210794",
+      "source_url": "https://store.steampowered.com/app/5164610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5125170,
+      "title": "Popcorn & Premieren",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "original_price": 19.99,
+      "sale_price": 14.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5125170/47300965e5ba44626a3edd87e5f3aeedb25560eb/capsule_231x87.jpg?t=1789617682",
+      "source_url": "https://store.steampowered.com/app/5125170/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4888520,
+      "title": "Pixel Three Kingdoms: Zombie Dungeon",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4888520/aa74b81abeb778529f685a50bca41b90acabd402/capsule_231x87.jpg?t=1785829054",
+      "source_url": "https://store.steampowered.com/app/4888520/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4168000,
+      "title": "Desktop Dice",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4168000/959e73feb27966f47d406dbd91adc5a40eaac408/capsule_231x87.jpg?t=1789910183",
+      "source_url": "https://store.steampowered.com/app/4168000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4429150,
+      "title": "Typomon Hunter",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 11.99,
+      "sale_price": 8.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4429150/ae0da1724cd032204dbe4eff0750c035b1ebd7ad/capsule_231x87.jpg?t=1786196803",
+      "source_url": "https://store.steampowered.com/app/4429150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4457040,
+      "title": "Lordress",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.49,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4457040/e1b11eb410dd27025b17dcb7533a6bcb89c2136a/capsule_231x87.jpg?t=1785598040",
+      "source_url": "https://store.steampowered.com/app/4457040/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4385660,
+      "title": "Knock Knock!",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Indie"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.24,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4385660/5558cf7940e1b90b3d4c386d1ce1b3300c484bef/capsule_231x87.jpg?t=1771633982",
+      "source_url": "https://store.steampowered.com/app/4385660/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4864280,
+      "title": "Hollow Orbit",
+      "type": "game",
+      "genres": [],
+      "original_price": 7.99,
+      "sale_price": 5.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4864280/f2f8a507b86bb0e86f4c44ad5d5ecec372130562/capsule_231x87.jpg?t=1790357760",
+      "source_url": "https://store.steampowered.com/app/4864280/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4280710,
+      "title": "Last Planet",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Adventure"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4280710/9a3a353f892356d75415caa50485cdecb910fe0a/capsule_231x87.jpg?t=1788809054",
+      "source_url": "https://store.steampowered.com/app/4280710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4775150,
+      "title": "Random Horse Derby",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Sports",
+        "Racing"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.74,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4775150/502dcbcabcfec837fbf712939083e0a31d542c0a/capsule_231x87.jpg?t=1782339087",
+      "source_url": "https://store.steampowered.com/app/4775150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4602350,
+      "title": "Turning point",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 3.99,
+      "sale_price": 2.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4602350/8233906abb1643872e1dae39b2c63528e3d01d55/capsule_231x87.jpg?t=1790010051",
+      "source_url": "https://store.steampowered.com/app/4602350/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4608560,
+      "title": "Framework Zero: Terminal Panic",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Adventure"
+      ],
+      "original_price": 7.99,
+      "sale_price": 5.99,
+      "discount_percent": 25,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4608560/dec8e407c434a70b38eb38832c255214dea81a6b/capsule_231x87.jpg?t=1790067508",
+      "source_url": "https://store.steampowered.com/app/4608560/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4614710,
+      "title": "AfterMove",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 8.99,
+      "sale_price": 7.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4614710/0980e6c0e4dc65e16a2fd04131d0d4e06061e4f4/capsule_231x87.jpg?t=1787166215",
+      "source_url": "https://store.steampowered.com/app/4614710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4259690,
+      "title": "Ajnabee - The Unknown",
+      "type": "game",
+      "genres": [
+        "Horror"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4259690/fc0f01e5c7d2d9c82b0105e3e944b4f5470413b9/capsule_231x87.jpg?t=1786345380",
+      "source_url": "https://store.steampowered.com/app/4259690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4258070,
+      "title": "GooNECT√2",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 19.99,
+      "sale_price": 15.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4258070/5864a38a642662d901b18755054fff674ecdfa7a/capsule_231x87.jpg?t=1789098368",
+      "source_url": "https://store.steampowered.com/app/4258070/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5187000,
+      "title": "CookSpiracy",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Simulation"
+      ],
+      "original_price": 9.9,
+      "sale_price": 7.92,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5187000/0425913672b60c95b166661dde99ebb1a83eb4ca/capsule_231x87.jpg?t=1790353381",
+      "source_url": "https://store.steampowered.com/app/5187000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4570680,
+      "title": "Tiny Farmie",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4570680/3090630a86dd84a135dc731b19facde0cf65365c/capsule_231x87.jpg?t=1789639854",
+      "source_url": "https://store.steampowered.com/app/4570680/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5171880,
+      "title": "That Cloud Looks Like",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5171880/7e872095c996b8ee5b3c0b5a0fd2edd494f3fecb/capsule_231x87.jpg?t=1789784599",
+      "source_url": "https://store.steampowered.com/app/5171880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3911500,
+      "title": "Slay The King",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3911500/068c12ac5d653fd60457f2df775b63e7072321d8/capsule_231x87.jpg?t=1790093799",
+      "source_url": "https://store.steampowered.com/app/3911500/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4420440,
+      "title": "Legacy of Sail",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Simulation"
+      ],
+      "original_price": 11.99,
+      "sale_price": 9.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4420440/ca1a6c6070d68ff1543196965b454bcda39359a4/capsule_231x87.jpg?t=1786149563",
+      "source_url": "https://store.steampowered.com/app/4420440/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4986110,
+      "title": "Aussie Rules Legend",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Sports",
+        "Strategy"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4986110/9180c346c33bd7f98aa33c74e00b54d017c556bc/capsule_231x87.jpg?t=1786688638",
+      "source_url": "https://store.steampowered.com/app/4986110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4857710,
+      "title": "Final Extraction",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4857710/3568173e16a32a67e8166a30ac76c57e8b58b688/capsule_231x87.jpg?t=1790265648",
+      "source_url": "https://store.steampowered.com/app/4857710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5190280,
+      "title": "LUCK IT",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5190280/6bf95a4b54370f2b58f089bbf0c37c54870c471d/capsule_231x87.jpg?t=1789547999",
+      "source_url": "https://store.steampowered.com/app/5190280/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3118260,
+      "title": "SIM - Simple Idle Miner",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 2.49,
+      "sale_price": 1.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3118260/e4fd1c3c3b7c7fa1f27b4072b915576f769a4b0b/capsule_231x87.jpg?t=1790355472",
+      "source_url": "https://store.steampowered.com/app/3118260/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4443830,
+      "title": "ResistanceZ",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4443830/6a5ccc8b00bacc40f3cd581f6f5fe3388e652f2a/capsule_231x87.jpg?t=1789643095",
+      "source_url": "https://store.steampowered.com/app/4443830/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5100610,
+      "title": "This is a Gift",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Puzzle",
+        "Action"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5100610/d7c210705cdc027c5fd5e9cfc893e83a8512eb5a/capsule_231x87.jpg?t=1790249702",
+      "source_url": "https://store.steampowered.com/app/5100610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3573410,
+      "title": "SHEROK's Case ;Recollection",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3573410/5f14f0e07c7e41ef9348a30544d0388825a0fbaa/capsule_231x87.jpg?t=1777296718",
+      "source_url": "https://store.steampowered.com/app/3573410/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5048480,
+      "title": "KUBO 3",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "RPG"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5048480/723166bd25d48b47818d5127417480cd776c2090/capsule_231x87.jpg?t=1790030932",
+      "source_url": "https://store.steampowered.com/app/5048480/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4216770,
+      "title": "Unanchored Spaceshooting",
+      "type": "game",
+      "genres": [
+        "Action",
+        "RPG"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4216770/795e9c4ab8f1ee0a2ba8f467a0c18df6339c5841/capsule_231x87.jpg?t=1790216087",
+      "source_url": "https://store.steampowered.com/app/4216770/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4042840,
+      "title": "Vquarium",
+      "type": "game",
+      "genres": [],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4042840/e4cb9740a55df5bb093b67031fff8560720326de/capsule_231x87.jpg?t=1785322671",
+      "source_url": "https://store.steampowered.com/app/4042840/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4968170,
+      "title": "Armored Career",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4968170/854cab707333aa00f2000d30aa8c06d0baf82033/capsule_231x87.jpg?t=1789642353",
+      "source_url": "https://store.steampowered.com/app/4968170/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5145800,
+      "title": "Slap Leather",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 2.25,
+      "sale_price": 1.8,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5145800/265417d88a77c3e89f3c218f70885116ac0c5d21/capsule_231x87.jpg?t=1790007338",
+      "source_url": "https://store.steampowered.com/app/5145800/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4500510,
+      "title": "天朝相亲图鉴",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4500510/e9e11ee4af3df18566671bee07cfddd6008cd337/capsule_231x87.jpg?t=1777355183",
+      "source_url": "https://store.steampowered.com/app/4500510/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4071230,
+      "title": "Memory Draw",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4071230/5d8d469726d9f31e1be50679b8a0277f51263f53/capsule_231x87.jpg?t=1773137298",
+      "source_url": "https://store.steampowered.com/app/4071230/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5178670,
+      "title": "Lucent",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 2.5,
+      "sale_price": 2,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5178670/8cc0c2ec7f41e3da01b13121461e61917ad655ba/capsule_231x87.jpg?t=1790005597",
+      "source_url": "https://store.steampowered.com/app/5178670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4991690,
+      "title": "Kihaven",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4991690/f867e8028f4e485caf32836cb7e59ac754c0282b/capsule_231x87.jpg?t=1790112210",
+      "source_url": "https://store.steampowered.com/app/4991690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4277000,
+      "title": "The Doomed Draw (大凶)",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4277000/6e2099f201d0c0ca90cc4971c5b9f39e39d8b3b2/capsule_231x87.jpg?t=1790123356",
+      "source_url": "https://store.steampowered.com/app/4277000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3538100,
+      "title": "Mouse",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3538100/3f22b2461a45bd9c90345c40c3f175a06d361729/capsule_231x87.jpg?t=1743078504",
+      "source_url": "https://store.steampowered.com/app/3538100/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4969340,
+      "title": "Drazy and the Puppets JB",
+      "type": "game",
+      "genres": [
+        "Horror"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4969340/15f12d06fb46bddd8af2cbce0f0f2562fa07c69e/capsule_231x87.jpg?t=1790295196",
+      "source_url": "https://store.steampowered.com/app/4969340/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3515630,
+      "title": "BABELOMANIA",
+      "type": "game",
+      "genres": [
+        "Horror"
+      ],
+      "original_price": 12.99,
+      "sale_price": 11.04,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3515630/73b494834a903233281732e64866a9d374b73328/capsule_231x87.jpg?t=1790182668",
+      "source_url": "https://store.steampowered.com/app/3515630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2870770,
+      "title": "DragonMirroreD with Hyoga & Magma",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Adventure",
+        "Casual"
+      ],
+      "original_price": 4.49,
+      "sale_price": 3.5,
+      "discount_percent": 22,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2870770/capsule_231x87.jpg?t=1751765983",
+      "source_url": "https://store.steampowered.com/app/2870770/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3862530,
+      "title": "Homunculus Meat",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Horror"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.55,
+      "discount_percent": 22,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3862530/2d62b618113471632e22fd2f68a39f2001aff80e/capsule_231x87.jpg?t=1760019924",
+      "source_url": "https://store.steampowered.com/app/3862530/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4948400,
+      "title": "Jackpot Dungeon",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4948400/eb952005109f664ee5ba929c829378261c1fa8e7/capsule_231x87.jpg?t=1790396975",
+      "source_url": "https://store.steampowered.com/app/4948400/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4988530,
+      "title": "MARODIS2",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.94,
+      "discount_percent": 21,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4988530/2c265e8624f8027c761b3ffc96e71870eb1a6076/capsule_231x87.jpg?t=1787993146",
+      "source_url": "https://store.steampowered.com/app/4988530/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5032470,
+      "title": "LemonFC - Der Fußball-Manager",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Sports"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5032470/cc03ef5f5a8b61fc5901d95f90e8b0211fe227c5/capsule_231x87.jpg?t=1789508366",
+      "source_url": "https://store.steampowered.com/app/5032470/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5130010,
+      "title": "AIGENROBO",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5130010/08047ae3a5280258dd49e3f5e713d6f0dbec4449/capsule_231x87.jpg?t=1790417435",
+      "source_url": "https://store.steampowered.com/app/5130010/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5119350,
+      "title": "Pixel Hold'em: Poker Coach",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5119350/621560a8da9cb1ee6b8f467bf2506b516dff30d3/capsule_231x87.jpg?t=1790161202",
+      "source_url": "https://store.steampowered.com/app/5119350/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2730270,
+      "title": "Sputnika Game",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy",
+        "Puzzle",
+        "Indie"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.54,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2730270/fad6c2d295ababec7de8da8cbc980cc1c9e238a9/capsule_231x87.jpg?t=1790162826",
+      "source_url": "https://store.steampowered.com/app/2730270/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3730110,
+      "title": "Nightmare Invasion",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.94,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3730110/838dbb583194779d1b9329614d5ce4a56de7e5b2/capsule_231x87.jpg?t=1790294238",
+      "source_url": "https://store.steampowered.com/app/3730110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 663080,
+      "title": "ReRace",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Racing",
+        "Indie",
+        "Puzzle"
+      ],
+      "original_price": 1.4,
+      "sale_price": 1.12,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/663080/4c8e8704c808b607583396e320493eac46df7c90/capsule_231x87.jpg?t=1781722887",
+      "source_url": "https://store.steampowered.com/app/663080/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1597820,
+      "title": "Pazing By",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1597820/capsule_231x87.jpg?t=1768541948",
+      "source_url": "https://store.steampowered.com/app/1597820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1456340,
+      "title": "Pocket Penguin DX ( ポケットペンギン): A Retro Style Adventure",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1456340/capsule_231x87.jpg?t=1750960158",
+      "source_url": "https://store.steampowered.com/app/1456340/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1652400,
+      "title": "Developer Daily",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation",
+        "Open World"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1652400/5b6ad8e29390ea18abf3a9d3ac402ae34a3a3f34/capsule_231x87.jpg?t=1785608037",
+      "source_url": "https://store.steampowered.com/app/1652400/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1625460,
+      "title": "Reptilian Rising",
+      "type": "game",
+      "genres": [],
+      "original_price": 29.99,
+      "sale_price": 23.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1625460/ebcd9ad0a95951ed5f20f680df824c93a13b6c50/capsule_231x87.jpg?t=1776932999",
+      "source_url": "https://store.steampowered.com/app/1625460/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2965690,
+      "title": "Look Closer!",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle",
+        "Horror"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2965690/capsule_231x87.jpg?t=1722189846",
+      "source_url": "https://store.steampowered.com/app/2965690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3243710,
+      "title": "KOTARO Survivor",
+      "type": "game",
+      "genres": [
+        "Survival",
+        "Casual"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3243710/75d96a549a7797b62d09120bae27631ce5eac69a/capsule_231x87.jpg?t=1751256033",
+      "source_url": "https://store.steampowered.com/app/3243710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2922630,
+      "title": "Chicken Chicken",
+      "type": "game",
+      "genres": [],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2922630/47be96222fb33d64dd55dd232fc003c78e73efbb/capsule_231x87.jpg?t=1784311679",
+      "source_url": "https://store.steampowered.com/app/2922630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3372850,
+      "title": "There's Always a Madman: The MacGuffin",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3372850/8e6634fa0fab10cee1b651f4f3bd0535328b16ea/capsule_231x87.jpg?t=1776989392",
+      "source_url": "https://store.steampowered.com/app/3372850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3317960,
+      "title": "Evoscape",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 11.99,
+      "sale_price": 9.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3317960/720ac680e1f5183c03a55de5d10a1f4c980f5702/capsule_231x87.jpg?t=1757328866",
+      "source_url": "https://store.steampowered.com/app/3317960/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3049700,
+      "title": "Covenant Tower",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Survival"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3049700/b7ddcf2cd2e8da036491c7e5a55a7dbe354848e6/capsule_231x87.jpg?t=1786729046",
+      "source_url": "https://store.steampowered.com/app/3049700/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2892230,
+      "title": "Box Zombies",
+      "type": "game",
+      "genres": [
+        "Survival"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2892230/2c411bbe45a66b5a2b71a6f6b842f628334a1ee4/capsule_231x87.jpg?t=1789430783",
+      "source_url": "https://store.steampowered.com/app/2892230/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3087790,
+      "title": "O.M.N.I.S.: Overnight Train",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3087790/f04eca8ad4408196344b77824833bbbc7ced8570/capsule_231x87.jpg?t=1755338397",
+      "source_url": "https://store.steampowered.com/app/3087790/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3018600,
+      "title": "Guns and Bots",
+      "type": "game",
+      "genres": [],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3018600/capsule_231x87.jpg?t=1718731349",
+      "source_url": "https://store.steampowered.com/app/3018600/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3716000,
+      "title": "Detective Bureau",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Puzzle"
+      ],
+      "original_price": 17.99,
+      "sale_price": 14.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3716000/6a2bcbc1bfcc70a28f1456ca3774288f5595e3d9/capsule_231x87.jpg?t=1785734141",
+      "source_url": "https://store.steampowered.com/app/3716000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3721820,
+      "title": "Important People of History: Presidents - George Washington",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3721820/2f9e3e9cdc250675bdd9305bcebf5306a96ac0d8/capsule_231x87.jpg?t=1784081160",
+      "source_url": "https://store.steampowered.com/app/3721820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3721830,
+      "title": "Important People of History: Presidents - Thomas Jefferson",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3721830/8b1be96da33b360daadbb76a325c108c85bc7221/capsule_231x87.jpg?t=1784081231",
+      "source_url": "https://store.steampowered.com/app/3721830/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3557050,
+      "title": "Kungfu2",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3557050/c5f43d9da34058954948ab9516952709c9f0795d/capsule_231x87.jpg?t=1777260575",
+      "source_url": "https://store.steampowered.com/app/3557050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3858860,
+      "title": "IKARUS",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3858860/20038ed823dae546dadff5b63231b9de6f8dea80/capsule_231x87.jpg?t=1786097273",
+      "source_url": "https://store.steampowered.com/app/3858860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3874370,
+      "title": "Desktop Ant Farm Simulator",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3874370/624542c3b6ff7e44e88dcb9cdaea48024087696b/capsule_231x87.jpg?t=1785876967",
+      "source_url": "https://store.steampowered.com/app/3874370/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3503580,
+      "title": "Snap Chess",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3503580/f3b7e543bf1821a2bd0fd6a988c9f35063d4cabb/capsule_231x87.jpg?t=1789722486",
+      "source_url": "https://store.steampowered.com/app/3503580/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4844970,
+      "title": "NEKOHERO",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle",
+        "Indie"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4844970/db351c122215bc9f73336d48faeb83b7e75a3b3d/capsule_231x87.jpg?t=1787536507",
+      "source_url": "https://store.steampowered.com/app/4844970/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5043000,
+      "title": "Cards, Blades & Fine Print",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5043000/2e84791746b46a9f980a2948da6d5316b887fb48/capsule_231x87.jpg?t=1790096502",
+      "source_url": "https://store.steampowered.com/app/5043000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4825430,
+      "title": "Covid-26",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4825430/f83ee2fa4ed8c65e1f1e18f98eb86bc920095c9d/capsule_231x87.jpg?t=1787342196",
+      "source_url": "https://store.steampowered.com/app/4825430/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3243710,
+      "title": "KOTARO Survivor",
+      "type": "game",
+      "genres": [
+        "Survival",
+        "Casual"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3243710/75d96a549a7797b62d09120bae27631ce5eac69a/capsule_231x87.jpg?t=1751256033",
+      "source_url": "https://store.steampowered.com/app/3243710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3372850,
+      "title": "There's Always a Madman: The MacGuffin",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3372850/8e6634fa0fab10cee1b651f4f3bd0535328b16ea/capsule_231x87.jpg?t=1776989392",
+      "source_url": "https://store.steampowered.com/app/3372850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3317960,
+      "title": "Evoscape",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 11.99,
+      "sale_price": 9.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3317960/720ac680e1f5183c03a55de5d10a1f4c980f5702/capsule_231x87.jpg?t=1757328866",
+      "source_url": "https://store.steampowered.com/app/3317960/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3557050,
+      "title": "Kungfu2",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3557050/c5f43d9da34058954948ab9516952709c9f0795d/capsule_231x87.jpg?t=1777260575",
+      "source_url": "https://store.steampowered.com/app/3557050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4844970,
+      "title": "NEKOHERO",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle",
+        "Indie"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4844970/db351c122215bc9f73336d48faeb83b7e75a3b3d/capsule_231x87.jpg?t=1787536507",
+      "source_url": "https://store.steampowered.com/app/4844970/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4742610,
+      "title": "Truck Maxxing",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Racing",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4742610/0f25402dab293ae6549a244788b4b3cc3ce2837b/capsule_231x87.jpg?t=1783434339",
+      "source_url": "https://store.steampowered.com/app/4742610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4900460,
+      "title": "Poly Peacocks",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4900460/be16394ee3720456f6df5519fde418825b2af118/capsule_231x87.jpg?t=1789449602",
+      "source_url": "https://store.steampowered.com/app/4900460/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4790960,
+      "title": "BeaconBound",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4790960/213a516c237fb33c497fc785b93d333f1ae617d9/capsule_231x87.jpg?t=1782382885",
+      "source_url": "https://store.steampowered.com/app/4790960/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4714130,
+      "title": "CyberRushUasSimulator",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Racing"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4714130/6b00ff2d17108b0b8216d0c77088958411bc6079/capsule_231x87.jpg?t=1790295453",
+      "source_url": "https://store.steampowered.com/app/4714130/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4737540,
+      "title": "21: Dead Man's Deck",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4737540/3a1258dffc79cd5cc010838550df4f994f0beb39/capsule_231x87.jpg?t=1789480696",
+      "source_url": "https://store.steampowered.com/app/4737540/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3923180,
+      "title": "SELF_NOT_FOUND",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Adventure",
+        "Action",
+        "Casual"
+      ],
+      "original_price": 11.99,
+      "sale_price": 9.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3923180/7be57367867b63f6ef9095dad51801690c184634/capsule_231x87.jpg?t=1790223782",
+      "source_url": "https://store.steampowered.com/app/3923180/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3941470,
+      "title": "Bush Dog",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3941470/1d92876c18aeca821500cd39b0fa748e5ca48b41/capsule_231x87.jpg?t=1786674183",
+      "source_url": "https://store.steampowered.com/app/3941470/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4255080,
+      "title": "Pawns Survival",
+      "type": "game",
+      "genres": [
+        "Survival"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4255080/7a5b7c562a2d81cb6854ca7b8bf59661d1fd30da/capsule_231x87.jpg?t=1790316868",
+      "source_url": "https://store.steampowered.com/app/4255080/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4127630,
+      "title": "PostBear Tales",
+      "type": "game",
+      "genres": [],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4127630/83635a73f66043baf1b244746e7f0883ba65aeae/capsule_231x87.jpg?t=1780429492",
+      "source_url": "https://store.steampowered.com/app/4127630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4153420,
+      "title": "Silent Castle",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4153420/8ad480cfdad1d73235b5034e2f6649798a70a211/capsule_231x87.jpg?t=1768433302",
+      "source_url": "https://store.steampowered.com/app/4153420/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4735560,
+      "title": "The Order of Things",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Horror"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4735560/d9fbe3c5e2f73a4e67c5851c5818a6ba2afda1e5/capsule_231x87.jpg?t=1782821213",
+      "source_url": "https://store.steampowered.com/app/4735560/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4397040,
+      "title": "Capivara Zen",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4397040/37cb309730535f44cd28df9ae5648b8c2575ab44/capsule_231x87.jpg?t=1774027177",
+      "source_url": "https://store.steampowered.com/app/4397040/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4367070,
+      "title": "Antim Yatra",
+      "type": "game",
+      "genres": [
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4367070/a8b49a297e76c5592ad627ce3d0d368243d20660/capsule_231x87.jpg?t=1790360461",
+      "source_url": "https://store.steampowered.com/app/4367070/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4936190,
+      "title": "The Outskirts",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4936190/67bbd1afdce845c154ce8ce8ca12308399b04df2/capsule_231x87.jpg?t=1785850526",
+      "source_url": "https://store.steampowered.com/app/4936190/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4937300,
+      "title": "My Mysterious Creature",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4937300/d166616c89d120a4e1915f5255c10fc9251e3719/capsule_231x87.jpg?t=1790344900",
+      "source_url": "https://store.steampowered.com/app/4937300/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4953710,
+      "title": "Typing Show",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4953710/7e7d186f00991bec1987d1ac63aa0d21113135e5/capsule_231x87.jpg?t=1785952807",
+      "source_url": "https://store.steampowered.com/app/4953710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5183370,
+      "title": "Nuclear Bomb Disarming Simulator",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5183370/3a00c8bfaf9a0fe542baea7783af33cdcb647a90/capsule_231x87.jpg?t=1790092159",
+      "source_url": "https://store.steampowered.com/app/5183370/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5188660,
+      "title": "Chibi Legends: Mini Mayhem",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Action"
+      ],
+      "original_price": 19.99,
+      "sale_price": 15.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5188660/ba6fe374bf1e91322de031c7f8aaa71e3fe375a0/capsule_231x87.jpg?t=1790380672",
+      "source_url": "https://store.steampowered.com/app/5188660/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4804640,
+      "title": "Kids Arcade",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Racing"
+      ],
+      "original_price": 5,
+      "sale_price": 4,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4804640/48b537cf9a504375d271f83b3a7abe8b0f7c92dc/capsule_231x87.jpg?t=1785689136",
+      "source_url": "https://store.steampowered.com/app/4804640/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4767920,
+      "title": "Friendly Fire",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual",
+        "Survival"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4767920/0da10d9717936af9602566005545fcded549cd87/capsule_231x87.jpg?t=1789319474",
+      "source_url": "https://store.steampowered.com/app/4767920/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4825430,
+      "title": "Covid-26",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4825430/f83ee2fa4ed8c65e1f1e18f98eb86bc920095c9d/capsule_231x87.jpg?t=1787342196",
+      "source_url": "https://store.steampowered.com/app/4825430/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4831070,
+      "title": "Proper Puzzles",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 2.49,
+      "sale_price": 1.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4831070/fa4d89ffd214d742672d9b402b0cb608efc9e018/capsule_231x87.jpg?t=1784532058",
+      "source_url": "https://store.steampowered.com/app/4831070/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4868610,
+      "title": "Tamespire",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4868610/e3d8f9ecbf25aab8759d573b646bc6ac55103762/capsule_231x87.jpg?t=1789329328",
+      "source_url": "https://store.steampowered.com/app/4868610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4995090,
+      "title": "Revolver 21",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4995090/d35a05e5f28c50e77c6a6a89f293747740c08f15/capsule_231x87.jpg?t=1789984313",
+      "source_url": "https://store.steampowered.com/app/4995090/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5067750,
+      "title": "Dream Draw Dungeons",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 11.99,
+      "sale_price": 9.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5067750/71d0275c14d8a030d930701ba39e2b866041b27c/capsule_231x87.jpg?t=1789490778",
+      "source_url": "https://store.steampowered.com/app/5067750/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5070850,
+      "title": "HITLESS",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5070850/8123c18a37bb7913b97746d779359b1d29c718e8/capsule_231x87.jpg?t=1790222338",
+      "source_url": "https://store.steampowered.com/app/5070850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5101840,
+      "title": "Teverim",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5101840/6f19249791654d1a3a64ceb1c77bc3ab958d712d/capsule_231x87.jpg?t=1790231628",
+      "source_url": "https://store.steampowered.com/app/5101840/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5165000,
+      "title": "MaskloZoophic Sessions",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Horror"
+      ],
+      "original_price": 3,
+      "sale_price": 2.4,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5165000/f4ce3d98daa2106360c6a5666aa19c606c5f3abc/capsule_231x87.jpg?t=1790262504",
+      "source_url": "https://store.steampowered.com/app/5165000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4984140,
+      "title": "Pleiades Zero",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4984140/9c31e65f159f112042cf791a68bf9ec799b24edb/capsule_231x87.jpg?t=1789543103",
+      "source_url": "https://store.steampowered.com/app/4984140/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4985780,
+      "title": "Are You Chicken?",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4985780/37fe1ae1714099afa15215873c5698f45a734b26/capsule_231x87.jpg?t=1789423681",
+      "source_url": "https://store.steampowered.com/app/4985780/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5045560,
+      "title": "Shuffle and Seek",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 5.99,
+      "sale_price": 4.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5045560/1fe6e07343364fd330ea9370641d7c072b044031/capsule_231x87.jpg?t=1790410165",
+      "source_url": "https://store.steampowered.com/app/5045560/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5022380,
+      "title": "Foosball2D",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Sports"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.39,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5022380/5f5e16ae3c0adabdbb4f6cd16dcbdbb38198a62d/capsule_231x87.jpg?t=1789840663",
+      "source_url": "https://store.steampowered.com/app/5022380/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4550120,
+      "title": "Hyper Sphere",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4550120/37fffdfcacabf8486f35a26dc2a59aa180146ba5/capsule_231x87.jpg?t=1780048826",
+      "source_url": "https://store.steampowered.com/app/4550120/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4550550,
+      "title": "Vampire Pumpkin Plot",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 10.99,
+      "sale_price": 8.79,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4550550/701a94b7b47c7b2ecbd231ae09b1e1cc0cc8895d/capsule_231x87.jpg?t=1778237781",
+      "source_url": "https://store.steampowered.com/app/4550550/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5132730,
+      "title": "ShutterOut",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Adventure"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.19,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5132730/5e99c05eee2435db14e5f7473acaf0a410cf3645/capsule_231x87.jpg?t=1790355269",
+      "source_url": "https://store.steampowered.com/app/5132730/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5144700,
+      "title": "SPIRAL OJOSAMA CHOHATSU MAKINA",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 24.99,
+      "sale_price": 19.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5144700/073e9e82652f9ef69ad42614367d07cd606a049c/capsule_231x87.jpg?t=1790066697",
+      "source_url": "https://store.steampowered.com/app/5144700/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5145040,
+      "title": "Build My World",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5145040/56a75b897c55c8a40d7c36389df544150486db8d/capsule_231x87.jpg?t=1790250322",
+      "source_url": "https://store.steampowered.com/app/5145040/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5176950,
+      "title": "Glitch Protocol",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Indie"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.59,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5176950/ac4cfaaa44f32d68c27cc6917df47370d856884e/capsule_231x87.jpg?t=1790058848",
+      "source_url": "https://store.steampowered.com/app/5176950/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5180590,
+      "title": "Derivation:viewer of abyss",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 9.99,
+      "sale_price": 7.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5180590/c3d0546a3b8c2ba21810d5bf22993c279509f76d/capsule_231x87.jpg?t=1790200516",
+      "source_url": "https://store.steampowered.com/app/5180590/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5136150,
+      "title": "Died in the Tower Again",
+      "type": "game",
+      "genres": [],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5136150/8cd2137cd861e8364c8004c7399dd7f37270bacc/capsule_231x87.jpg?t=1789729214",
+      "source_url": "https://store.steampowered.com/app/5136150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3334980,
+      "title": "PixelPop 2087",
+      "type": "game",
+      "genres": [],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3334980/228f6b8c540317429eebaf92ecc7cd293301c082/capsule_231x87.jpg?t=1789936347",
+      "source_url": "https://store.steampowered.com/app/3334980/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3822710,
+      "title": "Linkshift",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Action",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 3.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3822710/5deb7e7f3007cbb95cd1fd0adb4aeac7d7151ece/capsule_231x87.jpg?t=1784788406",
+      "source_url": "https://store.steampowered.com/app/3822710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5043000,
+      "title": "Cards, Blades & Fine Print",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 14.99,
+      "sale_price": 11.99,
+      "discount_percent": 20,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5043000/2e84791746b46a9f980a2948da6d5316b887fb48/capsule_231x87.jpg?t=1790096502",
+      "source_url": "https://store.steampowered.com/app/5043000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5218460,
+      "title": "ANT HELL",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5218460/9ea1655496520f0d63458f768a9f689e7c60c850/capsule_231x87.jpg?t=1790255134",
+      "source_url": "https://store.steampowered.com/app/5218460/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3585420,
+      "title": "Legacy of Ancestors",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.94,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3585420/f295121ff707700835ea88ac145b2b8fba7f7649/capsule_231x87.jpg?t=1774114333",
+      "source_url": "https://store.steampowered.com/app/3585420/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2781680,
+      "title": "The Stickman",
+      "type": "game",
+      "genres": [],
+      "original_price": 11.99,
+      "sale_price": 10.19,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2781680/357cb074a749f815ef0365ece6cc2dad9d61da34/capsule_231x87.jpg?t=1790010514",
+      "source_url": "https://store.steampowered.com/app/2781680/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3559920,
+      "title": "Backrooms: Poolrooms",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Casual",
+        "Horror"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3559920/ebf3ce8dabb64ef11dcd5a4c6f227a49f25bc2db/capsule_231x87.jpg?t=1770977890",
+      "source_url": "https://store.steampowered.com/app/3559920/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1800470,
+      "title": "Moonwakers",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.9,
+      "sale_price": 8.41,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1800470/06e382d9a9c6908bd747f7e57500f2740d333d8a/capsule_231x87.jpg?t=1790406134",
+      "source_url": "https://store.steampowered.com/app/1800470/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4903860,
+      "title": "The Grotto Index",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.79,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4903860/43f1ef6b3f4019dfe08a040343a9304a41f6b34b/capsule_231x87.jpg?t=1790096993",
+      "source_url": "https://store.steampowered.com/app/4903860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5222590,
+      "title": "Forest Explorer",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.39,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5222590/a21467f45c6490a9e411aeee733f48b86b27aa00/capsule_231x87.jpg?t=1790288413",
+      "source_url": "https://store.steampowered.com/app/5222590/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4798740,
+      "title": "Gemorium",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.69,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4798740/d1265060097c803ccf4f770590a6026b44fee268/capsule_231x87.jpg?t=1790410869",
+      "source_url": "https://store.steampowered.com/app/4798740/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3987610,
+      "title": "Unplanned Love: Building Dreams Together",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Casual"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.94,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3987610/53784007455964e9af6ef520b4ec1852977f729d/capsule_231x87.jpg?t=1767754862",
+      "source_url": "https://store.steampowered.com/app/3987610/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4459550,
+      "title": "FullSend",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Adventure",
+        "Action",
+        "Strategy",
+        "Open World"
+      ],
+      "original_price": 6.48,
+      "sale_price": 5.73,
+      "discount_percent": 12,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4459550/9cf8ca698b69b15fd30bbcc7654a9e0e57cd66cc/capsule_231x87.jpg?t=1790407960",
+      "source_url": "https://store.steampowered.com/app/4459550/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4535170,
+      "title": "Dicebinder",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4535170/99f54674fa0fc10b98592586d0852a4eeb760b18/capsule_231x87.jpg?t=1790004100",
+      "source_url": "https://store.steampowered.com/app/4535170/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4982690,
+      "title": "Rustborn",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.79,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4982690/2039622abbbff0f6a96879849296688c533748df/capsule_231x87.jpg?t=1789676476",
+      "source_url": "https://store.steampowered.com/app/4982690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5185810,
+      "title": "One Last Machine",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Simulation"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.79,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5185810/9a6e9ed1b36d4d6716f0c2f034e1137580a6a112/capsule_231x87.jpg?t=1790413643",
+      "source_url": "https://store.steampowered.com/app/5185810/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4288330,
+      "title": "Flow Legends",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4288330/42867a02f6a27d91bd3efd3951900bfa66aa98c2/capsule_231x87.jpg?t=1790161957",
+      "source_url": "https://store.steampowered.com/app/4288330/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2524740,
+      "title": "Day Off Simulator",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.84,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2524740/capsule_231x87.jpg?t=1789835876",
+      "source_url": "https://store.steampowered.com/app/2524740/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4287720,
+      "title": "Tiny Farm Big Money Together",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.69,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4287720/95788b83f4fdf589611e20afdf22e53e186a6c7b/capsule_231x87.jpg?t=1790186715",
+      "source_url": "https://store.steampowered.com/app/4287720/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5139950,
+      "title": "The Countess from Moscow",
+      "type": "game",
+      "genres": [],
+      "original_price": 6.99,
+      "sale_price": 5.94,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5139950/32e489d714bd1ed9938f0173a1791b51520919fc/capsule_231x87.jpg?t=1790089693",
+      "source_url": "https://store.steampowered.com/app/5139950/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4592150,
+      "title": "TocoToco",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.84,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4592150/fdc0fdc8108751ce33aca1641096920d824998c6/capsule_231x87.jpg?t=1790359503",
+      "source_url": "https://store.steampowered.com/app/4592150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5097190,
+      "title": "NEON STORM",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.69,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5097190/86e2288452decb04694c16b05db201df5cb37a70/capsule_231x87.jpg?t=1790293527",
+      "source_url": "https://store.steampowered.com/app/5097190/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4799380,
+      "title": "Cow Abduction Frenzy",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4799380/380ace46dfcfd26099c944ccf695c52cd70e8203/capsule_231x87.jpg?t=1790337858",
+      "source_url": "https://store.steampowered.com/app/4799380/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4969580,
+      "title": "Bubble Anima",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.69,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4969580/b5cc1a88b2ee70c19b20b5065d4b70f398a92069/capsule_231x87.jpg?t=1785792476",
+      "source_url": "https://store.steampowered.com/app/4969580/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5180680,
+      "title": "Chuomuniang",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.84,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5180680/069665eec82852382e6cc92dc1c7e69c51c9485b/capsule_231x87.jpg?t=1790137113",
+      "source_url": "https://store.steampowered.com/app/5180680/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5092960,
+      "title": "Survival Project: Island",
+      "type": "game",
+      "genres": [
+        "Survival",
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5092960/8e31692077fcb503138980502991f727c1525d93/capsule_231x87.jpg?t=1790267421",
+      "source_url": "https://store.steampowered.com/app/5092960/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4053350,
+      "title": "Hoodie Havoc",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4053350/390dc1fcbea34ddc4037f349e3cee44b7689222f/capsule_231x87.jpg?t=1789709986",
+      "source_url": "https://store.steampowered.com/app/4053350/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3151220,
+      "title": "Bot slash Bot",
+      "type": "game",
+      "genres": [
+        "Indie"
+      ],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3151220/cd4a032eb5da830ea7cd9ba88f11f50884444a9f/capsule_231x87_alt_assets_1.jpg?t=1789755132",
+      "source_url": "https://store.steampowered.com/app/3151220/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5116270,
+      "title": "Nebula Blink",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5116270/877a69b6310fa22999c8d391dd96e367daeda376/capsule_231x87.jpg?t=1790393801",
+      "source_url": "https://store.steampowered.com/app/5116270/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5036050,
+      "title": "Rakugaki Beast",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5036050/66bbb3c93e0c71214e1b0f0a5812382c9f301b1b/capsule_231x87.jpg?t=1790317576",
+      "source_url": "https://store.steampowered.com/app/5036050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4614040,
+      "title": "Last Call",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Horror"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4614040/a82b6238d0d4e714a4c7d861131d0862df78db54/capsule_231x87.jpg?t=1790337153",
+      "source_url": "https://store.steampowered.com/app/4614040/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5158690,
+      "title": "Pillagers: The Poisoned Throne",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5158690/0efd1d3ef8f4c3d637f2a20695a78f56cb5e7ef5/capsule_231x87.jpg?t=1789761995",
+      "source_url": "https://store.steampowered.com/app/5158690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5052050,
+      "title": "Shrine Train",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5052050/a4d66687d51d33258c733614218c1ea2afe9ab76/capsule_231x87.jpg?t=1790352137",
+      "source_url": "https://store.steampowered.com/app/5052050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4235690,
+      "title": "The Sigil Engine",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "Puzzle"
+      ],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4235690/e91413391231c851bfc5fde3da952c9c5c6a423f/capsule_231x87.jpg?t=1790292029",
+      "source_url": "https://store.steampowered.com/app/4235690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5033660,
+      "title": "Car Club Tuning Storm",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Racing"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5033660/d4569d655a726ed1b6a1ccad8b61075328520405/capsule_231x87.jpg?t=1789802079",
+      "source_url": "https://store.steampowered.com/app/5033660/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3219260,
+      "title": "Only Up To Space",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Casual",
+        "Simulation",
+        "Action"
+      ],
+      "original_price": 6.99,
+      "sale_price": 5.94,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3219260/1d6777788d002d9c6776b7a5de8024fb99971f3e/capsule_231x87.jpg?t=1752231594",
+      "source_url": "https://store.steampowered.com/app/3219260/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2954450,
+      "title": "Zooparasite",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Puzzle",
+        "Open World",
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2954450/capsule_231x87.jpg?t=1754673672",
+      "source_url": "https://store.steampowered.com/app/2954450/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3665640,
+      "title": "Clicker Climber Pachinko",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.69,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3665640/f02641230aa871094c25af4a94a4dc06f3448c31/capsule_231x87.jpg?t=1780953754",
+      "source_url": "https://store.steampowered.com/app/3665640/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3424650,
+      "title": "Stack Together: To the Moon – Stack, Build & Escape",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3424650/a8378c73bed2f59079de86037da5c4aea0fed5f6/capsule_231x87.jpg?t=1789400472",
+      "source_url": "https://store.steampowered.com/app/3424650/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4304340,
+      "title": "Into the Cave",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Casual"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4304340/0983a6166b24271acd582f269fed2f69519259e2/capsule_231x87.jpg?t=1776500392",
+      "source_url": "https://store.steampowered.com/app/4304340/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4659150,
+      "title": "Road Connect",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 1.49,
+      "sale_price": 1.26,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4659150/8a4d153694de9b5db59ac763cadc9d33a15e217f/capsule_231x87.jpg?t=1789413077",
+      "source_url": "https://store.steampowered.com/app/4659150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4634900,
+      "title": "GViRacer",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Racing"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4634900/a44ce80efc9588637e68284c5266bc68d7b28861/capsule_231x87.jpg?t=1790318552",
+      "source_url": "https://store.steampowered.com/app/4634900/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4188570,
+      "title": "Biovoid",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Survival"
+      ],
+      "original_price": 14.99,
+      "sale_price": 12.74,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4188570/f2c15623cacf07a4c4d3ab5c7ca23f602d8385e5/capsule_231x87.jpg?t=1789754551",
+      "source_url": "https://store.steampowered.com/app/4188570/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4089670,
+      "title": "Idle Starfleet",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation",
+        "Strategy"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4089670/9d527f4cb403ca06c32e9182a44d34fa150e1a8c/capsule_231x87.jpg?t=1778919218",
+      "source_url": "https://store.steampowered.com/app/4089670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4492150,
+      "title": "Terminal Hacker: Override",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle",
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.39,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4492150/0f6fe0cdb83c0efa443f4d2392604095c3ad6fd3/capsule_231x87.jpg?t=1775656835",
+      "source_url": "https://store.steampowered.com/app/4492150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4519750,
+      "title": "Deep Space Merchant",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4519750/3bffcb4d7a64541a2bb912035af860c84dcf18c1/capsule_231x87.jpg?t=1776119629",
+      "source_url": "https://store.steampowered.com/app/4519750/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4461820,
+      "title": "Oathbreak Dungeons",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4461820/9d39796770f39b19c0dd7b6a915a88016fe4ee77/capsule_231x87.jpg?t=1789190729",
+      "source_url": "https://store.steampowered.com/app/4461820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2648210,
+      "title": "Eco Balance",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Simulation"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.84,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2648210/4be4af96852f278d8c70948798dc84c7711ff83d/capsule_231x87.jpg?t=1789616646",
+      "source_url": "https://store.steampowered.com/app/2648210/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4262410,
+      "title": "The Aurora Chronicles",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4262410/9f2640b88be5d408feab2188805f299f67765dfe/capsule_231x87.jpg?t=1788450178",
+      "source_url": "https://store.steampowered.com/app/4262410/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4329880,
+      "title": "Mage Fight",
+      "type": "game",
+      "genres": [],
+      "original_price": 11.99,
+      "sale_price": 10.19,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329880/f2b301ff9496f5690acc9df3845cd88839044a5c/capsule_231x87.jpg?t=1789600305",
+      "source_url": "https://store.steampowered.com/app/4329880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4412910,
+      "title": "Micro Mystery Investigator: Noir Edition",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.39,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4412910/3278d81ec54e813f141a6eaecdbd8772ff153a0c/capsule_231x87.jpg?t=1775656912",
+      "source_url": "https://store.steampowered.com/app/4412910/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4893090,
+      "title": "Helmet",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4893090/834ecea9fa90e193e18290585f3d1947c08f1f06/capsule_231x87.jpg?t=1787247989",
+      "source_url": "https://store.steampowered.com/app/4893090/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4103290,
+      "title": "Stunted Gravity",
+      "type": "game",
+      "genres": [
+        "Racing"
+      ],
+      "original_price": 11.99,
+      "sale_price": 10.19,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4103290/273a43e3f5a91f9301571a4bc729114ca1ca08fc/capsule_231x87.jpg?t=1790179402",
+      "source_url": "https://store.steampowered.com/app/4103290/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4963760,
+      "title": "Zone//Zero",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4963760/5cdab9057e4d8ef283df6bd3e15beab068b7912b/capsule_231x87.jpg?t=1790182106",
+      "source_url": "https://store.steampowered.com/app/4963760/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1017980,
+      "title": "SERPULA",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.54,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1017980/c67043a0d6ea350fb79e0d813a2b2b24e6c3974f/capsule_231x87.jpg?t=1789979190",
+      "source_url": "https://store.steampowered.com/app/1017980/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5156430,
+      "title": "Packet Plague",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5156430/bf10e090b2110413c4fb5f9b100843467b5d4ddc/capsule_231x87.jpg?t=1790017275",
+      "source_url": "https://store.steampowered.com/app/5156430/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3424650,
+      "title": "Stack Together: To the Moon – Stack, Build & Escape",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action",
+        "Puzzle"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3424650/a8378c73bed2f59079de86037da5c4aea0fed5f6/capsule_231x87.jpg?t=1789400472",
+      "source_url": "https://store.steampowered.com/app/3424650/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4304340,
+      "title": "Into the Cave",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Casual"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4304340/0983a6166b24271acd582f269fed2f69519259e2/capsule_231x87.jpg?t=1776500392",
+      "source_url": "https://store.steampowered.com/app/4304340/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4492150,
+      "title": "Terminal Hacker: Override",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle",
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.39,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4492150/0f6fe0cdb83c0efa443f4d2392604095c3ad6fd3/capsule_231x87.jpg?t=1775656835",
+      "source_url": "https://store.steampowered.com/app/4492150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4659150,
+      "title": "Road Connect",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 1.49,
+      "sale_price": 1.26,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4659150/8a4d153694de9b5db59ac763cadc9d33a15e217f/capsule_231x87.jpg?t=1789413077",
+      "source_url": "https://store.steampowered.com/app/4659150/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4634900,
+      "title": "GViRacer",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Racing"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4634900/a44ce80efc9588637e68284c5266bc68d7b28861/capsule_231x87.jpg?t=1790318552",
+      "source_url": "https://store.steampowered.com/app/4634900/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4519750,
+      "title": "Deep Space Merchant",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4519750/3bffcb4d7a64541a2bb912035af860c84dcf18c1/capsule_231x87.jpg?t=1776119629",
+      "source_url": "https://store.steampowered.com/app/4519750/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4461820,
+      "title": "Oathbreak Dungeons",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.09,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4461820/9d39796770f39b19c0dd7b6a915a88016fe4ee77/capsule_231x87.jpg?t=1789190729",
+      "source_url": "https://store.steampowered.com/app/4461820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4329880,
+      "title": "Mage Fight",
+      "type": "game",
+      "genres": [],
+      "original_price": 11.99,
+      "sale_price": 10.19,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4329880/f2b301ff9496f5690acc9df3845cd88839044a5c/capsule_231x87.jpg?t=1789600305",
+      "source_url": "https://store.steampowered.com/app/4329880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4412910,
+      "title": "Micro Mystery Investigator: Noir Edition",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Puzzle"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.39,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4412910/3278d81ec54e813f141a6eaecdbd8772ff153a0c/capsule_231x87.jpg?t=1775656912",
+      "source_url": "https://store.steampowered.com/app/4412910/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4103290,
+      "title": "Stunted Gravity",
+      "type": "game",
+      "genres": [
+        "Racing"
+      ],
+      "original_price": 11.99,
+      "sale_price": 10.19,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4103290/273a43e3f5a91f9301571a4bc729114ca1ca08fc/capsule_231x87.jpg?t=1790179402",
+      "source_url": "https://store.steampowered.com/app/4103290/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3996660,
+      "title": "Guinea Pig Gunner",
+      "type": "game",
+      "genres": [],
+      "original_price": 14.99,
+      "sale_price": 12.74,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3996660/d64e86890110c1b34fd23052ac445138c354caea/capsule_231x87.jpg?t=1790012736",
+      "source_url": "https://store.steampowered.com/app/3996660/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1017980,
+      "title": "SERPULA",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.54,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1017980/c67043a0d6ea350fb79e0d813a2b2b24e6c3974f/capsule_231x87.jpg?t=1789979190",
+      "source_url": "https://store.steampowered.com/app/1017980/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4963760,
+      "title": "Zone//Zero",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.49,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4963760/5cdab9057e4d8ef283df6bd3e15beab068b7912b/capsule_231x87.jpg?t=1790182106",
+      "source_url": "https://store.steampowered.com/app/4963760/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5187190,
+      "title": "Trees",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5187190/86b0db168402964081442226a8653ab0fced7ff4/capsule_231x87.jpg?t=1790216108",
+      "source_url": "https://store.steampowered.com/app/5187190/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5190920,
+      "title": "Pixel Chess",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5190920/fac24a1d077ff2251a915b4a8e5210a43ebd2272/capsule_231x87.jpg?t=1790235268",
+      "source_url": "https://store.steampowered.com/app/5190920/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4285860,
+      "title": "Desktop Girl Chika",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 7.99,
+      "sale_price": 6.79,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4285860/9187b4dc65f8854804e42181914851b9d13c64ad/capsule_231x87.jpg?t=1790219599",
+      "source_url": "https://store.steampowered.com/app/4285860/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4974630,
+      "title": "Something Weird Will Happen",
+      "type": "game",
+      "genres": [
+        "Massively Multiplayer",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.24,
+      "discount_percent": 15,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4974630/9b2353c93b5e7fe431217fef450700beeaacd0a5/capsule_231x87.jpg?t=1790404207",
+      "source_url": "https://store.steampowered.com/app/4974630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5138940,
+      "title": "CandleBook: Trading Simulator",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Simulation",
+        "Indie"
+      ],
+      "original_price": 19.99,
+      "sale_price": 17.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5138940/3f672ef0a2b7ae6f4d6adc8429972a8f1d88eac7/capsule_231x87.jpg?t=1790245309",
+      "source_url": "https://store.steampowered.com/app/5138940/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4539070,
+      "title": "AI School Simulator",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4539070/0c5ace21e4b4f1a5452d4d2ee854783f7e0350b1/capsule_231x87.jpg?t=1790390120",
+      "source_url": "https://store.steampowered.com/app/4539070/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2626560,
+      "title": "Reflection Witch",
+      "type": "game",
+      "genres": [],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2626560/702fad0ab93e6373a5fa896b1031b5cc6d635949/capsule_231x87.jpg?t=1790218934",
+      "source_url": "https://store.steampowered.com/app/2626560/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1008930,
+      "title": "Heisenberg 101",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1008930/9693415e773355d5ecf432aafef08116d35893ba/capsule_231x87.jpg?t=1790272969",
+      "source_url": "https://store.steampowered.com/app/1008930/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3855090,
+      "title": "Aenoic Abyss",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Action",
+        "RPG"
+      ],
+      "original_price": 8.99,
+      "sale_price": 8.09,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3855090/b5ccd11aa0444b2c75f5c43e44385510a94a6885/capsule_231x87.jpg?t=1789983893",
+      "source_url": "https://store.steampowered.com/app/3855090/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3006090,
+      "title": "Crystant",
+      "type": "game",
+      "genres": [
+        "Survival"
+      ],
+      "original_price": 11.99,
+      "sale_price": 10.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3006090/5b557a04a2cf5a3ea7a0c039cb8ca2d02c0443bf/capsule_231x87.jpg?t=1789992206",
+      "source_url": "https://store.steampowered.com/app/3006090/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4118420,
+      "title": "100 Goldmine Cats",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Indie",
+        "Puzzle"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4118420/2203aeb36317d9d96aaa5afd4f87c080a37249d0/capsule_231x87.jpg?t=1789745178",
+      "source_url": "https://store.steampowered.com/app/4118420/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5191000,
+      "title": "Triple Track",
+      "type": "game",
+      "genres": [
+        "Puzzle",
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5191000/3fe875987aa2067220a1d25ed2dc62159f9e31e4/capsule_231x87.jpg?t=1790327738",
+      "source_url": "https://store.steampowered.com/app/5191000/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4326520,
+      "title": "When Work's A Bore",
+      "type": "game",
+      "genres": [
+        "Racing",
+        "Action"
+      ],
+      "original_price": 12.49,
+      "sale_price": 11.24,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4326520/dd47794db76e1d3a55bed5f724628d4ee0feda5f/capsule_231x87.jpg?t=1790251279",
+      "source_url": "https://store.steampowered.com/app/4326520/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5135630,
+      "title": "WPG Ravelin",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Action"
+      ],
+      "original_price": 10.99,
+      "sale_price": 9.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5135630/bc2ea1287ae47e9c340cfe35baf4d8235cf277e4/capsule_231x87.jpg?t=1790393841",
+      "source_url": "https://store.steampowered.com/app/5135630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4944310,
+      "title": "Nice To Meat You",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Indie"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4944310/217cb49238999d73238c3dad7e28a370e7b4be64/capsule_231x87.jpg?t=1790296064",
+      "source_url": "https://store.steampowered.com/app/4944310/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4120110,
+      "title": "Bombs vs Bots",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4120110/8e677594a9d16d5d6947e6a8e1b6225aede49882/capsule_231x87.jpg?t=1790179862",
+      "source_url": "https://store.steampowered.com/app/4120110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5027430,
+      "title": "梦境森林 (The Dreaming Woods)",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Puzzle"
+      ],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5027430/3db670e27ebe5919f07ba99cd6f8e3da53cf2ab6/capsule_231x87.jpg?t=1790346953",
+      "source_url": "https://store.steampowered.com/app/5027430/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4847850,
+      "title": "Echoes of Mora VR",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 17.14,
+      "sale_price": 15.43,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4847850/db287d38f6c381f11e4fb512977e3e11f9505826/capsule_231x87.jpg?t=1790012183",
+      "source_url": "https://store.steampowered.com/app/4847850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5110620,
+      "title": "The Crooked Hand",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5110620/ed47f01371eb784bce57fbb96111f8b0879c1cc2/capsule_231x87.jpg?t=1790328507",
+      "source_url": "https://store.steampowered.com/app/5110620/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5091290,
+      "title": "Epochlings",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Strategy"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5091290/0ac31fe9bb50f3811a87a1252452df446b13b46d/capsule_231x87.jpg?t=1789745767",
+      "source_url": "https://store.steampowered.com/app/5091290/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5032680,
+      "title": "WorldCraft",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Strategy"
+      ],
+      "original_price": 1.22,
+      "sale_price": 1.09,
+      "discount_percent": 11,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5032680/df808377b4b6639a946ab6fb53a1a904cd3c2efa/capsule_231x87.jpg?t=1789403186",
+      "source_url": "https://store.steampowered.com/app/5032680/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4776020,
+      "title": "Cat Or Explosion",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Casual"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4776020/fc16fd5937f915899232ebd536e649f045c3f2fe/capsule_231x87.jpg?t=1790284111",
+      "source_url": "https://store.steampowered.com/app/4776020/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5209990,
+      "title": "Hover Idle: Grid Master",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5209990/d82fb75be4ff3f641e1a148695a87100178848cf/capsule_231x87.jpg?t=1790099823",
+      "source_url": "https://store.steampowered.com/app/5209990/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5184740,
+      "title": "GunfireFantasy",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy",
+        "Adventure"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5184740/7926ff16f55215a21e97792f63729bc057f00f3d/capsule_231x87.jpg?t=1790417082",
+      "source_url": "https://store.steampowered.com/app/5184740/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4492570,
+      "title": "Lights out, run",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4492570/be982f0541cbfee3acbbad0a119c90c0839c3d92/capsule_231x87.jpg?t=1790347922",
+      "source_url": "https://store.steampowered.com/app/4492570/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5214350,
+      "title": "Soul Monsters: Gael's Survival",
+      "type": "game",
+      "genres": [
+        "Survival",
+        "Adventure",
+        "Simulation"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5214350/56d13e75f5badfc59cf58ed630c437340621cc63/capsule_231x87.jpg?t=1790164615",
+      "source_url": "https://store.steampowered.com/app/5214350/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5106570,
+      "title": "Zombie X",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Survival"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5106570/b2ff0661120001aefb69a21ac90202a8b7881060/capsule_231x87.jpg?t=1789992251",
+      "source_url": "https://store.steampowered.com/app/5106570/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2757640,
+      "title": "Mannequin Mayhem - Physics Ragdoll Shooter",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2757640/capsule_231x87.jpg?t=1790168283",
+      "source_url": "https://store.steampowered.com/app/2757640/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5194670,
+      "title": "SCORE80",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Puzzle"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5194670/83a65eea957e236cb728cd3e4e4de019af221eeb/capsule_231x87.jpg?t=1790147147",
+      "source_url": "https://store.steampowered.com/app/5194670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5005050,
+      "title": "UMAN",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5005050/96d415dbe320d23f1554a6660324b593a758ee64/capsule_231x87.jpg?t=1789876854",
+      "source_url": "https://store.steampowered.com/app/5005050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4794330,
+      "title": "Mind Verge",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy",
+        "RPG",
+        "Casual"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4794330/297af040ca8823e6313461daadfe7cc905bfd9a4/capsule_231x87.jpg?t=1790161242",
+      "source_url": "https://store.steampowered.com/app/4794330/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5052760,
+      "title": "Goddess Must Survive!",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5052760/4653b5b9a1ba580a4f64eb2c87965a3463eaf5f2/capsule_231x87.jpg?t=1790402322",
+      "source_url": "https://store.steampowered.com/app/5052760/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5123190,
+      "title": "Unfold Flower",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Simulation",
+        "Casual",
+        "Adventure"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5123190/52da2cda5b9b7d19ea84c0668cb872ac3a8bfcc8/capsule_231x87.jpg?t=1790217331",
+      "source_url": "https://store.steampowered.com/app/5123190/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5130470,
+      "title": "By My Command",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Indie"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5130470/82935f950638b9c1ff07cd222d58a6a6dba7f85c/capsule_231x87.jpg?t=1790180008",
+      "source_url": "https://store.steampowered.com/app/5130470/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3440880,
+      "title": "BLOODPUNISHED: NO TIME POR PATIENCE",
+      "type": "game",
+      "genres": [
+        "Horror"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3440880/be9387d4545713425fe53374c9000660fbbf7319/capsule_231x87.jpg?t=1785512662",
+      "source_url": "https://store.steampowered.com/app/3440880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4790620,
+      "title": "Daily Brew Idle: Milk Tea Tycoon",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 1,
+      "sale_price": 0.9,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4790620/5da3097b532dbe7c56fca511d65c679400b689dd/capsule_231x87.jpg?t=1785325110",
+      "source_url": "https://store.steampowered.com/app/4790620/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3292310,
+      "title": "Dying Land",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Adventure"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3292310/fa173c8983ed72de0ccd15bdfc5f206b4b5ca89f/capsule_231x87.jpg?t=1790412954",
+      "source_url": "https://store.steampowered.com/app/3292310/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 776250,
+      "title": "Somebody's Tale",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Indie"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.51,
+      "discount_percent": 12,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/776250/3066b3cdbb65e9323e4c80a897a6ce472616502b/capsule_231x87.jpg?t=1789824034",
+      "source_url": "https://store.steampowered.com/app/776250/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4287930,
+      "title": "Moneywatcher",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Puzzle"
+      ],
+      "original_price": 1.15,
+      "sale_price": 1.01,
+      "discount_percent": 12,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4287930/32fa368d876f2cc165451f785af4935796fe1c14/capsule_231x87.jpg?t=1775505548",
+      "source_url": "https://store.steampowered.com/app/4287930/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 984870,
+      "title": "Tecroroid Assault",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Indie"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/984870/capsule_231x87.jpg?t=1719797103",
+      "source_url": "https://store.steampowered.com/app/984870/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1721290,
+      "title": "Lumiric Stage",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 24.99,
+      "sale_price": 22.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1721290/35b528969a8a60b32b80808706829780a38991b4/capsule_231x87.jpg?t=1789955791",
+      "source_url": "https://store.steampowered.com/app/1721290/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 1993110,
+      "title": "Lorethem",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.69,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1993110/capsule_231x87.jpg?t=1787785411",
+      "source_url": "https://store.steampowered.com/app/1993110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 2054330,
+      "title": "El Minero",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2054330/capsule_231x87.jpg?t=1663295884",
+      "source_url": "https://store.steampowered.com/app/2054330/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3721840,
+      "title": "Important People of History: Presidents - Abraham Lincoln",
+      "type": "game",
+      "genres": [],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3721840/29d1bb24224b024a4ee3d2a98a683fd312b62d21/capsule_231x87.jpg?t=1790118642",
+      "source_url": "https://store.steampowered.com/app/3721840/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3838760,
+      "title": "Idle Car Clicker",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3838760/ffdfe51fc237cd89f70c80d15a83d9c4f9473df5/capsule_231x87.jpg?t=1767039336",
+      "source_url": "https://store.steampowered.com/app/3838760/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3958880,
+      "title": "Rosemary Village",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "RPG"
+      ],
+      "original_price": 1.99,
+      "sale_price": 1.79,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3958880/f8d461c4efd269c44e71299e71a022de2ddbd157/capsule_231x87.jpg?t=1768496418",
+      "source_url": "https://store.steampowered.com/app/3958880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3759520,
+      "title": "Fluttering",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Adventure"
+      ],
+      "original_price": 4.8,
+      "sale_price": 4.32,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3759520/e394fda855904df9ca4a461cb146be3c1e5bbc74/capsule_231x87.jpg?t=1789831207",
+      "source_url": "https://store.steampowered.com/app/3759520/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3555670,
+      "title": "Chill with Lisa – She Listens, She Cares, She Supports",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3555670/59ae05dc5d4077ebc7bf8b4bf10b193877d0a9f7/capsule_231x87.jpg?t=1772762577",
+      "source_url": "https://store.steampowered.com/app/3555670/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4521300,
+      "title": "Space Fishing: Verti-Go!",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Action"
+      ],
+      "original_price": 3.49,
+      "sale_price": 3.14,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4521300/a038a4daad5e58742cfe530b9e5490b06207382e/capsule_231x87.jpg?t=1790125444",
+      "source_url": "https://store.steampowered.com/app/4521300/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4312540,
+      "title": "No One's Hero",
+      "type": "game",
+      "genres": [
+        "Adventure"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.69,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4312540/1400973e9f3b8af327eaba7928c5642bdd5982c4/capsule_231x87.jpg?t=1787662689",
+      "source_url": "https://store.steampowered.com/app/4312540/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4713160,
+      "title": "Tohunga",
+      "type": "game",
+      "genres": [],
+      "original_price": 14.99,
+      "sale_price": 13.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4713160/aeb1c9ced385c56550255745bb4fdd16f958679d/capsule_231x87.jpg?t=1790096478",
+      "source_url": "https://store.steampowered.com/app/4713160/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5115240,
+      "title": "STILLTRACE",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5115240/6ef3b8c23c264d45959411896e1a515c96b02f48/capsule_231x87.jpg?t=1789491991",
+      "source_url": "https://store.steampowered.com/app/5115240/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5127970,
+      "title": "SuperStore Simulator",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5127970/cd7f9df929efed302e914fa64d919600091f86ba/capsule_231x87.jpg?t=1790180469",
+      "source_url": "https://store.steampowered.com/app/5127970/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5142630,
+      "title": "Fund Manager: Buy Side",
+      "type": "game",
+      "genres": [
+        "Simulation",
+        "Strategy"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5142630/ce30c8b805f3ae89fc32fee4c1421271be482a05/capsule_231x87.jpg?t=1790266495",
+      "source_url": "https://store.steampowered.com/app/5142630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5153890,
+      "title": "Grandpa's Legacy",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5153890/42efbbdad1468e42d2aae120a50e2b645344605a/capsule_231x87.jpg?t=1790095046",
+      "source_url": "https://store.steampowered.com/app/5153890/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5168720,
+      "title": "INVASION",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5168720/7fa2cc0a25d2bad99025c0d959de093b57aedc13/capsule_231x87.jpg?t=1790398220",
+      "source_url": "https://store.steampowered.com/app/5168720/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5191570,
+      "title": "Section 80",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5191570/24822a7b96e0f7f52bf2357c72d6a0a9a8720f23/capsule_231x87.jpg?t=1790411566",
+      "source_url": "https://store.steampowered.com/app/5191570/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4976450,
+      "title": "Last Ascender",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "RPG",
+        "Strategy"
+      ],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4976450/0de7a81b22f1debba199f84efb00d1eafb81c181/capsule_231x87.jpg?t=1788425703",
+      "source_url": "https://store.steampowered.com/app/4976450/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4224560,
+      "title": "TINY CAT FISHING",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "RPG",
+        "Simulation"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4224560/b0862d7bf9e6978ff1ee10b2e2c279e461a95668/capsule_231x87.jpg?t=1789995355",
+      "source_url": "https://store.steampowered.com/app/4224560/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4114010,
+      "title": "The Old Man’s Will",
+      "type": "game",
+      "genres": [
+        "Indie",
+        "Horror",
+        "Simulation"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4114010/7af370b3fe9e5212426ceae5c1bb62eea14fb1c8/capsule_231x87.jpg?t=1775938529",
+      "source_url": "https://store.steampowered.com/app/4114010/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5012330,
+      "title": "Wreckcore",
+      "type": "game",
+      "genres": [
+        "Simulation"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5012330/3aa11946a703b6ec3a67f0f20d21370be6c9b7c5/capsule_231x87.jpg?t=1789848358",
+      "source_url": "https://store.steampowered.com/app/5012330/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4926870,
+      "title": "Ward 9",
+      "type": "game",
+      "genres": [
+        "Horror"
+      ],
+      "original_price": 19.99,
+      "sale_price": 17.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4926870/d9c8e2858262d6a0c032c2dcd49dc9f65d145b8e/capsule_231x87.jpg?t=1790172050",
+      "source_url": "https://store.steampowered.com/app/4926870/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5219240,
+      "title": "Thread the Wall",
+      "type": "game",
+      "genres": [
+        "Action"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5219240/9e45324d55239c15df1a224c70453c1220af57a3/capsule_231x87.jpg?t=1790233387",
+      "source_url": "https://store.steampowered.com/app/5219240/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5220030,
+      "title": "NEON WIRE",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Indie",
+        "Casual"
+      ],
+      "original_price": 2.99,
+      "sale_price": 2.69,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5220030/40cc08ef4a08d90e0a611dd9d484fcf08b2f7426/capsule_231x87.jpg?t=1790300835",
+      "source_url": "https://store.steampowered.com/app/5220030/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5064740,
+      "title": "BULBIT",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Adventure",
+        "Indie"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5064740/0cb96e968964ca4ef2d739d68a37737d3429a197/capsule_231x87.jpg?t=1789197355",
+      "source_url": "https://store.steampowered.com/app/5064740/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4850210,
+      "title": "My Racing Car",
+      "type": "game",
+      "genres": [
+        "Racing",
+        "Simulation"
+      ],
+      "original_price": 10,
+      "sale_price": 9,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4850210/2be739fed4e86f9226c422fd3b1ffd15f0561324/capsule_231x87.jpg?t=1790278737",
+      "source_url": "https://store.steampowered.com/app/4850210/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4893730,
+      "title": "ONE (1) WORLD",
+      "type": "game",
+      "genres": [
+        "RPG"
+      ],
+      "original_price": 14.99,
+      "sale_price": 13.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4893730/d35cae5325b05570f6a9d684912d45f0cfa3c503/capsule_231x87.jpg?t=1790294425",
+      "source_url": "https://store.steampowered.com/app/4893730/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4906820,
+      "title": "Unbroken Valor",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Casual",
+        "Indie"
+      ],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4906820/a59dd70e1aa878862db0ca6aee03e78b45140632/capsule_231x87.jpg?t=1790278233",
+      "source_url": "https://store.steampowered.com/app/4906820/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5098890,
+      "title": "Benders In Space",
+      "type": "game",
+      "genres": [],
+      "original_price": 5.99,
+      "sale_price": 5.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5098890/304d7f84c5d3c022e49594db6ddaba725bce4656/capsule_231x87.jpg?t=1790103488",
+      "source_url": "https://store.steampowered.com/app/5098890/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5109050,
+      "title": "AstroTennis",
+      "type": "game",
+      "genres": [
+        "Sports",
+        "Casual"
+      ],
+      "original_price": 0.99,
+      "sale_price": 0.89,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5109050/65e56c52146358d1247503d04cf9214e5ddb0bde/capsule_231x87.jpg?t=1789836316",
+      "source_url": "https://store.steampowered.com/app/5109050/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5130710,
+      "title": "What The Frog！Who Kicked The Can？",
+      "type": "game",
+      "genres": [
+        "RPG",
+        "Casual"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5130710/d9d47a5c39c751a88f2629e324a040b7e71950d1/capsule_231x87.jpg?t=1789952451",
+      "source_url": "https://store.steampowered.com/app/5130710/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5136180,
+      "title": "The Midnight 21",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "Strategy"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5136180/4c56d446fa33c9162eb3e81aadaa6397668f46d9/capsule_231x87.jpg?t=1789744873",
+      "source_url": "https://store.steampowered.com/app/5136180/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5129690,
+      "title": "Blova",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5129690/920578a9834222879f131e99a20a788707fae17c/capsule_231x87.jpg?t=1790149001",
+      "source_url": "https://store.steampowered.com/app/5129690/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4886630,
+      "title": "I Have Only MP",
+      "type": "game",
+      "genres": [
+        "Casual",
+        "RPG"
+      ],
+      "original_price": 7.99,
+      "sale_price": 7.19,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4886630/f57eaf77e532e9d17dabbc6a96a595d4eb7a17c2/capsule_231x87.jpg?t=1789216017",
+      "source_url": "https://store.steampowered.com/app/4886630/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 5153850,
+      "title": "Infinite Music Game",
+      "type": "game",
+      "genres": [
+        "Casual"
+      ],
+      "original_price": 15.99,
+      "sale_price": 14.39,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5153850/76a02ce1307f578c55027c6e1ae6658a1ed88fbe/capsule_231x87.jpg?t=1789372053",
+      "source_url": "https://store.steampowered.com/app/5153850/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 3993880,
+      "title": "Rogue Bang",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "RPG"
+      ],
+      "original_price": 4.99,
+      "sale_price": 4.49,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3993880/147df9f383cd579af361d49b252f48d9f50daebb/capsule_231x87.jpg?t=1790152746",
+      "source_url": "https://store.steampowered.com/app/3993880/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4038110,
+      "title": "The Last Night:Zombie Attack",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Open World"
+      ],
+      "original_price": 9.99,
+      "sale_price": 8.99,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4038110/9d728878209c3fd0f0b43b56e8b2f1a1603922b9/capsule_231x87.jpg?t=1782465109",
+      "source_url": "https://store.steampowered.com/app/4038110/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4827940,
+      "title": "末世信使",
+      "type": "game",
+      "genres": [
+        "Strategy"
+      ],
+      "original_price": 8.99,
+      "sale_price": 8.09,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4827940/f476e835e444a4ac7e3c1f498f37338b8bea6076/capsule_231x87.jpg?t=1790009875",
+      "source_url": "https://store.steampowered.com/app/4827940/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4860510,
+      "title": "Recognition",
+      "type": "game",
+      "genres": [
+        "Action",
+        "Indie"
+      ],
+      "original_price": 4,
+      "sale_price": 3.6,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4860510/d60769f1c38a787c6725fdd6c27df1df4c1e9625/capsule_231x87.jpg?t=1783066048",
+      "source_url": "https://store.steampowered.com/app/4860510/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4735700,
+      "title": "Cyber Plinko",
+      "type": "game",
+      "genres": [
+        "Strategy",
+        "Casual"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4735700/d08b672c213c889f735239238e96dcba45c9414d/capsule_231x87.jpg?t=1789590228",
+      "source_url": "https://store.steampowered.com/app/4735700/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4728140,
+      "title": "Observation Protocol",
+      "type": "game",
+      "genres": [
+        "Horror",
+        "Adventure"
+      ],
+      "original_price": 3.99,
+      "sale_price": 3.59,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4728140/8209f282aeb15b1b9339fa585bd1e72dbde8a872/capsule_231x87.jpg?t=1790348420",
+      "source_url": "https://store.steampowered.com/app/4728140/",
+      "verified_by": "Steam specials search"
+    },
+    {
+      "steam_appid": 4666430,
+      "title": "The old house",
+      "type": "game",
+      "genres": [
+        "Adventure",
+        "Horror",
+        "Puzzle"
+      ],
+      "original_price": 6.99,
+      "sale_price": 6.29,
+      "discount_percent": 10,
+      "thumbnail_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4666430/6f0547db012003d83e99581aa728f90b4772133b/capsule_231x87.jpg?t=1789995751",
+      "source_url": "https://store.steampowered.com/app/4666430/",
+      "verified_by": "Steam specials search"
+    }
+  ]
+}
