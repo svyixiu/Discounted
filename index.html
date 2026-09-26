@@ -3,116 +3,144 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a0c10" />
-  <meta name="color-scheme" content="dark" />
-  <title>Discounted — Steam deals ending October 1</title>
-  <meta name="description" content="A calm, searchable list of Steam games discounted through October 1, 2026." />
+  <meta name="theme-color" content="#f6f0e5" />
+  <meta name="color-scheme" content="light" />
+  <title>Discounted — Steam sale index</title>
+  <meta name="description" content="Search, filter and sort the Steam discounts indexed by Discounted." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+  <div class="page-noise" aria-hidden="true"></div>
 
-  <main class="shell">
-    <header class="hero">
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Discounted home">
+      <span class="brand-box">D</span>
+      <span>DISCOUNTED</span>
+    </a>
+    <div class="topbar-meta">
+      <span>STEAM SALE INDEX</span>
+      <span class="live-dot"><i></i> SNAPSHOT</span>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero">
       <div class="hero-copy">
-        <div class="brand-row">
-          <span class="brand-mark" aria-hidden="true">D</span>
-          <span class="brand">Discounted</span>
-          <span class="status"><i></i> Oct 1 sale watch</span>
+        <p class="kicker">DEALS WITHOUT THE DIGGING</p>
+        <h1>Find the discount.<br><span>Set the budget.</span></h1>
+        <p class="hero-text">A searchable index of the Steam discounts currently tracked by this snapshot. Filter by product type, choose a price range, sort the catalog, and open the result on Steam.</p>
+      </div>
+
+      <div class="hero-stats" aria-label="Catalog statistics">
+        <article class="stat-card stat-yellow">
+          <span>INDEXED</span>
+          <strong id="totalCount">—</strong>
+          <small>products</small>
+        </article>
+        <article class="stat-card stat-blue">
+          <span>CHEAPEST</span>
+          <strong id="cheapestValue">—</strong>
+          <small>sale price</small>
+        </article>
+        <article class="stat-card stat-pink">
+          <span>BIGGEST CUT</span>
+          <strong id="bestDiscountValue">—</strong>
+          <small>discount</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="catalog-panel" aria-label="Deal browser">
+      <div class="section-label">01 / PRODUCT TYPE</div>
+      <nav id="typeTabs" class="type-tabs" aria-label="Product type">
+        <button class="type-tab active" type="button" data-type="game">GAMES <b id="gameCount">0</b></button>
+        <button class="type-tab" type="button" data-type="dlc">DLC <b id="dlcCount">0</b></button>
+        <button class="type-tab" type="button" data-type="bundle">BUNDLES <b id="bundleCount">0</b></button>
+        <button class="type-tab" type="button" data-type="all">ALL <b id="allCount">0</b></button>
+      </nav>
+
+      <div class="filter-grid">
+        <div class="filter-block search-block">
+          <label for="searchInput">SEARCH</label>
+          <div class="search-input-wrap">
+            <input id="searchInput" type="search" autocomplete="off" placeholder="Search title or sale…" />
+            <kbd>/</kbd>
+          </div>
         </div>
-        <p class="eyebrow">STEAM DEALS · USD</p>
-        <h1>No digging. <span>I’ve got you, stranger.</span></h1>
-        <p class="lede">One calm list of the base games we found discounted through October 1. Search it, sort it, narrow it down, then go enjoy something good.</p>
-      </div>
 
-      <aside class="snapshot" aria-label="Deal snapshot">
-        <div class="snapshot-top">
-          <span>Right now</span>
-          <span id="updatedAt">Checking…</span>
+        <div class="filter-block sort-block">
+          <label for="sortSelect">ORDER</label>
+          <select id="sortSelect">
+            <option value="az">Alphabetical A → Z</option>
+            <option value="za">Alphabetical Z → A</option>
+            <option value="cheap">Cheapest first</option>
+            <option value="expensive">Most expensive first</option>
+            <option value="discount">Biggest discount</option>
+            <option value="discount-low">Smallest discount</option>
+            <option value="savings">Most money saved</option>
+          </select>
         </div>
-        <strong id="totalCount">—</strong>
-        <span class="snapshot-label">tracked base-game deals</span>
-        <div class="snapshot-split">
-          <div><b id="cheapestValue">—</b><span>cheapest</span></div>
-          <div><b id="bestDiscountValue">—</b><span>biggest cut</span></div>
+
+        <div class="filter-block budget-block">
+          <div class="budget-head">
+            <label>BUDGET</label>
+            <output id="budgetOutput">$0.00 — $0.00</output>
+          </div>
+          <div class="range-wrap" id="rangeWrap">
+            <div class="range-track"></div>
+            <div class="range-fill" id="rangeFill"></div>
+            <input id="minPrice" type="range" min="0" max="100" step="0.5" value="0" aria-label="Minimum sale price" />
+            <input id="maxPrice" type="range" min="0" max="100" step="0.5" value="100" aria-label="Maximum sale price" />
+          </div>
+          <div class="range-scale"><span>$0</span><span id="rangeMaxLabel">$100</span></div>
         </div>
-      </aside>
-    </header>
-
-    <section class="controls" aria-label="Search and sort deals">
-      <label class="search-box" for="searchInput">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 20-4.2-4.2m1.7-5.3a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="Search a game…" />
-        <kbd>/</kbd>
-      </label>
-
-      <label class="select-wrap">
-        <span>Sort</span>
-        <select id="sortSelect" aria-label="Sort games">
-          <option value="az">A → Z</option>
-          <option value="za">Z → A</option>
-          <option value="cheap">Cheapest first</option>
-          <option value="expensive">Most expensive first</option>
-          <option value="discount">Biggest discount</option>
-          <option value="discount-low">Smallest discount</option>
-          <option value="savings">Most dollars saved</option>
-        </select>
-      </label>
-    </section>
-
-    <section class="quick-filters" aria-label="Quick filters">
-      <button class="chip active" data-filter="all">Everything</button>
-      <button class="chip" data-filter="under5">Under $5</button>
-      <button class="chip" data-filter="under10">Under $10</button>
-      <button class="chip" data-filter="under20">Under $20</button>
-      <button class="chip" data-filter="70plus">70%+ off</button>
-      <button class="chip" data-filter="90plus">90%+ off</button>
-    </section>
-
-    <section class="result-line" aria-live="polite">
-      <span id="resultCount">Loading the good stuff…</span>
-      <button id="resetButton" class="quiet-button" type="button" hidden>Reset filters</button>
-    </section>
-
-    <section class="deal-list" aria-label="Discounted games">
-      <div class="table-head" aria-hidden="true">
-        <span>Game</span>
-        <span>Was</span>
-        <span>Now</span>
-        <span>You save</span>
-        <span>Discount</span>
-        <span></span>
-      </div>
-      <div id="games"></div>
-
-      <div id="emptyState" class="empty-state" hidden>
-        <div class="empty-orb">?</div>
-        <strong>Nothing hiding here, stranger.</strong>
-        <p>Try a wider price range or clear the search. I’ll keep the list right here.</p>
-        <button id="emptyReset" type="button">Show everything</button>
       </div>
 
-      <div id="errorState" class="empty-state error-state" hidden>
-        <div class="empty-orb">!</div>
-        <strong>I dropped the deal bag.</strong>
-        <p><code>games.json</code> didn’t load. Refresh once; if it persists, the JSON file is probably missing from the deployment.</p>
+      <div class="quick-row">
+        <div class="quick-filters" aria-label="Discount filters">
+          <button class="quick-chip active" type="button" data-filter="all">ANY DISCOUNT</button>
+          <button class="quick-chip" type="button" data-filter="50plus">50%+</button>
+          <button class="quick-chip" type="button" data-filter="70plus">70%+</button>
+          <button class="quick-chip" type="button" data-filter="90plus">90%+</button>
+        </div>
+        <button id="resetButton" class="reset-button" type="button">RESET FILTERS</button>
       </div>
     </section>
 
-    <section class="trust-note">
-      <div class="trust-icon">✓</div>
+    <section class="results-head" aria-live="polite">
       <div>
-        <strong>Built to be easy to correct.</strong>
-        <p>The interface contains no hard-coded games. Titles, prices, discounts, expiry dates and verification notes all come from <code>games.json</code>. Steam search links are generated automatically from each title, so replacing the JSON is enough to refresh the catalog.</p>
+        <span class="section-label">02 / RESULTS</span>
+        <h2 id="resultCount">Loading catalog…</h2>
       </div>
+      <p id="updatedAt">Updated —</p>
     </section>
 
-    <footer>
-      <p><strong>Discounted</strong> · researched snapshot for October 1, 2026.</p>
-      <p>Steam can change live promotions. When it does, we change one JSON file—not the website.</p>
-    </footer>
+    <section id="products" class="product-grid" aria-label="Discounted products"></section>
+
+    <section id="emptyState" class="empty-state" hidden>
+      <strong>NO MATCHES.</strong>
+      <p>Try widening the budget range, changing tabs, or clearing the search.</p>
+      <button id="emptyReset" type="button">SHOW EVERYTHING</button>
+    </section>
+
+    <section id="errorState" class="empty-state error-state" hidden>
+      <strong>CATALOG FAILED TO LOAD.</strong>
+      <p><code>games.json</code> could not be read from this deployment.</p>
+    </section>
+
+    <section class="data-note">
+      <div class="data-note-number">JSON</div>
+      <div>
+        <h3>Data-first by design.</h3>
+        <p>The interface has no hard-coded products. Add or replace entries in <code>games.json</code>; the tabs, counts, budget controls, sorting, search and Steam links update automatically. Existing records default to <code>game</code>, while future entries can use <code>dlc</code>, <code>bundle</code> or <code>other</code>.</p>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <strong>DISCOUNTED</strong>
+    <span>Steam promotions can change. Prices shown are snapshot data.</span>
+  </footer>
 
   <script src="./script.js" defer></script>
 </body>
