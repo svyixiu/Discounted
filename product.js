@@ -95,8 +95,26 @@ function steamUrl(item) {
     : steamSearchUrl(item.title);
 }
 
-function productUrl(title) {
-  return `./product.html?title=${encodeURIComponent(title)}`;
+function routeHash(value) {
+  let hash = 2166136261;
+  for (const ch of String(value)) {
+    hash ^= ch.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(36);
+}
+
+function productRouteId(item) {
+  if (Number.isInteger(item?.steam_appid)) return String(item.steam_appid);
+  if (Number.isInteger(item?.steam_bundleid)) return "b" + item.steam_bundleid;
+  if (Number.isInteger(item?.steam_subid)) return "s" + item.steam_subid;
+  return "x" + routeHash(`${normalizeType(item?.type)}|${item?.title || ""}`);
+}
+
+function productUrl(item) {
+  if (!item || typeof item === "string")
+    return `./product.html?title=${encodeURIComponent(String(item || ""))}`;
+  return `/${normalizeType(item.type)}/${productRouteId(item)}`;
 }
 
 function steamHeaderUrl(appid) {
@@ -451,6 +469,12 @@ async function loadRates() {
 async function boot() {
   const params = new URLSearchParams(location.search);
   const title = params.get("title");
+  const routeMatch = location.pathname.match(
+    /^\/(game|dlc|bundle|other)\/([^/?#]+)\/?$/i,
+  );
+  const routeType = routeMatch ? normalizeType(routeMatch[1]) : null;
+  const routeId = routeMatch ? decodeURIComponent(routeMatch[2]).toLowerCase() : null;
+
   let back = params.get("from");
   try {
     back = back || sessionStorage.getItem("vault:filters");
@@ -460,14 +484,14 @@ async function boot() {
       if (!a.classList.contains("brand")) a.href = "./" + back + "#browse";
     });
 
-  if (!title) {
+  if (!title && !routeMatch) {
     els.missing.hidden = false;
     return;
   }
 
   try {
     const [catalogResponse] = await Promise.all([
-      fetch("./games.json", { cache: "no-store" }),
+      fetch("./games.json", { cache: "default" }),
       loadRates(),
     ]);
 
@@ -482,14 +506,26 @@ async function boot() {
       discount_percent: Number(item.discount_percent),
     }));
 
-    product = catalog.find(
-      (item) => item.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
-    );
+    if (routeMatch) {
+      product = catalog.find(
+        (item) =>
+          item.type === routeType &&
+          productRouteId(item).toLowerCase() === routeId,
+      );
+    } else {
+      product = catalog.find(
+        (item) => item.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
+      );
+    }
 
     if (!product) {
       els.missing.hidden = false;
       return;
     }
+
+    const canonicalPath = productUrl(product);
+    if (location.pathname !== canonicalPath && routeMatch)
+      history.replaceState(null, "", canonicalPath);
 
     await renderProduct();
   } catch (error) {

@@ -108,6 +108,17 @@ window.Vault = (() => {
   }
   let pointerFrame = 0,
     previous = null;
+
+  function releaseInteractiveCard(card) {
+    if (!card) return;
+    card.style.transition =
+      "transform 520ms cubic-bezier(0.22, 1, 0.36, 1)";
+    card.style.transform = "";
+    window.setTimeout(() => {
+      if (!card.matches(":hover")) card.style.removeProperty("transition");
+    }, 540);
+  }
+
   document.addEventListener("pointermove", (event) => {
     if (reduced.matches || event.pointerType === "touch" || pointerFrame)
       return;
@@ -128,17 +139,18 @@ window.Vault = (() => {
       const card = event.target.closest(
         ".product-card:not(.compact-card),.featured-card,.product-hero-media",
       );
-      if (previous && previous !== card) previous.style.transform = "";
+      if (previous && previous !== card) releaseInteractiveCard(previous);
       if (card && visible.has(card)) {
         const r = card.getBoundingClientRect();
+        card.style.transition = "transform 86ms ease-out";
         card.style.transform = `perspective(900px) rotateX(${(-(event.clientY - r.top - r.height / 2) / r.height) * 12}deg) rotateY(${((event.clientX - r.left - r.width / 2) / r.width) * 12}deg) translateY(-4px)`;
         previous = card;
       }
     });
   });
-  document.addEventListener("pointerout", (e) => {
-    if (previous && !previous.contains(e.relatedTarget)) {
-      previous.style.transform = "";
+  document.addEventListener("pointerout", (event) => {
+    if (previous && !previous.contains(event.relatedTarget)) {
+      releaseInteractiveCard(previous);
       previous = null;
     }
   });

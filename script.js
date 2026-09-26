@@ -150,8 +150,26 @@ function steamSearchUrl(title) {
   return `https://store.steampowered.com/search/?term=${encodeURIComponent(title)}`;
 }
 
-function internalProductUrl(title) {
-  return `./product.html?title=${encodeURIComponent(title)}&from=${encodeURIComponent(location.search)}`;
+function routeHash(value) {
+  let hash = 2166136261;
+  for (const ch of String(value)) {
+    hash ^= ch.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(36);
+}
+
+function productRouteId(product) {
+  if (Number.isInteger(product?.steam_appid)) return String(product.steam_appid);
+  if (Number.isInteger(product?.steam_bundleid)) return "b" + product.steam_bundleid;
+  if (Number.isInteger(product?.steam_subid)) return "s" + product.steam_subid;
+  return "x" + routeHash(`${normalizeType(product?.type)}|${product?.title || ""}`);
+}
+
+function internalProductUrl(product) {
+  if (!product || typeof product === "string")
+    return `./product.html?title=${encodeURIComponent(String(product || ""))}`;
+  return `/${normalizeType(product.type)}/${productRouteId(product)}`;
 }
 
 function steamHeaderUrl(appid) {
@@ -626,8 +644,8 @@ function render(options = {}) {
               { opacity: 1, transform: "none" },
             ],
         {
-          duration: 400,
-          delay: prev ? 0 : Math.min(i * 20, 300),
+          duration: 180,
+          delay: prev ? 0 : Math.min(i * 8, 80),
           easing: "cubic-bezier(.22,1,.36,1)",
         },
       );
@@ -659,7 +677,7 @@ function render(options = {}) {
     document
       .querySelector(".results-head")
       ?.scrollIntoView({
-        behavior: Vault.reduced.matches ? "instant" : "smooth",
+        behavior: "auto",
         block: "start",
       });
   }
@@ -848,7 +866,7 @@ async function boot() {
 
   try {
     const [catalogResponse] = await Promise.all([
-      fetch("./games.json", { cache: "no-store" }),
+      fetch("./games.json", { cache: "default" }),
       loadRates(),
     ]);
 
@@ -902,7 +920,7 @@ window.addEventListener("pageshow", () => {
 let searchTimer;
 els.search.addEventListener("input", () => {
   clearTimeout(searchTimer);
-  searchTimer = setTimeout(resetPageAndRender, 140);
+  searchTimer = setTimeout(resetPageAndRender, 80);
 });
 els.sort.addEventListener("change", resetPageAndRender);
 els.pageSize.addEventListener("change", resetPageAndRender);
@@ -1158,11 +1176,18 @@ async function buildDiscoveries() {
   });
   const shelf = document.querySelector("#legendaryShelf"),
     items = ranked.filter((p) => p.discount_percent >= 90).slice(0, 8);
-  shelf.innerHTML = items.map(fullCard).join("");
   shelf.parentElement.hidden = !items.length;
-  [...shelf.children].forEach((el, i) => resolveThumbnail(el, items[i]));
-  Vault.shelf(shelf);
-  Vault.observe(shelf);
+  if (items.length) {
+    const run = items.map(fullCard).join("");
+    shelf.innerHTML = `<div class="shelf-track">${run}${run}</div>`;
+    const track = shelf.querySelector(".shelf-track");
+    [...track.children].forEach((el, i) =>
+      resolveThumbnail(el, items[i % items.length]),
+    );
+    Vault.observe(track);
+  } else {
+    shelf.innerHTML = "";
+  }
   const soon = catalog
     .filter((p) => Vault.endTime(p.ends_at) > Date.now())
     .sort((a, b) => Vault.endTime(a.ends_at) - Vault.endTime(b.ends_at))[0];

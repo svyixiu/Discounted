@@ -4,8 +4,29 @@
     {
       "source": "/games.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/game/:id",
+      "destination": "/product.html"
+    },
+    {
+      "source": "/dlc/:id",
+      "destination": "/product.html"
+    },
+    {
+      "source": "/bundle/:id",
+      "destination": "/product.html"
+    },
+    {
+      "source": "/other/:id",
+      "destination": "/product.html"
     }
   ]
 }
