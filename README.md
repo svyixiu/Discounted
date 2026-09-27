@@ -1,49 +1,56 @@
-# Discounted · The Gem Vault
+# Discounted
 
-A static, build-free catalog of discounted Steam games, DLC and bundles. Edit `games.json` to add products; no frontend edits are needed. Vercel serves the pages and the existing currency and Steam-thumbnail API handlers.
+A static, build-free catalog of discounted Steam games, DLC and bundles, in English and Arabic. Edit `games.json` to add products; no frontend edits are needed. Vercel serves the pages and the small API handlers in `api/`.
 
 ## Run and deploy
 
-Serve this directory with any static HTTP server. Use Vercel for `/api/fx` and `/api/steam-thumb`; a plain local server cannot execute those handlers. Missing currency service falls back to the existing approximate exchange rates. Prices are estimates; Steam is authoritative.
+Serve this directory with any static HTTP server. Use Vercel for `/api/fx`, `/api/popularity` and `/api/steam-thumb`, and for the clean product routes in `vercel.json`. A plain local server cannot run those handlers; without them the site falls back to approximate exchange rates and simply omits review counts. Prices are estimates; Steam is authoritative.
 
-There is no install step, bundler, framework or production JavaScript dependency. `script.js` owns catalog behavior, `product.js` owns product details, and `vault.js` owns shared interaction and motion. The existing `games.json`, `api/fx.js` and `api/steam-thumb.js` are unchanged.
+There is no install step, bundler, framework or production JavaScript dependency.
+
+| File | Owns |
+| --- | --- |
+| `i18n.js` | English and Arabic strings, plural rules, number and date formatting, `dir`/`lang` |
+| `common.js` | Catalog loading, routes, currency, artwork, popularity, the deal card, header controls |
+| `script.js` | Catalog page: filters, sorting, URL state, filter sheet, price notice |
+| `product.js` | Product page and recommendations |
+| `styles.css` | The whole visual system |
 
 ## Design system
 
-The first block in `styles.css` is the token source. Backgrounds progress from `--void` (#070a0f), `--bg` (#0b0f15), and `--bg-raised` (#111722) to `--surface` (#151c28) and `--surface-2` (#1b2432). Raised panels pair their elevation shadow (`--e0`–`--e4`) with an edge highlight. Text uses `--text`, `--text-soft`, and `--muted`. Steam blue is reserved for actions and Rare gems. Radii are 8, 12, 18 and 28px.
+**Palette.** A charcoal page (`--bg` #1a1916) with cream text (`--text` #f2ece0). Cream panels (`--cream` #efe7d7) with charcoal ink are "tags": the intro, the product price panel, the price notice and the 404 page. Each tag has a punched hole, the same one that appears in the logo. The only accent is lime (`--lime` #cfdd7a), and it is reserved for discount percentages. No glow, gradients, glass or decorative motion.
 
-| Discount | Rarity | Gem | Color |
-| --- | --- | --- | --- |
-| 1–49% | Common | Quartz | #9fb3c8 |
-| 50–69% | Rare | Sapphire | #66c0f4 |
-| 70–89% | Epic | Amethyst | #b48cff |
-| 90–99% | Legendary | Topaz | #ffcf6b |
-| 100% | Mythic | Prism | Iridescent |
+**Type.** Archivo (variable weight and width) sets Latin text. Headlines use its condensed cut (`font-stretch: 78%`, weight 800). IBM Plex Sans Arabic sets Arabic text; Arabic headings drop the negative tracking and uppercase labels. Prices use tabular figures. Both fonts are self-hosted woff2 subsets under the SIL Open Font License (`assets/fonts/OFL.txt`); the Arabic and Latin-extended files only download when those characters appear.
 
-`Vault.rarity()` is the shared classifier. Rarity filters are cumulative thresholds: Epic includes all discounts of 70% or more. Never rely on color alone: badges retain percentages and tier names.
+**Logo.** The mark is a D-shaped price tag with a punched hole: the flat side and bowl read as a D, the hole makes it a tag. `assets/logo-mark.svg` is the cream mark, `favicon.svg` and `assets/discounted.svg` are the charcoal app tile, and `assets/logo-lockup.svg` is the mark with the wordmark converted to outlines (Archivo 800, 82% width).
 
-Headlines use a locally served, preloaded Space Grotesk face; UI uses Inter with a system fallback. Prices use tabular figures. The included Space Grotesk font is licensed under the SIL Open Font License (see `assets/OFL.txt`).
+**Layout.** Everything uses logical properties (`inset-inline-start`, `padding-inline-end`…), so Arabic mirrors without separate RTL styles. Latin titles inside Arabic pages keep `dir="auto"` and align right. Filters are a left rail at 1024px and wider and a bottom sheet below that. The catalog grid is two columns on phones.
 
 ## Behavior
 
-- All existing type, budget, search, currency, view, sorting and pagination controls remain. Catalog pages render at most 100 results, plus eight shelf items.
-- URL parameters (`type`, `tier`, `q`, `sort`, `view`, `size`, `page`, `min`, `max`) encode the catalog state. Budget values in the URL are USD, independent of display currency. Product links carry the catalog query; back links restore it. Currency and view preferences retain their existing local-storage keys.
-- The daily gem is selected from the highest-discount products costing at most USD 10, with a UTC day seed and a title tie-break. If that pool is empty, it falls back to the ranked catalog. Identical snapshots show the same daily gem worldwide.
-- Date-only offer deadlines are interpreted as 00:00 UTC on that date, because the source has no exact end time. The timer is indicative; Steam is authoritative. Expired offers are labeled, not silently removed from the snapshot.
-- Recommendations preserve the existing family/type/promotion ranking and fix its title-token splitting.
-- `/` focuses search; `G` then `H` goes home; `R` opens a random product; `?` shows shortcut help. Arrows move a focused shelf. Escape closes a filter sheet or shortcut dialog.
-- Konami code or five clicks on the logo's upper-right glint enables gold treasure mode for the session.
+- **URL state.** Parameters `type`, `tier`, `genres`, `sale`, `q`, `sort`, `view`, `size`, `page`, `min`, `max` encode the catalog; defaults are omitted, so the home page URL stays clean. Budget values are USD, independent of display currency. Product pages link back to the catalog with its filters.
+- **Product URLs.** Products live at `/game/:id`, `/dlc/:id`, `/bundle/:id` and `/other/:id`. Legacy `/product.html?title=…` links resolve and replace themselves with the clean URL.
+- **Sorting.** "Featured" (the default) lists deals from named sale events first, then the rest by discount. "Ending soonest" orders dated offers by deadline. The previous sort values (`az`, `za`, `cheap`, `expensive`, `discount`, `discount-low`, `savings`) still work.
+- **Sale events.** Named promotions with at least eight listings and a future end date appear as filters above the catalog. Generic labels such as "Steam Specials" are excluded.
+- **Price range.** The slider is quadratic, so the cheap end where most deals sit gets most of the track. Bounds snap to round values in the display currency.
+- **Currencies.** USD, SAR, AED, EUR, GBP, CAD, AUD and JPY. The choice is remembered.
+- **Deadlines.** Date-only end dates mean 00:00 UTC on that date. Cards show the date, or a relative time inside 48 hours, and refresh once a minute. Expired offers are labeled, not hidden.
+- **Price notice.** First visit shows a dialog explaining that Steam has the final price. "Don't show again" remembers the choice.
+- **Shortcuts.** `/` search, `G` `H` home, `R` random deal, `?` list of shortcuts, `Esc` closes panels.
 
-## Motion and accessibility
+## Popularity, honestly
 
-Use transform/opacity/filter for animation, with `--spring` for entrances and `--snap` for feedback. List entrance staggering is capped at 300ms. Pointer tilt only applies to visible slabs and never to touch input or compact rows. A single rAF-coalesced pointer handler sets the shared light position. The canvas uses 30 dust particles and pauses when hidden. Autoplay also pauses while hidden, hovered or focused.
+`/api/popularity` returns two signals and the interface never goes beyond them:
 
-Reduced motion disables tilt, ambient animation, autoplay, digit flips and entrance motion. All primary controls are native links, buttons, selects and range inputs. The mobile sheet traps focus, restores focus and closes with Escape or a downward swipe. Keep explicit image ratios, lazy catalog images, readable focus rings and keyboard access when extending the site.
+- **Steam reviews:** the total user review count from Steam's review API. It shows how widely a game is known. It is not a count of copies sold.
+- **Top seller:** set only when the app is on Steam's top-sellers chart, which Steam ranks by revenue. The handler reads Steam's weekly top sellers service, falls back to the server-rendered chart table, and accepts a chart only if it holds 20–100 app ids. If neither source is available, nobody is labeled a top seller.
 
-## Assets and provenance
+Discounted does not estimate or display sales figures. The same explanation appears in the filter panel and on the How it works page.
 
-The brief referred to `discounted-logo.svg`, but that file was not present in the repository or available attachments. The included gem-and-tag-hole mark is an original SVG reconstruction from the written brief, **not a byte-identical copy of the missing supplied mark**. Replace `assets/logo-mark.svg`, `assets/discounted.svg` and `favicon.svg` together when the original becomes available, then regenerate the lockup, touch icon and social card. The lockup uses the display-family name with a sans-serif fallback for standalone SVG viewers.
+## Accessibility and motion
+
+Controls are native buttons, links, selects and range inputs, with visible focus rings. The mobile filter sheet traps focus, restores focus when it closes, and closes with Escape, its backdrop or a downward swipe on its header. Dialogs use `<dialog>`. Motion is limited to short color and opacity transitions and the sheet sliding in; `prefers-reduced-motion` removes all transitions. Nothing autoplays.
 
 ## Verification
 
-See `CHANGELOG.md` for completed checks and environment limitations. Lighthouse 90+, sustained 60fps, and Safari/iOS/Android results must be measured on a deployment; they are targets, not guaranteed claims.
+See `CHANGELOG.md`. Lighthouse scores, real-device Safari/iOS/Android behavior and the live Steam endpoints must be checked on a deployment.
