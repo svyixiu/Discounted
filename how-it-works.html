@@ -1,122 +1,101 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a1916" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#171a21" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="icon" href="./favicon.svg" />
     <title>How it works — Discounted</title>
+    <meta name="description" content="How Discounted collects, records and labels Steam deals." />
+    <script>
+      try { if (localStorage.getItem("discounted:language") === "ar") { document.documentElement.lang = "ar"; document.documentElement.dir = "rtl"; document.documentElement.classList.add("i18n-pending"); setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2500); } } catch (e) {}
+    </script>
+    <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Discounted — Steam deals without the digging."
-    />
-    <meta
-      property="og:description"
-      content="A vault of discounted Steam games, DLC and bundles. Pick your rarity. Find your next obsession."
-    />
-    <meta
-      property="og:image"
-      content="https://discounted.vercel.app/og-image.png"
-    />
+    <meta property="og:title" content="Discounted — Steam deals, sorted." />
+    <meta property="og:description" content="Browse discounted Steam games, DLC and bundles in one catalog." />
+    <meta property="og:image" content="https://discounted.vercel.app/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Discounted — Steam deals without the digging."
-    />
-    <meta
-      name="twitter:image"
-      content="https://discounted.vercel.app/og-image.png"
-    />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="./assets/space-grotesk-bold.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
+    <meta name="twitter:title" content="Discounted — Steam deals, sorted." />
+    <meta name="twitter:image" content="https://discounted.vercel.app/og-image.png" />
+    <script src="/i18n.js" defer></script>
+    <script src="/common.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  <body data-i18n-title="nav.how">
+    <a class="skip-link" href="#main" data-i18n="skip.main">Skip to content</a>
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="mark" viewBox="0 0 64 64"><path fill-rule="evenodd" d="M16 6h16a26 26 0 0 1 0 52H16a8 8 0 0 1-8-8V14a8 8 0 0 1 8-8Zm24 20a6 6 0 1 0 0 12a6 6 0 1 0 0-12Z" /></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4.5 4.5" /></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M19 7h1M4 17h3M13 17h7" /><circle cx="16" cy="7" r="2.5" /><circle cx="10" cy="17" r="2.5" /></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11" /><rect x="3.5" y="4.5" width="3" height="3" rx=".5" /><rect x="3.5" y="10.5" width="3" height="3" rx=".5" /><rect x="3.5" y="16.5" width="3" height="3" rx=".5" /></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9" /><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></symbol>
+      <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" /></symbol>
+      <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M8 8l8 8M16 8l-8 8" /></symbol>
+    </svg>
     <header class="masthead">
-      <a class="brand" href="./"
-        ><img
-          class="brand-logo"
-          src="./assets/logo-mark.svg"
-          width="34"
-          height="34"
-          alt=""
-        />Discounted</a
-      >
-      <nav class="masthead-links">
-        <a href="./how-it-works.html">How it works</a
-        ><a href="https://github.com/svyixiu/Discounted">Source</a>
-      </nav>
+      <div class="wrap masthead-inner">
+        <a class="brand" href="/" aria-label="Discounted home" data-i18n-attr="aria-label:brand.home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>
+          <span class="brand-word">Discounted</span>
+        </a>
+        <nav class="masthead-nav" aria-label="Site">
+          <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+        </nav>
+        <div class="masthead-tools">
+          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch to Arabic" data-i18n-attr="aria-label:lang.switchLabel"><span data-i18n="lang.switch">العربية</span></button>
+          <label class="currency-field">
+            <span class="sr-only" data-i18n="currency">Currency</span>
+            <select data-currency id="currencySelect"><option value="USD">USD</option></select>
+          </label>
+        </div>
+      </div>
     </header>
-    <main id="main-content" class="wrap story">
-      <p class="eyebrow">FROM THE GROUND TO YOUR LIBRARY</p>
-      <h1>Less digging.<br />More discovering.</h1>
-      <section class="story-step">
-        <b>01</b>
-        <p class="eyebrow">Dig</p>
-        <h2>The good stuff, unearthed.</h2>
-        <p>
-          We bring discounted Steam games, DLC and bundles into one catalog.
-          Every listing comes from the current sale snapshot, so you can browse
-          across promotions in one place.
-        </p>
+
+    <main id="main" class="how wrap">
+      <header class="how-head">
+        <p class="eyebrow" data-i18n="how.eyebrow">How Discounted works</p>
+        <h1 data-i18n="how.title">One catalog for Steam discounts.</h1>
+        <p class="how-lede" data-i18n="how.lede">Discounted collects Steam sale prices in one place so you can compare them quickly. Steam is always the final word on price.</p>
+      </header>
+
+      <ol class="steps">
+        <li><span class="step-n" aria-hidden="true">01</span><h2 data-i18n="how.1.title">Collect</h2><p data-i18n="how.1.body">Discounted games come from Steam’s specials listings. DLC, bundles and named sale events are researched by hand, with the offer end date when Steam lists one.</p></li>
+        <li><span class="step-n" aria-hidden="true">02</span><h2 data-i18n="how.2.title">Record</h2><p data-i18n="how.2.body">Each listing keeps its price, discount and the source it was checked against. The product page shows that source and the date the catalog was updated.</p></li>
+        <li><span class="step-n" aria-hidden="true">03</span><h2 data-i18n="how.3.title">Filter</h2><p data-i18n="how.3.body">Narrow by type, genre, discount and budget, or browse a sale event. Switch currencies to see estimated prices; conversions use current exchange rates.</p></li>
+        <li><span class="step-n" aria-hidden="true">04</span><h2 data-i18n="how.4.title">Buy on Steam</h2><p data-i18n="how.4.body">Open the deal on Steam to confirm the price, region, requirements and offer details. Discounted doesn’t sell games or earn from purchases.</p></li>
+      </ol>
+
+      <section class="how-labels" aria-labelledby="labelsTitle">
+        <h2 id="labelsTitle" data-i18n="how.popTitle">What the popularity labels mean</h2>
+        <dl>
+          <div><dt><span class="reviews" data-i18n="how.popReviews">Steam reviews</span></dt><dd data-i18n="how.popReviewsBody">The total number of user reviews on Steam. It’s a sign of how widely a game is known, not a count of copies sold.</dd></div>
+          <div><dt><span class="top-seller" data-i18n="how.popTop">Top seller</span></dt><dd data-i18n="how.popTopBody">The game currently appears on Steam’s top-sellers chart, which Steam ranks by revenue. Discounted doesn’t estimate or publish sales numbers.</dd></div>
+          <div><dt><span class="label-plain" data-i18n="sort.featured">Featured</span></dt><dd data-i18n="how.featBody">Featured lists deals from named sale events first, then everything else by the size of the discount. It isn’t paid placement.</dd></div>
+        </dl>
       </section>
-      <section class="story-step">
-        <b>02</b>
-        <p class="eyebrow">Verify</p>
-        <h2>Know what you’re looking at.</h2>
-        <p>
-          Each gem keeps its source in “verified by”, along with the listed
-          offer end date. Some offers are grounded in a sale event; others are
-          checked on a Steam offer page. The product page tells you which.
-        </p>
-      </section>
-      <section class="story-step">
-        <b>03</b>
-        <p class="eyebrow">Sort</p>
-        <h2>Find your kind of rare.</h2>
-        <p>
-          Quartz, Sapphire, Amethyst, Topaz, Prism. Deeper discounts mean rarer
-          gems. Narrow by product type, budget and rarity, or switch currencies
-          to compare estimated prices.
-        </p>
-      </section>
-      <section class="story-step">
-        <b>04</b>
-        <p class="eyebrow">Play</p>
-        <h2>Your next stop: Steam.</h2>
-        <p>
-          Open the deal on Steam to check the current price, region,
-          requirements and offer details before buying. Discounted does not sell
-          games. Steam prices and promotions can change.
-        </p>
-      </section>
-      <a class="primary-action" href="./#browse">Start browsing ↗</a>
+
+      <a class="button button-primary" href="/#browse" data-i18n="how.cta">Browse deals</a>
     </main>
+
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <a class="brand" href="./"
-          ><img
-            class="brand-logo"
-            src="./assets/logo-mark.svg"
-            width="30"
-            height="30"
-            alt=""
-          />Discounted</a
-        ><span>Steam promotions can change.</span
-        ><a href="https://github.com/svyixiu/Discounted">Source</a>
+        <a class="brand brand-small" href="/" aria-label="Discounted home" data-i18n-attr="aria-label:brand.home">
+          <svg class="brand-mark" aria-hidden="true"><use href="#mark" /></svg>
+          <span class="brand-word">Discounted</span>
+        </a>
+        <p class="footer-note"><span data-i18n="footer.note">Prices are recorded from Steam and can change. Discounted doesn’t sell games.</span> <span id="footerUpdated"></span></p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+          <a href="https://github.com/svyixiu/Discounted" target="_blank" rel="noopener noreferrer" data-i18n="nav.source">Source</a>
+        </nav>
       </div>
     </footer>
-    <script src="./vault.js" defer></script>
   </body>
 </html>

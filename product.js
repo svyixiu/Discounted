@@ -1,292 +1,61 @@
+/* Product page: one deal, its recorded price and similar deals. */
+const D = window.Discounted;
+const { t, escapeHtml } = D;
+
 const els = {
-  currency: document.querySelector("#currencySelect"),
+  loading: document.querySelector("#productLoading"),
   view: document.querySelector("#productView"),
   missing: document.querySelector("#missingProduct"),
-  media: document.querySelector("#productMedia"),
-  image: document.querySelector("#productImage"),
-  type: document.querySelector("#productType"),
+  kicker: document.querySelector("#productKicker"),
   title: document.querySelector("#productTitle"),
-  group: document.querySelector("#productGroup"),
-  discount: document.querySelector("#productDiscount"),
+  image: document.querySelector("#productImage"),
+  cut: document.querySelector("#productCut"),
   price: document.querySelector("#productPrice"),
   was: document.querySelector("#productWas"),
-  saving: document.querySelector("#productSaving"),
+  save: document.querySelector("#productSave"),
+  ends: document.querySelector("#productEnds"),
   steam: document.querySelector("#steamButton"),
-  recommendations: document.querySelector("#recommendations"),
-  recommendGrid: document.querySelector("#recommendGrid"),
+  recorded: document.querySelector("#productRecorded"),
+  genresRow: document.querySelector("#genresRow"),
+  genres: document.querySelector("#productGenres"),
+  saleRow: document.querySelector("#saleRow"),
+  sale: document.querySelector("#productSale"),
+  reviewsRow: document.querySelector("#reviewsRow"),
+  reviews: document.querySelector("#productReviews"),
+  more: document.querySelector("#recommendations"),
+  moreGrid: document.querySelector("#recommendGrid"),
 };
 
-const CURRENCY_KEY = "discounted:currency";
-const THUMB_CACHE_PREFIX = "discounted:thumb:";
 let catalog = [];
+let meta = {};
 let product = null;
-let rates = { USD: 1 };
-let currentCurrency = "USD";
-let currencyRate = 1;
-const formatterCache = new Map();
 
-const escapeHtml = (value) =>
-  String(value).replace(
-    /[&<>'"]/g,
-    (ch) =>
-      ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        "'": "&#39;",
-        '"': "&quot;",
-      })[ch],
-  );
+/* ---------- Recommendations: same franchise first, then shared sale and title words ---------- */
 
-function normalizeType(value) {
-  const raw = String(value || "game")
-    .trim()
-    .toLowerCase();
-  if (["dlc", "downloadable content", "downloadable_content"].includes(raw))
-    return "dlc";
-  if (["bundle", "package"].includes(raw)) return "bundle";
-  if (raw === "game") return "game";
-  return "other";
-}
-
-function typeLabel(type) {
-  if (type === "dlc") return "DLC";
-  if (type === "bundle") return "Bundle";
-  if (type === "other") return "Other";
-  return "Game";
-}
-
-function typeIcon(type) {
-  if (type === "dlc") return "i-puzzle";
-  if (type === "bundle") return "i-box";
-  if (type === "other") return "i-grid";
-  return "i-gamepad";
-}
-
-function getFormatter(code) {
-  if (formatterCache.has(code)) return formatterCache.get(code);
-
-  let formatter;
-  try {
-    formatter = new Intl.NumberFormat(undefined, {
-      style: "currency",
-      currency: code,
-      maximumFractionDigits: 2,
-    });
-  } catch {
-    formatter = { format: (value) => `${code} ${Number(value).toFixed(2)}` };
-  }
-
-  formatterCache.set(code, formatter);
-  return formatter;
-}
-
-function moneyUSD(usd) {
-  return getFormatter(currentCurrency).format(Number(usd) * currencyRate);
-}
-
-function steamSearchUrl(title) {
-  return `https://store.steampowered.com/search/?term=${encodeURIComponent(title)}`;
-}
-
-function steamUrl(item) {
-  return item.steam_appid
-    ? `https://store.steampowered.com/app/${item.steam_appid}/`
-    : steamSearchUrl(item.title);
-}
-
-function routeHash(value) {
-  let hash = 2166136261;
-  for (const ch of String(value)) {
-    hash ^= ch.charCodeAt(0);
-    hash = Math.imul(hash, 16777619);
-  }
-  return (hash >>> 0).toString(36);
-}
-
-function productRouteId(item) {
-  if (Number.isInteger(item?.steam_appid)) return String(item.steam_appid);
-  if (Number.isInteger(item?.steam_bundleid)) return "b" + item.steam_bundleid;
-  if (Number.isInteger(item?.steam_subid)) return "s" + item.steam_subid;
-  return "x" + routeHash(`${normalizeType(item?.type)}|${item?.title || ""}`);
-}
-
-function productUrl(item) {
-  if (!item || typeof item === "string")
-    return `./product.html?title=${encodeURIComponent(String(item || ""))}`;
-  return `/${normalizeType(item.type)}/${productRouteId(item)}`;
-}
-
-function steamHeaderUrl(appid) {
-  return `https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/header.jpg`;
-}
-
-function readThumbCache(title) {
-  try {
-    const raw = localStorage.getItem(THUMB_CACHE_PREFIX + title);
-    if (!raw) return null;
-    const data = JSON.parse(raw);
-    return data?.thumbnail_url ? data : null;
-  } catch {
-    return null;
-  }
-}
-
-function writeThumbCache(title, data) {
-  try {
-    localStorage.setItem(
-      THUMB_CACHE_PREFIX + title,
-      JSON.stringify({
-        thumbnail_url: data.thumbnail_url,
-        fallback_url: data.fallback_url || null,
-        cached_at: Date.now(),
-      }),
-    );
-  } catch {}
-}
-
-async function thumbnailData(item) {
-  if (item.thumbnail_url) return { thumbnail_url: item.thumbnail_url };
-
-  const appid = item.steam_appid || item.thumbnail_appid;
-  if (appid) return { thumbnail_url: steamHeaderUrl(appid) };
-
-  const cached = readThumbCache(item.title);
-  if (cached) return cached;
-
-  try {
-    const response = await fetch(
-      `/api/steam-thumb?title=${encodeURIComponent(item.title)}`,
-      {
-        headers: { Accept: "application/json" },
-      },
-    );
-
-    if (!response.ok) return null;
-    const data = await response.json();
-    if (!data.thumbnail_url) return null;
-
-    writeThumbCache(item.title, data);
-    return data;
-  } catch {
-    return null;
-  }
-}
-
-function setImage(container, image, data) {
-  if (!container || !image || !data?.thumbnail_url) return;
-
-  let triedFallback = false;
-  image.onload = () => container.classList.add("loaded");
-  image.onerror = () => {
-    if (
-      !triedFallback &&
-      data.fallback_url &&
-      data.fallback_url !== data.thumbnail_url
-    ) {
-      triedFallback = true;
-      image.src = data.fallback_url;
-      return;
-    }
-    container.classList.remove("loaded");
-    image.removeAttribute("src");
-  };
-  image.src = data.thumbnail_url;
-}
-
-function tokens(title) {
-  const stop = new Set([
-    "the",
-    "of",
-    "and",
-    "a",
-    "an",
-    "edition",
-    "deluxe",
-    "ultimate",
-    "complete",
-    "pack",
-    "pass",
-    "dlc",
-    "hd",
-    "remastered",
-    "windows",
-  ]);
-  return String(title)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .split(/\s+/)
-    .filter((token) => token.length > 1 && !stop.has(token));
-}
-
-const familyMatchers = [
-  ["far cry", /^far cry/i],
-  ["assassins creed", /^assassin['’]?s creed/i],
-  ["final fantasy", /^final fantasy/i],
-  ["kingdom hearts", /^kingdom hearts/i],
-  ["the crew", /^the crew/i],
-  ["ghost recon", /ghost recon/i],
-  ["star wars outlaws", /^star wars outlaws/i],
-  ["watch dogs", /^watch[_ ]?dogs/i],
-  ["prince of persia", /^prince of persia/i],
-  ["rainbow six", /rainbow six/i],
-  ["splinter cell", /splinter cell/i],
-  ["anno", /^anno/i],
-  ["trackmania", /^trackmania|^trackmania²/i],
+const STOP_WORDS = new Set(["the", "of", "and", "a", "an", "edition", "deluxe", "ultimate", "complete", "pack", "pass", "dlc", "hd", "remastered", "windows"]);
+const FAMILIES = [
+  ["far cry", /^far cry/i], ["assassins creed", /^assassin['’]?s creed/i], ["final fantasy", /^final fantasy/i],
+  ["kingdom hearts", /^kingdom hearts/i], ["the crew", /^the crew/i], ["ghost recon", /ghost recon/i],
+  ["star wars outlaws", /^star wars outlaws/i], ["watch dogs", /^watch[_ ]?dogs/i], ["prince of persia", /^prince of persia/i],
+  ["rainbow six", /rainbow six/i], ["splinter cell", /splinter cell/i], ["anno", /^anno/i], ["trackmania", /^trackmania/i],
   ["south park", /^south park/i],
 ];
 
-function family(title) {
-  const match = familyMatchers.find(([, rx]) => rx.test(title));
-  return match ? match[0] : null;
-}
+const tokens = (title) => String(title).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/).filter((w) => w.length > 1 && !STOP_WORDS.has(w));
+const family = (title) => FAMILIES.find(([, rx]) => rx.test(title))?.[0] || null;
 
 function relationScore(current, candidate) {
-  if (current.title === candidate.title) return -Infinity;
-
+  if (current === candidate || current.title === candidate.title) return -Infinity;
   let score = 0;
   const currentFamily = family(current.title);
-  const candidateFamily = family(candidate.title);
-
-  if (currentFamily && candidateFamily && currentFamily === candidateFamily)
-    score += 120;
-  if (
-    current.sale_group &&
-    candidate.sale_group &&
-    current.sale_group === candidate.sale_group
-  )
-    score += 24;
-
-  const a = new Set(tokens(current.title));
-  const b = new Set(tokens(candidate.title));
-  let overlap = 0;
-  a.forEach((token) => {
-    if (b.has(token)) overlap += 1;
-  });
-  score += overlap * 12;
-
-  if (
-    current.type === "game" &&
-    candidate.type === "dlc" &&
-    currentFamily &&
-    currentFamily === candidateFamily
-  )
-    score += 18;
-  if (
-    current.type === "dlc" &&
-    candidate.type === "game" &&
-    currentFamily &&
-    currentFamily === candidateFamily
-  )
-    score += 18;
-  if (
-    candidate.type === "bundle" &&
-    currentFamily &&
-    currentFamily === candidateFamily
-  )
-    score += 14;
-
+  const sameFamily = currentFamily && currentFamily === family(candidate.title);
+  if (sameFamily) score += 120;
+  if (current.sale_group && current.sale_group === candidate.sale_group && D.isNamedSale(current.sale_group)) score += 24;
+  const words = new Set(tokens(current.title));
+  score += tokens(candidate.title).filter((w) => words.has(w)).length * 12;
+  if (sameFamily && current.type !== candidate.type) score += candidate.type === "bundle" ? 14 : 18;
+  const sharedGenres = candidate.genres.filter((g) => current.genres.includes(g)).length;
+  score += sharedGenres * 3;
   score += Math.min(candidate.discount_percent, 90) / 15;
   return score;
 }
@@ -294,254 +63,182 @@ function relationScore(current, candidate) {
 function recommendationsFor(item) {
   const ranked = catalog
     .map((candidate) => ({ candidate, score: relationScore(item, candidate) }))
-    .filter((entry) => entry.score > 8)
-    .sort(
-      (a, b) =>
-        b.score - a.score ||
-        b.candidate.discount_percent - a.candidate.discount_percent ||
-        a.candidate.title.localeCompare(b.candidate.title),
-    );
-
+    .filter((entry) => entry.score > 12)
+    .sort((a, b) => b.score - a.score || b.candidate.discount_percent - a.candidate.discount_percent || a.candidate.title.localeCompare(b.candidate.title));
   const selected = [];
-  const selectedTitles = new Set();
-
   const take = (type, limit) => {
-    for (const entry of ranked) {
+    for (const { candidate } of ranked) {
       if (selected.length >= 8 || limit <= 0) break;
-      if (
-        entry.candidate.type !== type ||
-        selectedTitles.has(entry.candidate.title)
-      )
-        continue;
-      selected.push(entry.candidate);
-      selectedTitles.add(entry.candidate.title);
+      if (candidate.type !== type || selected.includes(candidate)) continue;
+      selected.push(candidate);
       limit -= 1;
     }
   };
-
   take("game", 4);
   take("dlc", 2);
   take("bundle", 2);
-
-  for (const entry of ranked) {
+  for (const { candidate } of ranked) {
     if (selected.length >= 8) break;
-    if (selectedTitles.has(entry.candidate.title)) continue;
-    selected.push(entry.candidate);
-    selectedTitles.add(entry.candidate.title);
+    if (!selected.includes(candidate)) selected.push(candidate);
   }
-
+  // Titles with nothing close by still get a short row of deals from the same genres.
+  if (selected.length < 4 && item.genres.length) {
+    const fallback = catalog
+      .filter((candidate) => candidate !== item && !selected.includes(candidate) && candidate.type === item.type)
+      .map((candidate) => ({ candidate, shared: candidate.genres.filter((g) => item.genres.includes(g)).length }))
+      .filter((entry) => entry.shared > 0)
+      .sort((a, b) => b.shared - a.shared || D.isNamedSale(b.candidate.sale_group) - D.isNamedSale(a.candidate.sale_group) || b.candidate.discount_percent - a.candidate.discount_percent || a.candidate.title.localeCompare(b.candidate.title));
+    for (const { candidate } of fallback) {
+      if (selected.length >= 4) break;
+      selected.push(candidate);
+    }
+  }
   return selected;
 }
 
-async function renderRecommendationImage(card, item) {
-  const data = await thumbnailData(item);
-  if (!data) return;
-  setImage(
-    card.querySelector(".recommend-media"),
-    card.querySelector("img"),
-    data,
-  );
+/* ---------- Rendering ---------- */
+
+function renderPrices() {
+  const saved = Math.max(0, product.original_price - product.sale_price);
+  els.cut.textContent = `−${product.discount_percent}%`;
+  els.price.textContent = D.money(product.sale_price);
+  els.was.textContent = D.money(product.original_price);
+  els.was.setAttribute("aria-label", t("product.was", { price: D.money(product.original_price) }));
+  els.save.textContent = t("product.save", { amount: D.money(saved) });
+  const updated = I18n.date(meta.updated_at, { month: "short", day: "numeric", year: "numeric" });
+  const source = product.verified_by ? escapeHtml(product.verified_by) : "";
+  const sourceHtml = source && /^https:\/\//.test(product.source_url || "")
+    ? `<a href="${escapeHtml(product.source_url)}" target="_blank" rel="noopener noreferrer">${source}</a>`
+    : source;
+  els.recorded.innerHTML = updated
+    ? sourceHtml ? escapeHtml(t("product.recorded", { date: updated, source: "\u0000" })).replace("\u0000", sourceHtml) : escapeHtml(t("product.recordedNoSource", { date: updated }))
+    : "";
+  els.recorded.hidden = !updated;
+}
+
+function renderEnds() {
+  const end = D.endTime(product.ends_at);
+  els.ends.classList.remove("soon", "ended");
+  if (!Number.isFinite(end)) {
+    els.ends.textContent = t("product.noEnd");
+    return;
+  }
+  const left = end - Date.now();
+  if (left <= 0) {
+    els.ends.textContent = t("product.ended");
+    els.ends.classList.add("ended");
+    return;
+  }
+  const hasTime = /T/.test(product.ends_at);
+  const date = I18n.date(end, hasTime
+    ? { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZone: undefined, timeZoneName: "short" }
+    : { month: "short", day: "numeric", year: "numeric" });
+  els.ends.innerHTML = `<span>${escapeHtml(t("product.ends", { date }))}</span><b>${escapeHtml(I18n.relative(left))}</b>`;
+  els.ends.classList.toggle("soon", left < 172800000);
+}
+
+function renderReviews() {
+  const id = product.steam_appid;
+  if (!Number.isSafeInteger(id)) return;
+  els.reviewsRow.hidden = false;
+  els.reviews.innerHTML = `<span class="muted">…</span>`;
+  D.loadPopularity([id]).then(() => {
+    const result = D.popularity.get(id);
+    if (!result || (result.reviews == null && !result.topSeller)) {
+      els.reviews.innerHTML = `<span class="muted">${escapeHtml(t("product.reviewsUnknown"))}</span>`;
+      return;
+    }
+    els.reviews.innerHTML = `<span class="deal-pop">${D.popularityMarkup(id, { long: true })}</span>`;
+  });
 }
 
 function renderRecommendations() {
   const items = recommendationsFor(product);
-
-  if (!items.length) {
-    els.recommendations.hidden = true;
-    return;
-  }
-
-  els.recommendations.hidden = false;
-  els.recommendGrid.innerHTML = items
-    .map(
-      (item) => `
-    <a class="recommend-card" href="${escapeHtml(productUrl(item))}">
-      <div class="recommend-media">
-        <span class="thumb-fallback"><svg class="i"><use href="#i-image"/></svg></span>
-        <img alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
-      </div>
-      <div class="recommend-body">
-        <strong>${escapeHtml(item.title)}</strong>
-        <span>-${item.discount_percent}% · ${moneyUSD(item.sale_price)}</span>
-      </div>
-    </a>
-  `,
-    )
-    .join("");
-
-  [...els.recommendGrid.querySelectorAll(".recommend-card")].forEach(
-    (card, index) => {
-      renderRecommendationImage(card, items[index]);
-    },
-  );
+  els.more.hidden = !items.length;
+  els.moreGrid.innerHTML = items.map((item) => D.dealCard(item)).join("");
+  D.hydrateArt(els.moreGrid, new Map(items.map((item) => [D.routeId(item), item])));
+  D.loadPopularity(items.map((item) => item.steam_appid)).then(() => D.paintPopularity(els.moreGrid));
 }
 
 async function renderProduct() {
-  if (!product) return;
-
   document.title = `${product.title} — Discounted`;
-  els.type.innerHTML = `<svg class="i i-sm"><use href="#${typeIcon(product.type)}"/></svg>${escapeHtml(typeLabel(product.type))}`;
+  const kicker = [t(`kind.${product.type}`)];
+  if (D.isNamedSale(product.sale_group)) kicker.push(product.sale_group);
+  els.kicker.textContent = kicker.join(" · ");
   els.title.textContent = product.title;
-  els.group.textContent = product.sale_group || "Steam promotion";
-  els.discount.textContent = `-${product.discount_percent}%`;
-  els.price.textContent = moneyUSD(product.sale_price);
-  els.was.textContent = moneyUSD(product.original_price);
-  els.saving.textContent = `Save ${moneyUSD(Math.max(0, product.original_price - product.sale_price))}`;
-  els.steam.href = steamUrl(product);
+  els.steam.href = D.steamUrl(product);
+  document.querySelector("[data-copy]").dataset.copy = location.origin + D.productUrl(product);
 
-  Vault.paint(els.view, product.discount_percent);
-  Vault.paint(els.media, product.discount_percent);
-  els.discount.textContent =
-    Vault.rarity(product.discount_percent) +
-    " · −" +
-    product.discount_percent +
-    "%";
-  document.querySelector("#productTrust").textContent = product.verified_by
-    ? "✓ Verified by " + product.verified_by
-    : "Verification source not supplied";
-  const timer = document.querySelector("#productTimer");
-  if (product.ends_at) timer.dataset.ends = product.ends_at;
-  document.querySelector("#priceBreakdown i").style.width =
-    (product.original_price
-      ? Math.max(
-          0,
-          Math.min(100, (product.sale_price / product.original_price) * 100),
-        )
-      : 0) + "%";
-  document.querySelector("[data-copy]").dataset.copy = location.href;
-  Vault.timers();
-  els.view.hidden = false;
-  Vault.observe();
-  const data = await thumbnailData(product);
-  if (data) {
-    setImage(els.media, els.image, data);
-    document.querySelector(".product-backdrop").style.backgroundImage =
-      "url(" + JSON.stringify(data.thumbnail_url) + ")";
-  }
+  renderPrices();
+  renderEnds();
+  renderReviews();
 
+  els.genresRow.hidden = !product.genres.length;
+  els.genres.innerHTML = product.genres
+    .map((genre) => `<a class="chip" href="/?genres=${encodeURIComponent(genre)}#browse">${escapeHtml(I18n.genre(genre))}</a>`)
+    .join("");
+  const named = D.isNamedSale(product.sale_group);
+  els.saleRow.hidden = !product.sale_group;
+  els.sale.innerHTML = named
+    ? `<a href="/?sale=${encodeURIComponent(product.sale_group)}#browse" dir="auto">${escapeHtml(product.sale_group)}</a>`
+    : `<span dir="auto">${escapeHtml(product.sale_group || "")}</span>`;
+
+  const art = D.artUrl(product);
+  if (art) D.setArt(els.image, art);
+  else D.lookupArt(product).then((data) => data && D.setArt(els.image, data.thumbnail_url, data.fallback_url));
+
+  els.loading.hidden = true;
   els.view.hidden = false;
   renderRecommendations();
-  Vault.shelf(els.recommendGrid);
 }
 
-async function loadRates() {
-  try {
-    const response = await fetch("/api/fx", {
-      headers: { Accept: "application/json" },
-    });
-    if (!response.ok) throw new Error("FX unavailable");
-    const data = await response.json();
-    if (data.rates) rates = data.rates;
-  } catch {
-    rates = {
-      USD: 1,
-      EUR: 0.86,
-      GBP: 0.74,
-      SAR: 3.75,
-      AED: 3.6725,
-      JPY: 158,
-      CAD: 1.4,
-      AUD: 1.42,
-    };
-  }
-
-  const common = ["USD", "EUR", "GBP", "SAR", "AED", "JPY", "CAD", "AUD"];
-  const codes = Object.keys(rates).sort((a, b) => a.localeCompare(b));
-  const ordered = [
-    ...new Set([...common.filter((code) => rates[code]), ...codes]),
-  ];
-
-  els.currency.innerHTML = ordered
-    .map((code) => `<option value="${code}">${code}</option>`)
-    .join("");
-
-  let saved = "USD";
-  try {
-    saved = localStorage.getItem(CURRENCY_KEY) || "USD";
-  } catch {}
-  if (!rates[saved]) saved = "USD";
-
-  currentCurrency = saved;
-  currencyRate = rates[saved] || 1;
-  els.currency.value = saved;
+function showMissing() {
+  els.loading.hidden = true;
+  els.missing.hidden = false;
 }
+
+// Requests cancelled by navigating away are not failures worth reporting.
+let leaving = false;
+addEventListener("pagehide", () => (leaving = true));
 
 async function boot() {
   const params = new URLSearchParams(location.search);
   const title = params.get("title");
-  const routeMatch = location.pathname.match(
-    /^\/(game|dlc|bundle|other)\/([^/?#]+)\/?$/i,
-  );
-  const routeType = routeMatch ? normalizeType(routeMatch[1]) : null;
-  const routeId = routeMatch ? decodeURIComponent(routeMatch[2]).toLowerCase() : null;
+  const route = location.pathname.match(/^\/(game|dlc|bundle|other)\/([^/?#]+)\/?$/i);
 
   let back = params.get("from");
-  try {
-    back = back || sessionStorage.getItem("vault:filters");
-  } catch {}
-  if (back && back.startsWith("?"))
-    document.querySelectorAll('a[href="./"]').forEach((a) => {
-      if (!a.classList.contains("brand")) a.href = "./" + back + "#browse";
-    });
+  try { back ||= sessionStorage.getItem(D.FILTERS_KEY); } catch {}
+  if (back && back.startsWith("?")) document.querySelector("#backLink").href = "/" + back + "#browse";
 
-  if (!title && !routeMatch) {
-    els.missing.hidden = false;
-    return;
-  }
+  if (!title && !route) return showMissing();
 
   try {
-    const [catalogResponse] = await Promise.all([
-      fetch("./games.json", { cache: "default" }),
-      loadRates(),
-    ]);
-
-    if (!catalogResponse.ok) throw new Error("Catalog unavailable");
-    const data = await catalogResponse.json();
-
-    catalog = (data.games || []).map((item) => ({
-      ...item,
-      type: normalizeType(item.type || item.product_type),
-      original_price: Number(item.original_price),
-      sale_price: Number(item.sale_price),
-      discount_percent: Number(item.discount_percent),
-    }));
-
-    if (routeMatch) {
-      product = catalog.find(
-        (item) =>
-          item.type === routeType &&
-          productRouteId(item).toLowerCase() === routeId,
-      );
+    const [data] = await Promise.all([D.loadCatalog(), D.loadRates()]);
+    catalog = data.items;
+    meta = data.meta;
+    D.mountCurrency();
+    if (route) {
+      const type = D.normalizeType(route[1]);
+      const id = decodeURIComponent(route[2]).toLowerCase();
+      product = catalog.find((item) => item.type === type && D.routeId(item).toLowerCase() === id);
     } else {
-      product = catalog.find(
-        (item) => item.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
-      );
+      product = catalog.find((item) => item.title.toLocaleLowerCase() === title.toLocaleLowerCase());
     }
-
-    if (!product) {
-      els.missing.hidden = false;
-      return;
-    }
-
-    const canonicalPath = productUrl(product);
-    if (location.pathname !== canonicalPath || location.search)
-      history.replaceState(null, "", canonicalPath);
-
-    await renderProduct();
+    if (!product) return showMissing();
+    const canonical = D.productUrl(product);
+    if (location.pathname !== canonical || location.search) history.replaceState(null, "", canonical);
+    renderProduct();
   } catch (error) {
+    if (leaving) return;
     console.error(error);
-    els.missing.hidden = false;
+    showMissing();
   }
 }
 
-els.currency.addEventListener("change", async () => {
-  currentCurrency = els.currency.value;
-  currencyRate = rates[currentCurrency] || 1;
-  try {
-    localStorage.setItem(CURRENCY_KEY, currentCurrency);
-  } catch {}
-  await renderProduct();
-  Vault.flipPrices();
+document.addEventListener("currencychange", () => {
+  if (!product) return;
+  renderPrices();
+  renderRecommendations();
 });
 
 boot();
