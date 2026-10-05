@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "rows": 149721,
+  "uniqueIds": 149721,
+  "uniqueCleanRoutes": 149721,
+  "legacyRedirects": 235,
+  "types": {
+    "game": 65057,
+    "bundle": 41940,
+    "dlc": 35153,
+    "other": 7571
+  },
+  "standalonePriceChecks": 6,
+  "editionIdentityCheck": "passed",
+  "frontendCatalogLoadMs": 1072,
+  "catalogSortMs": 72,
+  "bytes": 61363094
+}

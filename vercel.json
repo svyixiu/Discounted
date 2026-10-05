@@ -28,5 +28,1182 @@
       "source": "/other/:id",
       "destination": "/product"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/bundle/b38110",
+      "destination": "/bundle/b25803",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/b38910",
+      "destination": "/bundle/b35525",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/s1176944",
+      "destination": "/dlc/1661621",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/s220633",
+      "destination": "/game/291650",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/s945120",
+      "destination": "/bundle/s1033161",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/s945121",
+      "destination": "/bundle/s1376560",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x10g3tfq",
+      "destination": "/bundle/s141099",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x11rxsuu",
+      "destination": "/bundle/b89464",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x15zjoho",
+      "destination": "/dlc/3572160",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x16jna1g",
+      "destination": "/bundle/b50939",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x17qn4ii",
+      "destination": "/bundle/b87102",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x18e22us",
+      "destination": "/bundle/s35563",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1bnu63z",
+      "destination": "/bundle/b33611",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1cgrxi2",
+      "destination": "/bundle/b24162",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1d1i11k",
+      "destination": "/bundle/s425705",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1dexe8x",
+      "destination": "/bundle/b43747",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1i023r7",
+      "destination": "/bundle/b80572",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1jqe6sa",
+      "destination": "/bundle/s1119568",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1l28kmq",
+      "destination": "/bundle/b89636",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1lcjzq9",
+      "destination": "/bundle/b88172",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1leirm6",
+      "destination": "/bundle/b88752",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1lx1dwa",
+      "destination": "/bundle/s857632",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1mj1j44",
+      "destination": "/bundle/s338058",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1n32505",
+      "destination": "/bundle/s368777",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1nm2ntb",
+      "destination": "/bundle/b24560",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1ommpin",
+      "destination": "/bundle/s96994",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1oyaxyo",
+      "destination": "/bundle/b48478",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1t144xq",
+      "destination": "/bundle/s1175493",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1t5jj2a",
+      "destination": "/bundle/b757",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1tzf0x5",
+      "destination": "/bundle/b10539",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1utjdii",
+      "destination": "/bundle/b80627",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1wnv5bz",
+      "destination": "/bundle/b88642",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x1yukmrh",
+      "destination": "/bundle/s1200863",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x2ge4wf",
+      "destination": "/bundle/b47665",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x2ktq3k",
+      "destination": "/bundle/s1195946",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x3590bj",
+      "destination": "/bundle/s960634",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x40gixj",
+      "destination": "/bundle/b88643",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x4bdxxl",
+      "destination": "/bundle/b40346",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x5jhf4r",
+      "destination": "/bundle/b80240",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x5x9qbi",
+      "destination": "/bundle/s1150199",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x7bikhx",
+      "destination": "/bundle/b89697",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/x8y6in7",
+      "destination": "/bundle/b48359",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xas6kiw",
+      "destination": "/bundle/s1000794",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xcl59fq",
+      "destination": "/bundle/s338055",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xd9hj0t",
+      "destination": "/bundle/b59911",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xe6e5pg",
+      "destination": "/bundle/s1155688",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xhxbx6h",
+      "destination": "/bundle/b5583",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xj5qq9c",
+      "destination": "/bundle/s1093759",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xk9m8cp",
+      "destination": "/bundle/b85912",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xl102c1",
+      "destination": "/bundle/b81845",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xlgtkbp",
+      "destination": "/bundle/s1155705",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xlnkaa7",
+      "destination": "/other/2019520",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xncaksm",
+      "destination": "/bundle/b82800",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xq8lavb",
+      "destination": "/bundle/b82448",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xqmx0sq",
+      "destination": "/bundle/b89127",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xrb1rw8",
+      "destination": "/bundle/b85045",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xrgyine",
+      "destination": "/bundle/b89549",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xu9rmgi",
+      "destination": "/bundle/b21478",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xut4d5q",
+      "destination": "/bundle/b89123",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xxie12p",
+      "destination": "/bundle/b76344",
+      "permanent": true
+    },
+    {
+      "source": "/bundle/xye4t9y",
+      "destination": "/bundle/s1186108",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/1074870",
+      "destination": "/game/1085590",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/1101300",
+      "destination": "/other/1101300",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/1172420",
+      "destination": "/other/1172420",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/1795380",
+      "destination": "/other/1770640",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/1836750",
+      "destination": "/dlc/1866620",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2347690",
+      "destination": "/other/2347690",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2593890",
+      "destination": "/other/2593890",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2622480",
+      "destination": "/dlc/2924410",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2622490",
+      "destination": "/dlc/2924400",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2727180",
+      "destination": "/other/2672410",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2727190",
+      "destination": "/dlc/2744630",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/290170",
+      "destination": "/dlc/297900",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/2999080",
+      "destination": "/other/3115280",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3123420",
+      "destination": "/dlc/3742630",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3169830",
+      "destination": "/other/3888570",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3169840",
+      "destination": "/dlc/3888580",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3169850",
+      "destination": "/dlc/4795300",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3169860",
+      "destination": "/dlc/4139560",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/3169870",
+      "destination": "/other/4126080",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/453400",
+      "destination": "/other/453400",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/486710",
+      "destination": "/dlc/464840",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/486720",
+      "destination": "/dlc/530660",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x130svw9",
+      "destination": "/dlc/3271130",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x17g8o6d",
+      "destination": "/dlc/407474",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1c3t6mi",
+      "destination": "/dlc/2231410",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1e24q1f",
+      "destination": "/dlc/937892",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1e3g4ku",
+      "destination": "/dlc/660080",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1ewr8h0",
+      "destination": "/dlc/683850",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1foqq5q",
+      "destination": "/dlc/3917400",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1kdrn4b",
+      "destination": "/dlc/4160500",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1lacbab",
+      "destination": "/dlc/405080",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1rfhx04",
+      "destination": "/dlc/371020",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1uiat76",
+      "destination": "/dlc/407470",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1w3wodk",
+      "destination": "/dlc/937891",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x1xgbrkc",
+      "destination": "/dlc/3917380",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x3wrco7",
+      "destination": "/dlc/3271160",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x5lowyo",
+      "destination": "/dlc/2051320",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/x98xpef",
+      "destination": "/dlc/2369470",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xeh61f3",
+      "destination": "/dlc/407471",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xfljkbn",
+      "destination": "/dlc/2369458",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xii3sa1",
+      "destination": "/dlc/3251420",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xlcl4rp",
+      "destination": "/dlc/763820",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xpf7f2l",
+      "destination": "/dlc/2421930",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xtqm980",
+      "destination": "/dlc/3541390",
+      "permanent": true
+    },
+    {
+      "source": "/dlc/xyynntr",
+      "destination": "/dlc/3361450",
+      "permanent": true
+    },
+    {
+      "source": "/game/1005870",
+      "destination": "/game/1004370",
+      "permanent": true
+    },
+    {
+      "source": "/game/1089020",
+      "destination": "/game/1087760",
+      "permanent": true
+    },
+    {
+      "source": "/game/1732110",
+      "destination": "/game/1732180",
+      "permanent": true
+    },
+    {
+      "source": "/game/1794200",
+      "destination": "/game/1793250",
+      "permanent": true
+    },
+    {
+      "source": "/game/252270",
+      "destination": "/game/252410",
+      "permanent": true
+    },
+    {
+      "source": "/game/2621040",
+      "destination": "/game/2291680",
+      "permanent": true
+    },
+    {
+      "source": "/game/2621050",
+      "destination": "/game/2289720",
+      "permanent": true
+    },
+    {
+      "source": "/game/2841930",
+      "destination": "/game/2458860",
+      "permanent": true
+    },
+    {
+      "source": "/game/2984190",
+      "destination": "/game/3225060",
+      "permanent": true
+    },
+    {
+      "source": "/game/2984200",
+      "destination": "/game/2274980",
+      "permanent": true
+    },
+    {
+      "source": "/game/2995890",
+      "destination": "/game/2841770",
+      "permanent": true
+    },
+    {
+      "source": "/game/3056390",
+      "destination": "/other/3056390",
+      "permanent": true
+    },
+    {
+      "source": "/game/306160",
+      "destination": "/game/606160",
+      "permanent": true
+    },
+    {
+      "source": "/game/3087260",
+      "destination": "/game/2997230",
+      "permanent": true
+    },
+    {
+      "source": "/game/3087280",
+      "destination": "/game/3405540",
+      "permanent": true
+    },
+    {
+      "source": "/game/3087320",
+      "destination": "/game/2918500",
+      "permanent": true
+    },
+    {
+      "source": "/game/3094820",
+      "destination": "/game/3711590",
+      "permanent": true
+    },
+    {
+      "source": "/game/3108920",
+      "destination": "/game/4668890",
+      "permanent": true
+    },
+    {
+      "source": "/game/3169820",
+      "destination": "/game/3548580",
+      "permanent": true
+    },
+    {
+      "source": "/game/x10a6o45",
+      "destination": "/game/1848270",
+      "permanent": true
+    },
+    {
+      "source": "/game/x11gql3n",
+      "destination": "/game/2650590",
+      "permanent": true
+    },
+    {
+      "source": "/game/x12bwh0e",
+      "destination": "/game/33220",
+      "permanent": true
+    },
+    {
+      "source": "/game/x133gr0m",
+      "destination": "/game/3192250",
+      "permanent": true
+    },
+    {
+      "source": "/game/x13x3mcy",
+      "destination": "/game/2840770",
+      "permanent": true
+    },
+    {
+      "source": "/game/x146mkn6",
+      "destination": "/game/2453310",
+      "permanent": true
+    },
+    {
+      "source": "/game/x16hkr8f",
+      "destination": "/game/13620",
+      "permanent": true
+    },
+    {
+      "source": "/game/x16nngrv",
+      "destination": "/game/3181220",
+      "permanent": true
+    },
+    {
+      "source": "/game/x16wv2vg",
+      "destination": "/game/1909270",
+      "permanent": true
+    },
+    {
+      "source": "/game/x17v050b",
+      "destination": "/game/4065090",
+      "permanent": true
+    },
+    {
+      "source": "/game/x188afkc",
+      "destination": "/game/2138450",
+      "permanent": true
+    },
+    {
+      "source": "/game/x18kmgdc",
+      "destination": "/game/19800",
+      "permanent": true
+    },
+    {
+      "source": "/game/x19g0y2y",
+      "destination": "/game/2989770",
+      "permanent": true
+    },
+    {
+      "source": "/game/x19nzrtm",
+      "destination": "/game/2019680",
+      "permanent": true
+    },
+    {
+      "source": "/game/x19s9fm9",
+      "destination": "/game/4011180",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1a4xvtw",
+      "destination": "/game/907090",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1awxpdc",
+      "destination": "/game/3207780",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1b52xpm",
+      "destination": "/game/3192260",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1bitvls",
+      "destination": "/game/212630",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1blouh4",
+      "destination": "/game/2143540",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1ceyxxf",
+      "destination": "/game/488790",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1cm2px4",
+      "destination": "/game/2273420",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1dgkgc",
+      "destination": "/game/3570940",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1dhst6b",
+      "destination": "/game/33320",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1eazizm",
+      "destination": "/game/3116500",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1ew4jva",
+      "destination": "/game/48240",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1exoyi1",
+      "destination": "/game/4048300",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1gjhrxt",
+      "destination": "/game/2971750",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1h31nql",
+      "destination": "/game/2989760",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1hieyn9",
+      "destination": "/game/15080",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1i6a831",
+      "destination": "/game/2229480",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1iebz7o",
+      "destination": "/game/2090810",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1il66bx",
+      "destination": "/game/213670",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1izmphb",
+      "destination": "/game/33230",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1j90t5d",
+      "destination": "/game/249050",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1jcfrgk",
+      "destination": "/game/1969960",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1jiitu2",
+      "destination": "/game/2458480",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1juwhdb",
+      "destination": "/game/1658310",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1jvpsk5",
+      "destination": "/game/570940",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1jx8iv5",
+      "destination": "/game/2694020",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1k5qje7",
+      "destination": "/game/15190",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1k6kmq7",
+      "destination": "/game/2962400",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1l1hvz0",
+      "destination": "/game/2531310",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1m9g6gs",
+      "destination": "/game/2822030",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1ma0ppy",
+      "destination": "/game/2102760",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1mgn081",
+      "destination": "/game/4257850",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1mvs8p6",
+      "destination": "/game/13630",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1nqm1sy",
+      "destination": "/game/524220",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1nzou80",
+      "destination": "/game/2755480",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1po3ap8",
+      "destination": "/game/375910",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1pvstls",
+      "destination": "/game/245490",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1q2vgf3",
+      "destination": "/game/3839360",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1r2opk6",
+      "destination": "/game/2483970",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1rg9j3c",
+      "destination": "/game/3728940",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1rw42od",
+      "destination": "/game/2672430",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1so1w5e",
+      "destination": "/game/2460070",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1t8y8nl",
+      "destination": "/game/3192310",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1tps6v0",
+      "destination": "/game/15390",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1uginqz",
+      "destination": "/game/1741040",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1ulm8rd",
+      "destination": "/game/3412290",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1vdyv3f",
+      "destination": "/game/365590",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1vpeuyg",
+      "destination": "/game/921570",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1vuwylt",
+      "destination": "/game/15100",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1vybntf",
+      "destination": "/game/3830690",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1wv6aao",
+      "destination": "/game/2756380",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1x4cp09",
+      "destination": "/game/2329630",
+      "permanent": true
+    },
+    {
+      "source": "/game/x1yba1ae",
+      "destination": "/game/3439830",
+      "permanent": true
+    },
+    {
+      "source": "/game/x2aafbc",
+      "destination": "/game/374320",
+      "permanent": true
+    },
+    {
+      "source": "/game/x2o65pr",
+      "destination": "/game/3659410",
+      "permanent": true
+    },
+    {
+      "source": "/game/x2sfajx",
+      "destination": "/game/2867460",
+      "permanent": true
+    },
+    {
+      "source": "/game/x3hrd3b",
+      "destination": "/game/3192340",
+      "permanent": true
+    },
+    {
+      "source": "/game/x5dz54p",
+      "destination": "/game/2253970",
+      "permanent": true
+    },
+    {
+      "source": "/game/x5in5o0",
+      "destination": "/game/2445900",
+      "permanent": true
+    },
+    {
+      "source": "/game/x63rmf9",
+      "destination": "/game/2289960",
+      "permanent": true
+    },
+    {
+      "source": "/game/x6tfjg",
+      "destination": "/game/460920",
+      "permanent": true
+    },
+    {
+      "source": "/game/x85r8b3",
+      "destination": "/game/3241760",
+      "permanent": true
+    },
+    {
+      "source": "/game/x99bfte",
+      "destination": "/game/13500",
+      "permanent": true
+    },
+    {
+      "source": "/game/x9at4yp",
+      "destination": "/game/524220",
+      "permanent": true
+    },
+    {
+      "source": "/game/xb2y2tw",
+      "destination": "/game/1854250",
+      "permanent": true
+    },
+    {
+      "source": "/game/xbf09oy",
+      "destination": "/game/2652480",
+      "permanent": true
+    },
+    {
+      "source": "/game/xbl39mz",
+      "destination": "/game/2962480",
+      "permanent": true
+    },
+    {
+      "source": "/game/xc3zbn8",
+      "destination": "/game/304390",
+      "permanent": true
+    },
+    {
+      "source": "/game/xdkkmxn",
+      "destination": "/game/1888930",
+      "permanent": true
+    },
+    {
+      "source": "/game/xdq94vj",
+      "destination": "/game/2652500",
+      "permanent": true
+    },
+    {
+      "source": "/game/xekck3r",
+      "destination": "/game/335300",
+      "permanent": true
+    },
+    {
+      "source": "/game/xfl768b",
+      "destination": "/game/2053940",
+      "permanent": true
+    },
+    {
+      "source": "/game/xfmepro",
+      "destination": "/game/3192290",
+      "permanent": true
+    },
+    {
+      "source": "/game/xghk1pv",
+      "destination": "/game/3571750",
+      "permanent": true
+    },
+    {
+      "source": "/game/xh1jc9m",
+      "destination": "/game/243470",
+      "permanent": true
+    },
+    {
+      "source": "/game/xi52f26",
+      "destination": "/game/2613010",
+      "permanent": true
+    },
+    {
+      "source": "/game/xihk84j",
+      "destination": "/game/646910",
+      "permanent": true
+    },
+    {
+      "source": "/game/ximgnjv",
+      "destination": "/game/1959520",
+      "permanent": true
+    },
+    {
+      "source": "/game/xiuznlc",
+      "destination": "/game/4564320",
+      "permanent": true
+    },
+    {
+      "source": "/game/xk95c8v",
+      "destination": "/game/2215260",
+      "permanent": true
+    },
+    {
+      "source": "/game/xmzrvx7",
+      "destination": "/game/13530",
+      "permanent": true
+    },
+    {
+      "source": "/game/xoswa6q",
+      "destination": "/game/1113560",
+      "permanent": true
+    },
+    {
+      "source": "/game/xr6ryaj",
+      "destination": "/game/2176570",
+      "permanent": true
+    },
+    {
+      "source": "/game/xr6z8u0",
+      "destination": "/game/3192240",
+      "permanent": true
+    },
+    {
+      "source": "/game/xs7utn5",
+      "destination": "/game/3122460",
+      "permanent": true
+    },
+    {
+      "source": "/game/xt4cl2m",
+      "destination": "/game/2859100",
+      "permanent": true
+    },
+    {
+      "source": "/game/xts2bvm",
+      "destination": "/game/2962420",
+      "permanent": true
+    },
+    {
+      "source": "/game/xu20ii",
+      "destination": "/game/4090250",
+      "permanent": true
+    },
+    {
+      "source": "/game/xv8eygd",
+      "destination": "/game/1622780",
+      "permanent": true
+    },
+    {
+      "source": "/game/xvh7i3",
+      "destination": "/game/2458490",
+      "permanent": true
+    },
+    {
+      "source": "/game/xvir83w",
+      "destination": "/game/2059310",
+      "permanent": true
+    },
+    {
+      "source": "/game/xvjadtp",
+      "destination": "/game/2178330",
+      "permanent": true
+    },
+    {
+      "source": "/game/xw2u02x",
+      "destination": "/game/2311840",
+      "permanent": true
+    },
+    {
+      "source": "/game/xwtmt1y",
+      "destination": "/game/2270600",
+      "permanent": true
+    },
+    {
+      "source": "/game/xynmcu",
+      "destination": "/game/1938300",
+      "permanent": true
+    },
+    {
+      "source": "/game/xyvg4cr",
+      "destination": "/game/2311820",
+      "permanent": true
+    }
   ]
 }
