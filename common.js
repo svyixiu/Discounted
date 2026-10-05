@@ -15,6 +15,74 @@ window.Discounted = (() => {
   const escapeHtml = (value) =>
     String(value ?? "").replace(/[&<>'"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[ch]);
 
+  /* Adult content is hidden until an explicit age entry, for this tab's session only.
+     Store the decision, never the entered age. This is self-declaration, not identity verification. */
+  const ADULT_KEY = "discounted:adult-session";
+  let adultEnabled = false;
+  try { adultEnabled = sessionStorage.getItem(ADULT_KEY) === "18+"; } catch {}
+  const adultAllowed = () => adultEnabled;
+  const isAdult = (item) => item?.adult_content === true ||
+    (item?.content_descriptorids || []).some((id) => id === 3 || id === 4);
+  const canShow = (item) => !isAdult(item) || adultAllowed();
+  const acceptableAge = (value) => /^\d{1,3}$/.test(String(value).trim()) && Number(value) >= 18 && Number(value) <= 120;
+  function setAdultAllowed(value) {
+    adultEnabled = value === true;
+    try { adultEnabled ? sessionStorage.setItem(ADULT_KEY, "18+") : sessionStorage.removeItem(ADULT_KEY); } catch {}
+    document.dispatchEvent(new Event("adultcontentchange"));
+  }
+  addEventListener("pageshow", () => {
+    let saved = false;
+    try { saved = sessionStorage.getItem(ADULT_KEY) === "18+"; } catch { saved = adultEnabled; }
+    if (saved !== adultEnabled) setAdultAllowed(saved);
+  });
+  let adultRequest = null;
+  function requestAdult() {
+    if (adultAllowed()) return Promise.resolve(true);
+    if (adultRequest) return adultRequest;
+    adultRequest = new Promise((resolve) => {
+      const previousFocus = document.activeElement;
+      const dialog = document.createElement("dialog");
+      dialog.className = "adult-dialog";
+      dialog.id = "adultGate";
+      dialog.setAttribute("aria-labelledby", "adultGateTitle");
+      dialog.setAttribute("aria-describedby", "adultGateNote");
+      dialog.innerHTML = `<form novalidate>
+        <h2 id="adultGateTitle">${escapeHtml(t("adult.title"))}</h2>
+        <p id="adultGateNote">${escapeHtml(t("adult.note"))}</p>
+        <label for="adultAge">${escapeHtml(t("adult.age"))}</label>
+        <input id="adultAge" type="number" min="18" max="120" step="1" inputmode="numeric" autocomplete="off" required aria-describedby="adultAgeError" autofocus>
+        <p id="adultAgeError" role="alert" hidden>${escapeHtml(t("adult.error"))}</p>
+        <div class="adult-actions"><button type="button" class="button" data-adult-cancel>${escapeHtml(t("adult.cancel"))}</button>
+        <button type="submit" class="button button-primary">${escapeHtml(t("adult.show"))}</button></div>
+      </form>`;
+      document.body.append(dialog);
+      let accepted = false;
+      dialog.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const input = dialog.querySelector("input");
+        if (!acceptableAge(input.value)) {
+          dialog.querySelector("#adultAgeError").hidden = false;
+          input.setAttribute("aria-invalid", "true");
+          input.focus();
+          return;
+        }
+        accepted = true;
+        input.value = "";
+        setAdultAllowed(true);
+        dialog.close();
+      });
+      dialog.querySelector("[data-adult-cancel]").addEventListener("click", () => dialog.close());
+      dialog.addEventListener("close", () => {
+        dialog.remove();
+        previousFocus?.focus?.();
+        adultRequest = null;
+        resolve(accepted);
+      }, { once: true });
+      dialog.showModal();
+    });
+    return adultRequest;
+  }
+
   /* ---------- Catalog ---------- */
 
   function normalizeType(value) {
@@ -308,6 +376,7 @@ window.Discounted = (() => {
   }
 
   function dealCard(item, { query = "", layout = "full", eager = false } = {}) {
+    if (!canShow(item)) return "";
     const url = escapeHtml(productUrl(item));
     const art = artUrl(item);
     const ends = endsLabel(item.ends_at);
@@ -377,7 +446,8 @@ window.Discounted = (() => {
 
   async function random() {
     try {
-      const { items } = await loadCatalog();
+      const { items: allItems } = await loadCatalog();
+      const items = allItems.filter(canShow);
       if (!items.length) throw new Error("empty");
       location.href = productUrl(items[Math.floor(Math.random() * items.length)]);
     } catch {
@@ -435,6 +505,7 @@ window.Discounted = (() => {
 
   return {
     t, escapeHtml, reducedMotion, FILTERS_KEY,
+    isAdult, canShow, adultAllowed, setAdultAllowed, requestAdult, acceptableAge,
     normalizeType, routeId, productUrl, steamUrl, isNamedSale, loadCatalog,
     endTime, endsLabel, refreshDeadlines,
     loadRates, mountCurrency, setCurrency, money, moneyRounded, rate, currency: () => currency,

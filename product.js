@@ -61,7 +61,7 @@ function relationScore(current, candidate) {
 }
 
 function recommendationsFor(item) {
-  const ranked = catalog
+  const ranked = catalog.filter(D.canShow)
     .map((candidate) => ({ candidate, score: relationScore(item, candidate) }))
     .filter((entry) => entry.score > 12)
     .sort((a, b) => b.score - a.score || b.candidate.discount_percent - a.candidate.discount_percent || a.candidate.title.localeCompare(b.candidate.title));
@@ -83,7 +83,7 @@ function recommendationsFor(item) {
   }
   // Titles with nothing close by still get a short row of deals from the same genres.
   if (selected.length < 4 && item.genres.length) {
-    const fallback = catalog
+    const fallback = catalog.filter(D.canShow)
       .filter((candidate) => candidate !== item && !selected.includes(candidate) && candidate.type === item.type)
       .map((candidate) => ({ candidate, shared: candidate.genres.filter((g) => item.genres.includes(g)).length }))
       .filter((entry) => entry.shared > 0)
@@ -161,6 +161,26 @@ function renderRecommendations() {
 }
 
 async function renderProduct() {
+  if (!D.canShow(product)) {
+    els.loading.hidden = true;
+    els.view.hidden = true;
+    els.more.hidden = true;
+    els.moreGrid.innerHTML = "";
+    els.image.removeAttribute("src");
+    let gate = document.querySelector("#adultProductGate");
+    if (!gate) {
+      gate = document.createElement("section");
+      gate.id = "adultProductGate";
+      gate.className = "adult-product-gate";
+      els.view.before(gate);
+    }
+    document.title = `${t("adult.title")} — Discounted`;
+    gate.innerHTML = `<h1>${escapeHtml(t("adult.title"))}</h1><p>${escapeHtml(t("adult.hidden"))}</p>
+      <button class="button button-primary" type="button">${escapeHtml(t("adult.show"))}</button>`;
+    gate.querySelector("button").addEventListener("click", () => D.requestAdult());
+    return;
+  }
+  document.querySelector("#adultProductGate")?.remove();
   document.title = `${product.title} — Discounted`;
   const kicker = [t(`kind.${product.type}`)];
   if (D.isNamedSale(product.sale_group)) kicker.push(product.sale_group);
@@ -185,7 +205,7 @@ async function renderProduct() {
 
   const art = D.artUrl(product);
   if (art) D.setArt(els.image, art);
-  else D.lookupArt(product).then((data) => data && D.setArt(els.image, data.thumbnail_url, data.fallback_url));
+  else D.lookupArt(product).then((data) => data && D.canShow(product) && D.setArt(els.image, data.thumbnail_url, data.fallback_url));
 
   els.loading.hidden = true;
   els.view.hidden = false;
@@ -236,9 +256,13 @@ async function boot() {
 }
 
 document.addEventListener("currencychange", () => {
-  if (!product) return;
+  if (!product || !D.canShow(product)) return;
   renderPrices();
   renderRecommendations();
+});
+
+document.addEventListener("adultcontentchange", () => {
+  if (product) renderProduct();
 });
 
 boot();

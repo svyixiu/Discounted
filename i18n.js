@@ -3,6 +3,15 @@
   const KEY = "discounted:language";
 
   const en = {
+    "adult.title": "Adult content (18+)",
+    "adult.show": "Show adult content (18+)",
+    "adult.note": "Enter your age to view adult sexual content. You must be 18 or older. Your age is not saved.",
+    "adult.age": "Your age",
+    "adult.error": "Enter a whole-number age between 18 and 120.",
+    "adult.cancel": "Keep hidden",
+    "adult.hidden": "This product is hidden because it contains adult sexual content.",
+    "adult.filterNote": "Adult sexual content is hidden by default.",
+
     "skip": "Skip to deals",
     "skip.main": "Skip to content",
     "brand.home": "Discounted home",
@@ -173,6 +182,15 @@
   };
 
   const ar = {
+    "adult.title": "محتوى للبالغين (+18)",
+    "adult.show": "إظهار محتوى البالغين (+18)",
+    "adult.note": "أدخل عمرك لعرض المحتوى الجنسي المخصص للبالغين. يجب أن يكون عمرك 18 عامًا أو أكثر. لا يتم حفظ عمرك.",
+    "adult.age": "عمرك",
+    "adult.error": "أدخل عمرًا صحيحًا بين 18 و120 عامًا.",
+    "adult.cancel": "إبقاء المحتوى مخفيًا",
+    "adult.hidden": "هذا المنتج مخفي لأنه يحتوي على محتوى جنسي مخصص للبالغين.",
+    "adult.filterNote": "المحتوى الجنسي المخصص للبالغين مخفي افتراضيًا.",
+
     "skip": "تخطَّ إلى العروض",
     "skip.main": "تخطَّ إلى المحتوى",
     "brand.home": "الصفحة الرئيسية لموقع Discounted",

@@ -3,6 +3,7 @@ const D = window.Discounted;
 const { t, escapeHtml } = D;
 
 const els = {
+  adult: document.querySelector("#showAdult"),
   products: document.querySelector("#products"),
   search: document.querySelector("#searchInput"),
   sorts: [...document.querySelectorAll("[data-sort]")],
@@ -132,6 +133,7 @@ function updatePriceUI() {
 /* ---------- Filtering and sorting ---------- */
 
 function matches(item, skip = "") {
+  if (!D.canShow(item)) return false;
   const { min, max } = priceBounds();
   if (skip !== "type" && state.type !== "all" && item.type !== state.type) return false;
   if (item.discount_percent < TIERS[state.tier]) return false;
@@ -237,7 +239,7 @@ function render({ scroll = false } = {}) {
 // Type counts reflect every other active filter, so each number is what that button would show.
 function renderCounts() {
   const counts = { all: 0, game: 0, dlc: 0, bundle: 0 };
-  for (const item of catalog) {
+  for (const item of catalog.filter(D.canShow)) {
     if (!matches(item, "type")) continue;
     counts.all += 1;
     if (item.type in counts) counts[item.type] += 1;
@@ -259,6 +261,7 @@ function activeFilters() {
 }
 
 function syncControls() {
+  els.adult.checked = D.adultAllowed();
   els.types.forEach((el) => el.setAttribute("aria-pressed", String(el.dataset.type === state.type)));
   els.tiers.forEach((el) => el.setAttribute("aria-pressed", String(el.dataset.tier === state.tier)));
   els.genreList.querySelectorAll("[data-genre]").forEach((el) => el.setAttribute("aria-pressed", String(state.genres.has(el.dataset.genre))));
@@ -333,7 +336,7 @@ function buildSortOptions() {
 
 function buildGenres() {
   const counts = new Map();
-  catalog.forEach((item) => item.genres.forEach((genre) => counts.set(genre, (counts.get(genre) || 0) + 1)));
+  catalog.filter(D.canShow).forEach((item) => item.genres.forEach((genre) => counts.set(genre, (counts.get(genre) || 0) + 1)));
   const genres = [...counts.keys()].sort((a, b) => {
     const ai = PREFERRED_GENRES.indexOf(a);
     const bi = PREFERRED_GENRES.indexOf(b);
@@ -348,7 +351,7 @@ function buildGenres() {
 function buildEvents() {
   const now = Date.now();
   const groups = new Map();
-  for (const item of catalog) {
+  for (const item of catalog.filter(D.canShow)) {
     if (!D.isNamedSale(item.sale_group)) continue;
     const group = groups.get(item.sale_group) || { name: item.sale_group, count: 0, end: Infinity };
     group.count += 1;
@@ -370,12 +373,13 @@ function buildEvents() {
 }
 
 function buildStats() {
+  const visible = catalog.filter(D.canShow);
   const now = Date.now();
-  const lowest = catalog.reduce((a, b) => (b.sale_price < a.sale_price ? b : a));
-  const deepest = catalog.reduce((a, b) => (b.discount_percent > a.discount_percent ? b : a));
-  const next = catalog.map((item) => D.endTime(item.ends_at)).filter((end) => Number.isFinite(end) && end > now).sort((a, b) => a - b)[0];
-  document.querySelector("#statCount").textContent = I18n.number(catalog.length);
-  document.querySelector("#statLowest").textContent = D.money(lowest.sale_price);
+  const lowest = visible.reduce((a, b) => (b.sale_price < a.sale_price ? b : a), { sale_price: Infinity });
+  const deepest = visible.reduce((a, b) => (b.discount_percent > a.discount_percent ? b : a), { discount_percent: 0 });
+  const next = visible.map((item) => D.endTime(item.ends_at)).filter((end) => Number.isFinite(end) && end > now).sort((a, b) => a - b)[0];
+  document.querySelector("#statCount").textContent = I18n.number(visible.length);
+  document.querySelector("#statLowest").textContent = visible.length ? D.money(lowest.sale_price) : "—";
   document.querySelector("#statDeepest").innerHTML = `<bdi dir="ltr">−${deepest.discount_percent}%</bdi>`;
   const deadline = document.querySelector("#statDeadline");
   deadline.textContent = next ? (next - now < 172800000 ? I18n.relative(next - now) : I18n.date(next)) : t("stat.none");
@@ -422,7 +426,7 @@ els.sheetDone.addEventListener("click", () => {
 els.backdrop.addEventListener("click", closeSheet);
 sheetQuery.addEventListener?.("change", () => !sheetQuery.matches && closeSheet());
 document.addEventListener("keydown", (event) => {
-  if (!els.panel.classList.contains("open")) return;
+  if (!els.panel.classList.contains("open") || document.querySelector("#adultGate[open]")) return;
   if (event.key === "Escape") closeSheet();
   if (event.key !== "Tab") return;
   const focusable = [...els.panel.querySelectorAll("button, input, select")].filter((el) => !el.disabled && el.offsetParent !== null);
@@ -452,6 +456,7 @@ function update(changes = {}, options) {
 }
 
 function resetAll() {
+  D.setAdultAllowed(false);
   state.type = "all";
   state.tier = "all";
   state.genres = new Set();
@@ -463,6 +468,21 @@ function resetAll() {
   update();
   D.toast(t("toast.reset"));
 }
+
+els.adult.addEventListener("change", async () => {
+  const requested = els.adult.checked;
+  els.adult.checked = D.adultAllowed();
+  if (!requested) D.setAdultAllowed(false);
+  else await D.requestAdult();
+  syncControls();
+});
+document.addEventListener("adultcontentchange", () => {
+  if (!catalog.length) return;
+  buildGenres();
+  buildEvents();
+  buildStats();
+  update();
+});
 
 let searchTimer;
 els.search.addEventListener("input", () => {
@@ -578,7 +598,7 @@ async function boot() {
     catalog = data.items;
     meta = data.meta;
     byKey = new Map(catalog.map((item) => [D.routeId(item), item]));
-    maxUSD = Math.max(5, Math.ceil(Math.max(...catalog.map((item) => item.sale_price)) / 5) * 5);
+    maxUSD = Math.max(5, Math.ceil(catalog.reduce((max, item) => Math.max(max, item.sale_price), 0) / 5) * 5);
     D.mountCurrency();
     buildGenres();
     buildEvents();
